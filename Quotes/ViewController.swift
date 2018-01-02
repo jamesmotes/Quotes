@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSMobileClient
 
 class ViewController: UIViewController {
 
@@ -25,8 +26,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showMenu(_ sender: Any) {
-        leadingConstraint.constant = 100
-        trailingConstraint.constant = trailingConstraint.constant + 100
+        if leadingConstraint.constant == 100{
+            leadingConstraint.constant = 0
+            trailingConstraint.constant = trailingConstraint.constant - 100
+        } else {
+            leadingConstraint.constant = 100
+            trailingConstraint.constant = trailingConstraint.constant + 100
+        }
     }
     
 }
