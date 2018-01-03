@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSDynamoDB
+import AWSCore
 
 class People: UITableViewController {
 
@@ -91,5 +93,7 @@ class People: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

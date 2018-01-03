@@ -19,6 +19,7 @@
 		1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C681FFC2C7000F547E4 /* Categories.swift */; };
 		1AB47C6B1FFC2C8F00F547E4 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C6A1FFC2C8F00F547E4 /* Favorites.swift */; };
 		1AB47C6D1FFC2CB200F547E4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C6C1FFC2CB200F547E4 /* Settings.swift */; };
+		1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C6E1FFC461B00F547E4 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1AB47C681FFC2C7000F547E4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		1AB47C6A1FFC2C8F00F547E4 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		1AB47C6C1FFC2CB200F547E4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +57,7 @@
 		1AACFE851FF2F65E00E6424D = {
 			isa = PBXGroup;
 			children = (
+				1AB47C6E1FFC461B00F547E4 /* Podfile */,
 				1AACFE901FF2F65E00E6424D /* Quotes */,
 				1AACFE8F1FF2F65E00E6424D /* Products */,
 				CB4F55663DDE70E33932FC9B /* Pods */,
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */,
 				1AB47C631FFC239E00F547E4 /* awsconfiguration.json in Resources */,
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
 				1AACFE991FF2F65E00E6424D /* Assets.xcassets in Resources */,
@@ -186,7 +190,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Quotes/Pods-Quotes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
@@ -197,7 +200,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
