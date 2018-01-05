@@ -18,9 +18,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var randQuote: UILabel!
+    @IBOutlet weak var randPerson: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        randQuote.adjustsFontSizeToFitWidth = true
+        let per = arc4random_uniform(_: UInt32(array.count))
+        let Quote = Quotes(i:Int(per))
+        let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
+        
+        randQuote.text = Quote.quotes[Int(quo)]
+        randPerson.text = "- " + array[Int(per)]
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -39,5 +49,22 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func swipeRight(_ sender: Any) {
+        let per = arc4random_uniform(_: UInt32(array.count))
+        let Quote = Quotes(i:Int(per))
+        let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
+        
+        randQuote.text = Quote.quotes[Int(quo)]
+        randPerson.text = "- " + array[Int(per)]
+    }
+    
+    @IBAction func swipeLeft(_ sender: Any) {
+        let per = arc4random_uniform(_: UInt32(array.count))
+        let Quote = Quotes(i:Int(per))
+        let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
+        
+        randQuote.text = Quote.quotes[Int(quo)]
+        randPerson.text = "- " + array[Int(per)]
+    }
 }
 
