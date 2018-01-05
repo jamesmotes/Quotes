@@ -13,6 +13,10 @@ import AWSMobileClient
 let array = ["James Motes", "Elon Musk"]
 var person : Int = Int()
 
+
+let categories = ["Entrepreneur", "Fitness"]
+var cat : Int = Int()
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
@@ -25,7 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         randQuote.adjustsFontSizeToFitWidth = true
         let per = arc4random_uniform(_: UInt32(array.count))
-        let Quote = Quotes(i:Int(per))
+        let Quote = PeopleQuotes(i:Int(per))
         let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
         
         randQuote.text = Quote.quotes[Int(quo)]
@@ -51,7 +55,7 @@ class ViewController: UIViewController {
     
     @IBAction func swipeRight(_ sender: Any) {
         let per = arc4random_uniform(_: UInt32(array.count))
-        let Quote = Quotes(i:Int(per))
+        let Quote = PeopleQuotes(i:Int(per))
         let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
         
         randQuote.text = Quote.quotes[Int(quo)]
@@ -60,7 +64,7 @@ class ViewController: UIViewController {
     
     @IBAction func swipeLeft(_ sender: Any) {
         let per = arc4random_uniform(_: UInt32(array.count))
-        let Quote = Quotes(i:Int(per))
+        let Quote = PeopleQuotes(i:Int(per))
         let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
         
         randQuote.text = Quote.quotes[Int(quo)]

@@ -1,5 +1,5 @@
 //
-//  ViewPersonQuotes.swift
+//  ViewCategoriesQuotes.swift
 //  Quotes
 //
 //  Created by James Motes on 1/5/18.
@@ -8,28 +8,26 @@
 
 import UIKit
 
-class ViewPersonQuotes: UIViewController {
+class ViewCategoriesQuotes: UIViewController {
 
-    var quotes = PeopleQuotes(i: -1)
-    var it = 0;
+    var quotes = CategoryQuotes(i: -1)
+    var it = 0
     
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var name: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        quotes = PeopleQuotes(i: person)
+        quotes = CategoryQuotes(i: cat)
         quote.adjustsFontSizeToFitWidth = true
-        quote.text = quotes.quotes[it]
-        name.text = "- " + array[person]
+        quote.text = [String](quotes.quotes.values)[it]
+        name.text = "- " + [String](quotes.quotes.keys)[it]
+        
         // Do any additional setup after loading the view.
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
         // Dispose of any resources that can be recreated.
     }
     
@@ -49,10 +47,9 @@ class ViewPersonQuotes: UIViewController {
     }
     
     func refresh(){
-        quote.text = quotes.quotes[it]
-        name.text = "- " + array[person]
+        quote.text = [String](quotes.quotes.values)[it]
+        name.text = "- " + [String](quotes.quotes.keys)[it]
     }
-    
     /*
     // MARK: - Navigation
 

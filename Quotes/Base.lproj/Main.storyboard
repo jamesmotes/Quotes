@@ -20,13 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jEU-v9-J8K">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="jEU-v9-J8K">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jEU-v9-J8K" id="wV7-YF-pbb">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nxG-yj-rOt" kind="show" id="BRU-J3-aa4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -318,6 +321,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9o-2y-Dhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-246" y="134"/>
+        </scene>
+        <!--View Categories Quotes-->
+        <scene sceneID="YQT-De-DbM">
+            <objects>
+                <viewController id="nxG-yj-rOt" customClass="ViewCategoriesQuotes" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tUo-7t-LTy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1n-nX-Fpb">
+                                <rect key="frame" x="48" y="589.5" width="279" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M17-3T-JRx">
+                                <rect key="frame" x="48" y="103" width="279" height="460"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="XP1-BX-9b8" firstAttribute="trailing" secondItem="M17-3T-JRx" secondAttribute="trailing" constant="48" id="5Up-bi-ZrU"/>
+                            <constraint firstItem="XP1-BX-9b8" firstAttribute="trailing" secondItem="f1n-nX-Fpb" secondAttribute="trailing" constant="48" id="gdD-Gh-D3V"/>
+                            <constraint firstItem="M17-3T-JRx" firstAttribute="leading" secondItem="XP1-BX-9b8" secondAttribute="leading" constant="48" id="ioo-jp-k0b"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="M17-3T-JRx" secondAttribute="bottom" constant="104" id="l23-6T-2Qs"/>
+                            <constraint firstItem="M17-3T-JRx" firstAttribute="top" secondItem="XP1-BX-9b8" secondAttribute="top" constant="39" id="nCU-48-TUd"/>
+                            <constraint firstItem="f1n-nX-Fpb" firstAttribute="leading" secondItem="XP1-BX-9b8" secondAttribute="leading" constant="48" id="tLZ-qm-A3k"/>
+                            <constraint firstItem="XP1-BX-9b8" firstAttribute="bottom" secondItem="f1n-nX-Fpb" secondAttribute="bottom" constant="27" id="zeG-mo-9Io"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XP1-BX-9b8"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="637-1C-8GP" appends="YES" id="9oa-ZM-5ZS"/>
+                            <outletCollection property="gestureRecognizers" destination="5O3-5h-oJd" appends="YES" id="k2E-FV-hSl"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="name" destination="f1n-nX-Fpb" id="5Nf-jZ-1Qe"/>
+                        <outlet property="quote" destination="M17-3T-JRx" id="quX-Vp-v6n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJ0-14-4K9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="637-1C-8GP" userLabel="Swipe Gesture Recognizer Right">
+                    <connections>
+                        <action selector="swipeRight:" destination="nxG-yj-rOt" id="qfw-ae-WXW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="5O3-5h-oJd" userLabel="Swipe Gesture Recognizer Left">
+                    <connections>
+                        <action selector="swipeLeft:" destination="nxG-yj-rOt" id="QnT-ta-ftD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-430" y="-544"/>
         </scene>
     </scenes>
 </document>

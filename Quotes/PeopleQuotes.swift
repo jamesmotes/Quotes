@@ -5,7 +5,7 @@
 //
 
 
-class Quotes {
+class PeopleQuotes {
     var quotes: [String]
     init (i: Int){
         switch i {
@@ -19,7 +19,6 @@ class Quotes {
                 ]
         default:
             quotes = []
-            print("not in list of people")
         }
     }
 }
