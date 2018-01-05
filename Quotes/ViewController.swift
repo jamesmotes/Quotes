@@ -11,7 +11,7 @@ import AWSMobileClient
 
 
 let array = ["James Motes", "Elon Musk"]
-var person = 0
+var person : Int = Int()
 
 class ViewController: UIViewController {
 

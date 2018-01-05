@@ -10,7 +10,7 @@ import UIKit
 
 class ViewPersonQuotes: UIViewController {
 
-    var quotes = Quotes(i: person)
+    var quotes = Quotes(i: -1)
     var it = 0;
     
     @IBOutlet weak var quote: UILabel!
@@ -18,6 +18,7 @@ class ViewPersonQuotes: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        quotes = Quotes(i: person)
         quote.adjustsFontSizeToFitWidth = true
         quote.text = quotes.quotes[it]
         name.text = "- " + array[person]
@@ -28,13 +29,13 @@ class ViewPersonQuotes: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func swipeRight(_ sender: Any) {
-        print("Swiped right")
         if(it == 0){
-            it = quotes.quotes.count - 1
+            it = (quotes.quotes.count) - 1
         }
         else {
             it = (it-1)
@@ -43,7 +44,6 @@ class ViewPersonQuotes: UIViewController {
     }
     
     @IBAction func swipeLeft(_ sender: Any) {
-        print("Swiped left")
         it = (it+1)%(quotes.quotes.count)
         refresh()
     }

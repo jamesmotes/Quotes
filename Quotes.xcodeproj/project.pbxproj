@@ -38,7 +38,6 @@
 		1AB47C6C1FFC2CB200F547E4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		1AB47C701FFF078700F547E4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		1AB47C721FFFFA4D00F547E4 /* Quotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quotes.h; sourceTree = "<group>"; };
 		1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPersonQuotes.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,7 +90,6 @@
 				1AACFE9D1FF2F65E00E6424D /* Info.plist */,
 				1AB47C641FFC26BC00F547E4 /* Quotes.swift */,
 				1AB47C661FFC2C3100F547E4 /* People.swift */,
-				1AB47C721FFFFA4D00F547E4 /* Quotes.h */,
 				1AB47C701FFF078700F547E4 /* awsconfiguration.json */,
 			);
 			path = Quotes;
