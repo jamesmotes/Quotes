@@ -9,6 +9,10 @@
 import UIKit
 import AWSMobileClient
 
+
+let array = ["James Motes", "Elon Musk"]
+var person = 0
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
