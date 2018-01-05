@@ -13,10 +13,12 @@ class CategoryQuotes {
     init (i: Int){
         switch i {
         case 0 :
+            //entrepenuer
             quotes = ["Elon Musk": "My mentality is that of a samurai. I would rather commit seppuku than fail.",
                       "Gary Vaynerchuck": "Stop focusing on dumb shit. Don’t be afraid to break things. Don’t be romantic. Don’t take the time to breathe. Don’t aim for perfect. And whatever you do, keep moving. Reread this a few times . . ."
             ]
         case 1 :
+            //fitness
             quotes = ["Brandon Carter": "This is planet earth. Results are the only thing that matters on planet earth."]
         default :
             quotes = [:]
