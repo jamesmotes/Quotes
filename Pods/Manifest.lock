@@ -1,35 +1,51 @@
 PODS:
-  - AWSAuthCore (2.6.10):
-    - AWSCore (= 2.6.10)
-  - AWSCognitoIdentityProvider (2.6.10):
-    - AWSCognitoIdentityProviderASF (= 1.0.1)
-    - AWSCore (= 2.6.10)
-  - AWSCognitoIdentityProviderASF (1.0.1)
-  - AWSCore (2.6.10)
-  - AWSDynamoDB (2.6.10):
-    - AWSCore (= 2.6.10)
-  - AWSMobileClient (2.6.10):
-    - AWSAuthCore (= 2.6.10)
-  - AWSUserPoolsSignIn (2.6.10):
-    - AWSAuthCore (= 2.6.10)
-    - AWSCognitoIdentityProvider (= 2.6.10)
+  - Firebase/Core (4.8.0):
+    - FirebaseAnalytics (= 4.0.5)
+    - FirebaseCore (= 4.0.13)
+  - Firebase/Messaging (4.8.0):
+    - Firebase/Core
+    - FirebaseMessaging (= 2.0.8)
+  - FirebaseAnalytics (4.0.5):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.13):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.8):
+    - FirebaseCore (~> 4.0)
+  - FirebaseMessaging (2.0.8):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/Logger (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - Protobuf (3.5.0)
 
 DEPENDENCIES:
-  - AWSAuthCore (~> 2.6.6)
-  - AWSCore (~> 2.6.6)
-  - AWSDynamoDB (~> 2.6.6)
-  - AWSMobileClient (~> 2.6.6)
-  - AWSUserPoolsSignIn (~> 2.6.6)
+  - Firebase/Core
+  - Firebase/Messaging
 
 SPEC CHECKSUMS:
-  AWSAuthCore: d5e52ee671c815bee92c8fc1077fb6bd526f026a
-  AWSCognitoIdentityProvider: f88d27fef26b131191da06c0a9a398e3c686945c
-  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
-  AWSCore: 5bb072a6b5b185f43ddbd239d6554d2f8a285ad2
-  AWSDynamoDB: 46c7d83862a8375fb824796dc60b04f9273c5d3f
-  AWSMobileClient: 6bdf1228aa064a9f2ee9db1486f09bfc6bc64c1e
-  AWSUserPoolsSignIn: c9752ce399f314a556e61f3527f72887c2f0df7a
+  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
+  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
+  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
+  FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
+  FirebaseMessaging: dfdcd307c2382290a1e297a81d0f18370f5b1bcd
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: 4cf74c36a9bda1d271b7d6f28dad907584bf4e4c
+PODFILE CHECKSUM: 489e39c1be603fc9743a38d058f856918f5d6a3f
 
 COCOAPODS: 1.3.1

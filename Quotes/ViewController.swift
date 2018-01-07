@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AWSMobileClient
 
 
 let array = ["James Motes", "Elon Musk"]
@@ -91,6 +90,7 @@ class ViewController: UIViewController {
             favButton.tintColor = UIColor.darkGray
         }
     }
+    
     
 }
 
