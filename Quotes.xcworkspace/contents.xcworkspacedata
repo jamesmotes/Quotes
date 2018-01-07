@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Favorites.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Settings.swift">
+   </FileRef>
+   <FileRef
       location = "group:Quotes.xcodeproj">
    </FileRef>
    <FileRef

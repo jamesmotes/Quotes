@@ -16,12 +16,15 @@ class ViewCategoriesQuotes: UIViewController {
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var name: UILabel!
     
+    
+    @IBOutlet weak var favButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         quotes = CategoryQuotes(i: cat)
         quote.adjustsFontSizeToFitWidth = true
-        quote.text = [String](quotes.quotes.values)[it]
-        name.text = "- " + [String](quotes.quotes.keys)[it]
+        refresh()
         
         // Do any additional setup after loading the view.
     }
@@ -49,7 +52,29 @@ class ViewCategoriesQuotes: UIViewController {
     func refresh(){
         quote.text = [String](quotes.quotes.values)[it]
         name.text = "- " + [String](quotes.quotes.keys)[it]
+        
+        if favorites.keys.contains(String(describing: quote.text!)) {
+            favButton.tintColor = UIColor.red
+        }
+        else {
+            favButton.tintColor = UIColor.darkGray
+        }
     }
+    
+    
+    
+    @IBAction func clickedFavButton(_ sender: Any) {
+        if(favButton.tintColor == UIColor.darkGray){
+            favorites[String(describing: quote.text!)] = String(describing: name.text!.dropFirst(2))
+            favButton.tintColor = UIColor.red
+        }
+        else {
+            favorites.removeValue(forKey: String(describing: quote.text!))
+            favButton.tintColor = UIColor.darkGray
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

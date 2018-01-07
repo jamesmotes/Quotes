@@ -11,18 +11,18 @@
 		1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE911FF2F65E00E6424D /* AppDelegate.swift */; };
 		1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE931FF2F65E00E6424D /* ViewController.swift */; };
 		1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACFE951FF2F65E00E6424D /* Main.storyboard */; };
-		1AACFE991FF2F65E00E6424D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AACFE981FF2F65E00E6424D /* Assets.xcassets */; };
 		1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACFE9A1FF2F65E00E6424D /* LaunchScreen.storyboard */; };
 		1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */; };
 		1AB47C671FFC2C3100F547E4 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C661FFC2C3100F547E4 /* People.swift */; };
 		1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C681FFC2C7000F547E4 /* Categories.swift */; };
-		1AB47C6B1FFC2C8F00F547E4 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C6A1FFC2C8F00F547E4 /* Favorites.swift */; };
-		1AB47C6D1FFC2CB200F547E4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C6C1FFC2CB200F547E4 /* Settings.swift */; };
 		1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C6E1FFC461B00F547E4 /* Podfile */; };
 		1AB47C711FFF078700F547E4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C701FFF078700F547E4 /* awsconfiguration.json */; };
 		1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */; };
 		1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */; };
 		1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */; };
+		1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7B20003A1500F547E4 /* Settings.swift */; };
+		1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C862001A4DA00F547E4 /* Images.xcassets */; };
+		1AB47C892001BCBF00F547E4 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C882001BCBF00F547E4 /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,19 +30,19 @@
 		1AACFE911FF2F65E00E6424D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AACFE931FF2F65E00E6424D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AACFE961FF2F65E00E6424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1AACFE981FF2F65E00E6424D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AACFE9B1FF2F65E00E6424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AACFE9D1FF2F65E00E6424D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleQuotes.swift; sourceTree = "<group>"; };
 		1AB47C661FFC2C3100F547E4 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		1AB47C681FFC2C7000F547E4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		1AB47C6A1FFC2C8F00F547E4 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
-		1AB47C6C1FFC2CB200F547E4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		1AB47C701FFF078700F547E4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPersonQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCategoriesQuotes.swift; sourceTree = "<group>"; };
+		1AB47C7B20003A1500F547E4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = "/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Settings.swift"; sourceTree = "<absolute>"; };
+		1AB47C862001A4DA00F547E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1AB47C882001BCBF00F547E4 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = "/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Favorites.swift"; sourceTree = "<absolute>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,15 +82,15 @@
 		1AACFE901FF2F65E00E6424D /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				1AB47C7B20003A1500F547E4 /* Settings.swift */,
+				1AB47C882001BCBF00F547E4 /* Favorites.swift */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
 				1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */,
-				1AB47C6C1FFC2CB200F547E4 /* Settings.swift */,
-				1AB47C6A1FFC2C8F00F547E4 /* Favorites.swift */,
 				1AB47C681FFC2C7000F547E4 /* Categories.swift */,
 				1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */,
-				1AACFE981FF2F65E00E6424D /* Assets.xcassets */,
+				1AB47C862001A4DA00F547E4 /* Images.xcassets */,
 				1AACFE9A1FF2F65E00E6424D /* LaunchScreen.storyboard */,
 				1AACFE9D1FF2F65E00E6424D /* Info.plist */,
 				1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */,
@@ -182,7 +182,7 @@
 			files = (
 				1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */,
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
-				1AACFE991FF2F65E00E6424D /* Assets.xcassets in Resources */,
+				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
 				1AB47C711FFF078700F547E4 /* awsconfiguration.json in Resources */,
 			);
@@ -264,10 +264,10 @@
 				1AB47C671FFC2C3100F547E4 /* People.swift in Sources */,
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
+				1AB47C892001BCBF00F547E4 /* Favorites.swift in Sources */,
 				1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */,
-				1AB47C6B1FFC2C8F00F547E4 /* Favorites.swift in Sources */,
+				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,
-				1AB47C6D1FFC2CB200F547E4 /* Settings.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
 				1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */,

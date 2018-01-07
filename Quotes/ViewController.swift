@@ -17,6 +17,8 @@ var person : Int = Int()
 let categories = ["Entrepreneur", "Fitness"]
 var cat : Int = Int()
 
+var favorites : [String: String] = [:]
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
@@ -25,17 +27,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var randQuote: UILabel!
     @IBOutlet weak var randPerson: UILabel!
     
+    @IBOutlet weak var favButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         randQuote.adjustsFontSizeToFitWidth = true
-        let per = arc4random_uniform(_: UInt32(array.count))
-        let Quote = PeopleQuotes(i:Int(per))
-        let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
-        
-        randQuote.text = Quote.quotes[Int(quo)]
-        randPerson.text = "- " + array[Int(per)]
+        refresh()
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refresh()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,21 +58,39 @@ class ViewController: UIViewController {
     }
     
     @IBAction func swipeRight(_ sender: Any) {
-        let per = arc4random_uniform(_: UInt32(array.count))
-        let Quote = PeopleQuotes(i:Int(per))
-        let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
-        
-        randQuote.text = Quote.quotes[Int(quo)]
-        randPerson.text = "- " + array[Int(per)]
+        refresh()
     }
     
     @IBAction func swipeLeft(_ sender: Any) {
+        refresh()
+    }
+    
+    func refresh(){
         let per = arc4random_uniform(_: UInt32(array.count))
         let Quote = PeopleQuotes(i:Int(per))
         let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
         
         randQuote.text = Quote.quotes[Int(quo)]
         randPerson.text = "- " + array[Int(per)]
+        
+        if favorites.keys.contains(String(describing: randQuote.text!)) {
+            favButton.tintColor = UIColor.red
+        }
+        else {
+            favButton.tintColor = UIColor.darkGray
+        }
     }
+    
+    @IBAction func clickedFavoriteButton(_ sender: Any) {
+        if(favButton.tintColor == UIColor.darkGray){
+            favorites[String(describing: randQuote.text!)] = String(describing: randPerson.text!.dropFirst(2))
+            favButton.tintColor = UIColor.red
+        }
+        else {
+            favorites.removeValue(forKey: String(describing: randQuote.text!))
+            favButton.tintColor = UIColor.darkGray
+        }
+    }
+    
 }
 
