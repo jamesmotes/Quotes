@@ -15,14 +15,28 @@ class ViewPersonQuotes: UIViewController {
     
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var unlockPerson: UIButton!
     
     @IBOutlet weak var favButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        quotes = PeopleQuotes(i: person)
+        
         quote.adjustsFontSizeToFitWidth = true
-        refresh()
+        if(dict[array[person]] == true) {
+            quotes = PeopleQuotes(i: person)
+            unlockPerson.isHidden = true
+            refresh()
+        }
+        else {
+            quote.text = "It looks like you have not unlocked " + array[person] + " :("
+            name.text = ""
+            unlockPerson.isEnabled = true
+            unlockPerson.setTitle("Unlock now!", for: UIControlState.normal)
+            unlockPerson.isHidden = false
+        }
+        
+        
         // Do any additional setup after loading the view.
         
         
@@ -72,6 +86,15 @@ class ViewPersonQuotes: UIViewController {
         }
     }
     
+    @IBAction func unlockNewPerson(_ sender: Any) {
+        let ind = 0
+        InAppPurchases.shared.purchase(product: "thomas_jefferson")
+        dict["Thomas Jefferson"] = true
+        let defaults = UserDefaults.standard
+        defaults.set(dict, forKey: "unlockedPeople")
+        refresh()
+        
+    }
     /*
     // MARK: - Navigation
 

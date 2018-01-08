@@ -189,22 +189,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKH-Rb-6ol">
-                                <rect key="frame" x="30" y="94" width="131" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKH-Rb-6ol">
+                                <rect key="frame" x="30" y="94" width="121" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxG-KL-u75">
-                                <rect key="frame" x="312" y="94" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxG-KL-u75">
+                                <rect key="frame" x="310" y="94" width="51" height="31"/>
                                 <connections>
                                     <action selector="saveNotificationState:" destination="1sl-5y-MR5" eventType="valueChanged" id="Tm3-LK-8KO"/>
                                 </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hKH-Rb-6ol" firstAttribute="leading" secondItem="ceZ-77-AZz" secondAttribute="leading" constant="30" id="EDk-ef-Gca"/>
+                            <constraint firstItem="hKH-Rb-6ol" firstAttribute="top" secondItem="ceZ-77-AZz" secondAttribute="top" constant="30" id="awS-i1-eyw"/>
+                            <constraint firstItem="ceZ-77-AZz" firstAttribute="trailing" secondItem="IxG-KL-u75" secondAttribute="trailing" constant="16" id="f37-Q0-fEO"/>
+                            <constraint firstItem="IxG-KL-u75" firstAttribute="top" secondItem="ceZ-77-AZz" secondAttribute="top" constant="30" id="r0F-UO-JaA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ceZ-77-AZz"/>
                     </view>
                     <connections>
@@ -232,7 +236,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="kPW-7B-pGr" kind="show" id="GpL-IF-pAe"/>
+                                    <segue destination="kPW-7B-pGr" kind="show" id="8Sx-h7-mbK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -266,17 +270,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-1G-TVs">
+                                <rect key="frame" x="48" y="533" width="279" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="unlockNewPerson:" destination="kPW-7B-pGr" eventType="touchUpInside" id="jG3-Ca-CCh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="izG-pR-4Vf" secondAttribute="trailing" constant="48" id="1Jr-Or-Hlb"/>
+                            <constraint firstItem="oTz-1G-TVs" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="5O3-AP-Ygo"/>
                             <constraint firstItem="izG-pR-4Vf" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="CrU-aX-P9K"/>
                             <constraint firstItem="izG-pR-4Vf" firstAttribute="top" secondItem="wd1-eE-cYL" secondAttribute="top" constant="39" id="GRb-vf-ib6"/>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="RYd-Pd-vL8" secondAttribute="trailing" constant="48" id="JTb-7c-mTq"/>
                             <constraint firstItem="RYd-Pd-vL8" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="Spv-9W-Ggs"/>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="bottom" secondItem="RYd-Pd-vL8" secondAttribute="bottom" constant="27" id="afS-Tt-m4h"/>
                             <constraint firstAttribute="bottomMargin" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="104" id="gjV-Au-HAT"/>
+                            <constraint firstItem="wd1-eE-cYL" firstAttribute="bottom" secondItem="oTz-1G-TVs" secondAttribute="bottom" constant="27" id="l6X-Ua-7h9"/>
+                            <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="oTz-1G-TVs" secondAttribute="trailing" constant="48" id="qXZ-8W-tuz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wd1-eE-cYL"/>
                         <connections>
@@ -298,6 +313,7 @@
                         <outlet property="favButton" destination="DV2-qY-VAH" id="Alr-Jk-kbw"/>
                         <outlet property="name" destination="RYd-Pd-vL8" id="nNS-gC-OCD"/>
                         <outlet property="quote" destination="izG-pR-4Vf" id="ofe-tA-2N2"/>
+                        <outlet property="unlockPerson" destination="oTz-1G-TVs" id="fxK-oF-ccy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7D-xF-OAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,7 +328,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2618" y="134"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gym-Pz-bb0">

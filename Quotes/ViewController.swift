@@ -9,7 +9,8 @@
 import UIKit
 
 
-let array = ["James Motes", "Elon Musk"]
+var dict = ["James Motes": true, "Elon Musk": true, "Blake Nelson": true, "Thomas Jefferson": false, "DJ Khaled": true]
+var array = ["James Motes", "Elon Musk", "Blake Nelson", "Thomas Jefferson", "DJ Khaled"]
 var person : Int = Int()
 
 
@@ -20,6 +21,7 @@ var favorites : [String: String] = [:]
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
@@ -34,6 +36,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         randQuote.adjustsFontSizeToFitWidth = true
         refresh()
+        initIAP()
+        dict["DJ Khaled"] = true
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -70,15 +74,22 @@ class ViewController: UIViewController {
         let Quote = PeopleQuotes(i:Int(per))
         let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
         
-        randQuote.text = Quote.quotes[Int(quo)]
-        randPerson.text = "- " + array[Int(per)]
-        
-        if favorites.keys.contains(String(describing: randQuote.text!)) {
-            favButton.tintColor = UIColor.red
+        if(dict[array[Int(per)]] == true){
+            randQuote.text = Quote.quotes[Int(quo)]
+            randPerson.text = "- " + array[Int(per)]
+            
+            if favorites.keys.contains(String(describing: randQuote.text!)) {
+                favButton.tintColor = UIColor.red
+            }
+            else {
+                favButton.tintColor = UIColor.darkGray
+            }
         }
         else {
-            favButton.tintColor = UIColor.darkGray
+            refresh()
         }
+        
+        
     }
     
     @IBAction func clickedFavoriteButton(_ sender: Any) {
@@ -97,6 +108,11 @@ class ViewController: UIViewController {
         activityVC.popoverPresentationController?.sourceView = self.view
         
         self.present(activityVC, animated: true, completion: nil)
+    }
+
+    func initIAP(){
+        InAppPurchases.shared.getProducts()
+        //InAppPurchases.shared.restorePurchases()
     }
     
 }
