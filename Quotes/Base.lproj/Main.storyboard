@@ -92,8 +92,8 @@
                                     <segue destination="1sl-5y-MR5" kind="show" id="fn1-cO-jr0"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-0m-e0G">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-0m-e0G">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzl-6I-NrX">
                                         <rect key="frame" x="48" y="38" width="279" height="416"/>
@@ -119,6 +119,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fzl-6I-NrX" secondAttribute="bottom" constant="105" id="30R-6q-7qp"/>
                                     <constraint firstAttribute="trailing" secondItem="fzl-6I-NrX" secondAttribute="trailing" constant="48" id="33z-B1-3sv"/>
                                     <constraint firstItem="fzl-6I-NrX" firstAttribute="leading" secondItem="DW4-0m-e0G" secondAttribute="leading" constant="48" id="6bo-Rx-2FK"/>
                                     <constraint firstAttribute="trailing" secondItem="N1o-Ni-CRv" secondAttribute="trailing" constant="83" id="FKf-yI-18x"/>

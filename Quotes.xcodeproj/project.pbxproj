@@ -16,7 +16,6 @@
 		1AB47C671FFC2C3100F547E4 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C661FFC2C3100F547E4 /* People.swift */; };
 		1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C681FFC2C7000F547E4 /* Categories.swift */; };
 		1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C6E1FFC461B00F547E4 /* Podfile */; };
-		1AB47C711FFF078700F547E4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C701FFF078700F547E4 /* awsconfiguration.json */; };
 		1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */; };
 		1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */; };
 		1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */; };
@@ -39,7 +38,6 @@
 		1AB47C661FFC2C3100F547E4 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		1AB47C681FFC2C7000F547E4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		1AB47C701FFF078700F547E4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPersonQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCategoriesQuotes.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */,
 				1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */,
 				1AB47C661FFC2C3100F547E4 /* People.swift */,
-				1AB47C701FFF078700F547E4 /* awsconfiguration.json */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -207,7 +204,6 @@
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
-				1AB47C711FFF078700F547E4 /* awsconfiguration.json in Resources */,
 				1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
