@@ -67,8 +67,8 @@ class Favorites: UIViewController {
         if(quotes.count < 0){
             favorites.removeValue(forKey: String(describing: quote.text!))
             quotes.remove(at: it)
-            refresh()
         }
+        refresh()
     }
     
     @IBAction func swipedRight(_ sender: Any) {
