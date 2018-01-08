@@ -22,7 +22,7 @@
 		1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */; };
 		1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7B20003A1500F547E4 /* Settings.swift */; };
 		1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C862001A4DA00F547E4 /* Images.xcassets */; };
-		1AB47C892001BCBF00F547E4 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C882001BCBF00F547E4 /* Favorites.swift */; };
+		1AB47C892001BCBF00F547E4 /* Quotes in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C882001BCBF00F547E4 /* Quotes */; };
 		1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */; };
 		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
 		1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */; };
@@ -43,9 +43,9 @@
 		1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPersonQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCategoriesQuotes.swift; sourceTree = "<group>"; };
-		1AB47C7B20003A1500F547E4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = "/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Settings.swift"; sourceTree = "<absolute>"; };
+		1AB47C7B20003A1500F547E4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1AB47C862001A4DA00F547E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1AB47C882001BCBF00F547E4 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = "/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Favorites.swift"; sourceTree = "<absolute>"; };
+		1AB47C882001BCBF00F547E4 /* Quotes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Quotes; path = /Users/blakenelson/Desktop/Quotes; sourceTree = "<absolute>"; };
 		1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -93,7 +93,7 @@
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
 				1AB47C7B20003A1500F547E4 /* Settings.swift */,
-				1AB47C882001BCBF00F547E4 /* Favorites.swift */,
+				1AB47C882001BCBF00F547E4 /* Quotes */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
@@ -252,7 +252,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CAE59B30D98D5A9534488F59 /* [CP] Copy Pods Resources */ = {
@@ -281,7 +281,7 @@
 				1AB47C671FFC2C3100F547E4 /* People.swift in Sources */,
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
-				1AB47C892001BCBF00F547E4 /* Favorites.swift in Sources */,
+				1AB47C892001BCBF00F547E4 /* Quotes in Sources */,
 				1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */,
 				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,

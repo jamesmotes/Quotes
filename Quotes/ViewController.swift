@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var randPerson: UILabel!
     
     @IBOutlet weak var favButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -102,11 +103,17 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func clickedShareButton(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [self.randQuote.text! + " " + self.randPerson.text!], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
+
     func initIAP(){
         InAppPurchases.shared.getProducts()
         //InAppPurchases.shared.restorePurchases()
     }
-    
     
 }
 
