@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '00C18B5AD6117E6AAE4C354CFCDAF666'
-               BlueprintName = 'AWSUserPoolsSignIn-AWSUserPoolsSignIn'
+               BlueprintIdentifier = 'C5B80060FE8C664DF08841000F41D515'
+               BlueprintName = 'GoogleToolboxForMac'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'AWSUserPoolsSignIn.bundle'>
+               BuildableName = 'GoogleToolboxForMac.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
