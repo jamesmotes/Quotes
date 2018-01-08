@@ -40,6 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.set(favorites, forKey: "favorites")
         }
         
+        if (defaults.dictionary(forKey: "unlockedPeople") != nil){
+            dict = defaults.dictionary(forKey: "unlockedPeople") as! [String : Bool]
+        }
+        else {
+            defaults.set(dict, forKey: "unlockedPeople")
+        }
+        
         //setupNotifications()
         FirebaseApp.configure()
         
@@ -64,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         let defaults = UserDefaults.standard
         defaults.set(favorites, forKey: "favorites")
+        defaults.set(dict, forKey: "unlockedPeople")
         Messaging.messaging().shouldEstablishDirectChannel = false
     }
 

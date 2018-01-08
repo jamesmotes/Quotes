@@ -24,6 +24,8 @@
 		1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C862001A4DA00F547E4 /* Images.xcassets */; };
 		1AB47C892001BCBF00F547E4 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C882001BCBF00F547E4 /* Favorites.swift */; };
 		1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */; };
+		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
+		1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		1AB47C882001BCBF00F547E4 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = "/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Favorites.swift"; sourceTree = "<absolute>"; };
 		1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
+		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */,
+				1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,7 @@
 				1AB47C7B20003A1500F547E4 /* Settings.swift */,
 				1AB47C882001BCBF00F547E4 /* Favorites.swift */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
+				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
 				1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */,
@@ -118,6 +124,7 @@
 		FB1F3D7889D68A94D3BFF49C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AB47CAD20033B7E00F547E4 /* StoreKit.framework */,
 				E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */,
 			);
 			name = Frameworks;
@@ -160,6 +167,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Keychain = {
 								enabled = 0;
 							};
@@ -267,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */,
 				1AB47C671FFC2C3100F547E4 /* People.swift in Sources */,
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
