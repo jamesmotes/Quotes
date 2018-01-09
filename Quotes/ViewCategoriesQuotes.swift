@@ -66,7 +66,7 @@ class ViewCategoriesQuotes: UIViewController {
     @IBAction func clickedFavButton(_ sender: Any) {
         if(favButton.tintColor == UIColor.darkGray){
             favorites[String(describing: quote.text!)] = String(describing: name.text!.dropFirst(2))
-            favButton.tintColor = UIColor.red
+            favButton.tintColor = UIColor.orange
         }
         else {
             favorites.removeValue(forKey: String(describing: quote.text!))

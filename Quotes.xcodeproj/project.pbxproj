@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */; };
+		1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAC5B0820043FEB00E29433 /* Favorites.swift */; };
 		1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE911FF2F65E00E6424D /* AppDelegate.swift */; };
 		1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE931FF2F65E00E6424D /* ViewController.swift */; };
 		1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACFE951FF2F65E00E6424D /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AAC5B0820043FEB00E29433 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../Quotes/Quotes/Favorites.swift; sourceTree = "<group>"; };
 		1AACFE8E1FF2F65E00E6424D /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AACFE911FF2F65E00E6424D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AACFE931FF2F65E00E6424D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
 				1AB47C7B20003A1500F547E4 /* Settings.swift */,
+				1AAC5B0820043FEB00E29433 /* Favorites.swift */,
 				1AB47C882001BCBF00F547E4 /* Quotes */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
@@ -282,6 +285,7 @@
 				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
+				1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
 				1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */,
 			);

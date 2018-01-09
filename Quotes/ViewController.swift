@@ -31,13 +31,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var favButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var navItem: UINavigationItem!
+    
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         randQuote.adjustsFontSizeToFitWidth = true
         refresh()
         initIAP()
-        dict["DJ Khaled"] = true
+        
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -79,7 +84,7 @@ class ViewController: UIViewController {
             randPerson.text = "- " + array[Int(per)]
             
             if favorites.keys.contains(String(describing: randQuote.text!)) {
-                favButton.tintColor = UIColor.red
+                favButton.tintColor = UIColor.orange
             }
             else {
                 favButton.tintColor = UIColor.darkGray
@@ -93,15 +98,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickedFavoriteButton(_ sender: Any) {
-        if(favButton.tintColor == UIColor.darkGray){
-            favorites[String(describing: randQuote.text!)] = String(describing: randPerson.text!.dropFirst(2))
-            favButton.tintColor = UIColor.red
-        }
-        else {
+        if(favButton.tintColor == UIColor.orange){
             favorites.removeValue(forKey: String(describing: randQuote.text!))
             favButton.tintColor = UIColor.darkGray
         }
+        else {
+            favorites[String(describing: randQuote.text!)] = String(describing: randPerson.text!.dropFirst(2))
+            favButton.tintColor = UIColor.orange
+        }
     }
+    
     
     @IBAction func clickedShareButton(_ sender: Any) {
         let activityVC = UIActivityViewController(activityItems: [self.randQuote.text! + " " + self.randPerson.text!], applicationActivities: nil)
@@ -109,7 +115,7 @@ class ViewController: UIViewController {
         
         self.present(activityVC, animated: true, completion: nil)
     }
-
+    
     func initIAP(){
         InAppPurchases.shared.getProducts()
         //InAppPurchases.shared.restorePurchases()

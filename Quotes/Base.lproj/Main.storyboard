@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="476" y="-543"/>
         </scene>
-        <!--"Quotes" -James-->
+        <!--"Quotes" - James-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,42 +96,57 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzl-6I-NrX">
-                                        <rect key="frame" x="48" y="38" width="279" height="416"/>
+                                        <rect key="frame" x="48" y="27" width="279" height="399"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTC-Wj-vrr">
+                                        <rect key="frame" x="0.0" y="515" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem systemItem="organize" id="7dx-92-sKf">
+                                                <connections>
+                                                    <action selector="showMenu:" destination="BYZ-38-t0r" id="foB-Zh-nBv"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="XYq-Tc-i2M"/>
+                                            <barButtonItem systemItem="action" id="iF4-3K-bIe">
+                                                <connections>
+                                                    <action selector="clickedShareButton:" destination="BYZ-38-t0r" id="kuc-bZ-IE8"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="O1F-kt-9wz"/>
+                                            <barButtonItem title="Fav" image="star" width="62" id="Lmo-Ge-CUB">
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="clickedFavoriteButton:" destination="BYZ-38-t0r" id="QmO-1l-tJq"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1o-Ni-CRv">
-                                        <rect key="frame" x="48" y="481" width="279" height="51"/>
+                                        <rect key="frame" x="48" y="449" width="279" height="50.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDR-dT-MNq">
-                                        <rect key="frame" x="327" y="521" width="40" height="30"/>
-                                        <state key="normal" title="Share"/>
-                                        <connections>
-                                            <action selector="clickedShareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="60f-c1-IqA"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="RDR-dT-MNq" secondAttribute="trailing" constant="8" id="1hC-mH-7hZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="fzl-6I-NrX" secondAttribute="bottom" constant="105" id="30R-6q-7qp"/>
                                     <constraint firstAttribute="trailing" secondItem="fzl-6I-NrX" secondAttribute="trailing" constant="48" id="33z-B1-3sv"/>
                                     <constraint firstItem="fzl-6I-NrX" firstAttribute="leading" secondItem="DW4-0m-e0G" secondAttribute="leading" constant="48" id="6bo-Rx-2FK"/>
+                                    <constraint firstAttribute="bottom" secondItem="N1o-Ni-CRv" secondAttribute="bottom" constant="59.5" id="OHy-sM-wPJ"/>
                                     <constraint firstAttribute="trailing" secondItem="N1o-Ni-CRv" secondAttribute="trailing" constant="48" id="U2L-nJ-R7L"/>
                                     <constraint firstItem="N1o-Ni-CRv" firstAttribute="leading" secondItem="DW4-0m-e0G" secondAttribute="leading" constant="48" id="blP-fj-aFe"/>
-                                    <constraint firstAttribute="bottom" secondItem="N1o-Ni-CRv" secondAttribute="bottom" constant="27" id="egG-UD-4Pc"/>
-                                    <constraint firstAttribute="bottom" secondItem="RDR-dT-MNq" secondAttribute="bottom" constant="8" id="opo-je-xQU"/>
-                                    <constraint firstItem="N1o-Ni-CRv" firstAttribute="top" secondItem="fzl-6I-NrX" secondAttribute="bottom" constant="27" id="pHG-Ce-LzB"/>
-                                    <constraint firstItem="fzl-6I-NrX" firstAttribute="top" secondItem="DW4-0m-e0G" secondAttribute="top" constant="38" id="xpB-XO-aVh"/>
+                                    <constraint firstAttribute="bottom" secondItem="fzl-6I-NrX" secondAttribute="bottom" constant="133" id="fpa-Js-nAG"/>
+                                    <constraint firstItem="fzl-6I-NrX" firstAttribute="top" secondItem="DW4-0m-e0G" secondAttribute="top" constant="27" id="xbE-A9-7jd"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="f5A-3J-2Mc" appends="YES" id="SHq-CB-4Ru"/>
                                     <outletCollection property="gestureRecognizers" destination="Jw3-eS-ew3" appends="YES" id="015-Nm-ERq"/>
+                                    <outletCollection property="gestureRecognizers" destination="qLP-LE-mnl" appends="YES" id="tlb-Uw-HXM"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -145,27 +160,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="&quot;Quotes&quot; -James" id="hJR-HW-Swp">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="7dx-92-sKf">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="showMenu:" destination="BYZ-38-t0r" id="8uZ-jL-fJF"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Fav" image="star" id="Lmo-Ge-CUB">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="clickedFavoriteButton:" destination="BYZ-38-t0r" id="p4b-Wj-kH6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="&quot;Quotes&quot; - James" id="hJR-HW-Swp"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favButton" destination="Lmo-Ge-CUB" id="eW4-bq-Ptc"/>
                         <outlet property="leadingConstraint" destination="QSD-5K-cJo" id="10G-ey-JSo"/>
+                        <outlet property="navItem" destination="hJR-HW-Swp" id="bld-Yd-64I"/>
                         <outlet property="randPerson" destination="N1o-Ni-CRv" id="XEw-bM-EoQ"/>
                         <outlet property="randQuote" destination="fzl-6I-NrX" id="oXk-p9-kbH"/>
-                        <outlet property="shareButton" destination="RDR-dT-MNq" id="wPY-YL-U4h"/>
+                        <outlet property="settingsButton" destination="IBI-Ks-qaj" id="tfK-C1-SAr"/>
                         <outlet property="trailingConstraint" destination="dMi-aB-Ds4" id="hlg-ep-k9p"/>
                     </connections>
                 </viewController>
@@ -180,6 +183,11 @@
                         <action selector="swipeLeft:" destination="BYZ-38-t0r" id="5cK-fm-Tio"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="qLP-LE-mnl">
+                    <connections>
+                        <action selector="clickedFavoriteButton:" destination="BYZ-38-t0r" id="QJz-gg-SFc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
@@ -266,13 +274,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-pR-4Vf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-pR-4Vf">
                                 <rect key="frame" x="48" y="103" width="279" height="416"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-1G-TVs">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-1G-TVs">
                                 <rect key="frame" x="48" y="533" width="279" height="63"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Button"/>
@@ -364,7 +372,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M17-3T-JRx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M17-3T-JRx">
                                 <rect key="frame" x="48" y="103" width="279" height="416"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <nil key="textColor"/>
@@ -432,7 +440,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kex-OO-cgi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kex-OO-cgi">
                                 <rect key="frame" x="48" y="103" width="279" height="416"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
