@@ -3,5 +3,6 @@ target 'Quotes' do
 
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
+    pod 'Firebase/Database'
 
 end

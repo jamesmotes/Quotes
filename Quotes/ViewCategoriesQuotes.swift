@@ -74,6 +74,13 @@ class ViewCategoriesQuotes: UIViewController {
         }
     }
     
+    @IBAction func clickedShareButton(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [self.quote.text! + " " + self.name.text!], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation

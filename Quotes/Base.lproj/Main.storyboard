@@ -269,39 +269,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYd-Pd-vL8">
-                                <rect key="frame" x="48" y="545.5" width="279" height="50.5"/>
+                                <rect key="frame" x="48" y="513" width="279" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-pR-4Vf">
-                                <rect key="frame" x="48" y="103" width="279" height="416"/>
+                                <rect key="frame" x="48" y="87" width="279" height="403"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-1G-TVs">
-                                <rect key="frame" x="48" y="533" width="279" height="63"/>
+                                <rect key="frame" x="48" y="513" width="279" height="63"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="unlockNewPerson:" destination="kPW-7B-pGr" eventType="touchUpInside" id="jG3-Ca-CCh"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJc-W2-mEp">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="organize" id="ffN-9g-dOg">
+                                        <connections>
+                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="mbi-0k-bSF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Opr-bB-QUg"/>
+                                    <barButtonItem systemItem="action" id="5od-nM-ubt">
+                                        <connections>
+                                            <action selector="clickedShareButton:" destination="BYZ-38-t0r" id="gsr-hE-RXi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lLG-n6-iTw"/>
+                                    <barButtonItem title="Fav" image="star" width="62" id="XkD-fx-fSS">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="clickedFavoriteButton:" destination="BYZ-38-t0r" id="SHG-Fp-Hk6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="izG-pR-4Vf" secondAttribute="trailing" constant="48" id="1Jr-Or-Hlb"/>
+                            <constraint firstItem="oTz-1G-TVs" firstAttribute="top" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="23" id="3H5-Za-fbC"/>
                             <constraint firstItem="oTz-1G-TVs" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="5O3-AP-Ygo"/>
+                            <constraint firstAttribute="bottom" secondItem="QJc-W2-mEp" secondAttribute="bottom" id="8ld-sI-XBI"/>
+                            <constraint firstItem="RYd-Pd-vL8" firstAttribute="top" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="23" id="9TB-vs-JMO"/>
+                            <constraint firstItem="izG-pR-4Vf" firstAttribute="top" secondItem="wd1-eE-cYL" secondAttribute="top" constant="23" id="9q7-aH-3lo"/>
                             <constraint firstItem="izG-pR-4Vf" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="CrU-aX-P9K"/>
-                            <constraint firstItem="izG-pR-4Vf" firstAttribute="top" secondItem="wd1-eE-cYL" secondAttribute="top" constant="39" id="GRb-vf-ib6"/>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="RYd-Pd-vL8" secondAttribute="trailing" constant="48" id="JTb-7c-mTq"/>
                             <constraint firstItem="RYd-Pd-vL8" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="Spv-9W-Ggs"/>
-                            <constraint firstItem="wd1-eE-cYL" firstAttribute="bottom" secondItem="RYd-Pd-vL8" secondAttribute="bottom" constant="27" id="afS-Tt-m4h"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="104" id="gjV-Au-HAT"/>
-                            <constraint firstItem="wd1-eE-cYL" firstAttribute="bottom" secondItem="oTz-1G-TVs" secondAttribute="bottom" constant="27" id="l6X-Ua-7h9"/>
+                            <constraint firstItem="QJc-W2-mEp" firstAttribute="leading" secondItem="t5f-dO-z7d" secondAttribute="leading" id="UUJ-Jx-2Yy"/>
+                            <constraint firstAttribute="trailing" secondItem="QJc-W2-mEp" secondAttribute="trailing" id="V9b-aD-1Fz"/>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="oTz-1G-TVs" secondAttribute="trailing" constant="48" id="qXZ-8W-tuz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="133" id="zyl-o6-27P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wd1-eE-cYL"/>
                         <connections>
@@ -310,17 +336,9 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="GPy-LA-adT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" id="DV2-qY-VAH">
-                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="clickedFavButton:" destination="kPW-7B-pGr" id="5RU-AC-yvi"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="GPy-LA-adT"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="favButton" destination="DV2-qY-VAH" id="Alr-Jk-kbw"/>
                         <outlet property="name" destination="RYd-Pd-vL8" id="nNS-gC-OCD"/>
                         <outlet property="quote" destination="izG-pR-4Vf" id="ofe-tA-2N2"/>
                         <outlet property="unlockPerson" destination="oTz-1G-TVs" id="fxK-oF-ccy"/>
@@ -367,28 +385,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1n-nX-Fpb">
-                                <rect key="frame" x="48" y="545.5" width="279" height="50.5"/>
+                                <rect key="frame" x="48" y="513" width="279" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M17-3T-JRx">
-                                <rect key="frame" x="48" y="103" width="279" height="416"/>
+                                <rect key="frame" x="48" y="87" width="279" height="403"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-nc-D8f">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="organize" id="t3E-5M-CKh">
+                                        <connections>
+                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="SBr-Md-PuN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KZY-IH-zyi"/>
+                                    <barButtonItem systemItem="action" id="4aL-OR-32B">
+                                        <connections>
+                                            <action selector="clickedShareButton:" destination="nxG-yj-rOt" id="0pc-S6-unv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="k4a-8o-PzN"/>
+                                    <barButtonItem title="Fav" image="star" width="62" id="cr5-J1-BBu">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="clickedFavButton:" destination="nxG-yj-rOt" id="bUp-N6-kiS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hXM-nc-D8f" secondAttribute="trailing" id="4AL-vM-zpb"/>
                             <constraint firstItem="XP1-BX-9b8" firstAttribute="trailing" secondItem="M17-3T-JRx" secondAttribute="trailing" constant="48" id="5Up-bi-ZrU"/>
+                            <constraint firstItem="f1n-nX-Fpb" firstAttribute="top" secondItem="M17-3T-JRx" secondAttribute="bottom" constant="23" id="bnb-XG-JZD"/>
+                            <constraint firstItem="M17-3T-JRx" firstAttribute="top" secondItem="XP1-BX-9b8" secondAttribute="top" constant="23" id="gR2-oP-aHx"/>
                             <constraint firstItem="XP1-BX-9b8" firstAttribute="trailing" secondItem="f1n-nX-Fpb" secondAttribute="trailing" constant="48" id="gdD-Gh-D3V"/>
                             <constraint firstItem="M17-3T-JRx" firstAttribute="leading" secondItem="XP1-BX-9b8" secondAttribute="leading" constant="48" id="ioo-jp-k0b"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="M17-3T-JRx" secondAttribute="bottom" constant="104" id="l23-6T-2Qs"/>
-                            <constraint firstItem="M17-3T-JRx" firstAttribute="top" secondItem="XP1-BX-9b8" secondAttribute="top" constant="39" id="nCU-48-TUd"/>
+                            <constraint firstAttribute="bottom" secondItem="hXM-nc-D8f" secondAttribute="bottom" id="mU7-og-mRC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="M17-3T-JRx" secondAttribute="bottom" constant="133" id="rNO-7G-eZ9"/>
                             <constraint firstItem="f1n-nX-Fpb" firstAttribute="leading" secondItem="XP1-BX-9b8" secondAttribute="leading" constant="48" id="tLZ-qm-A3k"/>
-                            <constraint firstItem="XP1-BX-9b8" firstAttribute="bottom" secondItem="f1n-nX-Fpb" secondAttribute="bottom" constant="27" id="zeG-mo-9Io"/>
+                            <constraint firstItem="hXM-nc-D8f" firstAttribute="leading" secondItem="tUo-7t-LTy" secondAttribute="leading" id="uJ9-Er-GOv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XP1-BX-9b8"/>
                         <connections>
@@ -397,17 +441,10 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="VTw-x7-27w">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" id="vTU-Lz-0Bq">
-                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="clickedFavButton:" destination="nxG-yj-rOt" id="4mJ-yn-j1M"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="VTw-x7-27w"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="favButton" destination="vTU-Lz-0Bq" id="thp-nS-M2S"/>
+                        <outlet property="favButton" destination="cr5-J1-BBu" id="hm0-N8-qtz"/>
                         <outlet property="name" destination="f1n-nX-Fpb" id="5Nf-jZ-1Qe"/>
                         <outlet property="quote" destination="M17-3T-JRx" id="quX-Vp-v6n"/>
                     </connections>
@@ -435,28 +472,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fw0-e9-WM9">
-                                <rect key="frame" x="48" y="545.5" width="279" height="50.5"/>
+                                <rect key="frame" x="48" y="513" width="279" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kex-OO-cgi">
-                                <rect key="frame" x="48" y="103" width="279" height="416"/>
+                                <rect key="frame" x="48" y="87" width="279" height="403"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-ws-3j3">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="organize" id="z4Y-Jv-dSj">
+                                        <connections>
+                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="itm-yG-B10"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VmA-vB-hGo"/>
+                                    <barButtonItem systemItem="action" id="VJB-Gn-LCy">
+                                        <connections>
+                                            <action selector="clickedShareButton:" destination="mmL-oP-FBd" id="z6b-YJ-Faa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="awp-jA-5qM"/>
+                                    <barButtonItem title="Fav" image="star" width="62" id="FOA-1s-Hza">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="clickedFavButton:" destination="mmL-oP-FBd" id="TOv-aT-Jp8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="PVP-fI-W5y" firstAttribute="bottom" secondItem="Fw0-e9-WM9" secondAttribute="bottom" constant="27" id="TWo-gG-JGi"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="kex-OO-cgi" secondAttribute="bottom" constant="133" id="9ll-gK-CUQ"/>
+                            <constraint firstItem="kex-OO-cgi" firstAttribute="top" secondItem="PVP-fI-W5y" secondAttribute="top" constant="23" id="FKr-y0-cmF"/>
+                            <constraint firstAttribute="trailing" secondItem="hHE-ws-3j3" secondAttribute="trailing" id="LbX-te-zSn"/>
+                            <constraint firstItem="Fw0-e9-WM9" firstAttribute="top" secondItem="kex-OO-cgi" secondAttribute="bottom" constant="23" id="PPl-8m-eEc"/>
+                            <constraint firstAttribute="bottom" secondItem="hHE-ws-3j3" secondAttribute="bottom" id="dvQ-uB-DSq"/>
                             <constraint firstItem="PVP-fI-W5y" firstAttribute="trailing" secondItem="Fw0-e9-WM9" secondAttribute="trailing" constant="48" id="e3H-xq-cqC"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="kex-OO-cgi" secondAttribute="bottom" constant="104" id="elb-xk-505"/>
                             <constraint firstItem="PVP-fI-W5y" firstAttribute="trailing" secondItem="kex-OO-cgi" secondAttribute="trailing" constant="48" id="h5G-39-zYb"/>
                             <constraint firstItem="Fw0-e9-WM9" firstAttribute="leading" secondItem="PVP-fI-W5y" secondAttribute="leading" constant="48" id="ng9-DR-dUW"/>
-                            <constraint firstItem="kex-OO-cgi" firstAttribute="top" secondItem="PVP-fI-W5y" secondAttribute="top" constant="39" id="tyb-Io-POi"/>
+                            <constraint firstItem="hHE-ws-3j3" firstAttribute="leading" secondItem="mWe-HK-eOv" secondAttribute="leading" id="uLB-KO-JRg"/>
                             <constraint firstItem="kex-OO-cgi" firstAttribute="leading" secondItem="PVP-fI-W5y" secondAttribute="leading" constant="48" id="w1i-OH-syX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PVP-fI-W5y"/>
@@ -466,17 +529,10 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9aL-8y-Ju6">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" id="u2I-Qw-uf3">
-                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="clickedFavButton:" destination="mmL-oP-FBd" id="9l8-p1-xXg"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="9aL-8y-Ju6"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="favButton" destination="u2I-Qw-uf3" id="FdA-rt-tEJ"/>
+                        <outlet property="favButton" destination="FOA-1s-Hza" id="sBH-Ep-UpL"/>
                         <outlet property="name" destination="Fw0-e9-WM9" id="qSa-gt-qNA"/>
                         <outlet property="quote" destination="kex-OO-cgi" id="cSD-KH-Cns"/>
                     </connections>

@@ -39,7 +39,7 @@
 		1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleQuotes.swift; sourceTree = "<group>"; };
 		1AB47C661FFC2C3100F547E4 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		1AB47C681FFC2C7000F547E4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPersonQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCategoriesQuotes.swift; sourceTree = "<group>"; };
