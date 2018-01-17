@@ -19,7 +19,7 @@ class PeopleQuotes {
             quotes = [ "My mentality is that of a samurai. I would rather commit seppuku than fail.",
                        "When I was in college, I wanted to be involved in things that would change the world.",
                         "If there was a way that I could not eat, so I could work more, I would not eat. I wish there was a way to get nutrients without sitting down for a meal.",
-                        "If you get up in the morning and think the future is goin to be beteer it is a bright day. Otherwise, it's not.",
+                        "If you get up in the morning and think the future is going to be beteer it is a bright day. Otherwise, it's not.",
                         "I think it's very important to have a feedback loop, where you're constantly thinking about what you've done and how you could be doing it better.",
                         "When Henry Ford made cheap, reliable cars people said, 'Nah, what's wrong with a horse?' That was a huge bet he made, and it worked.",
                         "I would like to die on Mars. Just not on impact.",

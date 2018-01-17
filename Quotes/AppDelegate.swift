@@ -19,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var isInitialized = false
     
+    
+    
     var notify = false
+    
+    override init() {
+        
+        FirebaseApp.configure()
+    }
 
 /*
     func application(_ application: UIApplication,
@@ -48,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //setupNotifications()
-        FirebaseApp.configure()
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             if (error == nil){

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 
 var dict = ["James Motes": true, "Elon Musk": true, "Blake Nelson": true, "Thomas Jefferson": false, "DJ Khaled": true]
@@ -18,6 +20,8 @@ let categories = ["Entrepreneur", "Fitness"]
 var cat : Int = Int()
 
 var favorites : [String: String] = [:]
+
+var ref : DatabaseReference!
 
 class ViewController: UIViewController {
 
@@ -35,6 +39,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         randQuote.adjustsFontSizeToFitWidth = true
@@ -43,7 +49,7 @@ class ViewController: UIViewController {
         
         navigationController?.navigationBar.barTintColor = UIColor.white
         
-        
+        loadDatabse()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -119,6 +125,21 @@ class ViewController: UIViewController {
     func initIAP(){
         InAppPurchases.shared.getProducts()
         //InAppPurchases.shared.restorePurchases()
+    }
+    
+    func loadDatabse(){
+        
+        ref = Database.database().reference()
+        
+        ref.child("Unlocked").observe(.value, with: { (snapshot) in
+            
+            print(snapshot)
+            
+        }, withCancel: { (error) in
+            
+            print(error.localizedDescription)
+            
+        })
     }
     
 }

@@ -306,7 +306,7 @@
                                     <barButtonItem title="Fav" image="star" width="62" id="XkD-fx-fSS">
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="clickedFavoriteButton:" destination="BYZ-38-t0r" id="SHG-Fp-Hk6"/>
+                                            <action selector="clickedFavButton:" destination="kPW-7B-pGr" id="Oey-2c-HNL"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -339,6 +339,7 @@
                     <navigationItem key="navigationItem" id="GPy-LA-adT"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="favButton" destination="XkD-fx-fSS" id="LPw-bb-lsV"/>
                         <outlet property="name" destination="RYd-Pd-vL8" id="nNS-gC-OCD"/>
                         <outlet property="quote" destination="izG-pR-4Vf" id="ofe-tA-2N2"/>
                         <outlet property="unlockPerson" destination="oTz-1G-TVs" id="fxK-oF-ccy"/>
