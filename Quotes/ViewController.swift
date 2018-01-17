@@ -128,7 +128,7 @@ class ViewController: UIViewController {
     }
     
     func loadDatabse(){
-        
+        //
         ref = Database.database().reference()
         
         ref.child("Unlocked").observe(.value, with: { (snapshot) in
