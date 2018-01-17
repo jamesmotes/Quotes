@@ -16,6 +16,7 @@ class ViewCategoriesQuotes: UIViewController {
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var name: UILabel!
     
+    @IBOutlet weak var backgroundView: UIImageView!
     
     @IBOutlet weak var favButton: UIBarButtonItem!
     
@@ -53,8 +54,12 @@ class ViewCategoriesQuotes: UIViewController {
         quote.text = [String](quotes.quotes.values)[it]
         name.text = "- " + [String](quotes.quotes.keys)[it]
         
+        let rand = Int(arc4random_uniform(UInt32(backgrounds.count)))
+        
+        backgroundView.image = UIImage(named: backgrounds[rand])!
+        
         if favorites.keys.contains(String(describing: quote.text!)) {
-            favButton.tintColor = UIColor.red
+            favButton.tintColor = UIColor.orange
         }
         else {
             favButton.tintColor = UIColor.darkGray

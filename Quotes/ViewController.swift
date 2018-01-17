@@ -16,6 +16,21 @@ var array = ["James Motes", "Elon Musk", "Blake Nelson", "Thomas Jefferson", "DJ
 var person : Int = Int()
 
 
+var backgrounds = ["city_stack.jpg",
+                    "dancing_girl.jpg",
+                    "snowy_mountains.jpg",
+                    "milky_way.jpg",
+                    "forest_road.jpg",
+                    "volcano_opening.jpg",
+                    "painted_dude.jpg",
+                    "coffee_mason_jar.jpg",
+                    "mirrored_city.jpg",
+                    "flower_girl.jpg",
+                    "black_umbrella.jpg",
+                    "hoodie_red_smoke.jpg"
+                    ]
+
+
 let categories = ["Entrepreneur", "Fitness"]
 var cat : Int = Int()
 
