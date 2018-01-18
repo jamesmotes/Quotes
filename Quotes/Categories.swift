@@ -9,16 +9,31 @@
 import UIKit
 
 class Categories: UITableViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "man_on_beach.jpg"))
+        
+        tableView.backgroundView?.contentMode = .scaleAspectFill
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    /*override func viewDidAppear(_ animated: Bool) {
+        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
+        super.viewWillAppear(animated)
+        
+        // Add a background view to the table view
+        let backgroundImage = UIImage(named: "man_on_beach.jpg")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        // center and scale background image
+
+        imageView.contentMode = .scaleAspectFill
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,11 +58,14 @@ class Categories: UITableViewController {
         
         // Configure the cell...
         cell.textLabel?.text = categories[indexPath.row]
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         cat = indexPath.row
+        performSegue(withIdentifier: "showCategoryQuotes", sender: nil)
     }
 
     /*

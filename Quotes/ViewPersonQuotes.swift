@@ -68,7 +68,7 @@ class ViewPersonQuotes: UIViewController {
         name.text = "- " + array[person]
         
         if favorites.keys.contains(String(describing: quote.text!)) {
-            favButton.tintColor = UIColor.red
+            favButton.tintColor = UIColor.orange
         }
         else {
             favButton.tintColor = UIColor.darkGray
@@ -94,6 +94,13 @@ class ViewPersonQuotes: UIViewController {
         defaults.set(dict, forKey: "unlockedPeople")
         refresh()
         
+    }
+    
+    @IBAction func clickedShareButton(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [self.quote.text! + " " + self.name.text!], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

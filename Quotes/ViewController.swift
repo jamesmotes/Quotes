@@ -31,7 +31,6 @@ var backgrounds = ["city_stack.jpg",
                     ]
 
 
-let categories = ["Entrepreneur", "Fitness"]
 var cat : Int = Int()
 
 var favorites : [String: String] = [:]
@@ -64,7 +63,7 @@ class ViewController: UIViewController {
         
         navigationController?.navigationBar.barTintColor = UIColor.white
         
-        loadDatabse()
+        //loadDatabse()
         // Do any additional setup after loading the view, typically from a nib.
     }
     

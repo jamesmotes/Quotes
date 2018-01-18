@@ -50,6 +50,7 @@ class People: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         person = indexPath.row
+        performSegue(withIdentifier: "showViewPersonQuotes", sender: nil)
     }
     
 
