@@ -7,6 +7,8 @@
 
 import UIKit
 
+var favorites : [String: String] = [:]
+
 class Settings: UIViewController {
     
     @IBOutlet var notificationsSwitch: UISwitch!

@@ -28,16 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
     }
 
-/*
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions:
-        
-        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
-        AWSDDLog.sharedInstance.logLevel = .info
-        return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
-    }
-    */
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let defaults = UserDefaults.standard
         if (defaults.dictionary(forKey: "favorites") != nil){

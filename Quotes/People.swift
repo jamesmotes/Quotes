@@ -15,6 +15,10 @@ class People: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "man_on_beach.jpg"))
+        
+        tableView.backgroundView?.contentMode = .scaleAspectFill
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

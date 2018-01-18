@@ -33,7 +33,7 @@ var backgrounds = ["city_stack.jpg",
 
 var cat : Int = Int()
 
-var favorites : [String: String] = [:]
+
 
 var ref : DatabaseReference!
 
@@ -42,10 +42,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var randQuote: UILabel!
-    @IBOutlet weak var randPerson: UILabel!
-    
+        
     @IBOutlet weak var favButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIButton!
     
@@ -53,18 +50,44 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     
+    @IBOutlet weak var catTile: UIButton!
+    @IBOutlet weak var peopleTile: UIButton!
+    @IBOutlet weak var favTile: UIButton!
+    @IBOutlet weak var settingsTile: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        randQuote.adjustsFontSizeToFitWidth = true
+        //randQuote.adjustsFontSizeToFitWidth = true
         refresh()
         initIAP()
         
-        navigationController?.navigationBar.barTintColor = UIColor.white
+        //navigationController?.navigationBar.barTintColor = UIColor.white
         
+
         //loadDatabse()
-        // Do any additional setup after loading the view, typically from a nib.
+
+
+        catTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
+        catTile.titleLabel?.minimumScaleFactor = 0.5
+        catTile.titleLabel?.numberOfLines = 1
+        catTile.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        peopleTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
+        peopleTile.titleLabel?.minimumScaleFactor = 0.5
+        peopleTile.titleLabel?.numberOfLines = 1
+        peopleTile.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        favTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
+        favTile.titleLabel?.minimumScaleFactor = 0.5
+        favTile.titleLabel?.numberOfLines = 1
+        favTile.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        settingsTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
+        settingsTile.titleLabel?.minimumScaleFactor = 0.5
+        settingsTile.titleLabel?.numberOfLines = 1
+        settingsTile.titleLabel?.adjustsFontSizeToFitWidth = true
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,42 +122,42 @@ class ViewController: UIViewController {
         let Quote = PeopleQuotes(i:Int(per))
         let quo = arc4random_uniform(_: UInt32(Quote.quotes.count))
         
-        if(dict[array[Int(per)]] == true){
-            randQuote.text = Quote.quotes[Int(quo)]
-            randPerson.text = "- " + array[Int(per)]
-            
-            if favorites.keys.contains(String(describing: randQuote.text!)) {
-                favButton.tintColor = UIColor.orange
-            }
-            else {
-                favButton.tintColor = UIColor.darkGray
-            }
-        }
-        else {
-            refresh()
-        }
+//        if(dict[array[Int(per)]] == true){
+//            randQuote.text = Quote.quotes[Int(quo)]
+//            randPerson.text = "- " + array[Int(per)]
+//
+//            if favorites.keys.contains(String(describing: randQuote.text!)) {
+//                favButton.tintColor = UIColor.orange
+//            }
+//            else {
+//                favButton.tintColor = UIColor.darkGray
+//            }
+//        }
+//        else {
+//            refresh()
+//        }
         
         
     }
     
     @IBAction func clickedFavoriteButton(_ sender: Any) {
-        if(favButton.tintColor == UIColor.orange){
-            favorites.removeValue(forKey: String(describing: randQuote.text!))
-            favButton.tintColor = UIColor.darkGray
-        }
-        else {
-            favorites[String(describing: randQuote.text!)] = String(describing: randPerson.text!.dropFirst(2))
-            favButton.tintColor = UIColor.orange
-        }
+//        if(favButton.tintColor == UIColor.orange){
+//            favorites.removeValue(forKey: String(describing: randQuote.text!))
+//            favButton.tintColor = UIColor.darkGray
+//        }
+//        else {
+//            favorites[String(describing: randQuote.text!)] = String(describing: randPerson.text!.dropFirst(2))
+//            favButton.tintColor = UIColor.orange
+//        }
     }
     
     
-    @IBAction func clickedShareButton(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: [self.randQuote.text! + " " + self.randPerson.text!], applicationActivities: nil)
-        activityVC.popoverPresentationController?.sourceView = self.view
-        
-        self.present(activityVC, animated: true, completion: nil)
-    }
+//    @IBAction func clickedShareButton(_ sender: Any) {
+//        let activityVC = UIActivityViewController(activityItems: [self.randQuote.text! + " " + self.randPerson.text!], applicationActivities: nil)
+//        activityVC.popoverPresentationController?.sourceView = self.view
+//        
+//        self.present(activityVC, animated: true, completion: nil)
+//    }
     
     func initIAP(){
         InAppPurchases.shared.getProducts()
@@ -142,7 +165,6 @@ class ViewController: UIViewController {
     }
     
     func loadDatabse(){
-        //
         ref = Database.database().reference()
         
         ref.child("Unlocked").observe(.value, with: { (snapshot) in
