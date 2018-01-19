@@ -15,6 +15,7 @@ class People: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.barTintColor = UIColor.clear
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "man_on_beach.jpg"))
         

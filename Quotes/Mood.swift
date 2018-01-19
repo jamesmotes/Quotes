@@ -1,40 +1,29 @@
 //
-//  Categories.swift
+//  Mood.swift
 //  Quotes
 //
-//  Created by James Motes on 1/2/18.
+//  Created by James Motes on 1/18/18.
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
 import UIKit
 
-class Categories: UITableViewController {
-    
-    
+class Mood: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         navigationController?.navigationBar.barTintColor = UIColor.clear
         
-        tableView.backgroundView = UIImageView(image: UIImage(named: "mountain_sunset.jpg"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "beached_boat.jpg"))
         
         tableView.backgroundView?.contentMode = .scaleAspectFill
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    /*override func viewDidAppear(_ animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-        
-        // Add a background view to the table view
-        let backgroundImage = UIImage(named: "man_on_beach.jpg")
-        let imageView = UIImageView(image: backgroundImage)
-        self.tableView.backgroundView = imageView
-        // center and scale background image
-
-        imageView.contentMode = .scaleAspectFill
-    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,7 +39,7 @@ class Categories: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categories.count
+        return moods.count
     }
 
     
@@ -58,16 +47,15 @@ class Categories: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = categories[indexPath.row]
-        cell.textLabel?.adjustsFontSizeToFitWidth = true
-        cell.backgroundColor = UIColor.clear
+        cell.textLabel?.text = moods[indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        cat = indexPath.row
-        performSegue(withIdentifier: "showCategoryQuotes", sender: nil)
+        mood = indexPath.row
+        performSegue(withIdentifier: "showViewPersonQuotes", sender: nil)
     }
+    
 
     /*
     // Override to support conditional editing of the table view.

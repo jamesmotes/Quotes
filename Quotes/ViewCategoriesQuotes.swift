@@ -23,6 +23,7 @@ class ViewCategoriesQuotes: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor.clear
         quotes = CategoryQuotes(i: cat)
         quote.adjustsFontSizeToFitWidth = true
         refresh()

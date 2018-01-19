@@ -23,7 +23,7 @@
 		1A302F762010420900273C7E /* man_on_beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F63201041FF00273C7E /* man_on_beach.jpg */; };
 		1A302F772010420900273C7E /* julien-laurent-374836.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F642010420000273C7E /* julien-laurent-374836.jpg */; };
 		1A302F782010420900273C7E /* joshua-newton-275881.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F652010420100273C7E /* joshua-newton-275881.jpg */; };
-		1A302F792010420900273C7E /* casey-horner-351733.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F662010420100273C7E /* casey-horner-351733.jpg */; };
+		1A302F792010420900273C7E /* beached_boat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F662010420100273C7E /* beached_boat.jpg */; };
 		1A302F7A2010420900273C7E /* jake-blucker-316192.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F672010420100273C7E /* jake-blucker-316192.jpg */; };
 		1A302F7B2010420900273C7E /* dan-grinwis-396674.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F682010420200273C7E /* dan-grinwis-396674.jpg */; };
 		1A302F7C2010420900273C7E /* ahmed-saffu-420396.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F692010420200273C7E /* ahmed-saffu-420396.jpg */; };
@@ -35,10 +35,12 @@
 		1A302F822010420900273C7E /* sawyer-bengtson-256274.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F6F2010420400273C7E /* sawyer-bengtson-256274.jpg */; };
 		1A302F832010420900273C7E /* joshua-k-jackson-261210.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F702010420500273C7E /* joshua-k-jackson-261210.jpg */; };
 		1A302F842010420900273C7E /* daniel-malikyar-368330.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F712010420500273C7E /* daniel-malikyar-368330.jpg */; };
-		1A302F852010420900273C7E /* nathan-dumlao-293480.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F722010420600273C7E /* nathan-dumlao-293480.jpg */; };
+		1A302F852010420900273C7E /* mountain_sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F722010420600273C7E /* mountain_sunset.jpg */; };
 		1A302F862010420900273C7E /* annie-spratt-156491.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F732010420700273C7E /* annie-spratt-156491.jpg */; };
 		1A302F872010420900273C7E /* daniel-von-appen-255535.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F742010420800273C7E /* daniel-von-appen-255535.jpg */; };
 		1A302F882010420900273C7E /* takemaru-hirai-239939.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */; };
+		1A302F8C2010F50900273C7E /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8B2010F50900273C7E /* Mood.swift */; };
+		1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8D2010F63400273C7E /* MoodQuotes.swift */; };
 		1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAC5B0820043FEB00E29433 /* Favorites.swift */; };
 		1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE911FF2F65E00E6424D /* AppDelegate.swift */; };
 		1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE931FF2F65E00E6424D /* ViewController.swift */; };
@@ -75,7 +77,7 @@
 		1A302F63201041FF00273C7E /* man_on_beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man_on_beach.jpg; sourceTree = "<group>"; };
 		1A302F642010420000273C7E /* julien-laurent-374836.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "julien-laurent-374836.jpg"; sourceTree = "<group>"; };
 		1A302F652010420100273C7E /* joshua-newton-275881.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "joshua-newton-275881.jpg"; sourceTree = "<group>"; };
-		1A302F662010420100273C7E /* casey-horner-351733.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "casey-horner-351733.jpg"; sourceTree = "<group>"; };
+		1A302F662010420100273C7E /* beached_boat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beached_boat.jpg; sourceTree = "<group>"; };
 		1A302F672010420100273C7E /* jake-blucker-316192.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jake-blucker-316192.jpg"; sourceTree = "<group>"; };
 		1A302F682010420200273C7E /* dan-grinwis-396674.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dan-grinwis-396674.jpg"; sourceTree = "<group>"; };
 		1A302F692010420200273C7E /* ahmed-saffu-420396.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ahmed-saffu-420396.jpg"; sourceTree = "<group>"; };
@@ -87,10 +89,12 @@
 		1A302F6F2010420400273C7E /* sawyer-bengtson-256274.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sawyer-bengtson-256274.jpg"; sourceTree = "<group>"; };
 		1A302F702010420500273C7E /* joshua-k-jackson-261210.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "joshua-k-jackson-261210.jpg"; sourceTree = "<group>"; };
 		1A302F712010420500273C7E /* daniel-malikyar-368330.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "daniel-malikyar-368330.jpg"; sourceTree = "<group>"; };
-		1A302F722010420600273C7E /* nathan-dumlao-293480.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nathan-dumlao-293480.jpg"; sourceTree = "<group>"; };
+		1A302F722010420600273C7E /* mountain_sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_sunset.jpg; sourceTree = "<group>"; };
 		1A302F732010420700273C7E /* annie-spratt-156491.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "annie-spratt-156491.jpg"; sourceTree = "<group>"; };
 		1A302F742010420800273C7E /* daniel-von-appen-255535.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "daniel-von-appen-255535.jpg"; sourceTree = "<group>"; };
 		1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "takemaru-hirai-239939.jpg"; sourceTree = "<group>"; };
+		1A302F8B2010F50900273C7E /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		1A302F8D2010F63400273C7E /* MoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQuotes.swift; sourceTree = "<group>"; };
 		1AAC5B0820043FEB00E29433 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../Quotes/Quotes/Favorites.swift; sourceTree = "<group>"; };
 		1AACFE8E1FF2F65E00E6424D /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AACFE911FF2F65E00E6424D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +141,7 @@
 				1A302F63201041FF00273C7E /* man_on_beach.jpg */,
 				1A302F732010420700273C7E /* annie-spratt-156491.jpg */,
 				1A302F6A2010420300273C7E /* annie-spratt-412945.jpg */,
-				1A302F662010420100273C7E /* casey-horner-351733.jpg */,
+				1A302F662010420100273C7E /* beached_boat.jpg */,
 				1A302F682010420200273C7E /* dan-grinwis-396674.jpg */,
 				1A302F712010420500273C7E /* daniel-malikyar-368330.jpg */,
 				1A302F742010420800273C7E /* daniel-von-appen-255535.jpg */,
@@ -148,7 +152,7 @@
 				1A302F702010420500273C7E /* joshua-k-jackson-261210.jpg */,
 				1A302F652010420100273C7E /* joshua-newton-275881.jpg */,
 				1A302F642010420000273C7E /* julien-laurent-374836.jpg */,
-				1A302F722010420600273C7E /* nathan-dumlao-293480.jpg */,
+				1A302F722010420600273C7E /* mountain_sunset.jpg */,
 				1A302F6B2010420300273C7E /* samuel-ferrara-318709.jpg */,
 				1A302F6F2010420400273C7E /* sawyer-bengtson-256274.jpg */,
 				1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */,
@@ -190,6 +194,7 @@
 		1AACFE901FF2F65E00E6424D /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				1A302F8B2010F50900273C7E /* Mood.swift */,
 				1A302F4A20100A7400273C7E /* Backgrounds */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
@@ -199,6 +204,7 @@
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
+				1A302F8D2010F63400273C7E /* MoodQuotes.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
 				1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */,
 				1AB47C681FFC2C7000F547E4 /* Categories.swift */,
@@ -310,11 +316,11 @@
 				1A302F5720100AA600273C7E /* painted_dude.jpg in Resources */,
 				1A302F832010420900273C7E /* joshua-k-jackson-261210.jpg in Resources */,
 				1A302F7D2010420900273C7E /* annie-spratt-412945.jpg in Resources */,
-				1A302F792010420900273C7E /* casey-horner-351733.jpg in Resources */,
+				1A302F792010420900273C7E /* beached_boat.jpg in Resources */,
 				1A302F7B2010420900273C7E /* dan-grinwis-396674.jpg in Resources */,
 				1A302F7E2010420900273C7E /* samuel-ferrara-318709.jpg in Resources */,
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
-				1A302F852010420900273C7E /* nathan-dumlao-293480.jpg in Resources */,
+				1A302F852010420900273C7E /* mountain_sunset.jpg in Resources */,
 				1A302F5A20100AA600273C7E /* flower_girl.jpg in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1A302F7A2010420900273C7E /* jake-blucker-316192.jpg in Resources */,
@@ -417,6 +423,8 @@
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
 				1AB47C892001BCBF00F547E4 /* Quotes in Sources */,
+				1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */,
+				1A302F8C2010F50900273C7E /* Mood.swift in Sources */,
 				1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */,
 				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,

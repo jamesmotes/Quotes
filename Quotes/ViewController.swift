@@ -13,7 +13,7 @@ import FirebaseAuth
 
 var dict = ["James Motes": true, "Elon Musk": true, "Blake Nelson": true, "Thomas Jefferson": false, "DJ Khaled": true]
 var array = ["James Motes", "Elon Musk", "Blake Nelson", "Thomas Jefferson", "DJ Khaled"]
-var person : Int = Int()
+
 
 
 var backgrounds = ["city_stack.jpg",
@@ -30,8 +30,9 @@ var backgrounds = ["city_stack.jpg",
                     "hoodie_red_smoke.jpg"
                     ]
 
-
+var person : Int = Int()
 var cat : Int = Int()
+var mood : Int = Int()
 
 
 
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
         refresh()
         initIAP()
         
-        //navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.clear
         
 
         //loadDatabse()

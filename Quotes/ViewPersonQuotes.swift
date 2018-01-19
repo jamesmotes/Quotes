@@ -19,10 +19,13 @@ class ViewPersonQuotes: UIViewController {
     
     @IBOutlet weak var favButton: UIBarButtonItem!
     
+    @IBOutlet weak var backgroundView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         quote.adjustsFontSizeToFitWidth = true
+        navigationController?.navigationBar.barTintColor = UIColor.clear
         if(dict[array[person]] == true) {
             quotes = PeopleQuotes(i: person)
             unlockPerson.isHidden = true
@@ -66,6 +69,9 @@ class ViewPersonQuotes: UIViewController {
     func refresh(){
         quote.text = quotes.quotes[it]
         name.text = "- " + array[person]
+        
+        let rand = Int(arc4random_uniform(UInt32(backgrounds.count)))
+        backgroundView.image = UIImage(named: backgrounds[rand])!
         
         if favorites.keys.contains(String(describing: quote.text!)) {
             favButton.tintColor = UIColor.orange
