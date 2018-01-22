@@ -261,9 +261,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ndq-Oe-b9D">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYd-Pd-vL8">
                                 <rect key="frame" x="48" y="513" width="279" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
@@ -271,10 +268,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-pR-4Vf">
-                                <rect key="frame" x="48" y="87" width="279" height="403"/>
+                                <rect key="frame" x="16" y="87" width="343" height="403"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gm0-4T-c0M" appends="YES" id="QmI-iN-ndn"/>
+                                </connections>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-1G-TVs">
                                 <rect key="frame" x="48" y="513" width="279" height="63"/>
@@ -311,24 +312,20 @@
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="izG-pR-4Vf" secondAttribute="trailing" constant="48" id="1Jr-Or-Hlb"/>
                             <constraint firstItem="oTz-1G-TVs" firstAttribute="top" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="23" id="3H5-Za-fbC"/>
                             <constraint firstItem="oTz-1G-TVs" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="5O3-AP-Ygo"/>
-                            <constraint firstItem="ndq-Oe-b9D" firstAttribute="top" secondItem="t5f-dO-z7d" secondAttribute="top" id="6i4-Un-0uL"/>
                             <constraint firstAttribute="bottom" secondItem="QJc-W2-mEp" secondAttribute="bottom" id="8ld-sI-XBI"/>
                             <constraint firstItem="RYd-Pd-vL8" firstAttribute="top" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="23" id="9TB-vs-JMO"/>
                             <constraint firstItem="izG-pR-4Vf" firstAttribute="top" secondItem="wd1-eE-cYL" secondAttribute="top" constant="23" id="9q7-aH-3lo"/>
-                            <constraint firstItem="izG-pR-4Vf" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="CrU-aX-P9K"/>
-                            <constraint firstItem="ndq-Oe-b9D" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" id="Eh7-S7-ebK"/>
-                            <constraint firstItem="ndq-Oe-b9D" firstAttribute="trailing" secondItem="wd1-eE-cYL" secondAttribute="trailing" id="IT6-E4-wCW"/>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="RYd-Pd-vL8" secondAttribute="trailing" constant="48" id="JTb-7c-mTq"/>
                             <constraint firstItem="RYd-Pd-vL8" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="48" id="Spv-9W-Ggs"/>
                             <constraint firstItem="QJc-W2-mEp" firstAttribute="leading" secondItem="t5f-dO-z7d" secondAttribute="leading" id="UUJ-Jx-2Yy"/>
                             <constraint firstAttribute="trailing" secondItem="QJc-W2-mEp" secondAttribute="trailing" id="V9b-aD-1Fz"/>
-                            <constraint firstAttribute="bottom" secondItem="ndq-Oe-b9D" secondAttribute="bottom" id="pzN-ff-WSx"/>
+                            <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="izG-pR-4Vf" secondAttribute="trailing" constant="16" id="YPs-bc-aBh"/>
+                            <constraint firstItem="izG-pR-4Vf" firstAttribute="leading" secondItem="wd1-eE-cYL" secondAttribute="leading" constant="16" id="lFB-RN-nuS"/>
                             <constraint firstItem="wd1-eE-cYL" firstAttribute="trailing" secondItem="oTz-1G-TVs" secondAttribute="trailing" constant="48" id="qXZ-8W-tuz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="izG-pR-4Vf" secondAttribute="bottom" constant="133" id="zyl-o6-27P"/>
                         </constraints>
@@ -342,10 +339,12 @@
                     <navigationItem key="navigationItem" id="GPy-LA-adT"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="backgroundView" destination="ndq-Oe-b9D" id="eOq-P3-uwd"/>
+                        <outlet property="doubleTap" destination="gm0-4T-c0M" id="dFc-OT-gCb"/>
                         <outlet property="favButton" destination="XkD-fx-fSS" id="LPw-bb-lsV"/>
                         <outlet property="name" destination="RYd-Pd-vL8" id="nNS-gC-OCD"/>
                         <outlet property="quote" destination="izG-pR-4Vf" id="ofe-tA-2N2"/>
+                        <outlet property="swipeLeft" destination="nac-6o-niB" id="Y1I-wW-Kee"/>
+                        <outlet property="swipeRight" destination="3jK-KB-Wsz" id="3KC-mK-AtE"/>
                         <outlet property="unlockPerson" destination="oTz-1G-TVs" id="fxK-oF-ccy"/>
                     </connections>
                 </viewController>
@@ -360,6 +359,11 @@
                         <action selector="swipeLeft:" destination="kPW-7B-pGr" id="PF9-Po-XM0"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="gm0-4T-c0M">
+                    <connections>
+                        <action selector="clickedFavButton:" destination="kPW-7B-pGr" id="7ag-Vr-ahQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2397.5999999999999" y="133.5832083958021"/>
         </scene>
@@ -533,7 +537,7 @@
                                     <barButtonItem title="Fav" image="star" width="62" id="FOA-1s-Hza">
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="clickedFavButton:" destination="mmL-oP-FBd" id="TOv-aT-Jp8"/>
+                                            <action selector="clickedFavButton:" destination="mmL-oP-FBd" id="9Iy-D5-kpE"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

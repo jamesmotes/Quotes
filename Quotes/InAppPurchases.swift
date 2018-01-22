@@ -10,16 +10,20 @@ import UIKit
 import StoreKit
 
 
+
 class InAppPurchases: NSObject{
     
     private override init() {}
     static let shared = InAppPurchases()
     
+    var processing : Bool = Bool()
+    var purchased : Bool = Bool()
+    
     var products = [SKProduct]()
     let paymentQueue = SKPaymentQueue.default()
     
     func getProducts() {
-        let products: Set = ["thomas_jefferson"]
+        let products: Set = ["thomas_jefferson", "gabriel_wang"]
         
         let request = SKProductsRequest(productIdentifiers: products)
         request.delegate = self
@@ -28,9 +32,12 @@ class InAppPurchases: NSObject{
     }
     
     func purchase(product: String){
-        guard let purchaseItem = products.filter({ $0.productIdentifier == product}).first else {return}
+        purchased = false
+        guard let purchaseItem = products.filter({ $0.productIdentifier == product}).first else {processing = false; return}
         let payment = SKPayment(product: purchaseItem)
         paymentQueue.add(payment)
+        purchased = true
+        processing = false;
     }
     
     func restorePurchases() {
