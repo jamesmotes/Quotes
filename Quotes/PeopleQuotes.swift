@@ -123,7 +123,7 @@ class PeopleQuotes {
                       "I'm grinding when you're sleeping.",
                       "I'm not worried about getting boo'd in the third quarter. Talk to me after the game.",
                       "The reason you have no time to grind is because you waste it on dumb shit.",
-                      "Doing it the only option.",
+                      "Doing it is the only option.",
                       "If you're not dreaming big for yourself, who's going to do it for you?",
                       "If you're living for weekends and vacations your shit is broken."
                         ]
