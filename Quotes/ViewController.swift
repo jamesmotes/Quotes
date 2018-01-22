@@ -39,7 +39,6 @@ var mood : Int = Int()
 var ref : DatabaseReference!
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
@@ -59,36 +58,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //randQuote.adjustsFontSizeToFitWidth = true
         refresh()
         initIAP()
         
         navigationController?.navigationBar.barTintColor = UIColor.clear
         
-
-        //loadDatabse()
-
-
-        catTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        catTile.titleLabel?.minimumScaleFactor = 0.5
-        catTile.titleLabel?.numberOfLines = 1
-        catTile.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        peopleTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        peopleTile.titleLabel?.minimumScaleFactor = 0.5
-        peopleTile.titleLabel?.numberOfLines = 1
-        peopleTile.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        favTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        favTile.titleLabel?.minimumScaleFactor = 0.5
-        favTile.titleLabel?.numberOfLines = 1
-        favTile.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        settingsTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        settingsTile.titleLabel?.minimumScaleFactor = 0.5
-        settingsTile.titleLabel?.numberOfLines = 1
-        settingsTile.titleLabel?.adjustsFontSizeToFitWidth = true
-
     }
     
     override func viewWillAppear(_ animated: Bool) {

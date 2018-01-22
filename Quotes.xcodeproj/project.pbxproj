@@ -28,7 +28,7 @@
 		1A302F7B2010420900273C7E /* dan-grinwis-396674.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F682010420200273C7E /* dan-grinwis-396674.jpg */; };
 		1A302F7C2010420900273C7E /* ahmed-saffu-420396.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F692010420200273C7E /* ahmed-saffu-420396.jpg */; };
 		1A302F7D2010420900273C7E /* annie-spratt-412945.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F6A2010420300273C7E /* annie-spratt-412945.jpg */; };
-		1A302F7E2010420900273C7E /* samuel-ferrara-318709.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F6B2010420300273C7E /* samuel-ferrara-318709.jpg */; };
+		1A302F7E2010420900273C7E /* pink_sunset_mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F6B2010420300273C7E /* pink_sunset_mountain.jpg */; };
 		1A302F7F2010420900273C7E /* gabriel-jimenez-241711.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F6C2010420300273C7E /* gabriel-jimenez-241711.jpg */; };
 		1A302F802010420900273C7E /* jacob-fischer-367186.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F6D2010420400273C7E /* jacob-fischer-367186.jpg */; };
 		1A302F812010420900273C7E /* felix-russell-saw-251617.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F6E2010420400273C7E /* felix-russell-saw-251617.jpg */; };
@@ -59,6 +59,7 @@
 		1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */; };
 		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
 		1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */; };
+		81E16BFC20140F040020E646 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E16BFB20140F040020E646 /* MainMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +83,7 @@
 		1A302F682010420200273C7E /* dan-grinwis-396674.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dan-grinwis-396674.jpg"; sourceTree = "<group>"; };
 		1A302F692010420200273C7E /* ahmed-saffu-420396.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ahmed-saffu-420396.jpg"; sourceTree = "<group>"; };
 		1A302F6A2010420300273C7E /* annie-spratt-412945.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "annie-spratt-412945.jpg"; sourceTree = "<group>"; };
-		1A302F6B2010420300273C7E /* samuel-ferrara-318709.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "samuel-ferrara-318709.jpg"; sourceTree = "<group>"; };
+		1A302F6B2010420300273C7E /* pink_sunset_mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pink_sunset_mountain.jpg; sourceTree = "<group>"; };
 		1A302F6C2010420300273C7E /* gabriel-jimenez-241711.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gabriel-jimenez-241711.jpg"; sourceTree = "<group>"; };
 		1A302F6D2010420400273C7E /* jacob-fischer-367186.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jacob-fischer-367186.jpg"; sourceTree = "<group>"; };
 		1A302F6E2010420400273C7E /* felix-russell-saw-251617.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "felix-russell-saw-251617.jpg"; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
+		81E16BFB20140F040020E646 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,7 +155,7 @@
 				1A302F652010420100273C7E /* joshua-newton-275881.jpg */,
 				1A302F642010420000273C7E /* julien-laurent-374836.jpg */,
 				1A302F722010420600273C7E /* mountain_sunset.jpg */,
-				1A302F6B2010420300273C7E /* samuel-ferrara-318709.jpg */,
+				1A302F6B2010420300273C7E /* pink_sunset_mountain.jpg */,
 				1A302F6F2010420400273C7E /* sawyer-bengtson-256274.jpg */,
 				1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */,
 				1A302F5620100AA600273C7E /* city_stack.jpg */,
@@ -215,6 +217,7 @@
 				1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */,
 				1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */,
 				1AB47C661FFC2C3100F547E4 /* People.swift */,
+				81E16BFB20140F040020E646 /* MainMenuController.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -318,7 +321,7 @@
 				1A302F7D2010420900273C7E /* annie-spratt-412945.jpg in Resources */,
 				1A302F792010420900273C7E /* beached_boat.jpg in Resources */,
 				1A302F7B2010420900273C7E /* dan-grinwis-396674.jpg in Resources */,
-				1A302F7E2010420900273C7E /* samuel-ferrara-318709.jpg in Resources */,
+				1A302F7E2010420900273C7E /* pink_sunset_mountain.jpg in Resources */,
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
 				1A302F852010420900273C7E /* mountain_sunset.jpg in Resources */,
 				1A302F5A20100AA600273C7E /* flower_girl.jpg in Resources */,
@@ -419,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */,
+				81E16BFC20140F040020E646 /* MainMenuController.swift in Sources */,
 				1AB47C671FFC2C3100F547E4 /* People.swift in Sources */,
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
