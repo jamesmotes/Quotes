@@ -38,7 +38,7 @@ var mood : Int = Int()
 
 var ref : DatabaseReference!
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate {
 
     
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
@@ -49,13 +49,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var navItem: UINavigationItem!
     
-    @IBOutlet weak var settingsButton: UIBarButtonItem!
-    
-    @IBOutlet weak var catTile: UIButton!
-    @IBOutlet weak var peopleTile: UIButton!
-    @IBOutlet weak var favTile: UIButton!
-    @IBOutlet weak var settingsTile: UIButton!
-    
+    var labels = ["People", "Categories", "Favorites", "Settings", "Mood", "Random"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,30 +67,6 @@ class ViewController: UIViewController {
         dict["Beyonce"] = true
         
         navigationController?.navigationBar.barTintColor = UIColor.clear
-        
-
-        //loadDatabse()
-
-
-        catTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        catTile.titleLabel?.minimumScaleFactor = 0.5
-        catTile.titleLabel?.numberOfLines = 1
-        catTile.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        peopleTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        peopleTile.titleLabel?.minimumScaleFactor = 0.5
-        peopleTile.titleLabel?.numberOfLines = 1
-        peopleTile.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        favTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        favTile.titleLabel?.minimumScaleFactor = 0.5
-        favTile.titleLabel?.numberOfLines = 1
-        favTile.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        settingsTile.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-        settingsTile.titleLabel?.minimumScaleFactor = 0.5
-        settingsTile.titleLabel?.numberOfLines = 1
-        settingsTile.titleLabel?.adjustsFontSizeToFitWidth = true
 
     }
     
@@ -161,31 +131,25 @@ class ViewController: UIViewController {
 //        }
     }
     
-    
-//    @IBAction func clickedShareButton(_ sender: Any) {
-//        let activityVC = UIActivityViewController(activityItems: [self.randQuote.text! + " " + self.randPerson.text!], applicationActivities: nil)
-//        activityVC.popoverPresentationController?.sourceView = self.view
-//        
-//        self.present(activityVC, animated: true, completion: nil)
-//    }
-    
     func initIAP(){
         InAppPurchases.shared.getProducts()
         //InAppPurchases.shared.restorePurchases()
     }
     
-    func loadDatabse(){
-        ref = Database.database().reference()
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return labels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MainMenuViewCell
         
-        ref.child("Unlocked").observe(.value, with: { (snapshot) in
-            
-            print(snapshot)
-            
-        }, withCancel: { (error) in
-            
-            print(error.localizedDescription)
-            
-        })
+        cell.cellLabel.text = labels[indexPath.item]
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
     }
     
 }
