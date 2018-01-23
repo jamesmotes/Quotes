@@ -9,15 +9,14 @@
 import UIKit
 import StoreKit
 
+var processing : Bool = Bool()
+var purchased : Bool = Bool()
 
 
 class InAppPurchases: NSObject{
     
     private override init() {}
     static let shared = InAppPurchases()
-    
-    var processing : Bool = Bool()
-    var purchased : Bool = Bool()
     
     var products = [SKProduct]()
     let paymentQueue = SKPaymentQueue.default()
@@ -36,8 +35,6 @@ class InAppPurchases: NSObject{
         guard let purchaseItem = products.filter({ $0.productIdentifier == product}).first else {processing = false; return}
         let payment = SKPayment(product: purchaseItem)
         paymentQueue.add(payment)
-        purchased = true
-        processing = false;
     }
     
     func restorePurchases() {
@@ -61,8 +58,21 @@ extension InAppPurchases: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             switch transaction.transactionState {
-            case .purchasing: break
+            case .purchasing: print("Purchasing")
+            case .purchased:
+                purchased = true
+                processing = false
+                queue.finishTransaction(transaction)
+            case .restored:
+                purchased = true
+                processing = false
+                queue.finishTransaction(transaction)
+            case .failed:
+                purchased = false
+                processing = false
+                queue.finishTransaction(transaction)
             default: queue.finishTransaction(transaction)
+                processing = false
             }
         }
     }

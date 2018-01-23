@@ -112,17 +112,23 @@ class ViewPersonQuotes: UIViewController {
     @IBAction func unlockNewPerson(_ sender: Any) {
         //TODO add error catching for when user cancels purchase request
         
-        InAppPurchases.shared.processing = true
+        print(locked[array[person]]!)
         InAppPurchases.shared.purchase(product: locked[array[person]]!)
-        
-        while(InAppPurchases.shared.processing == true){}
-        if(InAppPurchases.shared.purchased == true){
-            dict[locked[array[person]]!] = true
-            print("here")
-            let defaults = UserDefaults.standard
-            defaults.set(dict, forKey: "unlockedPeople")
-        }
+        print(array[person])
+        dict[array[person]] = true
+        print("here")
+        let defaults = UserDefaults.standard
+        defaults.set(dict, forKey: "unlockedPeople")
         viewDidLoad()
+        
+        /*processing = true
+        
+        while(processing == true){
+            sleep(1)
+            print(processing)
+        }
+        if(purchased == true){
+        }*/
         
     }
 
