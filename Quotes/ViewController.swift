@@ -34,12 +34,9 @@ var person : Int = Int()
 var cat : Int = Int()
 var mood : Int = Int()
 
-
-
 var ref : DatabaseReference!
 
-class ViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate {
-
+class ViewController: UIViewController {
     
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
@@ -53,10 +50,8 @@ class ViewController: UIViewController,  UICollectionViewDataSource, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //randQuote.adjustsFontSizeToFitWidth = true
         refresh()
         initIAP()
-        
         
         dict["Gabriel Wang"] = false
         dict["Gary Vaynerchuck"] = true
@@ -76,7 +71,6 @@ class ViewController: UIViewController,  UICollectionViewDataSource, UICollectio
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func showMenu(_ sender: Any) {
@@ -120,60 +114,9 @@ class ViewController: UIViewController,  UICollectionViewDataSource, UICollectio
         
     }
     
-    @IBAction func clickedFavoriteButton(_ sender: Any) {
-//        if(favButton.tintColor == UIColor.orange){
-//            favorites.removeValue(forKey: String(describing: randQuote.text!))
-//            favButton.tintColor = UIColor.darkGray
-//        }
-//        else {
-//            favorites[String(describing: randQuote.text!)] = String(describing: randPerson.text!.dropFirst(2))
-//            favButton.tintColor = UIColor.orange
-//        }
-    }
-    
     func initIAP(){
         InAppPurchases.shared.getProducts()
         //InAppPurchases.shared.restorePurchases()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return labels.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MainMenuViewCell
-        
-        cell.cellLabel.text = labels[indexPath.item]
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-        switch indexPath.item {
-        case 0:
-            //people
-            performSegue(withIdentifier: "menuToPeople", sender: nil)
-        case 1:
-            //categories
-            performSegue(withIdentifier: "menuToCategories", sender: nil)
-        case 2:
-            //moods
-            performSegue(withIdentifier: "menuToMoods", sender: nil)
-        case 3:
-            //favorites
-            performSegue(withIdentifier: "menuToFavorites", sender: nil)
-        case 4:
-            //random
-            performSegue(withIdentifier: "menuToRandom", sender: nil)
-        case 5:
-            //settings
-            performSegue(withIdentifier: "menuToSettings", sender: nil)
-        default:
-            print("not a functional button")
-        }
-        
-        
     }
     
 }
