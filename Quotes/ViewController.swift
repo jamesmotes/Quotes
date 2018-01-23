@@ -49,7 +49,7 @@ class ViewController: UIViewController,  UICollectionViewDataSource, UICollectio
     
     @IBOutlet weak var navItem: UINavigationItem!
     
-    var labels = ["People", "Categories", "Favorites", "Settings", "Mood", "Random"]
+    var labels = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,6 +150,30 @@ class ViewController: UIViewController,  UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
+        switch indexPath.item {
+        case 0:
+            //people
+            performSegue(withIdentifier: "menuToPeople", sender: nil)
+        case 1:
+            //categories
+            performSegue(withIdentifier: "menuToCategories", sender: nil)
+        case 2:
+            //moods
+            performSegue(withIdentifier: "menuToMoods", sender: nil)
+        case 3:
+            //favorites
+            performSegue(withIdentifier: "menuToFavorites", sender: nil)
+        case 4:
+            //random
+            performSegue(withIdentifier: "menuToRandom", sender: nil)
+        case 5:
+            //settings
+            performSegue(withIdentifier: "menuToSettings", sender: nil)
+        default:
+            print("not a functional button")
+        }
+        
+        
     }
     
 }
