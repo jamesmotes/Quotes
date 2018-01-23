@@ -19,7 +19,10 @@ class ViewPersonQuotes: UIViewController {
     
     @IBOutlet weak var favButton: UIBarButtonItem!
     
-    @IBOutlet weak var backgroundView: UIImageView!
+    @IBOutlet var swipeRight: UISwipeGestureRecognizer!
+    @IBOutlet var swipeLeft: UISwipeGestureRecognizer!
+    @IBOutlet var doubleTap: UITapGestureRecognizer!
+    //@IBOutlet weak var backgroundView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +40,16 @@ class ViewPersonQuotes: UIViewController {
             unlockPerson.isEnabled = true
             unlockPerson.setTitle("Unlock now!", for: UIControlState.normal)
             unlockPerson.isHidden = false
+            quote.textColor = UIColor.white
+            unlockPerson.setTitleColor(UIColor.white, for: UIControlState.normal)
+            swipeLeft.isEnabled = false
+            swipeRight.isEnabled = false
+            doubleTap.isEnabled = false
         }
         
         
         // Do any additional setup after loading the view.
+        
         
         
     }
@@ -70,8 +79,9 @@ class ViewPersonQuotes: UIViewController {
         quote.text = quotes.quotes[it]
         name.text = "- " + array[person]
         
-        let rand = Int(arc4random_uniform(UInt32(backgrounds.count)))
-        backgroundView.image = UIImage(named: backgrounds[rand])!
+        //let rand = Int(arc4random_uniform(UInt32(backgrounds.count)))
+        //backgroundView.image = UIImage(named: backgrounds[rand])!
+        
         
         if favorites.keys.contains(String(describing: quote.text!)) {
             favButton.tintColor = UIColor.orange
@@ -100,12 +110,19 @@ class ViewPersonQuotes: UIViewController {
     }
     
     @IBAction func unlockNewPerson(_ sender: Any) {
-        let ind = 0
-        InAppPurchases.shared.purchase(product: "thomas_jefferson")
-        dict["Thomas Jefferson"] = true
-        let defaults = UserDefaults.standard
-        defaults.set(dict, forKey: "unlockedPeople")
-        refresh()
+        //TODO add error catching for when user cancels purchase request
+        
+        InAppPurchases.shared.processing = true
+        InAppPurchases.shared.purchase(product: locked[array[person]]!)
+        
+        while(InAppPurchases.shared.processing == true){}
+        if(InAppPurchases.shared.purchased == true){
+            dict[locked[array[person]]!] = true
+            print("here")
+            let defaults = UserDefaults.standard
+            defaults.set(dict, forKey: "unlockedPeople")
+        }
+        viewDidLoad()
         
     }
 

@@ -1,31 +1,25 @@
 //
-//  ViewCategoriesQuotes.swift
+//  Random.swift
 //  Quotes
 //
-//  Created by James Motes on 1/5/18.
+//  Created by James Motes on 1/22/18.
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
 import UIKit
 
-class ViewCategoriesQuotes: UIViewController {
+class ViewRandom: UIViewController {
 
-    var quotes = CategoryQuotes(i: -1)
-    var it = 0
+    var randomQuotes : [String: String] = [:]
     
+    @IBOutlet weak var favButton: UIBarButtonItem!
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var name: UILabel!
     
-    //@IBOutlet weak var backgroundView: UIImageView!
-    
-    @IBOutlet weak var favButton: UIBarButtonItem!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor.clear
-        quotes = CategoryQuotes(i: cat)
-        quote.adjustsFontSizeToFitWidth = true
+
+        randomQuotes = [:]
         refresh()
         
         // Do any additional setup after loading the view.
@@ -37,27 +31,21 @@ class ViewCategoriesQuotes: UIViewController {
     }
     
     @IBAction func swipeRight(_ sender: Any) {
-        if(it == 0){
-            it = (quotes.quotes.count) - 1
-        }
-        else {
-            it = (it-1)
-        }
         refresh()
     }
     
     @IBAction func swipeLeft(_ sender: Any) {
-        it = (it+1)%(quotes.quotes.count)
         refresh()
     }
     
     func refresh(){
-        quote.text = [String](quotes.quotes.values)[it]
-        name.text = "- " + [String](quotes.quotes.keys)[it]
+        let randPerson = Int(arc4random_uniform(UInt32(array.count - 1)))
+        let quotes = PeopleQuotes(i:randPerson)
+        let randQuotes = Int(arc4random_uniform(UInt32(quotes.quotes.count - 1)))
         
-        //let rand = Int(arc4random_uniform(UInt32(backgrounds.count)))
+        quote.text = quotes.quotes[randQuotes]
+        name.text = array[randPerson]
         
-        //backgroundView.image = UIImage(named: backgrounds[rand])!
         
         if favorites.keys.contains(String(describing: quote.text!)) {
             favButton.tintColor = UIColor.orange
@@ -86,8 +74,7 @@ class ViewCategoriesQuotes: UIViewController {
         
         self.present(activityVC, animated: true, completion: nil)
     }
-    
-    
+
     /*
     // MARK: - Navigation
 

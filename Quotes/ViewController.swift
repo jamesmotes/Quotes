@@ -11,9 +11,9 @@ import FirebaseDatabase
 import FirebaseAuth
 
 
-var dict = ["James Motes": true, "Elon Musk": true, "Blake Nelson": true, "Thomas Jefferson": false, "DJ Khaled": true]
-var array = ["James Motes", "Elon Musk", "Blake Nelson", "Thomas Jefferson", "DJ Khaled"]
-
+var dict = ["James Motes": true, "Elon Musk": true, "Blake Nelson": true, "Thomas Jefferson": false, "DJ Khaled": true, "Gary Vaynerchuck": true, "Brandon Carter": true, "Barack Obama": true, "LeBron James": true, "J.K. Rowling": true, "Beyonce": true, "Gabriel Wang": false]
+var array = ["James Motes", "Elon Musk", "Blake Nelson", "Thomas Jefferson", "DJ Khaled", "Gary Vaynerchuck", "Brandon Carter", "Barack Obama", "LeBron James", "J.K. Rowling", "Beyonce", "Gabriel Wang"]
+var locked = ["Thomas Jefferson": "thomas_jefferson", "Gabriel Wang": "gabriel_wang"]
 
 
 var backgrounds = ["city_stack.jpg",
@@ -46,19 +46,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var navItem: UINavigationItem!
     
-    @IBOutlet weak var settingsButton: UIBarButtonItem!
-    
-    @IBOutlet weak var catTile: UIButton!
-    @IBOutlet weak var peopleTile: UIButton!
-    @IBOutlet weak var favTile: UIButton!
-    @IBOutlet weak var settingsTile: UIButton!
-    
+    var labels = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         refresh()
         initIAP()
+        
+        dict["Gabriel Wang"] = false
+        dict["Gary Vaynerchuck"] = true
+        dict["Brandon Carter"] = true
+        dict["Barack Obama"] = true
+        dict["LeBron James"] = true
+        dict["J. K. Rowling"] = true
+        dict["Beyonce"] = true
+        
         navigationController?.navigationBar.barTintColor = UIColor.clear
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

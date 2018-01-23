@@ -12,7 +12,8 @@ class PeopleQuotes {
         case 0 :
             //James Motes
             quotes = [ "Don't check boxes.",
-                        "If you don't know why you're doing something, do something else."
+                        "If you don't know why you're doing something, do something else.",
+                        "There are more people alive today than all of history combined. The future is anything but set."
                 ]
         case 1 :
             //Elon Musk
@@ -86,7 +87,7 @@ class PeopleQuotes {
                 "One travels more usefully when alone, because he reflects more.",
                 "How much pain they have cost us, the evils which have never happened."
             ]
-        case 4:
+        case 4 :
             //DJ Khaled
             quotes = ["They kick you when you’re down, but they wanna kick it when you’re up.",
                       "You can never run out of keys.",
@@ -112,7 +113,120 @@ class PeopleQuotes {
                       "You smart! You loyal! You’re a genius!",
                       "If it takes a day, a year, or 20 years, we’re going to win. I haven’t taken a loss because everything I’ve done has been a working process to win."
             ]
-        default:
+        case 5 :
+            //Gary Vaynerchuck
+            quotes = ["There's plenty of time. Get shit done.",
+                      "Skills are cheap. Passion is priceless.",
+                      "Stop focusing on dumb shit. Don’t be afraid to break things. Don’t be romantic. Don’t take the time to breathe. Don’t aim for perfect. And whatever you do, keep moving. Reread this a few times . . .",
+                      "Look yourself in the mirror and ask yourself: What do I want to do every day for the rest of my life? DO THAT.",
+                      "Complaining is a zero return investment.",
+                      "I'm grinding when you're sleeping.",
+                      "I'm not worried about getting boo'd in the third quarter. Talk to me after the game.",
+                      "The reason you have no time to grind is because you waste it on dumb shit.",
+                      "Doing it is the only option.",
+                      "If you're not dreaming big for yourself, who's going to do it for you?",
+                      "If you're living for weekends and vacations your shit is broken."
+                        ]
+        case 6 :
+            //Brandon Carter
+            quotes = ["This is planet earth. Results are the only thing that matters on planet earth.",
+                      "You got to take responsibility for your own success. Regardless of your circumstances.",
+                      "Crying only works for babies.",
+                      "That's how you're going to be judged. On what you produce, or what you don't.",
+                      "Nobody is going to have pity on you.",
+                      "Don't worry about what he has. What do you have? What are you going to do to be successful? What are you going to do to accomplish your goals?",
+                      "Some people may have some advantages that you don't have. You may have to work harder than them... So work harder than them!",
+                      "With every excuse you make, you're putting your weakness on display for the whole world to see.",
+                      "I believe you're the type of person thats going to go after your goals no matter what. No matter what obstacles are in your way, you're going to go after that shit.",
+                      "Today I want you to promise yourself that you're done making excuses forever. You're done. You're going to set goals and you're going to accomplish them no matter what stands in your way.",
+                      "No matter how many times you fall down, you're going to get back up. You're going to keep going. You're going to keep pushing.",
+                      "You have to have extreme actions to have extreme results.",
+                      "Chill don't pay the bills."
+            ]
+        case 7 :
+            //Barack Obama
+            quotes = ["If you're walking down the right path and you're willing to keep walking, eventually you'll make progress.",
+                      "Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek.",
+                      "The future rewards those who press on. I don't have time to feel sorry for myself. I don't have time to complain. I'm going to press on.",
+                      "Yes we can.",
+                      "Focusing your life solely on making a buck shows a poverty of ambition. It asks too little of yourself, and it will leave you unfulfilled.",
+                      "You can't let your failures define you. You have to let your failures teach you.",
+                      "Where you are right now doesn't have to determine where you'll end up.",
+                      "Change is never easy but always possible.",
+                      "While we breathe, we will hope.",
+                      "We don't ask you to believe in our ability to bring change, rather, we ask you to believe in yours.",
+                      "There is no excuse for not trying.",
+                      "Nothing in life that's worth anything is easy.",
+                      "Progress will come in fits and starts. It's not always a straight line. It's not always a smooth path.",
+                      "The cynics may be the loudest voices- but I promise you, they will accomplish the least.",
+                      "One voice can change a room.",
+                      "We need to internalize this idea of excellence. Not many folks spend a lot of time trying to be excellent.",
+                      "If you work hard and meet your responsibilities, you can get ahead, no matter where you come from, what you look like or who you love.",
+                      "Making your mark on the world is hard. If it were easy, everybody would do it. But it's not. It takes patience, it takes commitment and it comes with plenty of failure along the way.",
+                      "The best way to not feel hopeless is to get up and do something.",
+                      "We did not come here to fear the future. We came here to shape it.",
+                      "If you run you stand a chance of losing, but if you don't run you've already lost.",
+                      "Our destiny is not written for us, but by us."
+                    ]
+        case 8 :
+            //LeBron James
+            quotes = ["Don’t be afraid of failure. This is the way to succeed.",
+                      "I’m going to use all my tools, my god-given ability, and make the best life I can with it.",
+                      "Dream as if you’ll live forever. Live as if you’ll die today.",
+                      "You can’t be afraid to fail. It’s the only way you succeed. You’re not gonna succeed all the time and I know that.",
+                      "You can’t be afraid to fail. It’s the only way you succeed. You’re not gonna succeed all the time and I know that.",
+                      "I always say, decisions I make, I live with them. There’s always ways you can correct them or ways you can do them better. At the end of the day, I live with them.",
+                      "When you have that gut feeling, you have to go with don’t go back on it.",
+                      "I think the reason why I am who I am today is because I went through those tough times when I was younger.",
+                      "I treated it like every day was my last day with a basketball.",
+                      "All your life they will tell you no. Quite firmly and very quickly. And you will tell them yes.",
+                      "I like criticism. It makes you strong.",
+                      "Ask me to play, I’ll play. Ask me to shoot, I’ll shoot. Ask me to pass, I’ll pass. Ask me to steal, block out, sacrifice, lead, dominate, anything. But it’s not just what you ask of me. It’s what I ask of myself.",
+                      "I hear my friends and my mom tell me I’m special, but honestly, I still don’t get it.",
+                      "I hear that word pressure all the time. There is a lot of pressure put on me, but I don’t put a lot of pressure on myself. I feel if I play my game, it will take care of itself.",
+                      "Every night on the court I give my all, and if I'm not giving 100 percent, I criticize myself.",
+                      "You know, when I have a bad game, it continues to humble me and know that, you know, you still have work to do and you still have a lot of people to impress."
+                    ]
+        case 9 :
+            //J. K. Rowling
+            quotes = ["It is our choices... that show what we truly are, far more than our abilities.",
+                      "It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all, in which case you have failed by default.",
+                      "Anything's possible if you've got enough nerve.",
+                      "What's coming will come and we'll just have to meet it when it does.",
+                      "It does not do to dwell on dreams and forget to live.",
+                      "As is a tale, so is life: not how long it is, but how good it is, is what matters.",
+                      "The knowledge that you have emerged wiser and stronger from setbacks means that you are, ever after, secure in your ability to survive.",
+                      "We do not need magic to change the world, we carry all the power we need inside ourselves already: we have the power to imagine better.",
+                      "You will never truly know yourself, or the strength of your relationships, until both have been tested by adversity.",
+                      "You will never truly know yourself, or the strength of your relationships, until both have been tested by adversity.",
+                      "It matters not what someone is born, but what they grow to be.",
+                      "You’ve got to work. It’s about structure. It’s about discipline. It’s all these deadly things that your schoolteacher told you you needed… You need it.",
+                      "Luck can only get you so far.",
+                      "Wit beyond measure is a man's greatest treasure.",
+                      "It was strange how your brain could know what your heart refused to accept."
+            ]
+        case 10 :
+            //Beyonce
+            quotes = ["If everything was perfect, you would never learn and you would never grow.",
+                      "Power means happiness; power means hard work and sacrifice.",
+                      "When you love and accept yourself, when you know who really cares about you, and when you learn from your mistakes, then you stop caring about what people who don't know you think.",
+                      "I can never be safe; I always try and go against the grain. As soon as I accomplish one thing, I just set a higher goal. That's how I've gotten to where I am.",
+                      "I've been working nonstop since I was 15. I don't even know how to chill out.",
+                      "I get nervous when I don't get nervous. If I'm nervous I know I'm going to have a good show.",
+                      "I truly believe that women should be financially independent from their men.",
+                      "I always try to be myself. Ever since I was an introverted kid, I’d get on stage and be able to break out of my shell.",
+                      "I use the negativity to fuel the transformation into a better me.",
+                      "I love my job, but it’s more than that: I need it.",
+                      "Strong enough to bear the children. Then get back to business.",
+                      "I don’t like to gamble, but if there’s one thing I’m willing to bet on, it’s myself."
+            ]
+        case 11 :
+            //Connor McGregror
+            quotes = []
+        case 12 :
+            //Gabriel Wng
+            quotes = ["James is always right. Always."]
+        default :
             quotes = []
         }
     }

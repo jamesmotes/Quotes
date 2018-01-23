@@ -59,8 +59,13 @@
 		1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */; };
 		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
 		1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */; };
+<<<<<<< HEAD
 		81155EAD2016C08500849C47 /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155EAC2016C08500849C47 /* MainMenuCell.swift */; };
 		81155EAF2016C12900849C47 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155EAE2016C12900849C47 /* MainMenuViewController.swift */; };
+=======
+		1AE63D3120166200009732CF /* ViewRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE63D3020166200009732CF /* ViewRandom.swift */; };
+		8192BFB320158411004FE2F6 /* MainMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192BFB220158411004FE2F6 /* MainMenuViewCell.swift */; };
+>>>>>>> master
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,9 +123,14 @@
 		1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
+		1AE63D3020166200009732CF /* ViewRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRandom.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		81155EAC2016C08500849C47 /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
 		81155EAE2016C12900849C47 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+=======
+		8192BFB220158411004FE2F6 /* MainMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewCell.swift; sourceTree = "<group>"; };
+>>>>>>> master
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -198,6 +208,7 @@
 		1AACFE901FF2F65E00E6424D /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				1AE63D3020166200009732CF /* ViewRandom.swift */,
 				1A302F8B2010F50900273C7E /* Mood.swift */,
 				1A302F4A20100A7400273C7E /* Backgrounds */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
@@ -210,8 +221,12 @@
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
 				1A302F8D2010F63400273C7E /* MoodQuotes.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
+<<<<<<< HEAD
 				81155EAE2016C12900849C47 /* MainMenuViewController.swift */,
 				81155EAC2016C08500849C47 /* MainMenuCell.swift */,
+=======
+				8192BFB220158411004FE2F6 /* MainMenuViewCell.swift */,
+>>>>>>> master
 				1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */,
 				1AB47C681FFC2C7000F547E4 /* Categories.swift */,
 				1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */,
@@ -433,7 +448,9 @@
 				1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */,
 				1A302F8C2010F50900273C7E /* Mood.swift in Sources */,
 				1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */,
+				1AE63D3120166200009732CF /* ViewRandom.swift in Sources */,
 				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
+				8192BFB320158411004FE2F6 /* MainMenuViewCell.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */,
