@@ -68,9 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-LE-Rwn">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-LE-Rwn">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4wF-vm-lGF">
                                     <size key="itemSize" width="120" height="120"/>
@@ -108,6 +107,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="Fcd-yj-Ubp"/>
+                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KkW-0s-SOK"/>
+                            <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" id="LJy-Gn-GYh"/>
+                            <constraint firstAttribute="trailing" secondItem="aYZ-LE-Rwn" secondAttribute="trailing" id="NoE-hK-85j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
@@ -116,6 +121,12 @@
                     <connections>
                         <outlet property="collectionView" destination="aYZ-LE-Rwn" id="6R3-Rg-lGc"/>
                         <outlet property="navItem" destination="hJR-HW-Swp" id="IfZ-NW-GIh"/>
+                        <segue destination="mmL-oP-FBd" kind="show" identifier="menuToFavorites" id="pW9-PM-IZ7"/>
+                        <segue destination="cOk-Ri-PWL" kind="show" identifier="menuToMood" id="bdT-qa-fBC"/>
+                        <segue destination="LTj-G0-e7s" kind="show" identifier="menuToPeople" id="gIN-rP-K9l"/>
+                        <segue destination="VHq-fN-Dmf" kind="show" identifier="menuToCategories" id="Nfk-2Z-p6R"/>
+                        <segue destination="K9e-4n-HFQ" kind="show" identifier="menuToRandom" id="N4j-eg-UPq"/>
+                        <segue destination="1sl-5y-MR5" kind="show" identifier="menuToSettings" id="cYy-6l-LVd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -146,13 +157,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKH-Rb-6ol">
-                                <rect key="frame" x="30" y="50" width="121" height="26.5"/>
+                                <rect key="frame" x="30" y="94" width="121" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxG-KL-u75">
-                                <rect key="frame" x="310" y="50" width="51" height="31"/>
+                                <rect key="frame" x="310" y="94" width="51" height="31"/>
                                 <connections>
                                     <action selector="saveNotificationState:" destination="1sl-5y-MR5" eventType="valueChanged" id="Tm3-LK-8KO"/>
                                 </connections>
@@ -173,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxG-Bn-Qev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="940"/>
+            <point key="canvasLocation" x="-543" y="940"/>
         </scene>
         <!--People-->
         <scene sceneID="Ag9-DP-Wtd">
@@ -227,7 +238,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-pR-4Vf">
-                                <rect key="frame" x="48" y="43" width="279" height="447"/>
+                                <rect key="frame" x="16" y="87" width="343" height="403"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -341,7 +352,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M17-3T-JRx">
-                                <rect key="frame" x="48" y="43" width="279" height="447"/>
+                                <rect key="frame" x="16" y="87" width="343" height="403"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -450,7 +461,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3E-m8-QKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398" y="-556"/>
+            <point key="canvasLocation" x="1521" y="-556"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="Jog-uK-zyI">
@@ -463,14 +474,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fw0-e9-WM9">
                                 <rect key="frame" x="48" y="513" width="279" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kex-OO-cgi">
-                                <rect key="frame" x="48" y="43" width="279" height="447"/>
+                                <rect key="frame" x="48" y="87" width="279" height="403"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-ws-3j3">
@@ -540,7 +551,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1521" y="-556"/>
+            <point key="canvasLocation" x="476" y="-556"/>
         </scene>
         <!--View Random-->
         <scene sceneID="VB7-BU-ta7">
@@ -632,7 +643,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="476" y="1443"/>
+            <point key="canvasLocation" x="476" y="940"/>
         </scene>
     </scenes>
     <resources>
