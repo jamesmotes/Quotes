@@ -18,6 +18,9 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dict["Gabriel Wang"] = false
+        dict["J.K. Rowling"] = true
+        InAppPurchases.shared.getProducts()
 
         collectionView.delegate = self
         collectionView.dataSource = self
