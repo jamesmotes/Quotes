@@ -68,18 +68,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-LE-Rwn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joshua-k-jackson-261210.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-mt-gDA">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4wF-vm-lGF">
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-LE-Rwn">
+                                <rect key="frame" x="0.0" y="145" width="375" height="478"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="0.0" id="4wF-vm-lGF">
                                     <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <inset key="sectionInset" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="iCp-2Z-0Pl" customClass="MainMenuCell" customModule="Quotes" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="120" height="120"/>
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="iCp-2Z-0Pl" customClass="MainMenuCell" customModule="Quotes" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="0.0" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -88,13 +91,15 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-qD-ZhI">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.32761665239726029" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="cellLabel" destination="Hvz-qD-ZhI" id="g9I-KB-epQ"/>
                                         </connections>
@@ -108,10 +113,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="Fcd-yj-Ubp"/>
+                            <constraint firstItem="Q9D-mt-gDA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8yN-CA-Anr"/>
+                            <constraint firstAttribute="bottom" secondItem="Q9D-mt-gDA" secondAttribute="bottom" id="9Yc-J7-p5p"/>
+                            <constraint firstItem="Q9D-mt-gDA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9ny-mq-uj0"/>
+                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="145" id="Fcd-yj-Ubp"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KkW-0s-SOK"/>
-                            <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" id="LJy-Gn-GYh"/>
+                            <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" constant="44" id="LJy-Gn-GYh"/>
                             <constraint firstAttribute="trailing" secondItem="aYZ-LE-Rwn" secondAttribute="trailing" id="NoE-hK-85j"/>
+                            <constraint firstItem="Q9D-mt-gDA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XyO-oK-Bsf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -335,7 +344,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2397.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2398" y="134"/>
         </scene>
         <!--View Categories Quotes-->
         <scene sceneID="YQT-De-DbM">
@@ -551,7 +560,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="476" y="-556"/>
+            <point key="canvasLocation" x="1521" y="-1280"/>
         </scene>
         <!--View Random-->
         <scene sceneID="VB7-BU-ta7">
@@ -647,6 +656,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="joshua-k-jackson-261210.jpg" width="3028" height="4542"/>
         <image name="star" width="28" height="28"/>
     </resources>
 </document>
