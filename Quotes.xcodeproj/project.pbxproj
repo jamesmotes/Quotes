@@ -121,7 +121,6 @@
 		1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
 		1AE63D3020166200009732CF /* ViewRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRandom.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		81155EAC2016C08500849C47 /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
 		81155EAE2016C12900849C47 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
