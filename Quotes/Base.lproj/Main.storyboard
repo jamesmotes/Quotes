@@ -114,7 +114,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="aYZ-LE-Rwn" id="6R3-Rg-lGc"/>
-                        <outlet property="navItem" destination="hJR-HW-Swp" id="bld-Yd-64I"/>
+                        <outlet property="navItem" destination="hJR-HW-Swp" id="sTc-cG-gBj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

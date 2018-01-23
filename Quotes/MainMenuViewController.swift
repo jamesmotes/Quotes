@@ -12,6 +12,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var navItem: UINavigationItem!
+    
     let mainMenu = ["People", "Categories", "Favorites", "Mood", "Random", "Settings"]
     
     override func viewDidLoad() {
