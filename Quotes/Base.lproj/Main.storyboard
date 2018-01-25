@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-LE-Rwn">
-                                <rect key="frame" x="0.0" y="145" width="375" height="478"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="0.0" id="4wF-vm-lGF">
                                     <size key="itemSize" width="120" height="120"/>
@@ -116,11 +116,14 @@
                             <constraint firstItem="Q9D-mt-gDA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8yN-CA-Anr"/>
                             <constraint firstAttribute="bottom" secondItem="Q9D-mt-gDA" secondAttribute="bottom" id="9Yc-J7-p5p"/>
                             <constraint firstItem="Q9D-mt-gDA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9ny-mq-uj0"/>
-                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="145" id="Fcd-yj-Ubp"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KkW-0s-SOK"/>
                             <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" constant="44" id="LJy-Gn-GYh"/>
                             <constraint firstAttribute="trailing" secondItem="aYZ-LE-Rwn" secondAttribute="trailing" id="NoE-hK-85j"/>
+                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T8U-NO-SLh"/>
+                            <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" id="V1h-Qm-zHg"/>
                             <constraint firstItem="Q9D-mt-gDA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XyO-oK-Bsf"/>
+                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="pEd-uN-433"/>
+                            <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yFo-1Z-gBc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -487,7 +490,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kex-OO-cgi">
-                                <rect key="frame" x="48" y="87" width="279" height="403"/>
+                                <rect key="frame" x="16" y="87" width="343" height="403"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -524,14 +527,14 @@
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="kex-OO-cgi" secondAttribute="bottom" constant="133" id="9ll-gK-CUQ"/>
                             <constraint firstItem="kex-OO-cgi" firstAttribute="top" secondItem="PVP-fI-W5y" secondAttribute="top" constant="23" id="FKr-y0-cmF"/>
+                            <constraint firstItem="kex-OO-cgi" firstAttribute="leading" secondItem="PVP-fI-W5y" secondAttribute="leading" constant="16" id="Gio-id-k6n"/>
                             <constraint firstAttribute="trailing" secondItem="hHE-ws-3j3" secondAttribute="trailing" id="LbX-te-zSn"/>
                             <constraint firstItem="Fw0-e9-WM9" firstAttribute="top" secondItem="kex-OO-cgi" secondAttribute="bottom" constant="23" id="PPl-8m-eEc"/>
+                            <constraint firstItem="PVP-fI-W5y" firstAttribute="trailing" secondItem="kex-OO-cgi" secondAttribute="trailing" constant="16" id="TE0-mk-HbD"/>
                             <constraint firstAttribute="bottom" secondItem="hHE-ws-3j3" secondAttribute="bottom" id="dvQ-uB-DSq"/>
                             <constraint firstItem="PVP-fI-W5y" firstAttribute="trailing" secondItem="Fw0-e9-WM9" secondAttribute="trailing" constant="48" id="e3H-xq-cqC"/>
-                            <constraint firstItem="PVP-fI-W5y" firstAttribute="trailing" secondItem="kex-OO-cgi" secondAttribute="trailing" constant="48" id="h5G-39-zYb"/>
                             <constraint firstItem="Fw0-e9-WM9" firstAttribute="leading" secondItem="PVP-fI-W5y" secondAttribute="leading" constant="48" id="ng9-DR-dUW"/>
                             <constraint firstItem="hHE-ws-3j3" firstAttribute="leading" secondItem="mWe-HK-eOv" secondAttribute="leading" id="uLB-KO-JRg"/>
-                            <constraint firstItem="kex-OO-cgi" firstAttribute="leading" secondItem="PVP-fI-W5y" secondAttribute="leading" constant="48" id="w1i-OH-syX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PVP-fI-W5y"/>
                         <connections>
