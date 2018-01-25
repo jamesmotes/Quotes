@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */; };
+		1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FC2019830C00B22EDE /* PurchasePerson.swift */; };
+		1A0999FF2019873600B22EDE /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FE2019873600B22EDE /* IAP.swift */; };
 		1A302F5720100AA600273C7E /* painted_dude.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4B20100AA300273C7E /* painted_dude.jpg */; };
 		1A302F5820100AA600273C7E /* snowy_mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4C20100AA300273C7E /* snowy_mountains.jpg */; };
 		1A302F5920100AA600273C7E /* black_umbrella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4D20100AA400273C7E /* black_umbrella.jpg */; };
@@ -65,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0999FC2019830C00B22EDE /* PurchasePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePerson.swift; sourceTree = "<group>"; };
+		1A0999FE2019873600B22EDE /* IAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
 		1A302F4B20100AA300273C7E /* painted_dude.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = painted_dude.jpg; sourceTree = "<group>"; };
 		1A302F4C20100AA300273C7E /* snowy_mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowy_mountains.jpg; sourceTree = "<group>"; };
 		1A302F4D20100AA400273C7E /* black_umbrella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black_umbrella.jpg; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				1AB47C882001BCBF00F547E4 /* Quotes */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
+				1A0999FE2019873600B22EDE /* IAP.swift */,
+				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
 				1A302F8D2010F63400273C7E /* MoodQuotes.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
@@ -427,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0999FF2019873600B22EDE /* IAP.swift in Sources */,
 				81155EAF2016C12900849C47 /* MainMenuViewController.swift in Sources */,
 				1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */,
 				1AB47C671FFC2C3100F547E4 /* People.swift in Sources */,
@@ -442,6 +449,7 @@
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
+				1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */,
 				1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */,
 				81155EAD2016C08500849C47 /* MainMenuCell.swift in Sources */,
 			);

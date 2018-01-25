@@ -9,7 +9,7 @@
 import Foundation
 
 
-let moods = ["Happy", "Motivational","Sad"]
+let moods = ["Happy", "Motivational", "Sad", "Hungry"]
 
 
 class MoodQuotes {
@@ -25,9 +25,10 @@ class MoodQuotes {
         case 2 :
             //sad
             quotes = [:]
-        /*case 3 :
+        case 3 :
+            //hungry
             quotes = [:]
-        case 4 :
+        /*case 4 :
             quotes = [:]
         case 5 :
             quotes = [:]

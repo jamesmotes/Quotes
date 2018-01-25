@@ -14,6 +14,8 @@ class People: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dict["Gabriel Wang"] = false
 
         navigationController?.navigationBar.barTintColor = UIColor.clear
         

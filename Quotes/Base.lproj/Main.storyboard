@@ -47,11 +47,18 @@
         <!--Navigation Controller-->
         <scene sceneID="vxo-mH-1PK">
             <objects>
-                <navigationController id="uuL-hm-U7M" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nye-zK-rqV">
+                <navigationController autoresizesArchivedViewToFullSize="NO" id="uuL-hm-U7M" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="nye-zK-rqV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a2r-wk-ZPZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WLr-tY-1OZ"/>
                     </connections>
@@ -69,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joshua-k-jackson-261210.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-mt-gDA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-LE-Rwn">
                                 <rect key="frame" x="0.0" y="96" width="375" height="571"/>
@@ -111,17 +118,17 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q9D-mt-gDA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8yN-CA-Anr"/>
                             <constraint firstAttribute="bottom" secondItem="Q9D-mt-gDA" secondAttribute="bottom" id="9Yc-J7-p5p"/>
-                            <constraint firstItem="Q9D-mt-gDA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9ny-mq-uj0"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KkW-0s-SOK"/>
-                            <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" constant="44" id="LJy-Gn-GYh"/>
                             <constraint firstAttribute="trailing" secondItem="aYZ-LE-Rwn" secondAttribute="trailing" id="NoE-hK-85j"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T8U-NO-SLh"/>
                             <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" id="V1h-Qm-zHg"/>
                             <constraint firstItem="Q9D-mt-gDA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XyO-oK-Bsf"/>
+                            <constraint firstItem="Q9D-mt-gDA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YTD-iy-sW2"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="pEd-uN-433"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yFo-1Z-gBc"/>
                         </constraints>

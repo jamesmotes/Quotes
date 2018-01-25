@@ -15,6 +15,8 @@ var purchased : Bool = Bool()
 
 class InAppPurchases: NSObject{
     
+    var delegate = ViewPersonQuotes.self
+    
     private override init() {}
     static let shared = InAppPurchases()
     
@@ -31,8 +33,7 @@ class InAppPurchases: NSObject{
     }
     
     func purchase(product: String){
-        purchased = false
-        guard let purchaseItem = products.filter({ $0.productIdentifier == product}).first else {processing = false; return}
+        guard let purchaseItem = products.filter({ $0.productIdentifier == product}).first else {return}
         let payment = SKPayment(product: purchaseItem)
         paymentQueue.add(payment)
     }
@@ -76,6 +77,7 @@ extension InAppPurchases: SKPaymentTransactionObserver {
             }
         }
     }
+
 }
 
 extension SKPaymentTransactionState {

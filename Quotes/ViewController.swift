@@ -12,7 +12,7 @@ import FirebaseAuth
 
 
 var dict = ["James Motes": true, "Elon Musk": true, "Blake Nelson": true, "Thomas Jefferson": false, "DJ Khaled": true, "Gary Vaynerchuck": true, "Brandon Carter": true, "Barack Obama": true, "LeBron James": true, "J.K. Rowling": true, "Beyonce": true, "Gabriel Wang": false]
-var array = ["James Motes", "Elon Musk", "Blake Nelson", "Thomas Jefferson", "DJ Khaled", "Gary Vaynerchuck", "Brandon Carter", "Barack Obama", "LeBron James", "J.K. Rowling", "Beyonce", "Gabriel Wang"]
+var array = ["James Motes", "Elon Musk", "Blake Nelson", "Thomas Jefferson", "DJ Khaled", "Gary Vaynerchuck", "Brandon Carter", "Barack Obama", "LeBron James", "J.K. Rowling", "Beyonce", "Conner McGregor", "Gabriel Wang"]
 var locked = ["Thomas Jefferson": "thomas_jefferson", "Gabriel Wang": "gabriel_wang"]
 
 

@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+var didPurchase = false
+
 class ViewPersonQuotes: UIViewController {
 
     var quotes = PeopleQuotes(i: -1)
@@ -24,6 +27,10 @@ class ViewPersonQuotes: UIViewController {
     @IBOutlet var doubleTap: UITapGestureRecognizer!
     //@IBOutlet weak var backgroundView: UIImageView!
     
+    
+    
+    var purchasesController: PurchasesControllerProtocol = PurchasesController(withProductIDs: ["thomas_jefferson", "gabriel_wang"])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,10 +38,13 @@ class ViewPersonQuotes: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.clear
         if(dict[array[person]] == true) {
             quotes = PeopleQuotes(i: person)
-            unlockPerson.isHidden = true
+            //unlockPerson.isHidden = true
             refresh()
         }
         else {
+            NotificationCenter.default.addObserver(self, selector: #selector(self.personPurchased),name:NSNotification.Name(rawValue: "purchasedPerson"), object: nil)
+
+            //performSegue(withIdentifier: "purchasePerson", sender: nil)
             quote.text = "It looks like you have not unlocked " + array[person] + " :("
             name.text = ""
             unlockPerson.isEnabled = true
@@ -45,6 +55,7 @@ class ViewPersonQuotes: UIViewController {
             swipeLeft.isEnabled = false
             swipeRight.isEnabled = false
             doubleTap.isEnabled = false
+ 
         }
         
         
@@ -110,9 +121,25 @@ class ViewPersonQuotes: UIViewController {
     }
     
     @IBAction func unlockNewPerson(_ sender: Any) {
+        
+        didPurchase = false
+        
+        purchasesController.buyItem(withProductID: locked[array[person]]!)
+        purchasesController.onPurchase = {
+            (itemID) in
+            dict[array[person]] = true
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "purchasedPerson"), object: nil)
+        }
+        purchasesController.onRestore = {
+            (itemID) in
+            dict[array[person]] = true
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "purchasedPerson"), object: nil)
+        }
+        
+        
         //TODO add error catching for when user cancels purchase request
         
-        print(locked[array[person]]!)
+        /*print(locked[array[person]]!)
         InAppPurchases.shared.purchase(product: locked[array[person]]!)
         print(array[person])
         dict[array[person]] = true
@@ -120,7 +147,7 @@ class ViewPersonQuotes: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(dict, forKey: "unlockedPeople")
         viewDidLoad()
-        
+        */
         /*processing = true
         
         while(processing == true){
@@ -130,6 +157,12 @@ class ViewPersonQuotes: UIViewController {
         if(purchased == true){
         }*/
         
+    }
+    
+    @objc func personPurchased(){
+        quotes = PeopleQuotes(i: person)
+        refresh()
+        unlockPerson.isHidden = true
     }
 
     /*
@@ -141,5 +174,6 @@ class ViewPersonQuotes: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
