@@ -53,7 +53,7 @@ class Mood: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         mood = indexPath.row
-        performSegue(withIdentifier: "showViewPersonQuotes", sender: nil)
+        performSegue(withIdentifier: "showMoodQuotes", sender: nil)
     }
     
 

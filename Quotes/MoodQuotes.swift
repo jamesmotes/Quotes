@@ -18,7 +18,7 @@ class MoodQuotes {
         switch i {
         case 0 :
             //happy
-            quotes = [:]
+            quotes = ["It takes more muscles to frown than smile":"Bob"]
         case 1 :
             //motivational
             quotes = [:]

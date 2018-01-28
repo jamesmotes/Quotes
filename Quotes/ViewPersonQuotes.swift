@@ -164,7 +164,11 @@ class ViewPersonQuotes: UIViewController {
         refresh()
         unlockPerson.isHidden = true
     }
+    
 
+    @IBAction func doubleTapped(_ sender: Any) {
+        print("double tapped")
+    }
     /*
     // MARK: - Navigation
 

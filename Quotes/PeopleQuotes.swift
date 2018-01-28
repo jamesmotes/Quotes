@@ -222,12 +222,76 @@ class PeopleQuotes {
             ]
         case 11 :
             //Connor McGregror
-            quotes = []
+            quotes = ["Doubt is only removed by action. If you’re not working then that’s where doubt comes in.",
+                      "There’s no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings.",
+                      "You could be anyone if you put in the time. You will reach the top, and that’s that. I am not talented, I am obsessed.",
+                      "I have never encountered a winner that held hate towards something.",
+                      "It’s not really that much big of a deal – you brush it off and you come back. Defeat is the secret ingredient to success.",
+                      "I’m just going to keep doing what I’m doing. Keep proving people wrong and proving myself right.",
+                      "At the end of the day, you’ve gotta feel some way. So why not feel unbeatable? Why not feel untouchable?",
+                      "I keep having vivid dreams of success. Then it’s time to sleep.",
+                      "Failure is not an option for me. Success is all I envision.",
+                      "Excellence is not a skill. Excellence is an attitude.",
+                      "I stay ready so I don’t have to get ready.",
+                      "All that matters is how you see yourself.",
+                      "Do I hate my opponents? How can I hate someone who has the same dreams as me?",
+                      "One king gets old, then a young gorilla comes up and kills him, and takes everything he owns.",
+                      "Approach everything with an open mind, with a learning mind. You will never stop learning as long as you keep the mind-set that everything works, because everything does work.",
+                      "There’s a time and a place for every single move. If you work on it enough, it will work.",
+                      "Be grateful with everything you have and you will be successful in everything you do.",
+                      "My success isn’t a result of arrogance. It’s a result of belief.",
+                      "Look out for those who look out for you. Loyalty is everything.",
+                      "There’s people that focus on the game and forget about the art. There’s that specific individual that can do both.",
+                      "You can’t fear success and I think a lot of people do. I think a lot of people fear the really high heights. But I am not one of those people… I’m not like that. I’m going for it.",
+                      "We’re not just here to take part. We’re here to take over.",
+                      "Winner focus on winning. Losers focus on winners.",
+                      "Smart work pays best. Trust it.",
+                      "What defines us is how well we rise after falling.",
+                      "Always look to learn. Learning something new is a great feeling. The feeling of progress.",
+                      "I’m going to the stars and then past them.",
+                      "I am cocky in prediction. I am confident in preparation. But I am always humble in victory or defeat.",
+                      "When I say something is going to happen, it’s going to happen.",
+                      "Nothing good ever comes from worrying or sitting there feeling sorry for yourself… keep positive and keep pushing on and things will turn good.",
+                      "The more you seek the uncomfortable, the more you will become comfortable."
+                    ]
         case 12 :
-            //Gabriel Wng
+            //Gabriel Wang
             quotes = ["James is always right. Always."]
+        case 13 :
+            //Grant Cardone
+            quotes = ["Successful people never blame others for their performance.",
+                      "Success tends to spend the most time with those that pay it the most attention.",
+                      "I never trusted my talent, so I outworked everyone.",
+                      "When you can handle fear, you can handle success.",
+                      "I want a million dollars in my happy account and a million dollars in my banck account",
+                      "When distracted by events outside your control recommit to those things which you can control.",
+                      "A little attention with massive action goes a long way",
+                      "As long as you are alive, you will either live to accomplish your own goals and dreams or be used as a resource to accomplish someone else's",
+                      "Whatever you think it’s going to take multiply times 10.",
+                      "Successful people show up early and stay late.",
+                      "If you want to be in the 1% it’s simple, don’t do what the 99% do.",
+                      "A quitter is anyone that settles.",
+                      "You will never create a powerful, solvent, prosperous, and abundant economy with an attitude of arrogance.",
+                      "If you don't know why, you will never know how.",
+                      "Tough times never last, but tough people do.",
+                      "Self confidence is the only outfit you can't buy. You must develop it.",
+                      "Do what you are scared to do and watch your confidence grow."
+                    ]
         default :
-            quotes = []
+            //Unnamed
+            quotes = ["Rome was not built in a day, but they laid bricks every hour.",
+                      "I can accept failure. Everyone fails at something. But I can’t accept not trying.",
+                      "If I quit now, I will soon be back to where I started. And when I started, I was desperately wishing to be where I am now.",
+                      "A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty.",
+                      "Make sure your worst enemy doesn't live between your two ears.",
+                      "You are stronger than your challenges and your challenges are making you stronger.",
+                      "Learn to enjoy every minute of your life. Be happy now. Don't wait for something outside of yourself to make you happy in the future.",
+                      "Most people quit because they look how far they have to go, not how far they have come. (Remember, don't focus on what you're not, but what you still are and have accomplished.)",
+                      "A ship in harbor is safe — but that is not what ships are built for.",
+                      "What would life be if we had no courage to attempt anything.",
+                      
+            
+            ]
         }
     }
 }

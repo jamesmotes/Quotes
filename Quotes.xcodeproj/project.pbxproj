@@ -10,6 +10,7 @@
 		111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */; };
 		1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FC2019830C00B22EDE /* PurchasePerson.swift */; };
 		1A0999FF2019873600B22EDE /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FE2019873600B22EDE /* IAP.swift */; };
+		1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */; };
 		1A302F5720100AA600273C7E /* painted_dude.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4B20100AA300273C7E /* painted_dude.jpg */; };
 		1A302F5820100AA600273C7E /* snowy_mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4C20100AA300273C7E /* snowy_mountains.jpg */; };
 		1A302F5920100AA600273C7E /* black_umbrella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4D20100AA400273C7E /* black_umbrella.jpg */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		1A0999FC2019830C00B22EDE /* PurchasePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePerson.swift; sourceTree = "<group>"; };
 		1A0999FE2019873600B22EDE /* IAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
+		1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoodQuotes.swift; sourceTree = "<group>"; };
 		1A302F4B20100AA300273C7E /* painted_dude.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = painted_dude.jpg; sourceTree = "<group>"; };
 		1A302F4C20100AA300273C7E /* snowy_mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowy_mountains.jpg; sourceTree = "<group>"; };
 		1A302F4D20100AA400273C7E /* black_umbrella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black_umbrella.jpg; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				81155EAE2016C12900849C47 /* MainMenuViewController.swift */,
 				81155EAC2016C08500849C47 /* MainMenuCell.swift */,
 				1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */,
+				1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */,
 				1AB47C681FFC2C7000F547E4 /* Categories.swift */,
 				1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */,
 				1AB47C862001A4DA00F547E4 /* Images.xcassets */,
@@ -439,6 +442,7 @@
 				1AB47C671FFC2C3100F547E4 /* People.swift in Sources */,
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
+				1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */,
 				1AB47C892001BCBF00F547E4 /* Quotes in Sources */,
 				1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */,
 				1A302F8C2010F50900273C7E /* Mood.swift in Sources */,

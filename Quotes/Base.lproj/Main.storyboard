@@ -258,11 +258,12 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-pR-4Vf">
                                 <rect key="frame" x="16" y="87" width="343" height="403"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gm0-4T-c0M" appends="YES" id="QmI-iN-ndn"/>
+                                    <outletCollection property="gestureRecognizers" destination="gm0-4T-c0M" appends="YES" id="Gjo-4W-Qge"/>
                                 </connections>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-1G-TVs">
@@ -322,13 +323,13 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="3jK-KB-Wsz" appends="YES" id="5cr-1W-kjc"/>
                             <outletCollection property="gestureRecognizers" destination="nac-6o-niB" appends="YES" id="gZc-zL-OcX"/>
+                            <outletCollection property="gestureRecognizers" destination="gm0-4T-c0M" appends="YES" id="mgT-aN-OMt"/>
                         </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GPy-LA-adT"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="doubleTap" destination="gm0-4T-c0M" id="dFc-OT-gCb"/>
                         <outlet property="favButton" destination="XkD-fx-fSS" id="LPw-bb-lsV"/>
                         <outlet property="name" destination="RYd-Pd-vL8" id="nNS-gC-OCD"/>
                         <outlet property="quote" destination="izG-pR-4Vf" id="ofe-tA-2N2"/>
@@ -350,7 +351,7 @@
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="gm0-4T-c0M">
                     <connections>
-                        <action selector="clickedFavButton:" destination="kPW-7B-pGr" id="7ag-Vr-ahQ"/>
+                        <action selector="doubleTapped:" destination="kPW-7B-pGr" id="ZXk-OA-zfV"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -372,6 +373,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M17-3T-JRx">
                                 <rect key="frame" x="16" y="87" width="343" height="403"/>
+                                <gestureRecognizers/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -382,6 +384,9 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fXg-Hm-YkE" appends="YES" id="jjp-DG-3JT"/>
+                                </connections>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-nc-D8f">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -427,6 +432,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="637-1C-8GP" appends="YES" id="9oa-ZM-5ZS"/>
                             <outletCollection property="gestureRecognizers" destination="5O3-5h-oJd" appends="YES" id="k2E-FV-hSl"/>
+                            <outletCollection property="gestureRecognizers" destination="fXg-Hm-YkE" appends="YES" id="ArA-fJ-R17"/>
                         </connections>
                     </view>
                     <toolbarItems/>
@@ -449,6 +455,11 @@
                         <action selector="swipeLeft:" destination="nxG-yj-rOt" id="QnT-ta-ftD"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="fXg-Hm-YkE">
+                    <connections>
+                        <action selector="clickedFavButton:" destination="nxG-yj-rOt" id="pgE-q4-s0n"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2399" y="940"/>
         </scene>
@@ -477,6 +488,9 @@
                             <outlet property="delegate" destination="cOk-Ri-PWL" id="0Yh-bf-yC5"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yVl-FT-H99" kind="show" identifier="showMoodQuotes" id="IhO-fd-yFu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3E-m8-QKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -663,6 +677,107 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="476" y="940"/>
+        </scene>
+        <!--View Mood Quotes-->
+        <scene sceneID="jFq-Lk-QzW">
+            <objects>
+                <viewController id="yVl-FT-H99" customClass="ViewMoodQuotes" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBD-iT-emu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-AQ-49x">
+                                <rect key="frame" x="48" y="513" width="279" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vL-Tp-Qc2">
+                                <rect key="frame" x="16" y="87" width="343" height="403"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HVi-LO-KG1" appends="YES" id="fqB-Dg-k4I"/>
+                                </connections>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-LA-3Zf">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem systemItem="organize" id="Tbw-l1-osi">
+                                        <connections>
+                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="Uu1-0x-4u4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IyC-bK-e8A"/>
+                                    <barButtonItem systemItem="action" id="6hB-Cl-DcM">
+                                        <connections>
+                                            <action selector="clickedShareButton:" destination="yVl-FT-H99" id="y9z-AQ-p8C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cT7-Hq-7vZ"/>
+                                    <barButtonItem title="Fav" image="star" width="62" id="i4x-WF-AwP">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="clickedFavButton:" destination="yVl-FT-H99" id="l6e-Ut-GMf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rU4-LA-3Zf" secondAttribute="bottom" id="3HG-29-Frp"/>
+                            <constraint firstItem="0vL-Tp-Qc2" firstAttribute="top" secondItem="jAK-tA-HF9" secondAttribute="top" constant="23" id="I0J-9M-87f"/>
+                            <constraint firstItem="WD4-AQ-49x" firstAttribute="leading" secondItem="jAK-tA-HF9" secondAttribute="leading" constant="48" id="ZR7-v8-fWl"/>
+                            <constraint firstItem="WD4-AQ-49x" firstAttribute="top" secondItem="0vL-Tp-Qc2" secondAttribute="bottom" constant="23" id="cDY-xF-Wua"/>
+                            <constraint firstAttribute="trailing" secondItem="rU4-LA-3Zf" secondAttribute="trailing" id="cus-0t-0rJ"/>
+                            <constraint firstItem="0vL-Tp-Qc2" firstAttribute="leading" secondItem="jAK-tA-HF9" secondAttribute="leading" constant="16" id="eZY-r0-ZDX"/>
+                            <constraint firstItem="jAK-tA-HF9" firstAttribute="trailing" secondItem="WD4-AQ-49x" secondAttribute="trailing" constant="48" id="hFb-XM-bGX"/>
+                            <constraint firstItem="jAK-tA-HF9" firstAttribute="trailing" secondItem="0vL-Tp-Qc2" secondAttribute="trailing" constant="16" id="iMa-jX-V2z"/>
+                            <constraint firstItem="rU4-LA-3Zf" firstAttribute="leading" secondItem="LBD-iT-emu" secondAttribute="leading" id="lsh-i3-HiA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0vL-Tp-Qc2" secondAttribute="bottom" constant="133" id="zo3-Ka-Fpm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jAK-tA-HF9"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ef1-ez-wzA" appends="YES" id="JVJ-ah-8lX"/>
+                            <outletCollection property="gestureRecognizers" destination="IDl-Gi-VEK" appends="YES" id="bQG-bR-ZD3"/>
+                            <outletCollection property="gestureRecognizers" destination="HVi-LO-KG1" appends="YES" id="dRS-f4-VDv"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="P6G-u2-aB2"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favButton" destination="i4x-WF-AwP" id="RQe-D8-TOS"/>
+                        <outlet property="name" destination="WD4-AQ-49x" id="6af-dC-hTa"/>
+                        <outlet property="quote" destination="0vL-Tp-Qc2" id="jeY-nC-OYe"/>
+                        <outlet property="swipeLeft" destination="IDl-Gi-VEK" id="JiO-Un-Zla"/>
+                        <outlet property="swipeRight" destination="ef1-ez-wzA" id="VEy-l1-soy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xf7-LM-cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ef1-ez-wzA" userLabel="Swipe Gesture Recognizer Right">
+                    <connections>
+                        <action selector="swipeRight:" destination="yVl-FT-H99" id="FEa-KG-fPD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="IDl-Gi-VEK" userLabel="Swipe Gesture Recognizer Left">
+                    <connections>
+                        <action selector="swipeLeft:" destination="yVl-FT-H99" id="IHH-Rt-2jW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="HVi-LO-KG1">
+                    <connections>
+                        <action selector="doubleTapped:" destination="yVl-FT-H99" id="Geu-3p-HaT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2398" y="-556"/>
         </scene>
     </scenes>
     <resources>
