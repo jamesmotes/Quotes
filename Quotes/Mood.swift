@@ -18,6 +18,7 @@ class Mood: UITableViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: "beached_boat.jpg"))
         
         tableView.backgroundView?.contentMode = .scaleAspectFill
+        tableView.tableFooterView = UIView()
         
         //tableView.backgroundView?.addVerticalGradientLayer(topColor: UIColor.white, bottomColor: UIColor.lightGray)
         // Uncomment the following line to preserve selection between presentations
@@ -49,6 +50,7 @@ class Mood: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         // Configure the cell...
+        cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = moods[indexPath.row]
         return cell
     }

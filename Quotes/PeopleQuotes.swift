@@ -12,7 +12,7 @@ class PeopleQuotes {
         case 0 :
             //James Motes
             quotes = [ "Don't check boxes.",
-                        "If you don't know why you're doing something, do something else.",
+                        //"If you don't know why you're doing something, do something else.",
                         "There are more people alive today than all of history combined. The future is anything but set."
                 ]
         case 1 :
@@ -28,7 +28,7 @@ class PeopleQuotes {
                         "There's a silly notion that failure's not an option at NASA. Failure is an option here. If things are not failing, you are not innovating enough.",
                         "I'm interested in things that change the world or that affect the future and wondrous, new technology where you see it, and you're like, 'Wow, how did that even happen? How is that possible?'",
                         "I think you should always bear in mind that entropy is not on your side.",
-                        "It's OK to have your eggs in one basket as long as you control what happens to that basket.",
+                        "It's okay to have your eggs in one basket as long as you control what happens to that basket.",
                         "I say something, and then it usually happens. Maybe not on schedule, but it usually happens.",
                         "I don't create companies for the sake of creating companies, but to get things done.",
                         "When something is important enough, you do it even if the odds are not in your favor.",
@@ -119,7 +119,7 @@ class PeopleQuotes {
                       "Skills are cheap. Passion is priceless.",
                       /*"Stop focusing on dumb shit. */"Don’t be afraid to break things. Don’t be romantic. Don’t take the time to breathe. Don’t aim for perfect. And whatever you do, keep moving. Reread this a few times . . .",
                       "Look yourself in the mirror and ask yourself: What do I want to do every day for the rest of my life? DO THAT.",
-                      "Complaining is a zero return investment.",
+                      //"Complaining is a zero return investment.",
                       "I'm grinding when you're sleeping.",
                       "I'm not worried about getting boo'd in the third quarter. Talk to me after the game.",
                       //"The reason you have no time to grind is because you waste it on dumb shit.",
@@ -213,7 +213,7 @@ class PeopleQuotes {
                       "I get nervous when I don't get nervous. If I'm nervous I know I'm going to have a good show.",
                       "I truly believe that women should be financially independent from their men.",
                       "I always try to be myself. Ever since I was an introverted kid, I’d get on stage and be able to break out of my shell.",
-                      "I use the negativity to fuel the transformation into a better me.",
+                      //"I use the negativity to fuel the transformation into a better me.",
                       "I love my job, but it’s more than that: I need it.",
                       "Strong enough to bear the children. Then get back to business.",
                       "I don’t like to gamble, but if there’s one thing I’m willing to bet on, it’s myself."

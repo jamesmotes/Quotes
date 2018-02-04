@@ -33,7 +33,7 @@ class CategoryQuotes {
                 "Our destiny is not written for us, but by us.":"Barack Obama",
                 "We do not need magic to change the world, we carry all the power we need inside ourselves already: we have the power to imagine better.":"J. K. Rowling" ,
                 "It matters not what someone is born, but what they grow to be.":"J. K. Rowling" ,
-                "I use the negativity to fuel the transformation into a better me.":"Beyonce",
+                //"I use the negativity to fuel the transformation into a better me.":"Beyonce",
                 "The more you seek the uncomfortable, the more you will become comfortable.":"Conor McGregor"
                     ]
         case 1 :
@@ -44,7 +44,7 @@ class CategoryQuotes {
                 "The first step is to establish that something is possible; then probability will occur.":"Elon Musk",
                 "Being an entrepreneur is like eating glass and staring into the abyss of death.":"Elon Musk",
                 "When somebody has a breakthrough innovation, it is rarely one little thing. Very rarely, is it one little thing. It's usually a whole bunch of things that collectively amount to a huge innovation.":"Elon Musk",
-                "Complaining is a zero return investment.":"Gary Vaynerchuck",
+                //"Complaining is a zero return investment.":"Gary Vaynerchuck",
                 "I'm grinding when you're sleeping.":"Gary Vaynerchuck",
                 "I'm not worried about getting boo'd in the third quarter. Talk to me after the game.":"Gary Vaynerchuck",
                 "If you're not dreaming big for yourself, who's going to do it for you?":"Gary Vaynerchuck",
