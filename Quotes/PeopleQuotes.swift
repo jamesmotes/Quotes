@@ -20,7 +20,7 @@ class PeopleQuotes {
             quotes = [ "My mentality is that of a samurai. I would rather commit seppuku than fail.",
                        "When I was in college, I wanted to be involved in things that would change the world.",
                         "If there was a way that I could not eat, so I could work more, I would not eat. I wish there was a way to get nutrients without sitting down for a meal.",
-                        "If you get up in the morning and think the future is going to be beteer it is a bright day. Otherwise, it's not.",
+                        "If you get up in the morning and think the future is going to be better it is a bright day. Otherwise, it's not.",
                         "I think it's very important to have a feedback loop, where you're constantly thinking about what you've done and how you could be doing it better.",
                         "When Henry Ford made cheap, reliable cars people said, 'Nah, what's wrong with a horse?' That was a huge bet he made, and it worked.",
                         "I would like to die on Mars. Just not on impact.",
@@ -32,11 +32,11 @@ class PeopleQuotes {
                         "I say something, and then it usually happens. Maybe not on schedule, but it usually happens.",
                         "I don't create companies for the sake of creating companies, but to get things done.",
                         "When something is important enough, you do it even if the odds are not in your favor.",
-                        "We're going to make it happen. As God is my bloody witness, I'm hell-bent on making it work.",
+                        //"We're going to make it happen. As God is my bloody witness, I'm hell-bent on making it work.",
                         "I think it is possible for ordinary people to choose to be extraordinary.",
                         "I could either watch it happen or be a part of it.",
                         "We’re changing the world and changing history, and you either commit or you don’t.",
-                        "There's a tremendous bias against taking risks. Everyone is trying to optimize their ass-covering.",
+                        //"There's a tremendous bias against taking risks. Everyone is trying to optimize their ass-covering.",
                         "I don't think it's a good idea to plan to sell a company.",
                         "People work better when they know what the goal is and why. It is important that people look forward to coming to work in the morning and enjoy working.",
                         "If you're co-founder or CEO, you have to do all kinds of tasks you might not want to do... If you don't do your chores, the company won't succeed... No task is too menial.",
@@ -51,7 +51,7 @@ class PeopleQuotes {
                 ]
         case 2 :
             //Blake Nelson
-            quotes = [ "I wish I was as strong as James"
+            quotes = [ "I wish I was as strong as James."
             ]
         case 3 :
             //Thomas Jefferson
@@ -115,17 +115,17 @@ class PeopleQuotes {
             ]
         case 5 :
             //Gary Vaynerchuck
-            quotes = ["There's plenty of time. Get shit done.",
+            quotes = [//"There's plenty of time. Get shit done.",
                       "Skills are cheap. Passion is priceless.",
-                      "Stop focusing on dumb shit. Don’t be afraid to break things. Don’t be romantic. Don’t take the time to breathe. Don’t aim for perfect. And whatever you do, keep moving. Reread this a few times . . .",
+                      /*"Stop focusing on dumb shit. */"Don’t be afraid to break things. Don’t be romantic. Don’t take the time to breathe. Don’t aim for perfect. And whatever you do, keep moving. Reread this a few times . . .",
                       "Look yourself in the mirror and ask yourself: What do I want to do every day for the rest of my life? DO THAT.",
                       "Complaining is a zero return investment.",
                       "I'm grinding when you're sleeping.",
                       "I'm not worried about getting boo'd in the third quarter. Talk to me after the game.",
-                      "The reason you have no time to grind is because you waste it on dumb shit.",
+                      //"The reason you have no time to grind is because you waste it on dumb shit.",
                       "Doing it is the only option.",
                       "If you're not dreaming big for yourself, who's going to do it for you?",
-                      "If you're living for weekends and vacations your shit is broken."
+                      //"If you're living for weekends and vacations your shit is broken."
                         ]
         case 6 :
             //Brandon Carter
@@ -137,7 +137,7 @@ class PeopleQuotes {
                       "Don't worry about what he has. What do you have? What are you going to do to be successful? What are you going to do to accomplish your goals?",
                       "Some people may have some advantages that you don't have. You may have to work harder than them... So work harder than them!",
                       "With every excuse you make, you're putting your weakness on display for the whole world to see.",
-                      "I believe you're the type of person thats going to go after your goals no matter what. No matter what obstacles are in your way, you're going to go after that shit.",
+                      //"I believe you're the type of person thats going to go after your goals no matter what. No matter what obstacles are in your way, you're going to go after that shit.",
                       "Today I want you to promise yourself that you're done making excuses forever. You're done. You're going to set goals and you're going to accomplish them no matter what stands in your way.",
                       "No matter how many times you fall down, you're going to get back up. You're going to keep going. You're going to keep pushing.",
                       "You have to have extreme actions to have extreme results.",
@@ -174,7 +174,6 @@ class PeopleQuotes {
                       "I’m going to use all my tools, my god-given ability, and make the best life I can with it.",
                       "Dream as if you’ll live forever. Live as if you’ll die today.",
                       "You can’t be afraid to fail. It’s the only way you succeed. You’re not gonna succeed all the time and I know that.",
-                      "You can’t be afraid to fail. It’s the only way you succeed. You’re not gonna succeed all the time and I know that.",
                       "I always say, decisions I make, I live with them. There’s always ways you can correct them or ways you can do them better. At the end of the day, I live with them.",
                       "When you have that gut feeling, you have to go with don’t go back on it.",
                       "I think the reason why I am who I am today is because I went through those tough times when I was younger.",
@@ -198,7 +197,6 @@ class PeopleQuotes {
                       "The knowledge that you have emerged wiser and stronger from setbacks means that you are, ever after, secure in your ability to survive.",
                       "We do not need magic to change the world, we carry all the power we need inside ourselves already: we have the power to imagine better.",
                       "You will never truly know yourself, or the strength of your relationships, until both have been tested by adversity.",
-                      "You will never truly know yourself, or the strength of your relationships, until both have been tested by adversity.",
                       "It matters not what someone is born, but what they grow to be.",
                       "You’ve got to work. It’s about structure. It’s about discipline. It’s all these deadly things that your schoolteacher told you you needed… You need it.",
                       "Luck can only get you so far.",
@@ -221,7 +219,7 @@ class PeopleQuotes {
                       "I don’t like to gamble, but if there’s one thing I’m willing to bet on, it’s myself."
             ]
         case 11 :
-            //Connor McGregror
+            //Conor McGregor
             quotes = ["Doubt is only removed by action. If you’re not working then that’s where doubt comes in.",
                       "There’s no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings.",
                       "You could be anyone if you put in the time. You will reach the top, and that’s that. I am not talented, I am obsessed.",

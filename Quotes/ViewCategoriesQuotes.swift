@@ -11,6 +11,7 @@ import UIKit
 class ViewCategoriesQuotes: UIViewController {
 
     var quotes = CategoryQuotes(i: -1)
+    var shuffledQuotes : [String] = []
     var it = 0
     
     @IBOutlet weak var quote: UILabel!
@@ -26,6 +27,8 @@ class ViewCategoriesQuotes: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.clear
         quotes = CategoryQuotes(i: cat)
         quote.adjustsFontSizeToFitWidth = true
+        shuffledQuotes = [String](quotes.quotes.keys)
+        shuffledQuotes.shuffle()
         refresh()
         
         // Do any additional setup after loading the view.
@@ -52,9 +55,9 @@ class ViewCategoriesQuotes: UIViewController {
     }
     
     func refresh(){
-        quote.text = [String](quotes.quotes.values)[it]
-        name.text = "- " + [String](quotes.quotes.keys)[it]
-        
+        quote.text = shuffledQuotes[it]
+        name.text = "- " + quotes.quotes[shuffledQuotes[it]]!
+        quote.adjustsFontSizeToFitWidth = true
         //let rand = Int(arc4random_uniform(UInt32(backgrounds.count)))
         
         //backgroundView.image = UIImage(named: backgrounds[rand])!
