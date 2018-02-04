@@ -20,6 +20,7 @@ class People: UITableViewController {
         navigationController?.navigationBar.barTintColor = UIColor.clear
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "man_on_beach.jpg"))
+        //tableView.addVerticalGradientLayer(topColor: UIColor.white, bottomColor: UIColor.cyan)
         
         tableView.backgroundView?.contentMode = .scaleAspectFill
         

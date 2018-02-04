@@ -33,9 +33,11 @@ class ViewPersonQuotes: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         quote.adjustsFontSizeToFitWidth = true
         navigationController?.navigationBar.barTintColor = UIColor.clear
+        
+        //view.addVerticalGradientLayer(topColor: UIColor.lightGray, bottomColor: UIColor.black)
+        
         if(dict[array[person]] == true) {
             quotes = PeopleQuotes(i: person)
             //unlockPerson.isHidden = true

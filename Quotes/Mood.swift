@@ -18,6 +18,8 @@ class Mood: UITableViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: "beached_boat.jpg"))
         
         tableView.backgroundView?.contentMode = .scaleAspectFill
+        
+        //tableView.backgroundView?.addVerticalGradientLayer(topColor: UIColor.white, bottomColor: UIColor.lightGray)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
