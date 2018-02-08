@@ -97,9 +97,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-qD-ZhI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-qD-ZhI">
                                                     <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.32761665239726029" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -109,6 +108,12 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Hvz-qD-ZhI" secondAttribute="trailing" id="5n7-kt-ddd"/>
+                                            <constraint firstItem="Hvz-qD-ZhI" firstAttribute="leading" secondItem="iCp-2Z-0Pl" secondAttribute="leading" id="FHn-wq-8eb"/>
+                                            <constraint firstItem="Hvz-qD-ZhI" firstAttribute="top" secondItem="iCp-2Z-0Pl" secondAttribute="top" id="fVA-Pd-8N4"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hvz-qD-ZhI" secondAttribute="bottom" id="kpd-t0-r2h"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="cellLabel" destination="Hvz-qD-ZhI" id="g9I-KB-epQ"/>
                                         </connections>
@@ -284,7 +289,7 @@
                                 <items>
                                     <barButtonItem systemItem="organize" id="ffN-9g-dOg">
                                         <connections>
-                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="mbi-0k-bSF"/>
+                                            <action selector="backToMainMenu" destination="kPW-7B-pGr" id="wJz-ec-UUd"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Opr-bB-QUg"/>
@@ -397,7 +402,7 @@
                                 <items>
                                     <barButtonItem systemItem="organize" id="t3E-5M-CKh">
                                         <connections>
-                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="SBr-Md-PuN"/>
+                                            <action selector="backToMainMenu" destination="nxG-yj-rOt" id="1iH-Cr-v4K"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KZY-IH-zyi"/>
@@ -626,7 +631,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <barButtonItem systemItem="organize" id="wxE-1x-v4O"/>
+                                    <barButtonItem systemItem="organize" id="wxE-1x-v4O">
+                                        <connections>
+                                            <action selector="backToMainMenu" destination="K9e-4n-HFQ" id="9DZ-Xx-Xgv"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ZSU-oQ-w2g"/>
                                     <barButtonItem systemItem="action" id="UTK-M3-HAk">
                                         <connections>
@@ -717,7 +726,7 @@
                                 <items>
                                     <barButtonItem systemItem="organize" id="Tbw-l1-osi">
                                         <connections>
-                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="Uu1-0x-4u4"/>
+                                            <action selector="backToMainMenu" destination="yVl-FT-H99" id="bKz-Jg-ud2"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="IyC-bK-e8A"/>

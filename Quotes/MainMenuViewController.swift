@@ -22,6 +22,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         dict["Gabriel Wang"] = false
         dict["Conor McGregor"] = true
         InAppPurchases.shared.getProducts()
+        
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -41,6 +42,10 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.layer.borderColor = UIColor.black.cgColor  // Border color
         cell.layer.borderWidth = 1                      // Border width
         cell.layer.cornerRadius = 12                    // Rounded corners
+        
+        
+        
+        
         
         cell.cellLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
         cell.cellLabel.minimumScaleFactor = 0.5
@@ -72,6 +77,13 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         default:
             print("none selected")
         }
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let spacing = self.view.frame.size.width
+        return CGSize(width: 0.5*spacing, height: 0.5*spacing)
     }
 
 }

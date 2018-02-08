@@ -171,6 +171,10 @@ class ViewPersonQuotes: UIViewController {
     @IBAction func doubleTapped(_ sender: Any) {
         print("double tapped")
     }
+    
+    @IBAction func backToMainMenu() {
+        navigationController?.popToRootViewController(animated: false)
+    }
     /*
     // MARK: - Navigation
 
