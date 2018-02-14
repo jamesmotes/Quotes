@@ -11,6 +11,10 @@ import UserNotifications
 import Firebase
 import FirebaseMessaging
 import FirebaseInstanceID
+import FirebaseDatabase
+import RealmSwift
+
+
 
 
 @UIApplicationMain
@@ -19,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var isInitialized = false
     
-    
+    let realm = try! Realm()
     
     var notify = false
     
@@ -31,7 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let defaults = UserDefaults.standard
-        if (defaults.dictionary(forKey: "favorites") != nil){
+        if (defaults.bool(forKey: "updated") == false){
+            updateDatabase()
+            defaults.set(true, forKey: "updated")
+        }
+        var quote = realm.objects(Quote.self).filter("person = 'Elon Musk'")
+        print(quote)
+        
+        
+        
+        /*if (defaults.dictionary(forKey: "favorites") != nil){
             favorites = defaults.dictionary(forKey: "favorites") as! [String : String]
         }
         else {
@@ -43,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else {
             defaults.set(dict, forKey: "unlockedPeople")
-        }
+        }*/
         
         //setupNotifications()
         
@@ -131,6 +144,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func FBHandler() {
         Messaging.messaging().shouldEstablishDirectChannel = true
+    }
+    
+    func updateDatabase(){
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            guard let value = snapshot.value as? Dictionary<String,Dictionary<String,Dictionary<String,Any>>> else {return}
+            
+            print(value)
+            
+            for (person, q) in value {
+                //print(person)
+                for(label, info) in q {
+                    //print(label)
+                    var quote = Quote()
+                    quote.person = person
+                    for(thing, data) in info {
+                        //print(thing)
+                        if(thing == "categories"){
+                            for(cat, b) in data as! Dictionary<String,Any>{
+                                quote.categories.insert(cat, at: quote.categories.count)
+                            }
+                        }
+                        else if(thing == "moods"){
+                            for(mood, b) in data as! Dictionary<String,Any>{
+                                quote.moods.insert(mood, at: quote.moods.count)
+                            }
+                        }
+                        else if(thing == "text"){
+                            quote.text = data as! String
+                        }
+                    }
+                    try! self.realm.write {
+                        self.realm.add(quote)
+                    }
+                }
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
    
 
