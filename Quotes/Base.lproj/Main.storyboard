@@ -812,27 +812,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-V2-zqV">
-                                <rect key="frame" x="16" y="43" width="343" height="447"/>
+                                <rect key="frame" x="16" y="66" width="343" height="424"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NC0-oe-dmn" appends="YES" id="vzr-py-67z"/>
+                                    <outletCollection property="gestureRecognizers" destination="1hA-Ae-PM2" appends="YES" id="UhU-AV-cWI"/>
+                                </connections>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEa-pU-OPB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="ltF-Gb-2TV"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vSr-Gp-sZh" firstAttribute="top" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="23" id="0Uj-2J-cd9"/>
+                            <constraint firstItem="r4S-V2-zqV" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" constant="46" id="0bF-S7-MwH"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="vSr-Gp-sZh" secondAttribute="trailing" constant="48" id="Ch9-zG-2HM"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="r4S-V2-zqV" secondAttribute="trailing" constant="16" id="HtE-yA-rhX"/>
                             <constraint firstAttribute="bottomMargin" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="133" id="MOJ-Ng-WCB"/>
                             <constraint firstItem="vSr-Gp-sZh" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="48" id="VwB-Wh-edy"/>
-                            <constraint firstItem="r4S-V2-zqV" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" constant="23" id="l8s-gh-FRm"/>
                             <constraint firstItem="r4S-V2-zqV" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="yyL-or-ZA7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qy-YD-y4i"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NC0-oe-dmn" appends="YES" id="t8A-Co-xcA"/>
+                            <outletCollection property="gestureRecognizers" destination="1hA-Ae-PM2" appends="YES" id="PXl-6g-XgP"/>
+                            <outletCollection property="gestureRecognizers" destination="vHd-CU-IdO" appends="YES" id="Gfm-bS-Rd5"/>
+                        </connections>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="qdJ-yO-h46"/>
+                    </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="person" destination="vSr-Gp-sZh" id="018-ZJ-mtS"/>
@@ -840,8 +858,51 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waZ-eh-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="NC0-oe-dmn">
+                    <connections>
+                        <action selector="swipedRight:" destination="dYJ-Kj-E20" id="f6m-Hv-KPg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="1hA-Ae-PM2">
+                    <connections>
+                        <action selector="swipedLeft:" destination="dYJ-Kj-E20" id="A4C-L2-rbq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="vHd-CU-IdO">
+                    <connections>
+                        <action selector="tapped:" destination="dYJ-Kj-E20" id="c2p-FJ-Vp9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="76" y="-1069"/>
+            <point key="canvasLocation" x="-426" y="-1408"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Et7-bh-p6w">
+            <objects>
+                <tableViewController id="Bof-bY-n92" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="daA-zN-tng">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YQP-Fu-h2H">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YQP-Fu-h2H" id="orr-r6-OId">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Bof-bY-n92" id="d70-Dz-eQj"/>
+                            <outlet property="delegate" destination="Bof-bY-n92" id="RxH-xM-Yia"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437" y="-694"/>
         </scene>
     </scenes>
     <resources>

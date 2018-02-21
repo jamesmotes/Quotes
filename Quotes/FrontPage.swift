@@ -17,6 +17,10 @@ class FrontPage: UIViewController {
     
     let realm = try! Realm()
     
+    var quotes : [Quote] = []
+    
+    var index = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var quote = Quote()
@@ -29,6 +33,9 @@ class FrontPage: UIViewController {
         /*try! realm.write {
             realm.add(quote)
         }*/
+        quotes = Array(realm.objects(Quote.self))
+        quotes.shuffle()
+        print(quotes)
         refresh()
 
         // Do any additional setup after loading the view.
@@ -40,13 +47,42 @@ class FrontPage: UIViewController {
     }
     
     func refresh(){
-        var quote = realm.objects(Quote.self).filter("person = 'Grant Cardone' AND text BEGINSWITH 'I'")
-        print(quote)
-        self.text.text = quote[0].text
-        self.person.text = quote[0].person
+        self.text.text = quotes[index].text
+        self.person.text = quotes[index].person
     }
     
 
+    @IBAction func swipedLeft(_ sender: Any) {
+        print("Swiped left")
+        if(index > 0){
+            index -= 1
+        }
+        else {
+            index = quotes.count - 1
+        }
+        refresh()
+    }
+    
+    @IBAction func swipedRight(_ sender: Any) {
+        print("Swiped right")
+        if(index < quotes.count - 1){
+            index += 1
+        }
+        else {
+            index = 0
+        }
+        refresh()
+    }
+    @IBAction func tapped(_ sender: Any) {
+        print("tapped")
+        if(index < quotes.count - 1){
+            index += 1
+        }
+        else {
+            index = 0
+        }
+        refresh()
+    }
     /*
     // MARK: - Navigation
 
