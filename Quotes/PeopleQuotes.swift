@@ -12,7 +12,7 @@ class PeopleQuotes {
         case 0 :
             //James Motes
             quotes = [ "Don't check boxes.",
-                        "If you don't know why you're doing something, do something else.",
+                        //"If you don't know why you're doing something, do something else.",
                         "There are more people alive today than all of history combined. The future is anything but set."
                 ]
         case 1 :
@@ -20,7 +20,7 @@ class PeopleQuotes {
             quotes = [ "My mentality is that of a samurai. I would rather commit seppuku than fail.",
                        "When I was in college, I wanted to be involved in things that would change the world.",
                         "If there was a way that I could not eat, so I could work more, I would not eat. I wish there was a way to get nutrients without sitting down for a meal.",
-                        "If you get up in the morning and think the future is going to be beteer it is a bright day. Otherwise, it's not.",
+                        "If you get up in the morning and think the future is going to be better it is a bright day. Otherwise, it's not.",
                         "I think it's very important to have a feedback loop, where you're constantly thinking about what you've done and how you could be doing it better.",
                         "When Henry Ford made cheap, reliable cars people said, 'Nah, what's wrong with a horse?' That was a huge bet he made, and it worked.",
                         "I would like to die on Mars. Just not on impact.",
@@ -28,15 +28,15 @@ class PeopleQuotes {
                         "There's a silly notion that failure's not an option at NASA. Failure is an option here. If things are not failing, you are not innovating enough.",
                         "I'm interested in things that change the world or that affect the future and wondrous, new technology where you see it, and you're like, 'Wow, how did that even happen? How is that possible?'",
                         "I think you should always bear in mind that entropy is not on your side.",
-                        "It's OK to have your eggs in one basket as long as you control what happens to that basket.",
+                        "It's okay to have your eggs in one basket as long as you control what happens to that basket.",
                         "I say something, and then it usually happens. Maybe not on schedule, but it usually happens.",
                         "I don't create companies for the sake of creating companies, but to get things done.",
                         "When something is important enough, you do it even if the odds are not in your favor.",
-                        "We're going to make it happen. As God is my bloody witness, I'm hell-bent on making it work.",
+                        //"We're going to make it happen. As God is my bloody witness, I'm hell-bent on making it work.",
                         "I think it is possible for ordinary people to choose to be extraordinary.",
                         "I could either watch it happen or be a part of it.",
                         "We’re changing the world and changing history, and you either commit or you don’t.",
-                        "There's a tremendous bias against taking risks. Everyone is trying to optimize their ass-covering.",
+                        //"There's a tremendous bias against taking risks. Everyone is trying to optimize their ass-covering.",
                         "I don't think it's a good idea to plan to sell a company.",
                         "People work better when they know what the goal is and why. It is important that people look forward to coming to work in the morning and enjoy working.",
                         "If you're co-founder or CEO, you have to do all kinds of tasks you might not want to do... If you don't do your chores, the company won't succeed... No task is too menial.",
@@ -51,7 +51,7 @@ class PeopleQuotes {
                 ]
         case 2 :
             //Blake Nelson
-            quotes = [ "I wish I was as strong as James"
+            quotes = [ "I wish I was as strong as James."
             ]
         case 3 :
             //Thomas Jefferson
@@ -115,17 +115,17 @@ class PeopleQuotes {
             ]
         case 5 :
             //Gary Vaynerchuck
-            quotes = ["There's plenty of time. Get shit done.",
+            quotes = [//"There's plenty of time. Get shit done.",
                       "Skills are cheap. Passion is priceless.",
-                      "Stop focusing on dumb shit. Don’t be afraid to break things. Don’t be romantic. Don’t take the time to breathe. Don’t aim for perfect. And whatever you do, keep moving. Reread this a few times . . .",
+                      /*"Stop focusing on dumb shit. */"Don’t be afraid to break things. Don’t be romantic. Don’t take the time to breathe. Don’t aim for perfect. And whatever you do, keep moving. Reread this a few times . . .",
                       "Look yourself in the mirror and ask yourself: What do I want to do every day for the rest of my life? DO THAT.",
-                      "Complaining is a zero return investment.",
+                      //"Complaining is a zero return investment.",
                       "I'm grinding when you're sleeping.",
                       "I'm not worried about getting boo'd in the third quarter. Talk to me after the game.",
-                      "The reason you have no time to grind is because you waste it on dumb shit.",
+                      //"The reason you have no time to grind is because you waste it on dumb shit.",
                       "Doing it is the only option.",
                       "If you're not dreaming big for yourself, who's going to do it for you?",
-                      "If you're living for weekends and vacations your shit is broken."
+                      //"If you're living for weekends and vacations your shit is broken."
                         ]
         case 6 :
             //Brandon Carter
@@ -137,7 +137,7 @@ class PeopleQuotes {
                       "Don't worry about what he has. What do you have? What are you going to do to be successful? What are you going to do to accomplish your goals?",
                       "Some people may have some advantages that you don't have. You may have to work harder than them... So work harder than them!",
                       "With every excuse you make, you're putting your weakness on display for the whole world to see.",
-                      "I believe you're the type of person thats going to go after your goals no matter what. No matter what obstacles are in your way, you're going to go after that shit.",
+                      //"I believe you're the type of person thats going to go after your goals no matter what. No matter what obstacles are in your way, you're going to go after that shit.",
                       "Today I want you to promise yourself that you're done making excuses forever. You're done. You're going to set goals and you're going to accomplish them no matter what stands in your way.",
                       "No matter how many times you fall down, you're going to get back up. You're going to keep going. You're going to keep pushing.",
                       "You have to have extreme actions to have extreme results.",
@@ -174,7 +174,6 @@ class PeopleQuotes {
                       "I’m going to use all my tools, my god-given ability, and make the best life I can with it.",
                       "Dream as if you’ll live forever. Live as if you’ll die today.",
                       "You can’t be afraid to fail. It’s the only way you succeed. You’re not gonna succeed all the time and I know that.",
-                      "You can’t be afraid to fail. It’s the only way you succeed. You’re not gonna succeed all the time and I know that.",
                       "I always say, decisions I make, I live with them. There’s always ways you can correct them or ways you can do them better. At the end of the day, I live with them.",
                       "When you have that gut feeling, you have to go with don’t go back on it.",
                       "I think the reason why I am who I am today is because I went through those tough times when I was younger.",
@@ -198,7 +197,6 @@ class PeopleQuotes {
                       "The knowledge that you have emerged wiser and stronger from setbacks means that you are, ever after, secure in your ability to survive.",
                       "We do not need magic to change the world, we carry all the power we need inside ourselves already: we have the power to imagine better.",
                       "You will never truly know yourself, or the strength of your relationships, until both have been tested by adversity.",
-                      "You will never truly know yourself, or the strength of your relationships, until both have been tested by adversity.",
                       "It matters not what someone is born, but what they grow to be.",
                       "You’ve got to work. It’s about structure. It’s about discipline. It’s all these deadly things that your schoolteacher told you you needed… You need it.",
                       "Luck can only get you so far.",
@@ -215,19 +213,83 @@ class PeopleQuotes {
                       "I get nervous when I don't get nervous. If I'm nervous I know I'm going to have a good show.",
                       "I truly believe that women should be financially independent from their men.",
                       "I always try to be myself. Ever since I was an introverted kid, I’d get on stage and be able to break out of my shell.",
-                      "I use the negativity to fuel the transformation into a better me.",
+                      //"I use the negativity to fuel the transformation into a better me.",
                       "I love my job, but it’s more than that: I need it.",
                       "Strong enough to bear the children. Then get back to business.",
                       "I don’t like to gamble, but if there’s one thing I’m willing to bet on, it’s myself."
             ]
         case 11 :
-            //Connor McGregror
-            quotes = []
+            //Conor McGregor
+            quotes = ["Doubt is only removed by action. If you’re not working then that’s where doubt comes in.",
+                      "There’s no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings.",
+                      "You could be anyone if you put in the time. You will reach the top, and that’s that. I am not talented, I am obsessed.",
+                      "I have never encountered a winner that held hate towards something.",
+                      "It’s not really that much big of a deal – you brush it off and you come back. Defeat is the secret ingredient to success.",
+                      "I’m just going to keep doing what I’m doing. Keep proving people wrong and proving myself right.",
+                      "At the end of the day, you’ve gotta feel some way. So why not feel unbeatable? Why not feel untouchable?",
+                      "I keep having vivid dreams of success. Then it’s time to sleep.",
+                      "Failure is not an option for me. Success is all I envision.",
+                      "Excellence is not a skill. Excellence is an attitude.",
+                      "I stay ready so I don’t have to get ready.",
+                      "All that matters is how you see yourself.",
+                      "Do I hate my opponents? How can I hate someone who has the same dreams as me?",
+                      "One king gets old, then a young gorilla comes up and kills him, and takes everything he owns.",
+                      "Approach everything with an open mind, with a learning mind. You will never stop learning as long as you keep the mind-set that everything works, because everything does work.",
+                      "There’s a time and a place for every single move. If you work on it enough, it will work.",
+                      "Be grateful with everything you have and you will be successful in everything you do.",
+                      "My success isn’t a result of arrogance. It’s a result of belief.",
+                      "Look out for those who look out for you. Loyalty is everything.",
+                      "There’s people that focus on the game and forget about the art. There’s that specific individual that can do both.",
+                      "You can’t fear success and I think a lot of people do. I think a lot of people fear the really high heights. But I am not one of those people… I’m not like that. I’m going for it.",
+                      "We’re not just here to take part. We’re here to take over.",
+                      "Winner focus on winning. Losers focus on winners.",
+                      "Smart work pays best. Trust it.",
+                      "What defines us is how well we rise after falling.",
+                      "Always look to learn. Learning something new is a great feeling. The feeling of progress.",
+                      "I’m going to the stars and then past them.",
+                      "I am cocky in prediction. I am confident in preparation. But I am always humble in victory or defeat.",
+                      "When I say something is going to happen, it’s going to happen.",
+                      "Nothing good ever comes from worrying or sitting there feeling sorry for yourself… keep positive and keep pushing on and things will turn good.",
+                      "The more you seek the uncomfortable, the more you will become comfortable."
+                    ]
         case 12 :
-            //Gabriel Wng
+            //Gabriel Wang
             quotes = ["James is always right. Always."]
+        case 13 :
+            //Grant Cardone
+            quotes = ["Successful people never blame others for their performance.",
+                      "Success tends to spend the most time with those that pay it the most attention.",
+                      "I never trusted my talent, so I outworked everyone.",
+                      "When you can handle fear, you can handle success.",
+                      "I want a million dollars in my happy account and a million dollars in my banck account",
+                      "When distracted by events outside your control recommit to those things which you can control.",
+                      "A little attention with massive action goes a long way",
+                      "As long as you are alive, you will either live to accomplish your own goals and dreams or be used as a resource to accomplish someone else's",
+                      "Whatever you think it’s going to take multiply times 10.",
+                      "Successful people show up early and stay late.",
+                      "If you want to be in the 1% it’s simple, don’t do what the 99% do.",
+                      "A quitter is anyone that settles.",
+                      "You will never create a powerful, solvent, prosperous, and abundant economy with an attitude of arrogance.",
+                      "If you don't know why, you will never know how.",
+                      "Tough times never last, but tough people do.",
+                      "Self confidence is the only outfit you can't buy. You must develop it.",
+                      "Do what you are scared to do and watch your confidence grow."
+                    ]
         default :
-            quotes = []
+            //Unnamed
+            quotes = ["Rome was not built in a day, but they laid bricks every hour.",
+                      "I can accept failure. Everyone fails at something. But I can’t accept not trying.",
+                      "If I quit now, I will soon be back to where I started. And when I started, I was desperately wishing to be where I am now.",
+                      "A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty.",
+                      "Make sure your worst enemy doesn't live between your two ears.",
+                      "You are stronger than your challenges and your challenges are making you stronger.",
+                      "Learn to enjoy every minute of your life. Be happy now. Don't wait for something outside of yourself to make you happy in the future.",
+                      "Most people quit because they look how far they have to go, not how far they have come. (Remember, don't focus on what you're not, but what you still are and have accomplished.)",
+                      "A ship in harbor is safe — but that is not what ships are built for.",
+                      "What would life be if we had no courage to attempt anything.",
+                      
+            
+            ]
         }
     }
 }

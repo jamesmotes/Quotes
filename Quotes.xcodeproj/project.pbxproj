@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */; };
+		1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FC2019830C00B22EDE /* PurchasePerson.swift */; };
+		1A0999FF2019873600B22EDE /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FE2019873600B22EDE /* IAP.swift */; };
+		1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */; };
 		1A302F5720100AA600273C7E /* painted_dude.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4B20100AA300273C7E /* painted_dude.jpg */; };
 		1A302F5820100AA600273C7E /* snowy_mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4C20100AA300273C7E /* snowy_mountains.jpg */; };
 		1A302F5920100AA600273C7E /* black_umbrella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4D20100AA400273C7E /* black_umbrella.jpg */; };
@@ -41,6 +44,12 @@
 		1A302F882010420900273C7E /* takemaru-hirai-239939.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */; };
 		1A302F8C2010F50900273C7E /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8B2010F50900273C7E /* Mood.swift */; };
 		1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8D2010F63400273C7E /* MoodQuotes.swift */; };
+		1AA438942033E2DB000C7238 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; };
+		1AA438952033E2DB000C7238 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AA438962033E2DB000C7238 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438932033E2DA000C7238 /* RealmSwift.framework */; };
+		1AA438972033E2DB000C7238 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438932033E2DA000C7238 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA438992033E521000C7238 /* QuoteClass.swift */; };
+		1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA4389B2033E629000C7238 /* FrontPage.swift */; };
 		1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAC5B0820043FEB00E29433 /* Favorites.swift */; };
 		1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE911FF2F65E00E6424D /* AppDelegate.swift */; };
 		1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE931FF2F65E00E6424D /* ViewController.swift */; };
@@ -64,7 +73,25 @@
 		81155EAF2016C12900849C47 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155EAE2016C12900849C47 /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1AA438982033E2DB000C7238 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AA438972033E2DB000C7238 /* RealmSwift.framework in Embed Frameworks */,
+				1AA438952033E2DB000C7238 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1A0999FC2019830C00B22EDE /* PurchasePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePerson.swift; sourceTree = "<group>"; };
+		1A0999FE2019873600B22EDE /* IAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
+		1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoodQuotes.swift; sourceTree = "<group>"; };
 		1A302F4B20100AA300273C7E /* painted_dude.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = painted_dude.jpg; sourceTree = "<group>"; };
 		1A302F4C20100AA300273C7E /* snowy_mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowy_mountains.jpg; sourceTree = "<group>"; };
 		1A302F4D20100AA400273C7E /* black_umbrella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black_umbrella.jpg; sourceTree = "<group>"; };
@@ -98,6 +125,10 @@
 		1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "takemaru-hirai-239939.jpg"; sourceTree = "<group>"; };
 		1A302F8B2010F50900273C7E /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		1A302F8D2010F63400273C7E /* MoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQuotes.swift; sourceTree = "<group>"; };
+		1AA438922033E2DA000C7238 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		1AA438932033E2DA000C7238 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		1AA438992033E521000C7238 /* QuoteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteClass.swift; sourceTree = "<group>"; };
+		1AA4389B2033E629000C7238 /* FrontPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPage.swift; sourceTree = "<group>"; };
 		1AAC5B0820043FEB00E29433 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../Quotes/Quotes/Favorites.swift; sourceTree = "<group>"; };
 		1AACFE8E1FF2F65E00E6424D /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AACFE911FF2F65E00E6424D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +163,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA438942033E2DB000C7238 /* Realm.framework in Frameworks */,
 				111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */,
+				1AA438962033E2DB000C7238 /* RealmSwift.framework in Frameworks */,
 				1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +214,8 @@
 		1AACFE851FF2F65E00E6424D = {
 			isa = PBXGroup;
 			children = (
+				1AA438922033E2DA000C7238 /* Realm.framework */,
+				1AA438932033E2DA000C7238 /* RealmSwift.framework */,
 				1AB47C6E1FFC461B00F547E4 /* Podfile */,
 				1AACFE901FF2F65E00E6424D /* Quotes */,
 				1AACFE8F1FF2F65E00E6424D /* Products */,
@@ -209,13 +244,18 @@
 				1AAC5B0820043FEB00E29433 /* Favorites.swift */,
 				1AB47C882001BCBF00F547E4 /* Quotes */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
+				1AA4389B2033E629000C7238 /* FrontPage.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
+				1A0999FE2019873600B22EDE /* IAP.swift */,
+				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
 				1A302F8D2010F63400273C7E /* MoodQuotes.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
 				81155EAE2016C12900849C47 /* MainMenuViewController.swift */,
+				1AA438992033E521000C7238 /* QuoteClass.swift */,
 				81155EAC2016C08500849C47 /* MainMenuCell.swift */,
 				1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */,
+				1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */,
 				1AB47C681FFC2C7000F547E4 /* Categories.swift */,
 				1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */,
 				1AB47C862001A4DA00F547E4 /* Images.xcassets */,
@@ -259,6 +299,7 @@
 				1AACFE8C1FF2F65E00E6424D /* Resources */,
 				A0A4354D9B87439B75CA7DE7 /* [CP] Embed Pods Frameworks */,
 				CAE59B30D98D5A9534488F59 /* [CP] Copy Pods Resources */,
+				1AA438982033E2DB000C7238 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,21 +468,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0999FF2019873600B22EDE /* IAP.swift in Sources */,
 				81155EAF2016C12900849C47 /* MainMenuViewController.swift in Sources */,
 				1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */,
 				1AB47C671FFC2C3100F547E4 /* People.swift in Sources */,
+				1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */,
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
+				1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */,
 				1AB47C892001BCBF00F547E4 /* Quotes in Sources */,
 				1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */,
 				1A302F8C2010F50900273C7E /* Mood.swift in Sources */,
 				1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */,
+				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AE63D3120166200009732CF /* ViewRandom.swift in Sources */,
 				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
+				1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */,
 				1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */,
 				81155EAD2016C08500849C47 /* MainMenuCell.swift in Sources */,
 			);
@@ -585,6 +631,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42SCT29WSH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Quotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JDM.Quotes;
@@ -604,6 +654,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42SCT29WSH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Quotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JDM.Quotes;

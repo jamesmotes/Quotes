@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uuL-hm-U7M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dYJ-Kj-E20">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,6 +27,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,11 +49,18 @@
         <!--Navigation Controller-->
         <scene sceneID="vxo-mH-1PK">
             <objects>
-                <navigationController id="uuL-hm-U7M" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nye-zK-rqV">
+                <navigationController autoresizesArchivedViewToFullSize="NO" id="uuL-hm-U7M" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="nye-zK-rqV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a2r-wk-ZPZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WLr-tY-1OZ"/>
                     </connections>
@@ -69,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joshua-k-jackson-261210.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-mt-gDA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-LE-Rwn">
                                 <rect key="frame" x="0.0" y="96" width="375" height="571"/>
@@ -82,15 +91,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="iCp-2Z-0Pl" customClass="MainMenuCell" customModule="Quotes" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="40" y="0.0" width="113" height="113"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-qD-ZhI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-qD-ZhI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.32761665239726029" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -100,6 +108,12 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Hvz-qD-ZhI" secondAttribute="trailing" id="5n7-kt-ddd"/>
+                                            <constraint firstItem="Hvz-qD-ZhI" firstAttribute="leading" secondItem="iCp-2Z-0Pl" secondAttribute="leading" id="FHn-wq-8eb"/>
+                                            <constraint firstItem="Hvz-qD-ZhI" firstAttribute="top" secondItem="iCp-2Z-0Pl" secondAttribute="top" id="fVA-Pd-8N4"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hvz-qD-ZhI" secondAttribute="bottom" id="kpd-t0-r2h"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="cellLabel" destination="Hvz-qD-ZhI" id="g9I-KB-epQ"/>
                                         </connections>
@@ -111,17 +125,17 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q9D-mt-gDA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8yN-CA-Anr"/>
                             <constraint firstAttribute="bottom" secondItem="Q9D-mt-gDA" secondAttribute="bottom" id="9Yc-J7-p5p"/>
-                            <constraint firstItem="Q9D-mt-gDA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9ny-mq-uj0"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KkW-0s-SOK"/>
-                            <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" constant="44" id="LJy-Gn-GYh"/>
                             <constraint firstAttribute="trailing" secondItem="aYZ-LE-Rwn" secondAttribute="trailing" id="NoE-hK-85j"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T8U-NO-SLh"/>
                             <constraint firstAttribute="bottom" secondItem="aYZ-LE-Rwn" secondAttribute="bottom" id="V1h-Qm-zHg"/>
                             <constraint firstItem="Q9D-mt-gDA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XyO-oK-Bsf"/>
+                            <constraint firstItem="Q9D-mt-gDA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YTD-iy-sW2"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="pEd-uN-433"/>
                             <constraint firstItem="aYZ-LE-Rwn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yFo-1Z-gBc"/>
                         </constraints>
@@ -219,7 +233,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -251,11 +265,12 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="41" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-pR-4Vf">
                                 <rect key="frame" x="16" y="87" width="343" height="403"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gm0-4T-c0M" appends="YES" id="QmI-iN-ndn"/>
+                                    <outletCollection property="gestureRecognizers" destination="gm0-4T-c0M" appends="YES" id="Gjo-4W-Qge"/>
                                 </connections>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-1G-TVs">
@@ -274,7 +289,7 @@
                                 <items>
                                     <barButtonItem systemItem="organize" id="ffN-9g-dOg">
                                         <connections>
-                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="mbi-0k-bSF"/>
+                                            <action selector="backToMainMenu" destination="kPW-7B-pGr" id="wJz-ec-UUd"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Opr-bB-QUg"/>
@@ -315,13 +330,14 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="3jK-KB-Wsz" appends="YES" id="5cr-1W-kjc"/>
                             <outletCollection property="gestureRecognizers" destination="nac-6o-niB" appends="YES" id="gZc-zL-OcX"/>
+                            <outletCollection property="gestureRecognizers" destination="gm0-4T-c0M" appends="YES" id="mgT-aN-OMt"/>
                         </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GPy-LA-adT"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="doubleTap" destination="gm0-4T-c0M" id="dFc-OT-gCb"/>
+                        <outlet property="doubleTap" destination="gm0-4T-c0M" id="W7G-eu-fg9"/>
                         <outlet property="favButton" destination="XkD-fx-fSS" id="LPw-bb-lsV"/>
                         <outlet property="name" destination="RYd-Pd-vL8" id="nNS-gC-OCD"/>
                         <outlet property="quote" destination="izG-pR-4Vf" id="ofe-tA-2N2"/>
@@ -343,7 +359,7 @@
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="gm0-4T-c0M">
                     <connections>
-                        <action selector="clickedFavButton:" destination="kPW-7B-pGr" id="7ag-Vr-ahQ"/>
+                        <action selector="doubleTapped:" destination="kPW-7B-pGr" id="ZXk-OA-zfV"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -365,6 +381,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M17-3T-JRx">
                                 <rect key="frame" x="16" y="87" width="343" height="403"/>
+                                <gestureRecognizers/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -375,6 +392,9 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fXg-Hm-YkE" appends="YES" id="jjp-DG-3JT"/>
+                                </connections>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-nc-D8f">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -382,7 +402,7 @@
                                 <items>
                                     <barButtonItem systemItem="organize" id="t3E-5M-CKh">
                                         <connections>
-                                            <action selector="showMenu:" destination="BYZ-38-t0r" id="SBr-Md-PuN"/>
+                                            <action selector="backToMainMenu" destination="nxG-yj-rOt" id="1iH-Cr-v4K"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KZY-IH-zyi"/>
@@ -420,6 +440,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="637-1C-8GP" appends="YES" id="9oa-ZM-5ZS"/>
                             <outletCollection property="gestureRecognizers" destination="5O3-5h-oJd" appends="YES" id="k2E-FV-hSl"/>
+                            <outletCollection property="gestureRecognizers" destination="fXg-Hm-YkE" appends="YES" id="ArA-fJ-R17"/>
                         </connections>
                     </view>
                     <toolbarItems/>
@@ -442,6 +463,11 @@
                         <action selector="swipeLeft:" destination="nxG-yj-rOt" id="QnT-ta-ftD"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="fXg-Hm-YkE">
+                    <connections>
+                        <action selector="clickedFavButton:" destination="nxG-yj-rOt" id="pgE-q4-s0n"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2399" y="940"/>
         </scene>
@@ -449,20 +475,26 @@
         <scene sceneID="tlK-Dt-z5F">
             <objects>
                 <tableViewController id="cOk-Ri-PWL" customClass="Mood" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g3Y-Gv-UxH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g3Y-Gv-UxH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="pnK-1C-Zgz">
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="30" reuseIdentifier="cell" id="pnK-1C-Zgz">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pnK-1C-Zgz" id="y0k-zb-Hov">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -470,6 +502,9 @@
                             <outlet property="delegate" destination="cOk-Ri-PWL" id="0Yh-bf-yC5"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yVl-FT-H99" kind="show" identifier="showMoodQuotes" id="IhO-fd-yFu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3E-m8-QKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -580,13 +615,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAx-FA-V3c">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.050000000000000003" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAx-FA-V3c">
                                 <rect key="frame" x="16" y="87" width="343" height="403"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" metaFont="system" size="82"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingHead" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingHead" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -596,7 +632,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <barButtonItem systemItem="organize" id="wxE-1x-v4O"/>
+                                    <barButtonItem systemItem="organize" id="wxE-1x-v4O">
+                                        <connections>
+                                            <action selector="backToMainMenu" destination="K9e-4n-HFQ" id="9DZ-Xx-Xgv"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ZSU-oQ-w2g"/>
                                     <barButtonItem systemItem="action" id="UTK-M3-HAk">
                                         <connections>
@@ -656,6 +696,214 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="476" y="940"/>
+        </scene>
+        <!--View Mood Quotes-->
+        <scene sceneID="jFq-Lk-QzW">
+            <objects>
+                <viewController id="yVl-FT-H99" customClass="ViewMoodQuotes" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBD-iT-emu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-AQ-49x">
+                                <rect key="frame" x="48" y="513" width="279" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vL-Tp-Qc2">
+                                <rect key="frame" x="16" y="87" width="343" height="403"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HVi-LO-KG1" appends="YES" id="fqB-Dg-k4I"/>
+                                </connections>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-LA-3Zf">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem systemItem="organize" id="Tbw-l1-osi">
+                                        <connections>
+                                            <action selector="backToMainMenu" destination="yVl-FT-H99" id="bKz-Jg-ud2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IyC-bK-e8A"/>
+                                    <barButtonItem systemItem="action" id="6hB-Cl-DcM">
+                                        <connections>
+                                            <action selector="clickedShareButton:" destination="yVl-FT-H99" id="y9z-AQ-p8C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cT7-Hq-7vZ"/>
+                                    <barButtonItem title="Fav" image="star" width="62" id="i4x-WF-AwP">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="clickedFavButton:" destination="yVl-FT-H99" id="l6e-Ut-GMf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rU4-LA-3Zf" secondAttribute="bottom" id="3HG-29-Frp"/>
+                            <constraint firstItem="0vL-Tp-Qc2" firstAttribute="top" secondItem="jAK-tA-HF9" secondAttribute="top" constant="23" id="I0J-9M-87f"/>
+                            <constraint firstItem="WD4-AQ-49x" firstAttribute="leading" secondItem="jAK-tA-HF9" secondAttribute="leading" constant="48" id="ZR7-v8-fWl"/>
+                            <constraint firstItem="WD4-AQ-49x" firstAttribute="top" secondItem="0vL-Tp-Qc2" secondAttribute="bottom" constant="23" id="cDY-xF-Wua"/>
+                            <constraint firstAttribute="trailing" secondItem="rU4-LA-3Zf" secondAttribute="trailing" id="cus-0t-0rJ"/>
+                            <constraint firstItem="0vL-Tp-Qc2" firstAttribute="leading" secondItem="jAK-tA-HF9" secondAttribute="leading" constant="16" id="eZY-r0-ZDX"/>
+                            <constraint firstItem="jAK-tA-HF9" firstAttribute="trailing" secondItem="WD4-AQ-49x" secondAttribute="trailing" constant="48" id="hFb-XM-bGX"/>
+                            <constraint firstItem="jAK-tA-HF9" firstAttribute="trailing" secondItem="0vL-Tp-Qc2" secondAttribute="trailing" constant="16" id="iMa-jX-V2z"/>
+                            <constraint firstItem="rU4-LA-3Zf" firstAttribute="leading" secondItem="LBD-iT-emu" secondAttribute="leading" id="lsh-i3-HiA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0vL-Tp-Qc2" secondAttribute="bottom" constant="133" id="zo3-Ka-Fpm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jAK-tA-HF9"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ef1-ez-wzA" appends="YES" id="JVJ-ah-8lX"/>
+                            <outletCollection property="gestureRecognizers" destination="IDl-Gi-VEK" appends="YES" id="bQG-bR-ZD3"/>
+                            <outletCollection property="gestureRecognizers" destination="HVi-LO-KG1" appends="YES" id="dRS-f4-VDv"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="P6G-u2-aB2"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favButton" destination="i4x-WF-AwP" id="RQe-D8-TOS"/>
+                        <outlet property="name" destination="WD4-AQ-49x" id="6af-dC-hTa"/>
+                        <outlet property="quote" destination="0vL-Tp-Qc2" id="jeY-nC-OYe"/>
+                        <outlet property="swipeLeft" destination="IDl-Gi-VEK" id="JiO-Un-Zla"/>
+                        <outlet property="swipeRight" destination="ef1-ez-wzA" id="VEy-l1-soy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xf7-LM-cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ef1-ez-wzA" userLabel="Swipe Gesture Recognizer Right">
+                    <connections>
+                        <action selector="swipeRight:" destination="yVl-FT-H99" id="FEa-KG-fPD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="IDl-Gi-VEK" userLabel="Swipe Gesture Recognizer Left">
+                    <connections>
+                        <action selector="swipeLeft:" destination="yVl-FT-H99" id="IHH-Rt-2jW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="HVi-LO-KG1">
+                    <connections>
+                        <action selector="doubleTapped:" destination="yVl-FT-H99" id="Geu-3p-HaT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2398" y="-556"/>
+        </scene>
+        <!--Front Page-->
+        <scene sceneID="W3O-tO-gSy">
+            <objects>
+                <viewController id="dYJ-Kj-E20" customClass="FrontPage" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2m-5i-EMa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSr-Gp-sZh">
+                                <rect key="frame" x="48" y="513" width="279" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-V2-zqV">
+                                <rect key="frame" x="16" y="66" width="343" height="424"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NC0-oe-dmn" appends="YES" id="vzr-py-67z"/>
+                                    <outletCollection property="gestureRecognizers" destination="1hA-Ae-PM2" appends="YES" id="UhU-AV-cWI"/>
+                                </connections>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEa-pU-OPB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="ltF-Gb-2TV"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vSr-Gp-sZh" firstAttribute="top" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="23" id="0Uj-2J-cd9"/>
+                            <constraint firstItem="r4S-V2-zqV" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" constant="46" id="0bF-S7-MwH"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="vSr-Gp-sZh" secondAttribute="trailing" constant="48" id="Ch9-zG-2HM"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="r4S-V2-zqV" secondAttribute="trailing" constant="16" id="HtE-yA-rhX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="133" id="MOJ-Ng-WCB"/>
+                            <constraint firstItem="vSr-Gp-sZh" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="48" id="VwB-Wh-edy"/>
+                            <constraint firstItem="r4S-V2-zqV" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="yyL-or-ZA7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4qy-YD-y4i"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NC0-oe-dmn" appends="YES" id="t8A-Co-xcA"/>
+                            <outletCollection property="gestureRecognizers" destination="1hA-Ae-PM2" appends="YES" id="PXl-6g-XgP"/>
+                            <outletCollection property="gestureRecognizers" destination="vHd-CU-IdO" appends="YES" id="Gfm-bS-Rd5"/>
+                        </connections>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="qdJ-yO-h46"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="person" destination="vSr-Gp-sZh" id="018-ZJ-mtS"/>
+                        <outlet property="text" destination="r4S-V2-zqV" id="n7z-Va-LBX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waZ-eh-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="NC0-oe-dmn">
+                    <connections>
+                        <action selector="swipedRight:" destination="dYJ-Kj-E20" id="f6m-Hv-KPg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="1hA-Ae-PM2">
+                    <connections>
+                        <action selector="swipedLeft:" destination="dYJ-Kj-E20" id="A4C-L2-rbq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="vHd-CU-IdO">
+                    <connections>
+                        <action selector="tapped:" destination="dYJ-Kj-E20" id="c2p-FJ-Vp9"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-426" y="-1408"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Et7-bh-p6w">
+            <objects>
+                <tableViewController id="Bof-bY-n92" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="daA-zN-tng">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YQP-Fu-h2H">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YQP-Fu-h2H" id="orr-r6-OId">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Bof-bY-n92" id="d70-Dz-eQj"/>
+                            <outlet property="delegate" destination="Bof-bY-n92" id="RxH-xM-Yia"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437" y="-694"/>
         </scene>
     </scenes>
     <resources>

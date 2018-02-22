@@ -77,6 +77,10 @@ class ViewRandom: UIViewController {
         
         self.present(activityVC, animated: true, completion: nil)
     }
+    
+    @IBAction func backToMainMenu() {
+        navigationController?.popToRootViewController(animated: false)
+    }
 
     /*
     // MARK: - Navigation
