@@ -829,6 +829,9 @@
                                     <constraint firstAttribute="width" constant="27" id="b2W-Pg-7BE"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Screen Shot 2018-02-21 at 6.18.16 PM.png"/>
+                                <connections>
+                                    <segue destination="Bof-bY-n92" kind="show" id="CRi-Xx-our"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -851,13 +854,7 @@
                             <outletCollection property="gestureRecognizers" destination="vHd-CU-IdO" appends="YES" id="Gfm-bS-Rd5"/>
                         </connections>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="qdJ-yO-h46">
-                            <connections>
-                                <segue destination="Bof-bY-n92" kind="show" id="bUu-Fj-2it"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="person" destination="vSr-Gp-sZh" id="018-ZJ-mtS"/>
