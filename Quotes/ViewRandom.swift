@@ -18,6 +18,9 @@ class ViewRandom: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        quote.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 41)
+        name.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 30)
 
         randomQuotes = [:]
         refresh()

@@ -24,6 +24,10 @@ class ViewCategoriesQuotes: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        quote.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 41)
+        name.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 30)
+        
         navigationController?.navigationBar.barTintColor = UIColor.clear
         quotes = CategoryQuotes(i: cat)
         quote.adjustsFontSizeToFitWidth = true

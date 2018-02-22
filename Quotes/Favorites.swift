@@ -43,6 +43,8 @@ class Favorites: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         favButton.tintColor = UIColor.red
+        quote.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
+        name.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
         refresh()
         // Do any additional setup after loading the view.
     }
