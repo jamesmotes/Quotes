@@ -45,6 +45,7 @@
 		1A302F8C2010F50900273C7E /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8B2010F50900273C7E /* Mood.swift */; };
 		1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8D2010F63400273C7E /* MoodQuotes.swift */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
+		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA438942033E2DB000C7238 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; };
 		1AA438952033E2DB000C7238 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AA438962033E2DB000C7238 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438932033E2DA000C7238 /* RealmSwift.framework */; };
@@ -127,6 +128,7 @@
 		1A302F8B2010F50900273C7E /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		1A302F8D2010F63400273C7E /* MoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQuotes.swift; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
+		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA438922033E2DA000C7238 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1AA438932033E2DA000C7238 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		1AA438992033E521000C7238 /* QuoteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteClass.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
 				1AB47C7B20003A1500F547E4 /* Settings.swift */,
+				1A96D549203FA31300254090 /* LoadQuotes.swift */,
 				1AAC5B0820043FEB00E29433 /* Favorites.swift */,
 				1AB47C882001BCBF00F547E4 /* Quotes */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
@@ -492,6 +495,7 @@
 				1AAC5B0920043FEB00E29433 /* Favorites.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
 				1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */,
+				1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */,
 				1AB47C7820001D8200F547E4 /* ViewCategoriesQuotes.swift in Sources */,
 				81155EAD2016C08500849C47 /* MainMenuCell.swift in Sources */,
 			);
