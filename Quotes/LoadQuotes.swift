@@ -44,6 +44,10 @@ class LoadQuotes {
         moos = ["Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
+        text = "If there was a way I could not eat, so I could work more, I would not eat. I widh there was a way to get nutrients without sitting down for a meal."
+        cats = ["Entrepenuer", "Change"]
+        moos = ["Motivational"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         //Thomas Jefferson
         name = "Thomas Jefferson"
