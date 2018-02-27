@@ -10,6 +10,8 @@ import UIKit
 
 class MainMenuTableViewController: UITableViewController {
 
+    let mainMenu = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,12 +19,18 @@ class MainMenuTableViewController: UITableViewController {
         navigationController?.navigationBar.backgroundColor = UIColor.black
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.barTintColor = UIColor.clear
+        
+        dict["Gabriel Wang"] = false
+        dict["Conor McGregor"] = true
+        InAppPurchases.shared.getProducts()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
@@ -37,7 +45,13 @@ class MainMenuTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return mainMenu.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Set front page parameters here:
+        
+        performSegue(withIdentifier: "toQuotesPage", sender: nil)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,6 +114,8 @@ class MainMenuTableViewController: UITableViewController {
     }
     */
     @IBAction func backToView(_ sender: Any) {
+        // Reset quotes page params
+        
         dismiss(animated: true, completion: nil)
     }
     
