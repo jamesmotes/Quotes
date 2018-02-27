@@ -47,6 +47,9 @@
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
+		1AA123742044F22D0004C1AE /* Share-icon-iOS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123732044F22C0004C1AE /* Share-icon-iOS.jpg */; };
+		1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123752044F3CF0004C1AE /* share_icon_white.jpg */; };
+		1AA123782044F4B40004C1AE /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123772044F4B30004C1AE /* search.png */; };
 		1AA438942033E2DB000C7238 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; };
 		1AA438952033E2DB000C7238 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AA438962033E2DB000C7238 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438932033E2DA000C7238 /* RealmSwift.framework */; };
@@ -131,6 +134,9 @@
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
+		1AA123732044F22C0004C1AE /* Share-icon-iOS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Share-icon-iOS.jpg"; sourceTree = "<group>"; };
+		1AA123752044F3CF0004C1AE /* share_icon_white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share_icon_white.jpg; sourceTree = "<group>"; };
+		1AA123772044F4B30004C1AE /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		1AA438922033E2DA000C7238 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1AA438932033E2DA000C7238 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		1AA438992033E521000C7238 /* QuoteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteClass.swift; sourceTree = "<group>"; };
@@ -268,6 +274,9 @@
 				1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */,
 				1AB47C862001A4DA00F547E4 /* Images.xcassets */,
 				1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */,
+				1AA123752044F3CF0004C1AE /* share_icon_white.jpg */,
+				1AA123772044F4B30004C1AE /* search.png */,
+				1AA123732044F22C0004C1AE /* Share-icon-iOS.jpg */,
 				1AACFE9A1FF2F65E00E6424D /* LaunchScreen.storyboard */,
 				1AACFE9D1FF2F65E00E6424D /* Info.plist */,
 				1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */,
@@ -381,6 +390,8 @@
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
 				1A302F852010420900273C7E /* mountain_sunset.jpg in Resources */,
 				1A302F5A20100AA600273C7E /* flower_girl.jpg in Resources */,
+				1AA123742044F22D0004C1AE /* Share-icon-iOS.jpg in Resources */,
+				1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1A302F7A2010420900273C7E /* jake-blucker-316192.jpg in Resources */,
 				1A302F772010420900273C7E /* julien-laurent-374836.jpg in Resources */,
@@ -402,6 +413,7 @@
 				1A302F862010420900273C7E /* annie-spratt-156491.jpg in Resources */,
 				1A302F782010420900273C7E /* joshua-newton-275881.jpg in Resources */,
 				1A302F882010420900273C7E /* takemaru-hirai-239939.jpg in Resources */,
+				1AA123782044F4B40004C1AE /* search.png in Resources */,
 				1A302F6220100AA600273C7E /* city_stack.jpg in Resources */,
 				1A302F822010420900273C7E /* sawyer-bengtson-256274.jpg in Resources */,
 				1A302F6120100AA600273C7E /* mirrored_city.jpg in Resources */,

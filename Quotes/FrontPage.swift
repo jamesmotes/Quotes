@@ -14,6 +14,7 @@ class FrontPage: UIViewController {
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var person: UILabel!
     
+    @IBOutlet weak var favButton: UIButton!
     
     let realm = try! Realm()
     
@@ -25,6 +26,7 @@ class FrontPage: UIViewController {
         super.viewDidLoad()
         
         navigationController?.isNavigationBarHidden = true
+        favButton.tintColor = UIColor.white
         
         var quote = Quote()
         quote.text = "If you want to be in the 1% it's simple, don't do what the 99% do."

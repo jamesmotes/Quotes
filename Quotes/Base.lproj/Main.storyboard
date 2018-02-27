@@ -833,6 +833,30 @@
                                     <segue destination="Bof-bY-n92" kind="presentation" modalTransitionStyle="coverVertical" id="CRi-Xx-our"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKE-V1-MAT">
+                                <rect key="frame" x="332" y="580" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="KbR-Ne-uAg"/>
+                                    <constraint firstAttribute="height" constant="27" id="LAm-wm-b7D"/>
+                                </constraints>
+                                <state key="normal" image="star"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egb-Sh-Bpj">
+                                <rect key="frame" x="16" y="580" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="0ga-Ks-C5H"/>
+                                    <constraint firstAttribute="height" constant="27" id="XrW-Sf-2p0"/>
+                                </constraints>
+                                <state key="normal" image="share_icon_white.jpg"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91b-xX-bAC">
+                                <rect key="frame" x="332" y="20" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="WHN-nx-DMA"/>
+                                    <constraint firstAttribute="width" constant="27" id="mEQ-U7-6by"/>
+                                </constraints>
+                                <state key="normal" image="search.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -842,10 +866,16 @@
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="vSr-Gp-sZh" secondAttribute="trailing" constant="48" id="Ch9-zG-2HM"/>
                             <constraint firstItem="IK4-Bm-ay0" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" id="H3i-Mt-WzA"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="r4S-V2-zqV" secondAttribute="trailing" constant="16" id="HtE-yA-rhX"/>
+                            <constraint firstItem="egb-Sh-Bpj" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="LI4-LV-ole"/>
                             <constraint firstAttribute="bottomMargin" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="133" id="MOJ-Ng-WCB"/>
                             <constraint firstItem="vSr-Gp-sZh" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="48" id="VwB-Wh-edy"/>
                             <constraint firstItem="r4S-V2-zqV" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" constant="41" id="Vxk-xx-QNC"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="91b-xX-bAC" secondAttribute="trailing" constant="16" id="W1D-cT-aFr"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="egb-Sh-Bpj" secondAttribute="bottom" constant="16" id="bSc-ab-lyE"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="aKE-V1-MAT" secondAttribute="bottom" constant="16" id="p6y-q1-dpP"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="aKE-V1-MAT" secondAttribute="trailing" constant="16" id="wYf-tk-MTa"/>
                             <constraint firstItem="r4S-V2-zqV" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="yyL-or-ZA7"/>
+                            <constraint firstItem="91b-xX-bAC" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" id="zcZ-jb-yXg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qy-YD-y4i"/>
                         <connections>
@@ -858,6 +888,7 @@
                     <navigationItem key="navigationItem" id="bYd-5S-uqV"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="favButton" destination="aKE-V1-MAT" id="7lC-gq-vhP"/>
                         <outlet property="person" destination="vSr-Gp-sZh" id="018-ZJ-mtS"/>
                         <outlet property="text" destination="r4S-V2-zqV" id="n7z-Va-LBX"/>
                     </connections>
@@ -922,6 +953,8 @@
     <resources>
         <image name="Screen Shot 2018-02-21 at 6.18.16 PM.png" width="460" height="420"/>
         <image name="joshua-k-jackson-261210.jpg" width="3028" height="4542"/>
+        <image name="search.png" width="256" height="256"/>
+        <image name="share_icon_white.jpg" width="488" height="502"/>
         <image name="star" width="28" height="28"/>
     </resources>
 </document>
