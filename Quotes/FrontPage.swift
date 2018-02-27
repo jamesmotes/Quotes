@@ -59,6 +59,16 @@ class FrontPage: UIViewController {
     func refresh(){
         self.text.text = quotes[index].text
         self.person.text = quotes[index].person
+        let query : String = "text == '" + self.text.text! + "'"
+        var theQuote = realm.objects(Quote.self).filter(query).first
+        try! realm.write {
+            if(theQuote?.favorite)!{
+                self.favButton.tintColor = UIColor.white
+            }
+            else {
+                self.favButton.tintColor = UIColor.orange
+            }
+        }
     }
     
 
@@ -85,13 +95,38 @@ class FrontPage: UIViewController {
     }
     @IBAction func tapped(_ sender: Any) {
         print("tapped")
-        if(index < quotes.count - 1){
+        /*if(index < quotes.count - 1){
             index += 1
         }
         else {
             index = 0
         }
+        refresh()*/
+    }
+    
+    @IBAction func favorite(_ sender: Any) {
+        let realm = try! Realm()
+        let query : String = "text == '" + self.text.text! + "'"
+        var theQuote = realm.objects(Quote.self).filter(query).first
+        try! realm.write {
+            if(theQuote?.favorite)!{
+                theQuote!.favorite = false
+                //self.favButton.tintColor = UIColor.white
+            }
+            else {
+                theQuote!.favorite = true
+                //self.favButton.tintColor = UIColor.yellow
+            }
+        }
+        theQuote = realm.objects(Quote.self).filter("favorite == true").first
         refresh()
+    }
+    
+    @IBAction func share(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [self.text.text! + " " + self.person.text!], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

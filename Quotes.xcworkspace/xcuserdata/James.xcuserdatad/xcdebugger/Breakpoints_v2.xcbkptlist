@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/ViewPersonQuotes.swift"
-            timestampString = "541390069.4260761"
+            timestampString = "541391187.688087"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -88,7 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/ViewPersonQuotes.swift"
-            timestampString = "541390069.426152"
+            timestampString = "541391187.688186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"
@@ -104,7 +104,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/ViewPersonQuotes.swift"
-            timestampString = "541390069.426221"
+            timestampString = "541391187.688264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -152,7 +152,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/ViewPersonQuotes.swift"
-            timestampString = "541390069.426366"
+            timestampString = "541391187.688426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -168,7 +168,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/ViewPersonQuotes.swift"
-            timestampString = "541390069.426425"
+            timestampString = "541391187.688499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -184,12 +184,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/AppDelegate.swift"
-            timestampString = "541390069.4265029"
+            timestampString = "541391945.104793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Quotes/FrontPage.swift"
+            timestampString = "541391945.1048861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "favorite(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Quotes/FrontPage.swift"
+            timestampString = "541391945.10545"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "refresh()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
