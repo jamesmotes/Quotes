@@ -99,5 +99,8 @@ class MainMenuTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func backToView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
