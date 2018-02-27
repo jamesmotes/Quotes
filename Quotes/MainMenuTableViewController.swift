@@ -1,41 +1,32 @@
 //
-//  Categories.swift
+//  MainMenuTableViewController.swift
 //  Quotes
 //
-//  Created by James Motes on 1/2/18.
+//  Created by James Motes on 2/26/18.
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
 import UIKit
 
-class Categories: UITableViewController {
-    
-    
+class MainMenuTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.backgroundColor = UIColor.black
+        navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.barTintColor = UIColor.clear
-        
-        tableView.backgroundView = UIImageView(image: UIImage(named: "mountain_sunset.jpg"))
-        
-        tableView.backgroundView?.contentMode = .scaleAspectFill
-        tableView.tableFooterView = UIView()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    /*override func viewDidAppear(_ animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-        
-        // Add a background view to the table view
-        let backgroundImage = UIImage(named: "man_on_beach.jpg")
-        let imageView = UIImageView(image: backgroundImage)
-        self.tableView.backgroundView = imageView
-        // center and scale background image
-
-        imageView.contentMode = .scaleAspectFill
-    }*/
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,29 +37,23 @@ class Categories: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categories.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
         // Configure the cell...
-        cell.textLabel?.text = categories[indexPath.row]
-        cell.textLabel?.adjustsFontSizeToFitWidth = true
-        cell.backgroundColor = UIColor.clear
+
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        cat = indexPath.row
-        performSegue(withIdentifier: "showCategoryQuotes", sender: nil)
-    }
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -114,7 +99,5 @@ class Categories: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
 
 }

@@ -830,7 +830,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Screen Shot 2018-02-21 at 6.18.16 PM.png"/>
                                 <connections>
-                                    <segue destination="Bof-bY-n92" kind="show" id="CRi-Xx-our"/>
+                                    <segue destination="Bof-bY-n92" kind="presentation" modalTransitionStyle="coverVertical" id="CRi-Xx-our"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -855,6 +855,7 @@
                         </connections>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bYd-5S-uqV"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="person" destination="vSr-Gp-sZh" id="018-ZJ-mtS"/>
@@ -880,10 +881,10 @@
             </objects>
             <point key="canvasLocation" x="-1050.4000000000001" y="-1743.778110944528"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Main Menu Table View Controller-->
         <scene sceneID="Et7-bh-p6w">
             <objects>
-                <tableViewController id="Bof-bY-n92" sceneMemberID="viewController">
+                <tableViewController id="Bof-bY-n92" customClass="MainMenuTableViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="daA-zN-tng">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

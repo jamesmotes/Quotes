@@ -46,6 +46,7 @@
 		1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8D2010F63400273C7E /* MoodQuotes.swift */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
+		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
 		1AA438942033E2DB000C7238 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; };
 		1AA438952033E2DB000C7238 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AA438962033E2DB000C7238 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438932033E2DA000C7238 /* RealmSwift.framework */; };
@@ -129,6 +130,7 @@
 		1A302F8D2010F63400273C7E /* MoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQuotes.swift; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
+		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
 		1AA438922033E2DA000C7238 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1AA438932033E2DA000C7238 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		1AA438992033E521000C7238 /* QuoteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteClass.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
 				1A302F8D2010F63400273C7E /* MoodQuotes.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
+				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
 				81155EAE2016C12900849C47 /* MainMenuViewController.swift */,
 				1AA438992033E521000C7238 /* QuoteClass.swift */,
 				81155EAC2016C08500849C47 /* MainMenuCell.swift */,
@@ -482,6 +485,7 @@
 				1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */,
 				1AACFE941FF2F65E00E6424D /* ViewController.swift in Sources */,
 				1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */,
+				1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */,
 				1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */,
 				1AB47C892001BCBF00F547E4 /* Quotes in Sources */,
 				1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */,

@@ -23,6 +23,9 @@ class FrontPage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = true
+        
         var quote = Quote()
         quote.text = "If you want to be in the 1% it's simple, don't do what the 99% do."
         quote.person = "Grant Cardone"
@@ -40,12 +43,17 @@ class FrontPage: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
     func refresh(){
         self.text.text = quotes[index].text
         self.person.text = quotes[index].person
