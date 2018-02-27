@@ -16,6 +16,7 @@ final class Quote: Object {
     let categories = List<String>()
     let moods = List<String>()
     @objc dynamic var favorite = false
+    @objc dynamic var downvote = false
     
     override static func primaryKey() -> String? {
         return "text"

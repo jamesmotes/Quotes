@@ -147,7 +147,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func updateDatabase(){
-        var ref: DatabaseReference!
+        
+        var lq : LoadQuotes = LoadQuotes()
+        
+        /*var ref: DatabaseReference!
         ref = Database.database().reference()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -184,7 +187,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }) { (error) in
             print(error.localizedDescription)
-        }
+        }*/
     }
    
 
