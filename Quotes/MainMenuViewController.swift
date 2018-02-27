@@ -44,10 +44,6 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.layer.borderWidth = 1                      // Border width
         cell.layer.cornerRadius = 12                    // Rounded corners
         
-        
-        
-        
-        
         cell.cellLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
         cell.cellLabel.minimumScaleFactor = 0.5
         cell.cellLabel.numberOfLines = 1
