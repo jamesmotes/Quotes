@@ -863,6 +863,9 @@
                                     <constraint firstAttribute="width" constant="27" id="mEQ-U7-6by"/>
                                 </constraints>
                                 <state key="normal" image="search.png"/>
+                                <connections>
+                                    <segue destination="01G-6L-bbu" kind="show" id="W98-Is-iJp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -918,6 +921,43 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1050.4000000000001" y="-1743.778110944528"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="y3a-w3-jIK">
+            <objects>
+                <viewController id="01G-6L-bbu" customClass="SearchViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3C-Rf-mkJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vzH-4H-Jn5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="01G-6L-bbu" id="r0d-u8-cR1"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eKT-bL-rox"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="gg2-Jp-jlj" id="xy3-ur-JjX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1g-1l-VGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="gg2-Jp-jlj">
+                    <connections>
+                        <outlet property="delegate" destination="01G-6L-bbu" id="lAS-hy-MTl"/>
+                        <outlet property="searchBar" destination="vzH-4H-Jn5" id="NWY-Lb-ruu"/>
+                        <outlet property="searchContentsController" destination="01G-6L-bbu" id="hn1-TU-2bq"/>
+                        <outlet property="searchResultsDataSource" destination="01G-6L-bbu" id="Rl8-JB-InE"/>
+                        <outlet property="searchResultsDelegate" destination="01G-6L-bbu" id="2vf-vF-3ON"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="20" y="-1723"/>
         </scene>
         <!--Main Menu Table View Controller-->
         <scene sceneID="Et7-bh-p6w">
