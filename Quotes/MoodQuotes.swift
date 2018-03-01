@@ -9,7 +9,7 @@
 import Foundation
 
 
-let moods = ["Happy", "Motivational", "Sad", "Hungry"]
+//let moods = 
 
 
 class MoodQuotes {
