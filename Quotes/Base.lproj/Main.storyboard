@@ -598,7 +598,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1521" y="-1280"/>
+            <point key="canvasLocation" x="1860" y="-1280.5097451274364"/>
         </scene>
         <!--View Random-->
         <scene sceneID="VB7-BU-ta7">
@@ -864,7 +864,7 @@
                                 </constraints>
                                 <state key="normal" image="search.png"/>
                                 <connections>
-                                    <segue destination="01G-6L-bbu" kind="show" id="W98-Is-iJp"/>
+                                    <segue destination="TWL-GO-nuq" kind="show" animates="NO" id="FdN-kF-G0n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -923,41 +923,77 @@
             <point key="canvasLocation" x="-1050.4000000000001" y="-1743.778110944528"/>
         </scene>
         <!--Search View Controller-->
-        <scene sceneID="y3a-w3-jIK">
+        <scene sceneID="5cM-QR-PRs">
             <objects>
-                <viewController id="01G-6L-bbu" customClass="SearchViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d3C-Rf-mkJ">
+                <viewController id="TWL-GO-nuq" customClass="SearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lBv-Tu-3hc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vzH-4H-Jn5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-vG-TGE">
+                                <rect key="frame" x="0.0" y="55" width="375" height="568"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="DNc-k4-vAp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NV2-8d-TjF">
+                                        <rect key="frame" x="0.0" y="84" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NV2-8d-TjF" id="WCf-0h-5sU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVP-MW-u8h">
+                                <rect key="frame" x="0.0" y="20" width="375" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="dhG-b0-zCZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title=" Back"/>
                                 <connections>
-                                    <outlet property="delegate" destination="01G-6L-bbu" id="r0d-u8-cR1"/>
+                                    <segue destination="dYJ-Kj-E20" kind="show" animates="NO" id="JTh-ow-EAD"/>
                                 </connections>
-                            </searchBar>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="eKT-bL-rox"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1jn-vG-TGE" firstAttribute="trailing" secondItem="A27-Nh-7U0" secondAttribute="trailing" id="Gw3-fA-Hri"/>
+                            <constraint firstItem="EVP-MW-u8h" firstAttribute="leading" secondItem="A27-Nh-7U0" secondAttribute="leading" id="RF8-Qg-1oc"/>
+                            <constraint firstItem="1jn-vG-TGE" firstAttribute="bottom" secondItem="A27-Nh-7U0" secondAttribute="bottom" id="U2q-7s-FYZ"/>
+                            <constraint firstItem="1jn-vG-TGE" firstAttribute="leading" secondItem="A27-Nh-7U0" secondAttribute="leading" id="cMa-Xo-Ppb"/>
+                            <constraint firstItem="EVP-MW-u8h" firstAttribute="top" secondItem="A27-Nh-7U0" secondAttribute="top" id="hF1-LS-9cK"/>
+                            <constraint firstItem="EVP-MW-u8h" firstAttribute="trailing" secondItem="A27-Nh-7U0" secondAttribute="trailing" id="k8y-yB-ukh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A27-Nh-7U0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ASq-jU-Ii9"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="gg2-Jp-jlj" id="xy3-ur-JjX"/>
+                        <outlet property="searchBar" destination="DNc-k4-vAp" id="daZ-hM-EeV"/>
+                        <outlet property="searchDisplayController" destination="JJZ-IZ-QIg" id="Jwe-fn-mjg"/>
+                        <outlet property="tableView" destination="1jn-vG-TGE" id="Jr6-qB-l7O"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i1g-1l-VGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="gg2-Jp-jlj">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0d-Tp-ITu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="JJZ-IZ-QIg">
                     <connections>
-                        <outlet property="delegate" destination="01G-6L-bbu" id="lAS-hy-MTl"/>
-                        <outlet property="searchBar" destination="vzH-4H-Jn5" id="NWY-Lb-ruu"/>
-                        <outlet property="searchContentsController" destination="01G-6L-bbu" id="hn1-TU-2bq"/>
-                        <outlet property="searchResultsDataSource" destination="01G-6L-bbu" id="Rl8-JB-InE"/>
-                        <outlet property="searchResultsDelegate" destination="01G-6L-bbu" id="2vf-vF-3ON"/>
+                        <outlet property="delegate" destination="TWL-GO-nuq" id="mhl-SV-qhc"/>
+                        <outlet property="searchContentsController" destination="TWL-GO-nuq" id="Zse-El-eK8"/>
+                        <outlet property="searchResultsDataSource" destination="TWL-GO-nuq" id="oBq-t2-bzr"/>
+                        <outlet property="searchResultsDelegate" destination="TWL-GO-nuq" id="PBA-Ob-i3P"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="20" y="-1723"/>
+            <point key="canvasLocation" x="-15.199999999999999" y="-1744.6776611694154"/>
         </scene>
         <!--Main Menu Table View Controller-->
         <scene sceneID="Et7-bh-p6w">

@@ -11,6 +11,7 @@
 		1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FC2019830C00B22EDE /* PurchasePerson.swift */; };
 		1A0999FF2019873600B22EDE /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FE2019873600B22EDE /* IAP.swift */; };
 		1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */; };
+		1A3011372048B755004BC424 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3011362048B754004BC424 /* SearchViewController.swift */; };
 		1A302F5720100AA600273C7E /* painted_dude.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4B20100AA300273C7E /* painted_dude.jpg */; };
 		1A302F5820100AA600273C7E /* snowy_mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4C20100AA300273C7E /* snowy_mountains.jpg */; };
 		1A302F5920100AA600273C7E /* black_umbrella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4D20100AA400273C7E /* black_umbrella.jpg */; };
@@ -50,7 +51,6 @@
 		1AA123742044F22D0004C1AE /* Share-icon-iOS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123732044F22C0004C1AE /* Share-icon-iOS.jpg */; };
 		1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123752044F3CF0004C1AE /* share_icon_white.jpg */; };
 		1AA123782044F4B40004C1AE /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123772044F4B30004C1AE /* search.png */; };
-		1AA1237A204643860004C1AE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA12379204643860004C1AE /* SearchViewController.swift */; };
 		1AA438942033E2DB000C7238 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; };
 		1AA438952033E2DB000C7238 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AA438962033E2DB000C7238 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438932033E2DA000C7238 /* RealmSwift.framework */; };
@@ -99,6 +99,7 @@
 		1A0999FC2019830C00B22EDE /* PurchasePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePerson.swift; sourceTree = "<group>"; };
 		1A0999FE2019873600B22EDE /* IAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
 		1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoodQuotes.swift; sourceTree = "<group>"; };
+		1A3011362048B754004BC424 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "/Users/James/Documents/Not School/AppExamples/Quotes0_5/Quotes/Quotes/SearchViewController.swift"; sourceTree = "<absolute>"; };
 		1A302F4B20100AA300273C7E /* painted_dude.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = painted_dude.jpg; sourceTree = "<group>"; };
 		1A302F4C20100AA300273C7E /* snowy_mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowy_mountains.jpg; sourceTree = "<group>"; };
 		1A302F4D20100AA400273C7E /* black_umbrella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black_umbrella.jpg; sourceTree = "<group>"; };
@@ -138,7 +139,6 @@
 		1AA123732044F22C0004C1AE /* Share-icon-iOS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Share-icon-iOS.jpg"; sourceTree = "<group>"; };
 		1AA123752044F3CF0004C1AE /* share_icon_white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share_icon_white.jpg; sourceTree = "<group>"; };
 		1AA123772044F4B30004C1AE /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
-		1AA12379204643860004C1AE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1AA438922033E2DA000C7238 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1AA438932033E2DA000C7238 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		1AA438992033E521000C7238 /* QuoteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteClass.swift; sourceTree = "<group>"; };
@@ -260,13 +260,13 @@
 				1AB47C882001BCBF00F547E4 /* Quotes */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AA4389B2033E629000C7238 /* FrontPage.swift */,
+				1A3011362048B754004BC424 /* SearchViewController.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
 				1A0999FE2019873600B22EDE /* IAP.swift */,
 				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
 				1AACFE931FF2F65E00E6424D /* ViewController.swift */,
 				1A302F8D2010F63400273C7E /* MoodQuotes.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
-				1AA12379204643860004C1AE /* SearchViewController.swift */,
 				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
 				81155EAE2016C12900849C47 /* MainMenuViewController.swift */,
 				1AA438992033E521000C7238 /* QuoteClass.swift */,
@@ -508,7 +508,7 @@
 				1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AE63D3120166200009732CF /* ViewRandom.swift in Sources */,
-				1AA1237A204643860004C1AE /* SearchViewController.swift in Sources */,
+				1A3011372048B755004BC424 /* SearchViewController.swift in Sources */,
 				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
