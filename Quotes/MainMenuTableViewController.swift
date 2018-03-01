@@ -8,9 +8,20 @@
 
 import UIKit
 
-class MainMenuTableViewController: UITableViewController {
+let mainMenuOptions = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
+let peopleOptions = ["Blake Nelson"]
+let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", /*"Death"*/]
+let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
-    let mainMenu = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
+let MAIN_MENU = 0
+let PEOPLE_MENU = 1
+let CAT_MENU = 2
+let MOOD_MENU = 3
+
+class MainMenuTableViewController: UITableViewController {
+    
+    let tableOptions = [mainMenuOptions, peopleOptions, catOptions, moodOptions]
+    var currentMenu = MAIN_MENU
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +34,7 @@ class MainMenuTableViewController: UITableViewController {
         dict["Gabriel Wang"] = false
         dict["Conor McGregor"] = true
         InAppPurchases.shared.getProducts()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,30 +55,38 @@ class MainMenuTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return mainMenu.count
+        return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Set front page parameters here:
-        
-        performSegue(withIdentifier: "toQuotesPage", sender: nil)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Set front page parameters inside cases
+        switch indexPath.item {
+        case 0:     // People
+            performSegue(withIdentifier: "toQuotesPage", sender: nil)
+        case 1:     // Categories
+            performSegue(withIdentifier: "toQuotesPage", sender: nil)
+        case 2:     // Mood
+            performSegue(withIdentifier: "toQuotesPage", sender: nil)
+        case 3:     // Favorites
+            performSegue(withIdentifier: "toQuotesPage", sender: nil)
+        default:    // Settings, Random, something fails
+            performSegue(withIdentifier: "toQuotesPage", sender: nil)
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tableOptions[currentMenu].count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        // Get the table item
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuRow", for: indexPath)
+        
+        // Design item as necessary
+        cell.textLabel?.text = tableOptions[currentMenu][indexPath.item]  // Label text
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

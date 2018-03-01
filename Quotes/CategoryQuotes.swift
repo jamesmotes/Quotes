@@ -9,7 +9,7 @@
 import Foundation
 
 
-let categories = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", /*"Death"*/]
+//let categories = 
 
 
 class CategoryQuotes {

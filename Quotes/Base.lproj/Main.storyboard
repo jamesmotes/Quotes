@@ -920,7 +920,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1050.4000000000001" y="-1743.778110944528"/>
+            <point key="canvasLocation" x="-1050" y="-1741"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="y3a-w3-jIK">
@@ -977,7 +977,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YQP-Fu-h2H">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuRow" id="YQP-Fu-h2H">
                                 <rect key="frame" x="0.0" y="50" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YQP-Fu-h2H" id="orr-r6-OId">
@@ -991,10 +991,13 @@
                             <outlet property="delegate" destination="Bof-bY-n92" id="RxH-xM-Yia"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="dYJ-Kj-E20" kind="show" identifier="toQuotesPage" id="44A-oO-2jS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1050" y="-1030"/>
+            <point key="canvasLocation" x="-1839" y="-966"/>
         </scene>
     </scenes>
     <resources>
