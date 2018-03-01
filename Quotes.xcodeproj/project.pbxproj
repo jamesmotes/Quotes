@@ -43,7 +43,6 @@
 		1A302F862010420900273C7E /* annie-spratt-156491.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F732010420700273C7E /* annie-spratt-156491.jpg */; };
 		1A302F872010420900273C7E /* daniel-von-appen-255535.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F742010420800273C7E /* daniel-von-appen-255535.jpg */; };
 		1A302F882010420900273C7E /* takemaru-hirai-239939.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */; };
-		1A302F8C2010F50900273C7E /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8B2010F50900273C7E /* Mood.swift */; };
 		1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A302F8D2010F63400273C7E /* MoodQuotes.swift */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
@@ -64,7 +63,6 @@
 		1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACFE9A1FF2F65E00E6424D /* LaunchScreen.storyboard */; };
 		1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */; };
 		1AB47C671FFC2C3100F547E4 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C661FFC2C3100F547E4 /* People.swift */; };
-		1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C681FFC2C7000F547E4 /* Categories.swift */; };
 		1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C6E1FFC461B00F547E4 /* Podfile */; };
 		1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */; };
 		1AB47C7620001A0700F547E4 /* CategoryQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */; };
@@ -131,7 +129,6 @@
 		1A302F732010420700273C7E /* annie-spratt-156491.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "annie-spratt-156491.jpg"; sourceTree = "<group>"; };
 		1A302F742010420800273C7E /* daniel-von-appen-255535.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "daniel-von-appen-255535.jpg"; sourceTree = "<group>"; };
 		1A302F752010420800273C7E /* takemaru-hirai-239939.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "takemaru-hirai-239939.jpg"; sourceTree = "<group>"; };
-		1A302F8B2010F50900273C7E /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		1A302F8D2010F63400273C7E /* MoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQuotes.swift; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
@@ -152,7 +149,6 @@
 		1AACFE9D1FF2F65E00E6424D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleQuotes.swift; sourceTree = "<group>"; };
 		1AB47C661FFC2C3100F547E4 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
-		1AB47C681FFC2C7000F547E4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPersonQuotes.swift; sourceTree = "<group>"; };
 		1AB47C7520001A0700F547E4 /* CategoryQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryQuotes.swift; sourceTree = "<group>"; };
@@ -250,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE63D3020166200009732CF /* ViewRandom.swift */,
-				1A302F8B2010F50900273C7E /* Mood.swift */,
 				1A302F4A20100A7400273C7E /* Backgrounds */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
@@ -273,7 +268,6 @@
 				81155EAC2016C08500849C47 /* MainMenuCell.swift */,
 				1AB47C731FFFFEA300F547E4 /* ViewPersonQuotes.swift */,
 				1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */,
-				1AB47C681FFC2C7000F547E4 /* Categories.swift */,
 				1AB47C7720001D8200F547E4 /* ViewCategoriesQuotes.swift */,
 				1AB47C862001A4DA00F547E4 /* Images.xcassets */,
 				1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */,
@@ -504,8 +498,6 @@
 				1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */,
 				1AB47C892001BCBF00F547E4 /* Quotes in Sources */,
 				1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */,
-				1A302F8C2010F50900273C7E /* Mood.swift in Sources */,
-				1AB47C691FFC2C7000F547E4 /* Categories.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AE63D3120166200009732CF /* ViewRandom.swift in Sources */,
 				1A3011372048B755004BC424 /* SearchViewController.swift in Sources */,

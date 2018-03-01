@@ -930,7 +930,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-vG-TGE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-vG-TGE">
                                 <rect key="frame" x="0.0" y="55" width="375" height="568"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -942,7 +942,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NV2-8d-TjF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="NV2-8d-TjF">
                                         <rect key="frame" x="0.0" y="84" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NV2-8d-TjF" id="WCf-0h-5sU">
@@ -973,6 +973,7 @@
                             <constraint firstItem="1jn-vG-TGE" firstAttribute="leading" secondItem="A27-Nh-7U0" secondAttribute="leading" id="cMa-Xo-Ppb"/>
                             <constraint firstItem="EVP-MW-u8h" firstAttribute="top" secondItem="A27-Nh-7U0" secondAttribute="top" id="hF1-LS-9cK"/>
                             <constraint firstItem="EVP-MW-u8h" firstAttribute="trailing" secondItem="A27-Nh-7U0" secondAttribute="trailing" id="k8y-yB-ukh"/>
+                            <constraint firstItem="1jn-vG-TGE" firstAttribute="top" secondItem="EVP-MW-u8h" secondAttribute="bottom" constant="8" id="kJ0-AK-88q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A27-Nh-7U0"/>
                     </view>
@@ -1043,4 +1044,7 @@
         <image name="share_icon_white.jpg" width="488" height="502"/>
         <image name="star" width="28" height="28"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JTh-ow-EAD"/>
+    </inferredMetricsTieBreakers>
 </document>

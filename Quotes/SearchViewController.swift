@@ -19,18 +19,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
     
     var data : [String]!
     
-    var filteredData: [String]!
+    var filteredData: [String] = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.dataSource = self
+        searchBar.delegate = self
         
-        let objects = Array(realm.objects(Quote.self))
-        for obj in objects {
-            data.append(obj.person)
-            data.append(contentsOf: obj.moods)
-            data.append(
-        }
+        data.append(contentsOf: peopleOptions)
+        data.append(contentsOf: catOptions)
+        data.append(contentsOf: moodOptions)
+        filteredData = data
         // Do any additional setup after loading the view.
     }
 
@@ -45,11 +44,13 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as UITableViewCell
+        cell.textLabel?.text = filteredData[indexPath.row]
+        return cell
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

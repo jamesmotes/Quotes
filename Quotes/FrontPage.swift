@@ -61,13 +61,11 @@ class FrontPage: UIViewController {
         self.person.text = quotes[index].person
         let query : String = "text == '" + self.text.text! + "'"
         var theQuote = realm.objects(Quote.self).filter(query).first
-        try! realm.write {
-            if(theQuote?.favorite)!{
-                self.favButton.tintColor = UIColor.white
-            }
-            else {
-                self.favButton.tintColor = UIColor.orange
-            }
+        if(theQuote?.favorite)!{
+            self.favButton.tintColor = UIColor.white
+        }
+        else {
+            self.favButton.tintColor = UIColor.orange
         }
     }
     
