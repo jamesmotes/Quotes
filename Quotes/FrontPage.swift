@@ -9,6 +9,13 @@
 import UIKit
 import RealmSwift
 
+var pers = ""
+var qoutes = ""
+var category = ""
+var md = ""
+var isFavorite = false
+var isDownvote = false
+
 class FrontPage: UIViewController {
 
     @IBOutlet weak var text: UILabel!
