@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 var pers = ""
-var qoutes = ""
+//var qoutes = ""
 var category = ""
 var md = ""
 var isFavorite = false
@@ -55,6 +55,8 @@ class FrontPage: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+
+        showAfterMenu()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +64,51 @@ class FrontPage: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func showAfterMenu() {
+        var query : String = ""
+        print(category)
+        if pers != "" {
+            query += "person == '" + pers + "'"
+        }
+        if category != "" {
+            if query != "" {
+                query += " AND "
+            }
+            query += "" // TODO: How do you filter based on items in a list?
+        }
+        if md != "" {
+            if query != "" {
+                query += " AND "
+            }
+            query += "" // TODO: How do you filter based on items in a list?
+        }
+        if isFavorite {
+            if query != "" {
+                query += " AND "
+            }
+            query += "favorite == true"
+        }
+        if isDownvote {     // Possibly remove when downvote functionality actually works
+            if query != "" {
+                query += " AND "
+            }
+            query += "downvote == false"
+        }
+        
+        print("Query: \(query)")
+        if query != "" {
+            let filteredQuotes = realm.objects(Quote.self).filter(query)
+            print(filteredQuotes)
+        }
+
+        // Reset params
+        pers = ""
+        category = ""
+        md = ""
+        isFavorite = false
+        isDownvote = false
+        
+    }
 
     func refresh(){
         self.text.text = quotes[index].text

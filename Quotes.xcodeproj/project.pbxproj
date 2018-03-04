@@ -11,7 +11,6 @@
 		1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FC2019830C00B22EDE /* PurchasePerson.swift */; };
 		1A0999FF2019873600B22EDE /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FE2019873600B22EDE /* IAP.swift */; };
 		1A2AF307201A822F00DB01B3 /* ViewMoodQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */; };
-		1A3011372048B755004BC424 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3011362048B754004BC424 /* SearchViewController.swift */; };
 		1A302F5720100AA600273C7E /* painted_dude.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4B20100AA300273C7E /* painted_dude.jpg */; };
 		1A302F5820100AA600273C7E /* snowy_mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4C20100AA300273C7E /* snowy_mountains.jpg */; };
 		1A302F5920100AA600273C7E /* black_umbrella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A302F4D20100AA400273C7E /* black_umbrella.jpg */; };
@@ -97,7 +96,6 @@
 		1A0999FC2019830C00B22EDE /* PurchasePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePerson.swift; sourceTree = "<group>"; };
 		1A0999FE2019873600B22EDE /* IAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
 		1A2AF306201A822F00DB01B3 /* ViewMoodQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoodQuotes.swift; sourceTree = "<group>"; };
-		1A3011362048B754004BC424 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "/Users/James/Documents/Not School/AppExamples/Quotes0_5/Quotes/Quotes/SearchViewController.swift"; sourceTree = "<absolute>"; };
 		1A302F4B20100AA300273C7E /* painted_dude.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = painted_dude.jpg; sourceTree = "<group>"; };
 		1A302F4C20100AA300273C7E /* snowy_mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowy_mountains.jpg; sourceTree = "<group>"; };
 		1A302F4D20100AA400273C7E /* black_umbrella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black_umbrella.jpg; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 				1AB47C882001BCBF00F547E4 /* Quotes */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AA4389B2033E629000C7238 /* FrontPage.swift */,
-				1A3011362048B754004BC424 /* SearchViewController.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
 				1A0999FE2019873600B22EDE /* IAP.swift */,
 				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
@@ -500,7 +497,6 @@
 				1A302F8E2010F63400273C7E /* MoodQuotes.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AE63D3120166200009732CF /* ViewRandom.swift in Sources */,
-				1A3011372048B755004BC424 /* SearchViewController.swift in Sources */,
 				1AB47C7C20003A1500F547E4 /* Settings.swift in Sources */,
 				1AB47C741FFFFEA300F547E4 /* ViewPersonQuotes.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
