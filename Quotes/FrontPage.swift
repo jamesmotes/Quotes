@@ -58,7 +58,7 @@ class FrontPage: UIViewController {
 
     func refresh(){
         self.text.text = quotes[index].text
-        self.person.text = quotes[index].person
+        self.person.text = "- " + quotes[index].person
         let query : String = "text == '" + self.text.text! + "'"
         var theQuote = realm.objects(Quote.self).filter(query).first
         if(theQuote?.favorite)!{
