@@ -208,7 +208,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
          text = "If you're not dreaming big for yourself, who's going to do it for you?"
-        cats = ["Success", "Entrepreneur", "Change]
+        cats = ["Success", "Entrepreneur", "Change"]
         moos = ["Motivational", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -266,7 +266,7 @@ class LoadQuotes {
         moos = ["Motivational", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
                 
-        text = "You have to have extreme actions to have extreme results.
+        text = "You have to have extreme actions to have extreme results."
         cats = ["Success", "Entrepreneur", "Fitness"]
         moos = ["Motivational", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
