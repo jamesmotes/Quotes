@@ -68,7 +68,7 @@ class FrontPage: UIViewController {
         var query : String = ""
         print(category)
         if pers != "" {
-            query += "person == '" + pers + "'"
+            query += "person = '" + pers + "'"
         }
         if category != "" {
             if query != "" {
@@ -86,19 +86,21 @@ class FrontPage: UIViewController {
             if query != "" {
                 query += " AND "
             }
-            query += "favorite == true"
+            query += "favorite = true"
         }
         if isDownvote {     // Possibly remove when downvote functionality actually works
             if query != "" {
                 query += " AND "
             }
-            query += "downvote == false"
+            query += "downvote = false"
         }
         
         print("Query: \(query)")
         if query != "" {
-            let filteredQuotes = realm.objects(Quote.self).filter(query)
-            print(filteredQuotes)
+            quotes = Array(realm.objects(Quote.self).filter(query))
+            print(quotes)
+            quotes.shuffle()
+            refresh()
         }
 
         // Reset params
