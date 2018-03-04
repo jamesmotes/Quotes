@@ -659,7 +659,179 @@ class LoadQuotes {
         //Beyonce
         name = "Beyonce"
         
-        text = "If everything was perfect, you would never learn and you would never grow"
+        text = "If everything was perfect, you would never learn and you would never grow."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Power means happiness; power means hard work and sacrifice."
+        cats = ["Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "When you love and accept yourself, when you know who really cares about you, and when you learn from your mistakes, then you stop caring about what people who don't know you think."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I can never be safe; I always try and go against the grain. As soon as I accomplish one thing, I just set a higher goal. That's how I've gotten to where I am."
+        cats = ["Success"]
+        moos = ["Motivational"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I wanted to sell a million records, and I sold a million records. I wanted to go platinum; I went platinum. I've been working nonstop since I was 15. I don't even know how to chill out."
+        cats = ["Success"]
+        moos = ["Motivational"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I get nervous when I don't get nervous. If I'm nervous I know I'm going to have a good show."
+        cats = ["Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I truly believe that women should be financially independent from their men. And let’s face it, money gives men the power to run the show. It gives men the power to define value. They define what’s sexy. And men define what’s feminine. It’s ridiculous."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I always try to be myself. Ever since I was an introverted kid, I’d get on stage and be able to break out of my shell."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I love my job, but it’s more than that: I need it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Strong enough to bear the children. Then get back to business."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I don’t like to gamble, but if there’s one thing I’m willing to bet on, it’s myself."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The reality is, sometimes you lose."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+         //Connor Mcgregor
+        name = "Connor Mcgregor"
+        
+        text = "Doubt is only removed by action. If you’re not working then that’s where doubt comes in."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "There’s no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings. You could be anyone if you put in the time. You will reach the top, and that’s that. I am not talented, I am obsessed."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I have never encountered a winner that held hate towards something."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "It’s not really that much big of a deal – you brush it off and you come back. Defeat is the secret ingredient to success."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I’m just going to keep doing what I’m doing. Keep proving people wrong and proving myself right."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "At the end of the day, you’ve gotta feel some way. So why not feel unbeatable? Why not feel untouchable?"
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I keep having vivid dreams of success. Then it’s time to sleep."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Failure is not an option for me. Success is all I envision."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Excellence is not a skill. Excellence is an attitude."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I stay ready so I don’t have to get ready."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "All that matters is how you see yourself."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Do I hate my opponents? How can I hate someone who has the same dreams as me?"
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I was always a dreamer, and my first ambition was to be a footballer. I’d be out in the field doing drills after it got dark at night. So I had that passion to get somewhere and a drive to do something. I did love football and was always more into playing it than watching it. When I found combat sport, however, it just took over. It’s non-stop now."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "One king gets old, then a young gorilla comes up and kills him, and takes everything he owns."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Approach everything with an open mind, with a learning mind. You will never stop learning as long as you keep the mind-set that everything works, because everything does work. There’s a time and a place for every single move. If you work on it enough, it will work."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Be grateful with everything you have and you will be successful in everything you do."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "My success isn’t a result of arrogance. It’s a result of belief"
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Look out for those who look out for you. Loyalty is everything."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "There’s people that focus on the game and forget about the art. There’s that specific individual that can do both."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "You can’t fear success and I think a lot of people do. I think a lot of people fear the really high heights. But I am not one of those people… I’m not like that. I’m going for it."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "We’re not just here to take part. We’re here to take over."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational", "Hungry"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+                
+        //Thomas Jefferson
+        name = "Thomas Jefferson"
+        
+        text = "Walking is the best possible exercise. Habituate yourself to walk very far."
         cats = []
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
