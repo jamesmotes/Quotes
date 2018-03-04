@@ -59,19 +59,56 @@ class MainMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Set front page parameters inside cases
-        switch indexPath.item {
-        case 0:     // People
-            performSegue(withIdentifier: "toQuotesPage", sender: nil)
-        case 1:     // Categories
-            performSegue(withIdentifier: "toQuotesPage", sender: nil)
-        case 2:     // Mood
-            performSegue(withIdentifier: "toQuotesPage", sender: nil)
-        case 3:     // Favorites
-            performSegue(withIdentifier: "toQuotesPage", sender: nil)
-        default:    // Settings, Random, something fails
-            performSegue(withIdentifier: "toQuotesPage", sender: nil)
+        
+        // Set front page parameters
+        if currentMenu == MAIN_MENU {   // Main menu, NOT submenu (could break things)
+            print("Something from the main menu was selected.")
+            switch indexPath.item {
+            case 0:     // People
+                print("A person was selected.")
+                currentMenu = PEOPLE_MENU
+            case 1:     // Categories
+                print("A category was selected.")
+                currentMenu = CAT_MENU
+            case 2:     // Mood
+                print("A mood was selected.")
+                currentMenu = MOOD_MENU
+            case 3:     // Favorites
+                print("The favorites were selected.")
+                isFavorite = true   // Show favorited quotes on Front Page
+//                performSegue(withIdentifier: "toQuotesPage", sender: nil)
+                dismiss(animated: true, completion: nil)
+            case 5:     // Settings
+                print("The settings were selected.")
+//                performSegue(withIdentifier: "toSettings", sender: nil)
+                dismiss(animated: true, completion: nil)
+            default:    // Random, or something fails
+                print("Random quotes were selected, or something failed.")
+//                performSegue(withIdentifier: "toQuotesPage", sender: nil)
+                dismiss(animated: true, completion: nil)
+            }
         }
+
+        else {  // Inside a submenu, same case values don't apply
+            switch currentMenu {
+            case PEOPLE_MENU:   // A Person was selected
+                pers = tableOptions[currentMenu][indexPath.item]
+                print("\(pers) was selected.")
+            case CAT_MENU:      // A Category was selected
+                category = tableOptions[currentMenu][indexPath.item]
+                print("\(category) was selected.")
+            case MOOD_MENU:     // A Mood was selected
+                md = tableOptions[currentMenu][indexPath.item]
+                print("\(md) was selected.")
+            default:            // Something broke
+                break
+            }
+            
+            dismiss(animated: true, completion: nil)
+        }
+        
+        // Reload table with new information
+        self.tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -134,8 +171,13 @@ class MainMenuTableViewController: UITableViewController {
     */
     @IBAction func backToView(_ sender: Any) {
         // Reset quotes page params
-        
-        dismiss(animated: true, completion: nil)
+        if currentMenu != MAIN_MENU {
+            currentMenu = MAIN_MENU
+            self.tableView.reloadData()
+        }
+        else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
 }

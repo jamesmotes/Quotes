@@ -1040,9 +1040,6 @@
                             <outlet property="delegate" destination="Bof-bY-n92" id="RxH-xM-Yia"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="dYJ-Kj-E20" kind="show" identifier="toQuotesPage" id="44A-oO-2jS"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
