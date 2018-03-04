@@ -930,29 +930,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-vG-TGE">
-                                <rect key="frame" x="0.0" y="55" width="375" height="568"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="DNc-k4-vAp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="NV2-8d-TjF">
-                                        <rect key="frame" x="0.0" y="84" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NV2-8d-TjF" id="WCf-0h-5sU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVP-MW-u8h">
                                 <rect key="frame" x="0.0" y="20" width="375" height="27"/>
                                 <constraints>
@@ -967,21 +944,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1jn-vG-TGE" firstAttribute="trailing" secondItem="A27-Nh-7U0" secondAttribute="trailing" id="Gw3-fA-Hri"/>
                             <constraint firstItem="EVP-MW-u8h" firstAttribute="leading" secondItem="A27-Nh-7U0" secondAttribute="leading" id="RF8-Qg-1oc"/>
-                            <constraint firstItem="1jn-vG-TGE" firstAttribute="bottom" secondItem="A27-Nh-7U0" secondAttribute="bottom" id="U2q-7s-FYZ"/>
-                            <constraint firstItem="1jn-vG-TGE" firstAttribute="leading" secondItem="A27-Nh-7U0" secondAttribute="leading" id="cMa-Xo-Ppb"/>
                             <constraint firstItem="EVP-MW-u8h" firstAttribute="top" secondItem="A27-Nh-7U0" secondAttribute="top" id="hF1-LS-9cK"/>
                             <constraint firstItem="EVP-MW-u8h" firstAttribute="trailing" secondItem="A27-Nh-7U0" secondAttribute="trailing" id="k8y-yB-ukh"/>
-                            <constraint firstItem="1jn-vG-TGE" firstAttribute="top" secondItem="EVP-MW-u8h" secondAttribute="bottom" constant="8" id="kJ0-AK-88q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A27-Nh-7U0"/>
                     </view>
                     <navigationItem key="navigationItem" id="ASq-jU-Ii9"/>
                     <connections>
-                        <outlet property="searchBar" destination="DNc-k4-vAp" id="daZ-hM-EeV"/>
                         <outlet property="searchDisplayController" destination="JJZ-IZ-QIg" id="Jwe-fn-mjg"/>
-                        <outlet property="tableView" destination="1jn-vG-TGE" id="Jr6-qB-l7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0d-Tp-ITu" userLabel="First Responder" sceneMemberID="firstResponder"/>

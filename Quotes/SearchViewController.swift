@@ -9,10 +9,8 @@ import UIKit
 import Realm
 import RealmSwift
 
-class SearchViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+class SearchViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
     
     let realm = try! Realm()
     
@@ -23,8 +21,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        searchBar.delegate = self
+        
         
         data.append(contentsOf: peopleOptions)
         data.append(contentsOf: catOptions)
@@ -68,7 +65,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         
-        tableView.reloadData()
     }
     
 }
