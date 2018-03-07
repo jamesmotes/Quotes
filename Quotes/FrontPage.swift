@@ -47,7 +47,7 @@ class FrontPage: UIViewController {
         }*/
         quotes = Array(realm.objects(Quote.self))
         quotes.shuffle()
-        print(quotes)
+        //print(quotes)
         refresh()
 
         // Do any additional setup after loading the view.
@@ -55,7 +55,7 @@ class FrontPage: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
-
+        index = 0
         showAfterMenu()
     }
 
@@ -102,22 +102,14 @@ class FrontPage: UIViewController {
             quotes.shuffle()
             refresh()
         }
-
-        // Reset params
-        pers = ""
-        category = ""
-        md = ""
-        isFavorite = false
-        isDownvote = false
-        
     }
 
     func refresh(){
         self.text.text = quotes[index].text
         self.person.text = "- " + quotes[index].person
-        let query : String = "text == '" + self.text.text! + "'"
-        var theQuote = realm.objects(Quote.self).filter(query).first
-        if(theQuote?.favorite)!{
+        //let query : String = "text == '" + self.text.text! + "'"
+        //var theQuote = realm.objects(Quote.self).filter(query).first
+        if(!quotes[index].favorite){
             self.favButton.tintColor = UIColor.white
         }
         else {
@@ -160,16 +152,22 @@ class FrontPage: UIViewController {
     
     @IBAction func favorite(_ sender: Any) {
         let realm = try! Realm()
-        let query : String = "text == '" + self.text.text! + "'"
+        let query : String = "id == " + String(quotes[index].id)
         var theQuote = realm.objects(Quote.self).filter(query).first
         try! realm.write {
             if(theQuote?.favorite)!{
                 theQuote!.favorite = false
-                //self.favButton.tintColor = UIColor.white
+                quotes[index].favorite = false
+                self.favButton.tintColor = UIColor.white
+                if isFavorite {
+                    quotes.remove(at: index)
+                    //print(quotes[index])
+                }
             }
             else {
+                quotes[index].favorite = true
                 theQuote!.favorite = true
-                //self.favButton.tintColor = UIColor.yellow
+                self.favButton.tintColor = UIColor.yellow
             }
         }
         theQuote = realm.objects(Quote.self).filter("favorite == true").first

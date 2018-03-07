@@ -36,6 +36,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         
         cell.textLabel?.text = filteredData[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
+        cell.backgroundColor = UIColor.black
         return cell
     }
     

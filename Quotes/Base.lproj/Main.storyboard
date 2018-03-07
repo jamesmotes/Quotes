@@ -974,13 +974,15 @@
                                     <constraint firstAttribute="height" constant="21" id="5ah-xP-r4g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title=" Back"/>
+                                <state key="normal" title=" Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="backToMainMenu:" destination="aI8-AM-MAE" eventType="touchUpInside" id="qiP-F5-Q0c"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DbF-6I-49D" firstAttribute="trailing" secondItem="Tjq-gx-ZPk" secondAttribute="trailing" id="TOH-YJ-XF5"/>
                             <constraint firstItem="DbF-6I-49D" firstAttribute="top" secondItem="FmZ-a8-sC9" secondAttribute="bottom" constant="8" id="WvH-ea-nwi"/>

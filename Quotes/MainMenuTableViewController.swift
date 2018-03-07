@@ -45,6 +45,12 @@ class MainMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        // Reset params
+        pers = ""
+        category = ""
+        md = ""
+        isFavorite = false
+        isDownvote = false
     }
 
     override func didReceiveMemoryWarning() {
