@@ -40,6 +40,20 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selected = filteredData[indexPath.row]
+        if peopleOptions.contains(selected){
+            pers = selected
+        }
+        else if catOptions.contains(selected) {
+            category = selected
+        }
+        else if moodOptions.contains(selected){
+            md = selected
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
 

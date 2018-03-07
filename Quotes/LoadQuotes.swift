@@ -988,7 +988,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos, _id : id)
                 
          //Connor Mcgregor
-        name = "Connor Mcgregor"
+        name = "Connor McGregor"
         
         text = "Doubt is only removed by action. If you’re not working then that’s where doubt comes in."
         cats = ["Success", "Sports"]

@@ -75,12 +75,43 @@ class FrontPage: UIViewController {
                 query += " AND "
             }
             query += "" // TODO: How do you filter based on items in a list?
+            quotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
+            //var filterThis = quotes.filter(category + "IN categories")
+            
+            //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
+            var remove : [Int] = [Int]()
+            for i in 0...(quotes.count - 1) {
+                if !quotes[i].categories.contains(category){
+                    remove.append(i)
+                }
+            }
+            for i in 0...(remove.count-1){
+                quotes.remove(at: remove.count-i)
+            }
+            print(quotes)
+            refresh()
         }
         if md != "" {
             if query != "" {
                 query += " AND "
             }
             query += "" // TODO: How do you filter based on items in a list?
+            
+            quotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
+            //var filterThis = quotes.filter(category + "IN categories")
+            
+            //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
+            var remove : [Int] = [Int]()
+            for i in 0...(quotes.count - 1) {
+                if !quotes[i].moods.contains(md){
+                    remove.append(i)
+                }
+            }
+            for i in 0...(remove.count-1){
+                quotes.remove(at: remove.count-i)
+            }
+            print(quotes)
+            refresh()
         }
         if isFavorite {
             if query != "" {
@@ -98,7 +129,7 @@ class FrontPage: UIViewController {
         print("Query: \(query)")
         if query != "" {
             quotes = Array(realm.objects(Quote.self).filter(query))
-            print(quotes)
+            //print(quotes)
             quotes.shuffle()
             refresh()
         }
@@ -119,7 +150,7 @@ class FrontPage: UIViewController {
     
 
     @IBAction func swipedLeft(_ sender: Any) {
-        print("Swiped left")
+        //print("Swiped left")
         if(index > 0){
             index -= 1
         }
@@ -130,7 +161,7 @@ class FrontPage: UIViewController {
     }
     
     @IBAction func swipedRight(_ sender: Any) {
-        print("Swiped right")
+        //print("Swiped right")
         if(index < quotes.count - 1){
             index += 1
         }

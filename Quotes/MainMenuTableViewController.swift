@@ -9,7 +9,7 @@
 import UIKit
 
 let mainMenuOptions = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
-let peopleOptions = ["Blake Nelson"]
+let peopleOptions = ["Elon Musk", "Lebron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson"]
 let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", /*"Death"*/]
 let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
