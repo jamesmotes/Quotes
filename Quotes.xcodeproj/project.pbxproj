@@ -17,6 +17,7 @@
 		1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123752044F3CF0004C1AE /* share_icon_white.jpg */; };
 		1AA123782044F4B40004C1AE /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA123772044F4B30004C1AE /* search.png */; };
 		1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA38419204B7D23007E4241 /* SearchView.swift */; };
+		1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3841E20523792007E4241 /* SettingsPage.swift */; };
 		1AA438942033E2DB000C7238 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; };
 		1AA438952033E2DB000C7238 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438922033E2DA000C7238 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AA438962033E2DB000C7238 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA438932033E2DA000C7238 /* RealmSwift.framework */; };
@@ -32,6 +33,8 @@
 		1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */; };
 		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
 		1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */; };
+		1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8853720523DCA0000B56A /* IMG_0739.GIF */; };
+		1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE885392052502C0000B56A /* AlarmsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +62,7 @@
 		1AA123752044F3CF0004C1AE /* share_icon_white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share_icon_white.jpg; sourceTree = "<group>"; };
 		1AA123772044F4B30004C1AE /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		1AA38419204B7D23007E4241 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		1AA3841E20523792007E4241 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		1AA438922033E2DA000C7238 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1AA438932033E2DA000C7238 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		1AA438992033E521000C7238 /* QuoteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteClass.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
+		1AE8853720523DCA0000B56A /* IMG_0739.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IMG_0739.GIF; path = Quotes/IMG_0739.GIF; sourceTree = SOURCE_ROOT; };
+		1AE885392052502C0000B56A /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +104,7 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1AE8853720523DCA0000B56A /* IMG_0739.GIF */,
 				1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */,
 				1AA123752044F3CF0004C1AE /* share_icon_white.jpg */,
 				1AA123732044F22C0004C1AE /* Share-icon-iOS.jpg */,
@@ -130,6 +137,7 @@
 		1AACFE901FF2F65E00E6424D /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				1AE885392052502C0000B56A /* AlarmsTableViewController.swift */,
 				1AA38419204B7D23007E4241 /* SearchView.swift */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
@@ -140,6 +148,7 @@
 				1A0999FE2019873600B22EDE /* IAP.swift */,
 				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
+				1AA3841E20523792007E4241 /* SettingsPage.swift */,
 				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
 				1AA438992033E521000C7238 /* QuoteClass.swift */,
 				1AB47C862001A4DA00F547E4 /* Images.xcassets */,
@@ -252,6 +261,7 @@
 				1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */,
 				1AA123782044F4B40004C1AE /* search.png in Resources */,
 				1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */,
+				1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +339,9 @@
 				1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */,
 				1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
+				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
+				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
 				1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */,

@@ -33,6 +33,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     var scrolls = 0
     
+    var didComeFromAdd = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         interstitial = createAndLoadInterstitial()
@@ -51,7 +53,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         index = 0
-        showAfterMenu()
+        if(!didComeFromAdd){
+            showAfterMenu()
+        }
+        else {
+            didComeFromAdd = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -138,6 +145,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         if interstitial.isReady && scrolls > 11 {
             interstitial.present(fromRootViewController: self)
             scrolls = 0
+            didComeFromAdd = true
         } else {
             print("Ad wasn't ready")
         }

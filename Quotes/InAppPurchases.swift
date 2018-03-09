@@ -15,7 +15,7 @@ var purchased : Bool = Bool()
 
 class InAppPurchases: NSObject{
     
-    var delegate = ViewPersonQuotes.self
+    var delegate = FrontPage.self
     
     private override init() {}
     static let shared = InAppPurchases()

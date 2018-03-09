@@ -16,7 +16,7 @@ class PurchasePerson: UIViewController {
     @IBOutlet weak var MainText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        MainText.text = "It looks like you have not unlocked " + array[person] + " :("
+        //MainText.text = "It looks like you have not unlocked " + array[person] + " :("
         // Do any additional setup after loading the view.
     }
 
@@ -26,16 +26,16 @@ class PurchasePerson: UIViewController {
     }
     
     @IBAction func unlockPerson(_ sender: Any) {
-        purchasesController.buyItem(withProductID: locked[array[person]]!)
+        //purchasesController.buyItem(withProductID: locked[array[person]]!)
         purchasesController.onPurchase = {
             (itemID) in
-            dict[array[person]] = true
+            //dict[array[person]] = true
             
             self.performSegue(withIdentifier: "backToPeople", sender: nil)
         }
         purchasesController.onRestore = {
             (itemID) in
-            dict[array[person]] = true
+            //dict[array[person]] = true
             self.performSegue(withIdentifier: "backToPeople", sender: nil)
         }
     }

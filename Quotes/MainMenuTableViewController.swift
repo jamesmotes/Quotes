@@ -31,8 +31,6 @@ class MainMenuTableViewController: UITableViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.barTintColor = UIColor.clear
         
-        dict["Gabriel Wang"] = false
-        dict["Conor McGregor"] = true
         InAppPurchases.shared.getProducts()
 
         // Uncomment the following line to preserve selection between presentations
@@ -86,8 +84,8 @@ class MainMenuTableViewController: UITableViewController {
                 dismiss(animated: true, completion: nil)
             case 5:     // Settings
                 print("The settings were selected.")
-//                performSegue(withIdentifier: "toSettings", sender: nil)
-                dismiss(animated: true, completion: nil)
+                performSegue(withIdentifier: "viewSettings", sender: nil)
+                //dismiss(animated: true, completion: nil)
             default:    // Random, or something fails
                 print("Random quotes were selected, or something failed.")
 //                performSegue(withIdentifier: "toQuotesPage", sender: nil)
