@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/James/Documents/Not School/AppExamples/Quotes0_5/Quotes/Quotes/SearchViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:../../../../Downloads/QuoteIcon.jpg">
-   </FileRef>
-   <FileRef
-      location = "absolute:Users/blakenelson/Desktop/Quotes/Quotes/Favorites.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/James/Documents/Not School/AppExamples/Quotes/Quotes/Settings.swift">
-   </FileRef>
-   <FileRef
       location = "group:Quotes.xcodeproj">
    </FileRef>
    <FileRef
