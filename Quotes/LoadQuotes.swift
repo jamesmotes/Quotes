@@ -252,12 +252,12 @@ class LoadQuotes {
         iterator += 1
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos, _id : id)
         
-        text = "Complaining is a zero return investment."
+        /*text = "Complaining is a zero return investment."
         cats = ["Success", "Entrepreneur", "Change"]
         moos = ["Motivational"]
         id = iterator
         iterator += 1
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos, _id : id)
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos, _id : id)*/
         
          text = "I'm grinding when you're sleeping."
         cats = ["Success", "Entrepreneur"]

@@ -88,7 +88,8 @@ class FrontPage: UIViewController {
             for i in 0...(remove.count-1){
                 quotes.remove(at: remove.count-i)
             }
-            print(quotes)
+            quotes.shuffle()
+            //print(quotes)
             refresh()
         }
         if md != "" {
@@ -110,7 +111,8 @@ class FrontPage: UIViewController {
             for i in 0...(remove.count-1){
                 quotes.remove(at: remove.count-i)
             }
-            print(quotes)
+            quotes.shuffle()
+            //print(quotes)
             refresh()
         }
         if isFavorite {
@@ -133,9 +135,14 @@ class FrontPage: UIViewController {
             quotes.shuffle()
             refresh()
         }
+        query = ""
     }
 
     func refresh(){
+        if(quotes.count < 1){
+            self.text.text = "No quotes available :("
+            self.person.text = "- gb&j"
+        }
         self.text.text = quotes[index].text
         self.person.text = "- " + quotes[index].person
         //let query : String = "text == '" + self.text.text! + "'"

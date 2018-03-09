@@ -13,9 +13,12 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     var data : [String] = [String]()
     var filteredData : [String] = [String]()
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    //@IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    /*
     func updateSearchResults(for searchController: UISearchController) {
         let searchString = searchController.searchBar.text
         
@@ -25,7 +28,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
                 filteredData.append(d)
             }
         }
-    }
+        tableView.reloadData()
+    }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData.count
@@ -62,8 +66,31 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         data.append(contentsOf: peopleOptions)
         data.append(contentsOf: catOptions)
         data.append(contentsOf: moodOptions)
+        data.shuffle()
         filteredData = data
+        tableView.backgroundView?.backgroundColor = UIColor.black
+        tableView.backgroundColor = UIColor.black
+        
+        //searchBar.barTintColor = UIColor.black
+        tableView.sectionIndexTrackingBackgroundColor = UIColor.black
+        tableView.sectionIndexBackgroundColor = UIColor.black
+        
+        let backView = UIView(frame: self.tableView.bounds)
+        backView.backgroundColor = UIColor.black // or whatever color
+        self.tableView.backgroundView = backView
         // Do any additional setup after loading the view.
+        
+        /*searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search..."
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        */
+        
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,11 +98,16 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        searchController.dismiss(animated: false, completion: nil)
+    }
+    
     
     @IBAction func backToMainMenu(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
+    /*
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData.removeAll() // is mandatory to empty the filtered array
         if(searchText != "") {
@@ -86,6 +118,30 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
             }
         }
         else {
+            filteredData = data
+        }
+        tableView.reloadData()
+        tableView.backgroundView?.backgroundColor = UIColor.black
+        tableView.backgroundColor = UIColor.black
+        
+        //searchBar.barTintColor = UIColor.black
+        tableView.sectionIndexTrackingBackgroundColor = UIColor.black
+        tableView.sectionIndexBackgroundColor = UIColor.black
+        
+        let backView = UIView(frame: self.tableView.bounds)
+        backView.backgroundColor = UIColor.black // or whatever color
+        self.tableView.backgroundView = backView
+        // Do any additional setup after loading the view.
+        
+    }*/
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            filteredData = data.filter { query in
+                return query.lowercased().contains(searchText.lowercased())
+            }
+            
+        } else {
             filteredData = data
         }
         tableView.reloadData()
@@ -103,3 +159,10 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     */
 
 }
+
+/*extension SearchView: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+    }
+}*/
