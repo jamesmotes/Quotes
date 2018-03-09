@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 var pers = ""
 //var qoutes = ""
@@ -16,7 +17,7 @@ var md = ""
 var isFavorite = false
 var isDownvote = false
 
-class FrontPage: UIViewController {
+class FrontPage: UIViewController , GADInterstitialDelegate {
 
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var person: UILabel!
@@ -29,8 +30,16 @@ class FrontPage: UIViewController {
     
     var index = 0
     
+    var interstitial: GADInterstitial!
+    
+    var scrolls = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        interstitial = createAndLoadInterstitial()
+        
+        let request = GADRequest()
+        interstitial.load(request)
         
         navigationController?.isNavigationBarHidden = true
         favButton.tintColor = UIColor.white
@@ -49,6 +58,7 @@ class FrontPage: UIViewController {
         quotes.shuffle()
         //print(quotes)
         refresh()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -139,6 +149,14 @@ class FrontPage: UIViewController {
     }
 
     func refresh(){
+        if interstitial.isReady && scrolls > 11 {
+            interstitial.present(fromRootViewController: self)
+            scrolls = 0
+        } else {
+            print("Ad wasn't ready")
+        }
+        
+        
         if(quotes.count < 1){
             self.text.text = "No quotes available :("
             self.person.text = "- gb&j"
@@ -164,6 +182,7 @@ class FrontPage: UIViewController {
         else {
             index = quotes.count - 1
         }
+        scrolls += 1
         refresh()
     }
     
@@ -175,6 +194,7 @@ class FrontPage: UIViewController {
         else {
             index = 0
         }
+        scrolls += 1
         refresh()
     }
     @IBAction func tapped(_ sender: Any) {
@@ -217,6 +237,20 @@ class FrontPage: UIViewController {
         activityVC.popoverPresentationController?.sourceView = self.view
         
         self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        //the real deal
+        //var interstitial = GADInterstitial(adUnitID: "ca-app-pub-1816441460162466~7930915740")
+        //test add
+        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
     }
     /*
     // MARK: - Navigation

@@ -13,7 +13,7 @@ import FirebaseMessaging
 import FirebaseInstanceID
 import FirebaseDatabase
 import RealmSwift
-
+import GoogleMobileAds
 
 
 
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.set(dict, forKey: "unlockedPeople")
         }*/
         
-        //setupNotifications()
+        //setupNotifications
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             if (error == nil){
@@ -67,6 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         application.registerForRemoteNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+        
+        //set up ads
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-1816441460162466~7930915740")
+        
         
         return true
     }
