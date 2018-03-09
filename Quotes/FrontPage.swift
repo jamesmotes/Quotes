@@ -11,7 +11,6 @@ import RealmSwift
 import GoogleMobileAds
 
 var pers = ""
-//var qoutes = ""
 var category = ""
 var md = ""
 var isFavorite = false
@@ -41,26 +40,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         let request = GADRequest()
         interstitial.load(request)
         
-        navigationController?.isNavigationBarHidden = true
-        favButton.tintColor = UIColor.white
+        //navigationController?.isNavigationBarHidden = true
+        //favButton.tintColor = UIColor.white
         
-        var quote = Quote()
-        quote.text = "If you want to be in the 1% it's simple, don't do what the 99% do."
-        quote.person = "Grant Cardone"
-        let cat : String = "Success"
-        quote.categories.insert(cat, at: quote.categories.count)
-        let mood : String = "Motivational"
-        quote.moods.insert(mood, at: quote.moods.count)
-        /*try! realm.write {
-            realm.add(quote)
-        }*/
         quotes = Array(realm.objects(Quote.self))
         quotes.shuffle()
-        //print(quotes)
         refresh()
-        
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -149,6 +134,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
 
     func refresh(){
+        //display ads every 12 quotes
         if interstitial.isReady && scrolls > 11 {
             interstitial.present(fromRootViewController: self)
             scrolls = 0
@@ -156,15 +142,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             print("Ad wasn't ready")
         }
         
-        
+        //if query or menu option is empty
         if(quotes.count < 1){
             self.text.text = "No quotes available :("
             self.person.text = "- gb&j"
         }
         self.text.text = quotes[index].text
         self.person.text = "- " + quotes[index].person
-        //let query : String = "text == '" + self.text.text! + "'"
-        //var theQuote = realm.objects(Quote.self).filter(query).first
         if(!quotes[index].favorite){
             self.favButton.tintColor = UIColor.white
         }
@@ -175,7 +159,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
 
     @IBAction func swipedLeft(_ sender: Any) {
-        //print("Swiped left")
         if(index > 0){
             index -= 1
         }
@@ -187,7 +170,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     @IBAction func swipedRight(_ sender: Any) {
-        //print("Swiped right")
         if(index < quotes.count - 1){
             index += 1
         }
@@ -196,16 +178,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         }
         scrolls += 1
         refresh()
-    }
-    @IBAction func tapped(_ sender: Any) {
-        print("tapped")
-        /*if(index < quotes.count - 1){
-            index += 1
-        }
-        else {
-            index = 0
-        }
-        refresh()*/
     }
     
     @IBAction func favorite(_ sender: Any) {
@@ -219,7 +191,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 self.favButton.tintColor = UIColor.white
                 if isFavorite {
                     quotes.remove(at: index)
-                    //print(quotes[index])
                 }
             }
             else {
