@@ -15,6 +15,7 @@ var category = ""
 var md = ""
 var isFavorite = false
 var isDownvote = false
+var isRandom = false
 
 class FrontPage: UIViewController , GADInterstitialDelegate {
 
@@ -130,6 +131,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             query += "downvote = false"
         }
         
+        if isRandom {
+            query = ""
+            quotes = Array(realm.objects(Quote.self))
+            quotes.shuffle()
+            refresh()
+        }
+        
         print("Query: \(query)")
         if query != "" {
             quotes = Array(realm.objects(Quote.self).filter(query))
@@ -155,13 +163,15 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             self.text.text = "No quotes available :("
             self.person.text = "- gb&j"
         }
-        self.text.text = quotes[index].text
-        self.person.text = "- " + quotes[index].person
-        if(!quotes[index].favorite){
-            self.favButton.tintColor = UIColor.white
-        }
         else {
-            self.favButton.tintColor = UIColor.orange
+            self.text.text = quotes[index].text
+            self.person.text = "- " + quotes[index].person
+            if(!quotes[index].favorite){
+                self.favButton.tintColor = UIColor.white
+            }
+            else {
+                self.favButton.tintColor = UIColor.orange
+            }
         }
     }
     
@@ -174,6 +184,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             index = quotes.count - 1
         }
         scrolls += 1
+        print("swipedLeft")
         refresh()
     }
     
@@ -185,6 +196,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             index = 0
         }
         scrolls += 1
+        print("swipedRight")
         refresh()
     }
     

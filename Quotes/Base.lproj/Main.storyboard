@@ -31,10 +31,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="NC0-oe-dmn" appends="YES" id="vzr-py-67z"/>
-                                    <outletCollection property="gestureRecognizers" destination="1hA-Ae-PM2" appends="YES" id="UhU-AV-cWI"/>
-                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-Bm-ay0">
                                 <rect key="frame" x="16" y="20" width="27" height="27"/>
@@ -102,8 +98,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qy-YD-y4i"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="NC0-oe-dmn" appends="YES" id="t8A-Co-xcA"/>
-                            <outletCollection property="gestureRecognizers" destination="1hA-Ae-PM2" appends="YES" id="PXl-6g-XgP"/>
+                            <outletCollection property="gestureRecognizers" destination="OhO-am-63B" appends="YES" id="Kyw-0Y-JYR"/>
+                            <outletCollection property="gestureRecognizers" destination="efC-qR-xYm" appends="YES" id="pSa-PY-uEh"/>
                         </connections>
                     </view>
                     <toolbarItems/>
@@ -116,14 +112,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waZ-eh-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="NC0-oe-dmn">
+                <swipeGestureRecognizer direction="right" id="OhO-am-63B" userLabel="Swipe Right">
                     <connections>
-                        <action selector="swipedRight:" destination="dYJ-Kj-E20" id="f6m-Hv-KPg"/>
+                        <action selector="swipedRight:" destination="dYJ-Kj-E20" id="L8B-Sq-h7b"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="1hA-Ae-PM2">
+                <swipeGestureRecognizer direction="left" id="efC-qR-xYm" userLabel="Swipe Left">
                     <connections>
-                        <action selector="swipedLeft:" destination="dYJ-Kj-E20" id="A4C-L2-rbq"/>
+                        <action selector="swipedLeft:" destination="dYJ-Kj-E20" id="LjE-ty-aMW"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -400,6 +396,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

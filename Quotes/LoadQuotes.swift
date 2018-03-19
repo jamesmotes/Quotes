@@ -6,6 +6,8 @@
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
+//TODO: Consolidate moods and categories
+
 import Foundation
 import RealmSwift
 import Realm
@@ -901,10 +903,6 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "Walking is the best possible exercise. Habituate yourself to walk very far."
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Our greatest happines does not depend on the condition of life in which chance has placed us, but is always the result of a good conscience, good health, occupation, and freedom in all just pursuits."
         cats = []
@@ -1057,7 +1055,7 @@ class LoadQuotes {
         text = "Tough times never last, but tough people do."
         cats = ["Entrepreneur", "Success"]
         moos = []
-        MakeQuote(_name: name, _quote: text,. _categories: cats, _moods: moos)
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Self confidence is the only outfit you can't buy. You must develop it."
         cats = ["Entrepreneur", "Success"]
@@ -1774,7 +1772,7 @@ class LoadQuotes {
         text = "99% is the same as zero. If you are gonna do 99, go ahead and stay home."
         cats = ["Success"]
         moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)                text = ""
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)                
       
         text = "If you want something, go get it. Period."
         cats = ["Success"]

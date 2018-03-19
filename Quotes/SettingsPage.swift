@@ -6,14 +6,27 @@
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
+//person for alarm and time it takes place at
+var AlarmSetPeople : [String] = []
+var AlarmSetTime   : [DateComponents] = []
+
+//TODO: sort alarms when they're inserted so that they appear in order when listed
+
+
 import UIKit
 import UserNotifications
+import Realm
+import RealmSwift
 
 let center = UNUserNotificationCenter.current()
 let options: UNAuthorizationOptions = [.alert, .sound];
 
 class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
 
+    
+    
+    let realm = try! Realm()
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var data : [String] = [String]()
@@ -53,6 +66,9 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
                 print("Something went wrong")
             }
         }
+        
+        datePicker.datePickerMode = UIDatePickerMode.time
+        
         //createNotification()
         
         
@@ -118,6 +134,63 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         tableView.reloadData()
     }
     @IBAction func createAlarm(_ sender: Any) {
+        
+        
+        
+        
+        var date = datePicker.date
+        print("Date entry")
+        print(date)
+        
+        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date)
+        
+        let query = "person = '" + filteredData[0] + "'"
+        var quotes = Array(realm.objects(Quote.self).filter(query))
+        //print(quotes)
+        quotes.shuffle()
+        
+        AlarmSetPeople.append(filteredData[0])
+        AlarmSetTime.append(triggerDate)
+        
+        var index = 0
+        while(index < 31){
+            for q in quotes {
+                let content = UNMutableNotificationContent()
+                content.title = q.text
+                content.body = " - " + q.person
+                content.sound = UNNotificationSound.default()
+                
+                //should probably adjust for months with 30 and 28 days
+                triggerDate.day = triggerDate.day! + 1
+                if(triggerDate.day! > 31){
+                    triggerDate.day = 1
+                    triggerDate.month = triggerDate.month! + 1
+                    if(triggerDate.month! > 12){
+                        triggerDate.month = 1
+                    }
+                }
+                
+                //print("TriggerDate")
+                //print(triggerDate)
+                
+                
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                
+                let identifier = q.person + (String)(index)
+                let request = UNNotificationRequest(identifier: identifier,
+                                                    content: content, trigger: trigger)
+                center.add(request, withCompletionHandler: { (error) in
+                    if let error = error {
+                        // Something went wrong
+                        print("something went wrong when adding the notification to the request center")
+                    }
+                })
+                index += 1
+                if(index > 31){
+                    break
+                }
+            }
+        }
         dismiss(animated: true, completion: nil)
     }
     

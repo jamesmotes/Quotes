@@ -6,6 +6,13 @@
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
+
+
+//TODO: Have way to turn alarms on and off - maybe just need to delete when turned off and recreate when turned back on
+//TODO: Need to be able to delete an alarm - figuere out how to have a swipe gesture only on a single cell, figure out how to delete a local alarm
+//TODO: Make it look pretty
+//TODO: Decide if this feature is going to be an in app purchase or if having above a certain number is or whatever
+
 import UIKit
 import UserNotifications
 
@@ -17,7 +24,7 @@ class AlarmsTableViewController: UITableViewController {
         super.viewDidLoad()
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
-            print(notifications)
+            //print(notifications)
         }
         tableView.reloadData()
         
@@ -58,7 +65,7 @@ class AlarmsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return alarms.count
+        return AlarmSetTime.count
     }
 
     @IBAction func backToMenu(_ sender: Any) {
@@ -72,16 +79,19 @@ class AlarmsTableViewController: UITableViewController {
         // Configure the cell...
         
         
-        var t : UNCalendarNotificationTrigger  = alarms[indexPath.item].trigger as! UNCalendarNotificationTrigger
-        print(t.dateComponents.hour)
-        var hour = t.dateComponents.hour!
+        //var t : UNCalendarNotificationTrigger  = alarms[indexPath.item].trigger as! UNCalendarNotificationTrigger
+        //print(t.dateComponents.hour)
+        //var hour = t.dateComponents.hour!
+        
+        var hour = AlarmSetTime[indexPath.row].hour!
         if hour == 0 {
             hour = 12
         }
         else if hour > 12 {
             hour -= 12
         }
-        var minute = t.dateComponents.minute!
+        //var minute = t.dateComponents.minute!
+        let minute = AlarmSetTime[indexPath.row].minute!
         var minuteString : String = ""
         if(minute < 10) {
             minuteString = "0\(minute)"
@@ -90,12 +100,13 @@ class AlarmsTableViewController: UITableViewController {
             minuteString = "\(minute)"
         }
         
-        var p : UNNotificationContent = alarms[indexPath.item].content
+        //let p : UNNotificationContent = alarms[indexPath.item].content
+        let p = AlarmSetPeople[indexPath.row]
         
-        
-        cell.textLabel?.text = "\(hour):"+minuteString + "   \(p.title)"
+        cell.textLabel?.text = "\(hour):"+minuteString + "   \(p)"
         return cell
     }
+    
     
     /*override func viewDidDisappear(_ animated: Bool) {
         for r in alarms {

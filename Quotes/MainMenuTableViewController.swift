@@ -6,6 +6,9 @@
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
+//TODO: Adjust to consolidation of moods and quotes
+//TODO: Make it pretty
+
 import UIKit
 
 let mainMenuOptions = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
@@ -49,6 +52,7 @@ class MainMenuTableViewController: UITableViewController {
         md = ""
         isFavorite = false
         isDownvote = false
+        isRandom = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,6 +91,7 @@ class MainMenuTableViewController: UITableViewController {
                 performSegue(withIdentifier: "viewSettings", sender: nil)
                 //dismiss(animated: true, completion: nil)
             default:    // Random, or something fails
+                isRandom = true
                 print("Random quotes were selected, or something failed.")
 //                performSegue(withIdentifier: "toQuotesPage", sender: nil)
                 dismiss(animated: true, completion: nil)
