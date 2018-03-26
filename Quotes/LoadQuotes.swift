@@ -1804,7 +1804,299 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
+ //Dwayne "The Rock" Johnson
+        name = "Dwayne \"The Rock\" Johnson"
+        
+        text = "Success isn't always about 'Greatness', it's about consistency. Consistent, hard work gains success. Greatness will come."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Blood, Sweat and Respect. First two you give, last one you earn."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "1995. 7 bucks in my pocket. I knew two things: I'm broke as hell and one day I won't be. "
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I like to use the hard times in the past to motivate me today."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I'll never, ever be full. I'll always be hungry. Obviously, I'm not talking about food. Growing up, I had nothing for such a long time. Someone told me a long time ago, and I've never forgotten it. 'Once you've ever been hungry, really, really hungry, then you'll never, ever be full.'"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The road to success and greatness is always pavef with consistent hard work. Outwork your competitors, be authentic and above all else.. chase your greatness."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Let actions do your talking for you."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "With drive and a bit of talent, you can move mountains."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Success at anything will always come down to this: focus and effort and we control both."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "All successes begin with Self-Discipline. It starts with you."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Don’t be afraid to be ambitious about your goals. Hard work never stops. Neither should your dreams."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We do today what they won’t so tomorrow we can accomplish what they can’t."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You don’t need directions, just point yourself to the top and go!"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When life puts you in tough situations, don’t say ‘why me?’ just say ‘Try Me’."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Think back 5 years ago. Think of where you’re at today. Think ahead 5 years and what you want to accomplish. Be unstoppable."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Wake up determined. Go to bed satisfied."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Success isn’t overnight. It’s when everyday you get a little better than the day before. It all adds up."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Grind hard, shine hard."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If something stands between you and your success, MOVE IT! Never be denied."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The first step to achiving your goal, is to take a moment to respect your goal. Know what it means to you to achieve it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "There is no substitute for hard work. Always be humble and hungry."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The wall! Your success is on the other side. Can’t jump over it or go around it. You know what to do."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        //Albert Einstein
+        name = "Albert Einstein"
+        
+        text = "Try not to become a man of success, but rather try to become a man of value."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "In the middle of difficulty lies opportunity."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "A person who never made a mistake never tried anything new."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Life is like riding a bicycle. To keep your balance you must keep moving."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Great spirits have always encountered violent opposition from mediocre minds."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "It’s not that I am so smart, it’s just that I stay with problems longer."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Insanity is doing the same thing, over and over again, but expecting different results."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Logic will get you from A to B. Imagination will take you everywhere."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You have to learn the rules of the game. And then you have to play better than anyone else"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We cannot solve our problems with the same thinking we used when we created them."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Few are those who see with their own eyes and feel with their own hearts."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Not everything that can be counted counts, and not everything that counts can be counted."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Any intelligent fool can make things bigger and more complex… It takes a touch of genius – and a lot of courage to move in the opposite direction."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I am thankful for all of those who said NO to me. Its because of them I’m doing it myself."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Never give up on what you really want to do. The person with big dreams is more powerful than the one with all the facts."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
 
+        //Stephen Hawking
+        name = "Stephen Hawking"        
+        
+        text = "However difficult life may seem, there is always something you can do, and succeed at. It matter that you don’t just give up."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Without imperfection, you or I would not exist."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The thing about smart people is that they seem like crazy people to dumb people."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Try to make sense of what you see and wonder about what makes the universe exist. Be curious, and however difficult life may seem, there is always something you can do, and succeed at. It matters that you don’t just give up."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Quiet people have the loudest minds."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the Universe. That makes us something very special."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Intelligence is the ability to adapt to change."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Although I cannot move and I have to speak through a computer, in my mind I am free."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The past, like the future, is indefinite and exists only as a spectrum of possibilities."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I am just a child who has never grown up. I still keep asking these 'how' and 'why' questions."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I believe things cannot make themselves impossible."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I was never top of the class at school, but my classmates must have seen potential in me, because my nickname was 'Einstein.'"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When one's expectations are reduced to zero, one really appreciates everything one does have."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Obviously, because of my disability, I need assistance. But I have always tried to overcome the limitations of my condition and lead as full a life as possible. I have traveled the world, from the Antarctic to zero gravity."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I have so much that I want to do. I hate wasting time."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "It is no good getting furious if you get stuck. What I do is keep thinking about the problem but work on something else. Sometimes it is years before I see the way forward. In the case of information loss and black holes, it was 29 years."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The doctor who diagnosed me with ALS, or motor neuron disease, told me that it would kill me in two or three years."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
     }
     
     func MakeQuote(_name : String, _quote : String, _categories : [String], _moods : [String]) -> Void {
