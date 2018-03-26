@@ -54,8 +54,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         if(!didComeFromAdd){
-            showAfterMenu()
             index = 0
+            showAfterMenu()
         }
         else {
             didComeFromAdd = false
@@ -142,8 +142,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             interstitial.present(fromRootViewController: self)
             scrolls = 0
             didComeFromAdd = true
-        } else {
-            print("Ad wasn't ready")
         }
         
         //if query or menu option is empty
@@ -152,6 +150,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             self.person.text = "- gb&j"
         }
         else {
+            print(index)
             self.text.text = quotes[index].text
             self.person.text = "- " + quotes[index].person
             if(!quotes[index].favorite){
