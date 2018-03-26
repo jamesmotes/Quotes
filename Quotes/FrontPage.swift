@@ -74,10 +74,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             query += "person = '" + pers + "'"
         }
         if category != "" {
-            if query != "" {
-                query += " AND "
-            }
-            query += "" // TODO: How do you filter based on items in a list?
+            query += ""
             quotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
             //var filterThis = quotes.filter(category + "IN categories")
             
@@ -92,21 +89,16 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 quotes.remove(at: remove.count-i)
             }
             quotes.shuffle()
-            //print(quotes)
             refresh()
         }
         if md != "" {
-            if query != "" {
-                query += " AND "
-            }
-            query += "" // TODO: How do you filter based on items in a list?
+            query += ""
             
             quotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
             //var filterThis = quotes.filter(category + "IN categories")
             
             //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
             
-            //TODO @ BLAKE: What is this below??
             var remove : [Int] = [Int]()
             for i in 0...(quotes.count - 1) {
                 if !quotes[i].moods.contains(md){
@@ -117,19 +109,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 quotes.remove(at: remove.count-i)
             }
             quotes.shuffle()
-            //print(quotes)
             refresh()
         }
         if isFavorite {
-            if query != "" {
-                query += " AND "
-            }
             query += "favorite = true"
         }
         if isDownvote {     // Possibly remove when downvote functionality actually works
-            if query != "" {
-                query += " AND "
-            }
             query += "downvote = false"
         }
         
@@ -143,7 +128,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         print("Query: \(query)")
         if query != "" {
             quotes = Array(realm.objects(Quote.self).filter(query))
-            //print(quotes)
             quotes.shuffle()
             refresh()
         }
