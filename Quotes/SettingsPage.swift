@@ -152,11 +152,24 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         AlarmSetPeople.append(filteredData[0])
         AlarmSetTime.append(triggerDate)
         
+        
+        /*let defaults = UserDefaults.standard
+        defaults.set(AlarmSetPeople, forKey: "AlarmSetPeople")
+        defaults.set(AlarmSetTime, forKey: "AlarmSetTime")
+        */
         triggerDate.day = triggerDate.day! - 1
         
         var index = 0
+        
         while(index < 31){
             for q in quotes {
+                var currentCount = 0
+                for i in AlarmSetPeople {
+                    if i == q.person {
+                        currentCount = currentCount + 1
+                    }
+                }
+                
                 let content = UNMutableNotificationContent()
                 content.title = q.text
                 content.body = " - " + q.person
@@ -178,7 +191,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
                 
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                 
-                let identifier = q.person + (String)(index)
+                let identifier = q.person + (String)(index + currentCount * 31)
                 let request = UNNotificationRequest(identifier: identifier,
                                                     content: content, trigger: trigger)
                 center.add(request, withCompletionHandler: { (error) in

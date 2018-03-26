@@ -26,9 +26,31 @@ class AlarmsTableViewController: UITableViewController {
             self.alarms = notifications
             //print(notifications)
         }
+        
+        
+        for a in alarms {
+            print(a)
+            var index = a.content.body.index(a.content.body.startIndex, offsetBy: 3)
+            let name = a.content.body[index...]
+            print("Name being found by the substring formula thing.....")
+            print(name)
+            print(AlarmSetPeople)
+            let t : UNCalendarNotificationTrigger  = a.trigger as! UNCalendarNotificationTrigger
+            if !AlarmSetPeople.contains(String(name)) {
+                print("In here")
+                AlarmSetPeople.append(String(name))
+                
+                AlarmSetTime.append(t.dateComponents)
+            }
+            else if !AlarmSetTime.contains(t.dateComponents) {
+                AlarmSetPeople.append(String(name))
+                AlarmSetTime.append(t.dateComponents)
+            }
+        }
         tableView.reloadData()
         
         if(alarms.count > 0){
+            print("Alarm > 0")
             let t : UNCalendarNotificationTrigger  = alarms[0].trigger as! UNCalendarNotificationTrigger
             print(t.dateComponents.hour!)
         }
@@ -47,7 +69,38 @@ class AlarmsTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
-            print(notifications)
+            //print(notifications)
+        }
+        
+        print(AlarmSetPeople)
+        for a in alarms {
+            print(a)
+            var index = a.content.body.index(a.content.body.startIndex, offsetBy: 3)
+            let name = a.content.body[index...]
+            print("Name being found by the substring formula thing.....")
+            print(name)
+            let t : UNCalendarNotificationTrigger  = a.trigger as! UNCalendarNotificationTrigger
+            
+            print(AlarmSetPeople)
+            if !AlarmSetPeople.contains(String(name)) {
+                AlarmSetPeople.append(String(name))
+                AlarmSetTime.append(t.dateComponents)
+            }
+            else {
+                var Repeat = false
+                for i in 0...AlarmSetPeople.count-1 {
+                    if AlarmSetPeople[i] == name {
+                        if AlarmSetTime[i].hour == t.dateComponents.hour && AlarmSetTime[i].minute == t.dateComponents.minute {
+                            Repeat = true
+                        }
+                    }
+                }
+                if(!Repeat){
+                    AlarmSetPeople.append(String(name))
+                    AlarmSetTime.append(t.dateComponents)
+                }
+            }
+            
         }
         tableView.reloadData()
         
