@@ -152,6 +152,8 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         AlarmSetPeople.append(filteredData[0])
         AlarmSetTime.append(triggerDate)
         
+        triggerDate.day = triggerDate.day! - 1
+        
         var index = 0
         while(index < 31){
             for q in quotes {

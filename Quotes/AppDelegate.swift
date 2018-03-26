@@ -39,7 +39,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             updateDatabase()
             defaults.set(true, forKey: "updated")
         }
+        if(defaults.bool(forKey: "HasBeenLaunched") == false){
+            defaults.set([], forKey: "AlarmSetPeople")
+            defaults.set([], forKey: "AlarmSetTime")
+            defaults.set(true, forKey: "HasBeenLaunched")
+        }
+        else{
+            AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
+            AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
+        }
         var quote = realm.objects(Quote.self).filter("person = 'Elon Musk'")
+        
         print(quote)
         
         
