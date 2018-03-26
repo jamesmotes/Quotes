@@ -105,6 +105,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             //var filterThis = quotes.filter(category + "IN categories")
             
             //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
+            
+            //TODO @ BLAKE: What is this below??
             var remove : [Int] = [Int]()
             for i in 0...(quotes.count - 1) {
                 if !quotes[i].moods.contains(md){
