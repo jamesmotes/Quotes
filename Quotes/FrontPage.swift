@@ -53,9 +53,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
-        index = 0
         if(!didComeFromAdd){
             showAfterMenu()
+            index = 0
         }
         else {
             didComeFromAdd = false
@@ -106,7 +106,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             
             //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
             
-            //TODO @ BLAKE: What is this below??
             var remove : [Int] = [Int]()
             for i in 0...(quotes.count - 1) {
                 if !quotes[i].moods.contains(md){
@@ -153,6 +152,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     func refresh(){
         //display ads every 12 quotes
         if interstitial.isReady && scrolls > 11 {
+            print("Time for add")
+            print(index)
             interstitial.present(fromRootViewController: self)
             scrolls = 0
             didComeFromAdd = true
@@ -175,6 +176,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 self.favButton.tintColor = UIColor.orange
             }
         }
+        print(index)
     }
     
 

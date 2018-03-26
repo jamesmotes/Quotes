@@ -1865,7 +1865,7 @@ class LoadQuotes {
         text = "We do today what they won’t so tomorrow we can accomplish what they can’t."
         cats = []
         moos = []
-        MakeQute(_name: name, _quote: text, _categories: cats, _moods: moos)
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "You don’t need directions, just point yourself to the top and go!"
         cats = []
