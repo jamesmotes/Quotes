@@ -2109,7 +2109,7 @@ class LoadQuotes {
             quote.categories.insert(cat, at: quote.categories.count)
         }
         for mood in _moods {
-            quote.moods.insert(mood, at: quote.moods.count)
+            quote.categories.insert(mood, at: quote.categories.count)
         }
         quote.id = self.iterator
         self.iterator += 1
