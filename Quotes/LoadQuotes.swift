@@ -535,7 +535,7 @@ class LoadQuotes {
         moos = ["Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
                 
-         text = "When you have that gut feeling, you have to go with don’t go back on it."
+         text = "When you have that gut feeling, you have to go with it don’t go back on it."
         cats = ["Success", "Sports"]
         moos = ["Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -1002,7 +1002,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "I want a million dollars in my happy account and a million dollars in my banck account"
+        text = "I want a million dollars in my happy account and a million dollars in my bank account."
         cats = ["Entrepreneur", "Success"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -1234,7 +1234,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "“Braggin' is when a person says something and can’t do it. I do what I say."
+        text = "Braggin' is when a person says something and can’t do it. I do what I say."
         cats = ["Sports"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -1626,7 +1626,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "It's our responsibility to do the best we can do to change things we don;t like. I think that's part of social responsibility, and everybody is going to do that in their own way."
+        text = "It's our responsibility to do the best we can do to change things we don't like. I think that's part of social responsibility, and everybody is going to do that in their own way."
         cats = ["Sports"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -1641,7 +1641,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
               
-        text = "Maybe some people can wake up adnd play PlayStation all day, but that's never been me."
+        text = "Maybe some people can wake up and play PlayStation all day, but that's never been me."
         cats = ["Sports"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -2008,7 +2008,7 @@ class LoadQuotes {
         //Stephen Hawking
         name = "Stephen Hawking"        
         
-        text = "However difficult life may seem, there is always something you can do, and succeed at. It matter that you don’t just give up."
+        text = "However difficult life may seem, there is always something you can do, and succeed at. It matters that you don’t just give up."
         cats = []
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
