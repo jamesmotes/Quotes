@@ -44,6 +44,7 @@ class MainMenuTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
         // Reset params
@@ -162,4 +163,7 @@ class MainMenuTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func swipedOnCell(_ sender: Any) {
+        
+    }
 }

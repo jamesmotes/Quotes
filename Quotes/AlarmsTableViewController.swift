@@ -16,6 +16,8 @@
 import UIKit
 import UserNotifications
 
+var alarmSelected : String = String()
+
 class AlarmsTableViewController: UITableViewController {
     
     var alarms : [UNNotificationRequest] = []
@@ -59,6 +61,10 @@ class AlarmsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        var recognizer = UISwipeGestureRecognizer(target: self, action: "didSwipe")
+        self.tableView.addGestureRecognizer(recognizer)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,12 +73,14 @@ class AlarmsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        alarms = []
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
             //print(notifications)
         }
         
         print(AlarmSetPeople)
+        print(alarms)
         for a in alarms {
             print(a)
             var index = a.content.body.index(a.content.body.startIndex, offsetBy: 3)
@@ -125,9 +133,21 @@ class AlarmsTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        alarmSelected = AlarmSetPeople[indexPath.row]
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
+        cell.textLabel?.textColor = UIColor.white
+        
         //print(alarms[indexPath].trigger)
         // Configure the cell...
         

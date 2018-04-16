@@ -219,7 +219,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <state key="normal" title=" Back"/>
+                            <state key="normal" title=" Back">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <connections>
                                 <action selector="backToView:" destination="Bof-bY-n92" eventType="touchUpInside" id="rHd-vu-SU2"/>
                             </connections>
@@ -233,6 +235,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -246,7 +249,90 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1050" y="-961"/>
+            <point key="canvasLocation" x="-1050.4000000000001" y="-961.16941529235385"/>
+        </scene>
+        <!--Edit Alarm-->
+        <scene sceneID="c0G-F4-wXu">
+            <objects>
+                <viewController id="R9t-lx-BPB" customClass="EditAlarm" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="haU-a6-2UR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hl-UM-UNI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kbd-P9-TvF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title=" Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToAlarmMenu:" destination="R9t-lx-BPB" eventType="touchUpInside" id="gKy-vP-zNN"/>
+                                    <action selector="backToMenu:" destination="Ih1-Xd-DY3" eventType="touchUpInside" id="14g-qp-fOY"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-SP-vL6">
+                                <rect key="frame" x="0.0" y="80" width="375" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <date key="date" timeIntervalSinceReferenceDate="542269644.47494197">
+                                    <!--2018-03-09 06:27:24 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKm-hl-Rzu">
+                                <rect key="frame" x="247" y="20" width="128" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n6w-hp-srf"/>
+                                    <constraint firstAttribute="width" constant="128" id="qh6-hQ-QiF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Edit Alarm  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAlarm:" destination="Ih1-Xd-DY3" eventType="touchUpInside" id="7LM-Sk-BEK"/>
+                                    <action selector="editAlarm:" destination="R9t-lx-BPB" eventType="touchUpInside" id="Hg9-LI-hTC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUR-8y-GtO">
+                                <rect key="frame" x="50" y="318" width="275" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="8Vn-ob-xJD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="Delete Alarm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAlarm:" destination="R9t-lx-BPB" eventType="touchUpInside" id="vhE-xT-RIY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oJA-SP-vL6" firstAttribute="trailing" secondItem="Ymi-O8-OT5" secondAttribute="trailing" id="0KG-qG-bnr"/>
+                            <constraint firstItem="iUR-8y-GtO" firstAttribute="leading" secondItem="Ymi-O8-OT5" secondAttribute="leading" constant="50" id="9Ae-FD-dt3"/>
+                            <constraint firstItem="7Hl-UM-UNI" firstAttribute="trailing" secondItem="Ymi-O8-OT5" secondAttribute="trailing" id="9Hw-Ox-lE8"/>
+                            <constraint firstItem="oJA-SP-vL6" firstAttribute="leading" secondItem="Ymi-O8-OT5" secondAttribute="leading" id="Mme-3p-2xx"/>
+                            <constraint firstItem="iUR-8y-GtO" firstAttribute="top" secondItem="oJA-SP-vL6" secondAttribute="bottom" constant="22" id="WIe-LJ-OLS"/>
+                            <constraint firstItem="BKm-hl-Rzu" firstAttribute="top" secondItem="Ymi-O8-OT5" secondAttribute="top" id="df8-6b-cn9"/>
+                            <constraint firstItem="7Hl-UM-UNI" firstAttribute="top" secondItem="Ymi-O8-OT5" secondAttribute="top" id="g3m-4a-OD9"/>
+                            <constraint firstItem="oJA-SP-vL6" firstAttribute="top" secondItem="haU-a6-2UR" secondAttribute="top" constant="80" id="quM-SL-URw"/>
+                            <constraint firstItem="Ymi-O8-OT5" firstAttribute="trailing" secondItem="iUR-8y-GtO" secondAttribute="trailing" constant="50" id="ssi-rX-LAy"/>
+                            <constraint firstItem="BKm-hl-Rzu" firstAttribute="trailing" secondItem="Ymi-O8-OT5" secondAttribute="trailing" id="tzx-0I-BtN"/>
+                            <constraint firstItem="7Hl-UM-UNI" firstAttribute="leading" secondItem="Ymi-O8-OT5" secondAttribute="leading" id="vSK-Va-IRl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ymi-O8-OT5"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="oJA-SP-vL6" id="c93-ft-MuZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4T-bx-58k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.60000000000002" y="-961.16941529235385"/>
         </scene>
         <!--Settings Page-->
         <scene sceneID="mTa-ZC-P9M">
@@ -357,16 +443,18 @@
         <scene sceneID="jXS-M4-xYy">
             <objects>
                 <tableViewController id="oMg-y0-1Gy" customClass="AlarmsTableViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mzM-Xm-O7m">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mzM-Xm-O7m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Aep-LZ-721">
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" translucent="NO" id="Aep-LZ-721">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <textAttributes key="titleTextAttributes">
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -389,15 +477,42 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="3ie-gH-CaO">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="3ie-gH-CaO" customClass="AlarmMenuCell" customModule="Quotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ie-gH-CaO" id="yvG-mu-Tvz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oif-eX-iq2">
+                                            <rect key="frame" x="300" y="0.0" width="75" height="50"/>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="4P1-PU-OXr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="Delete">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deleteAlarm:" destination="3ie-gH-CaO" eventType="touchUpInside" id="wDa-3e-42E"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oif-eX-iq2" firstAttribute="top" secondItem="yvG-mu-Tvz" secondAttribute="top" id="DbU-hx-58p"/>
+                                        <constraint firstAttribute="trailing" secondItem="oif-eX-iq2" secondAttribute="trailing" id="F3m-T8-69z"/>
+                                        <constraint firstAttribute="bottom" secondItem="oif-eX-iq2" secondAttribute="bottom" id="OLc-Hb-DD1"/>
+                                    </constraints>
                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="deleteButton" destination="oif-eX-iq2" id="NHj-o4-cKl"/>
+                                    <outletCollection property="gestureRecognizers" destination="zV2-zD-ZbX" appends="YES" id="F3N-YX-mzb"/>
+                                    <segue destination="R9t-lx-BPB" kind="presentation" id="wOT-We-srG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -408,6 +523,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgt-MV-CY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="zV2-zD-ZbX"/>
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="-961.16941529235385"/>
         </scene>

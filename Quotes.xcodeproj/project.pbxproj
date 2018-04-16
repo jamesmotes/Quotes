@@ -27,6 +27,8 @@
 		1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACFE911FF2F65E00E6424D /* AppDelegate.swift */; };
 		1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACFE951FF2F65E00E6424D /* Main.storyboard */; };
 		1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACFE9A1FF2F65E00E6424D /* LaunchScreen.storyboard */; };
+		1AAE1C332083F88B00345E1F /* AlarmMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE1C322083F88B00345E1F /* AlarmMenuCell.swift */; };
+		1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE1C3420840E5D00345E1F /* EditAlarm.swift */; };
 		1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */; };
 		1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C6E1FFC461B00F547E4 /* Podfile */; };
 		1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C862001A4DA00F547E4 /* Images.xcassets */; };
@@ -72,6 +74,8 @@
 		1AACFE961FF2F65E00E6424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AACFE9B1FF2F65E00E6424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AACFE9D1FF2F65E00E6424D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AAE1C322083F88B00345E1F /* AlarmMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmMenuCell.swift; sourceTree = "<group>"; };
+		1AAE1C3420840E5D00345E1F /* EditAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarm.swift; sourceTree = "<group>"; };
 		1AB47C641FFC26BC00F547E4 /* PeopleQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleQuotes.swift; sourceTree = "<group>"; };
 		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1AB47C862001A4DA00F547E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				1AE885392052502C0000B56A /* AlarmsTableViewController.swift */,
+				1AAE1C322083F88B00345E1F /* AlarmMenuCell.swift */,
+				1AAE1C3420840E5D00345E1F /* EditAlarm.swift */,
 				1AA38419204B7D23007E4241 /* SearchView.swift */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
@@ -341,11 +347,13 @@
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
+				1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
 				1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */,
 				1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */,
+				1AAE1C332083F88B00345E1F /* AlarmMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

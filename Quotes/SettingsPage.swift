@@ -171,8 +171,8 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
                 }
                 
                 let content = UNMutableNotificationContent()
-                content.title = q.text
-                content.body = " - " + q.person
+                //content.title =
+                content.body = q.text + " - " + q.person
                 content.sound = UNNotificationSound.default()
                 
                 //should probably adjust for months with 30 and 28 days
@@ -208,6 +208,8 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
     /*
     // MARK: - Navigation
