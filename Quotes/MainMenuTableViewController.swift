@@ -133,7 +133,9 @@ class MainMenuTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuRow", for: indexPath)
         
         // Design item as necessary
-        cell.textLabel?.text = tableOptions[currentMenu][indexPath.item]  // Label text
+        // sort array alphabetically
+        var sortedArray = tableOptions[currentMenu].sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
+        cell.textLabel?.text = sortedArray[indexPath.item]                // Label text
         cell.textLabel?.textAlignment = .center                           // Center text
         cell.textLabel?.adjustsFontSizeToFitWidth = true                  // Set font size
         cell.textLabel?.backgroundColor = UIColor.black                   // Set background color
