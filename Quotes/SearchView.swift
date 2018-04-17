@@ -138,12 +138,14 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text, !searchText.isEmpty {
             filteredData = data.filter { query in
-                return query.lowercased().contains(searchText.lowercased())
+                return query.lowercased().contains(searchText.lowercased()
             }
             
         } else {
             filteredData = data
         }
+        // sort alphabetically
+        filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
         tableView.reloadData()
     }
     

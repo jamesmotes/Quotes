@@ -11,19 +11,19 @@
 
 import UIKit
 
-let mainMenuOptions = ["People", "Categories", "Mood", "Favorites", "Random", "Settings"]
+let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms"]
 let peopleOptions = ["Elon Musk", "Lebron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady"]
-let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", /*"Death"*/]
-let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
+let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Happy", "Motivational", "Sad", "Hungry"/*, "Death"*/]
+//let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
 let MAIN_MENU = 0
 let PEOPLE_MENU = 1
 let CAT_MENU = 2
-let MOOD_MENU = 3
+//let MOOD_MENU = 3
 
 class MainMenuTableViewController: UITableViewController {
     
-    let tableOptions = [mainMenuOptions, peopleOptions, catOptions, moodOptions]
+    let tableOptions = [mainMenuOptions, peopleOptions, catOptions/*, moodOptions*/]
     var currentMenu = MAIN_MENU
     let MinHeight: CGFloat = 100.0
     
@@ -52,7 +52,7 @@ class MainMenuTableViewController: UITableViewController {
         // Reset params
         pers = ""
         category = ""
-        md = ""
+        //md = ""
         isFavorite = false
         isDownvote = false
         isRandom = false
@@ -81,15 +81,15 @@ class MainMenuTableViewController: UITableViewController {
             case 1:     // Categories
                 print("A category was selected.")
                 currentMenu = CAT_MENU
-            case 2:     // Mood
+            /*case 2:     // Mood
                 print("A mood was selected.")
-                currentMenu = MOOD_MENU
-            case 3:     // Favorites
+                currentMenu = MOOD_MENU*/
+            case 2:     // Favorites
                 print("The favorites were selected.")
                 isFavorite = true   // Show favorited quotes on Front Page
 //                performSegue(withIdentifier: "toQuotesPage", sender: nil)
                 dismiss(animated: true, completion: nil)
-            case 5:     // Settings
+            case 4:     // Alarms
                 print("The settings were selected.")
                 performSegue(withIdentifier: "viewSettings", sender: nil)
                 //dismiss(animated: true, completion: nil)
@@ -109,9 +109,9 @@ class MainMenuTableViewController: UITableViewController {
             case CAT_MENU:      // A Category was selected
                 category = tableOptions[currentMenu][indexPath.item]
                 print("\(category) was selected.")
-            case MOOD_MENU:     // A Mood was selected
+            /*case MOOD_MENU:     // A Mood was selected
                 md = tableOptions[currentMenu][indexPath.item]
-                print("\(md) was selected.")
+                print("\(md) was selected.")*/
             default:            // Something broke
                 break
             }
@@ -135,7 +135,9 @@ class MainMenuTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuRow", for: indexPath)
         
         // Design item as necessary
-        cell.textLabel?.text = tableOptions[currentMenu][indexPath.item]  // Label text
+        // sort array alphabetically
+        var sortedArray = tableOptions[currentMenu].sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
+        cell.textLabel?.text = sortedArray[indexPath.item]                // Label text
         cell.textLabel?.textAlignment = .center                           // Center text
         cell.textLabel?.adjustsFontSizeToFitWidth = true                  // Set font size
         cell.textLabel?.backgroundColor = UIColor.black                   // Set background color
