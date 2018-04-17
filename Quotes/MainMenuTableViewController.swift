@@ -27,6 +27,8 @@ class MainMenuTableViewController: UITableViewController {
     var currentMenu = MAIN_MENU
     let MinHeight: CGFloat = 100.0
     
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -143,7 +145,8 @@ class MainMenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tableHeight = tableView.bounds.height - 60
+        let tableHeight = tableView.bounds.height// - 60
+//        print(backButton.backgroundRect(forBounds: <#T##CGRect#>))
         if currentMenu == MAIN_MENU {
             
         }

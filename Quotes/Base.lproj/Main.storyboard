@@ -244,6 +244,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="backButton" destination="5xz-UK-Amm" id="ciu-St-Ua1"/>
                         <segue destination="oMg-y0-1Gy" kind="presentation" identifier="viewSettings" id="66w-Ug-y9a"/>
                     </connections>
                 </tableViewController>
