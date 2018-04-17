@@ -131,6 +131,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         } else {
             filteredData = data
         }
+        filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
         tableView.reloadData()
     }
     @IBAction func createAlarm(_ sender: Any) {
