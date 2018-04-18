@@ -175,6 +175,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
                 //content.title =
                 content.body = q.text + " - " + q.person
                 content.sound = UNNotificationSound.default()
+                content.categoryIdentifier = "RECEIVED_QUOTE"
                 
                 //should probably adjust for months with 30 and 28 days
                 triggerDate.day = triggerDate.day! + 1

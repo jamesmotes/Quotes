@@ -31,8 +31,8 @@ class AlarmsTableViewController: UITableViewController {
         
         
         for a in alarms {
-            print(a)
-            var index = a.content.body.index(a.content.body.startIndex, offsetBy: 3)
+            //print(a)
+            let index = a.content.body.index(a.content.body.startIndex, offsetBy: a.content.body.count - 8)
             let name = a.content.body[index...]
             print("Name being found by the substring formula thing.....")
             print(name)
