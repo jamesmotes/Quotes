@@ -131,7 +131,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         } else {
             filteredData = data
         }
-        filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
+        filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         tableView.reloadData()
     }
     @IBAction func createAlarm(_ sender: Any) {
@@ -143,7 +143,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         print("Date entry")
         print(date)
         
-        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date)
+        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
         
         let query = "person = '" + filteredData[0] + "'"
         var quotes = Array(realm.objects(Quote.self).filter(query))

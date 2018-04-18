@@ -1,6 +1,7 @@
 target 'Quotes' do
     use_frameworks!
-
+    
+    pod 'RealmSwift'
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
     pod 'Firebase/Database'

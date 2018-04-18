@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import GoogleMobileAds
+import Foundation
 
 var pers = ""
 var category = ""
@@ -48,6 +49,15 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         
         quotes = Array(realm.objects(Quote.self))
         quotes.shuffle()
+        
+        if(notificationQuote != "") {
+            for j in 0...(quotes.count - 1) {
+                if notificationQuote.range(of:(quotes[j].text)) != nil {
+                    index = j
+                    notificationQuote = ""
+                }
+            }
+        }
         refresh()
     }
     

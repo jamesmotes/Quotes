@@ -15,6 +15,7 @@ import FirebaseDatabase
 import RealmSwift
 import GoogleMobileAds
 
+var notificationQuote : String = ""
 
 
 @UIApplicationMain
@@ -48,9 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
         }
-        var quote = realm.objects(Quote.self).filter("person = 'Elon Musk'")
-        
-        print(quote)
         
         
         
@@ -73,16 +71,78 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             if (error == nil){
                 print("Successful authoriation")
+                application.registerForRemoteNotifications()
+                NotificationCenter.default.addObserver(self, selector: #selector(self.refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+                self.ConfigureNotifications()
             }
         }
-        application.registerForRemoteNotifications()
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+        //application.registerForRemoteNotifications()
+        //NotificationCenter.default.addObserver(self, selector: #selector(refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
         
         //set up ads
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1816441460162466~7930915740")
         
         
         return true
+    }
+    
+    func ConfigureNotifications(){
+        // Create the custom actions for notification category.
+        let favoriteAction = UNNotificationAction(identifier: "FAVORITE",
+                                                title: "Favorite",
+                                                options: UNNotificationActionOptions(rawValue: 0))
+        let quoteCategory = UNNotificationCategory(identifier: "RECEIVED_QUOTE",
+                                                     actions: [favoriteAction],
+                                                     intentIdentifiers: [],
+                                                     options: UNNotificationCategoryOptions(rawValue: 0))
+        
+        // Register the notification categories.
+        let center = UNUserNotificationCenter.current()
+        center.setNotificationCategories([quoteCategory])
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+                if response.actionIdentifier == "FAVORITE" {
+                    print("Handle like action identifier")
+                    print(response.notification.request.content.body)
+                    
+                    var quotes = Array(realm.objects(Quote.self))
+                    for j in 0...(quotes.count - 1) {
+                        if response.notification.request.content.body.range(of:(quotes[j].text)) != nil {
+                            
+                            let query : String = "id == " + String(quotes[j].id)
+                            var theQuote = realm.objects(Quote.self).filter(query).first
+                            try! realm.write {
+                                if(theQuote?.favorite)!{
+                                    theQuote!.favorite = false
+                                    quotes[j].favorite = false
+                                }
+                                else {
+                                    quotes[j].favorite = true
+                                    theQuote!.favorite = true
+                                }
+                            }
+                            theQuote = realm.objects(Quote.self).filter("favorite == true").first
+                            
+                            
+                            
+                        }
+                    }
+                    
+                } else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+                    notificationQuote = response.notification.request.content.body
+                } else {
+                    print("No custom action identifiers chosen")
+                }
+                // Make sure completionHandler method is at the bottom of this func
+                completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(UNNotificationPresentationOptions.sound)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

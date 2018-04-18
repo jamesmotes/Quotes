@@ -10,7 +10,6 @@
 
 import Foundation
 import RealmSwift
-import Realm
 
 class LoadQuotes {
     let realm = try! Realm()
@@ -160,7 +159,7 @@ class LoadQuotes {
         moos = ["Motivational", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
       
-        text = "Really pay attention to negative feedback and solicit it, particularly from friends. ... Hardly anyone does that, and it's incredibly helpful."
+        text = "Really pay attention to negative feedback and solicit it, particularly from friends... Hardly anyone does that, and it's incredibly helpful."
         cats = ["Entrepreneur", "Change"]
         moos = ["Motivational", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -1636,7 +1635,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
              
-        text = "I firmly believe that sleep and recovery are critial aspects of an effective and holistic training program."
+        text = "I firmly believe that sleep and recovery are critical aspects of an effective and holistic training program."
         cats = ["Sports"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)

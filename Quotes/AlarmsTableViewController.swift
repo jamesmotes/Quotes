@@ -26,7 +26,7 @@ class AlarmsTableViewController: UITableViewController {
         super.viewDidLoad()
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
-            //print(notifications)
+            print(notifications)
         }
         
         
@@ -73,10 +73,10 @@ class AlarmsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        alarms = []
+        //alarms = []
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
-            //print(notifications)
+            print(notifications)
         }
         
         print(AlarmSetPeople)

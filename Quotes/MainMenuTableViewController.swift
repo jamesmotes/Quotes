@@ -136,7 +136,13 @@ class MainMenuTableViewController: UITableViewController {
         
         // Design item as necessary
         // sort array alphabetically
-        var sortedArray = tableOptions[currentMenu].sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
+        var sortedArray : [String] = []
+        if(currentMenu != MAIN_MENU){
+            sortedArray = tableOptions[currentMenu].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        }
+        else {
+            sortedArray = tableOptions[currentMenu]
+        }
         cell.textLabel?.text = sortedArray[indexPath.item]                // Label text
         cell.textLabel?.textAlignment = .center                           // Center text
         cell.textLabel?.adjustsFontSizeToFitWidth = true                  // Set font size
