@@ -19,7 +19,7 @@
         <!--Front Page-->
         <scene sceneID="W3O-tO-gSy">
             <objects>
-                <viewController id="dYJ-Kj-E20" customClass="FrontPage" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="frontPage" id="dYJ-Kj-E20" customClass="FrontPage" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P2m-5i-EMa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -19,7 +19,7 @@ var notificationQuote : String = ""
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     var isInitialized = false
@@ -67,15 +67,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }*/
         
         //setupNotifications
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
+        /*UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             if (error == nil){
                 print("Successful authoriation")
                 application.registerForRemoteNotifications()
                 NotificationCenter.default.addObserver(self, selector: #selector(self.refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
                 self.ConfigureNotifications()
             }
-        }
+        }*/
+        
+        registerForPushNotifications()
+        
         //application.registerForRemoteNotifications()
         //NotificationCenter.default.addObserver(self, selector: #selector(refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
         
@@ -84,6 +86,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         return true
+    }
+    
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current().delegate = self as! UNUserNotificationCenterDelegate
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            print("Permission granted: \(granted)")
+            // 1. Check if permission granted
+            guard granted else { return }
+            // 2. Attempt registration for remote notifications on the main thread
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
     }
     
     func ConfigureNotifications(){
@@ -103,7 +119,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-                if response.actionIdentifier == "FAVORITE" {
+        print("DID CLICK ON NOTIFICATION")
+            if response.actionIdentifier == "FAVORITE" {
                     print("Handle like action identifier")
                     print(response.notification.request.content.body)
                     
@@ -132,6 +149,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                 } else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
                     notificationQuote = response.notification.request.content.body
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "frontPage") as! FrontPage
+                    self.window?.rootViewController = nextViewController
                 } else {
                     print("No custom action identifiers chosen")
                 }
@@ -288,4 +309,5 @@ extension UIView {
         self.layer.insertSublayer(gradient, at: 0)
     }
 }
+
 
