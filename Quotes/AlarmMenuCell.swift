@@ -10,11 +10,11 @@ import UIKit
 
 class AlarmMenuCell: UITableViewCell {
 
-    @IBOutlet weak var deleteButton: UIView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var time: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        deleteButton.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,8 +23,6 @@ class AlarmMenuCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func deleteAlarm(_ sender: UIButton) {
-        print("Pressed delete")
-    }
+    
     
 }

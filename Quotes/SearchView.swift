@@ -38,6 +38,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         
+        filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        
         cell.textLabel?.text = filteredData[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor.black
@@ -68,6 +70,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         //data.append(contentsOf: moodOptions)
         data.shuffle()
         filteredData = data
+        filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         tableView.backgroundView?.backgroundColor = UIColor.black
         tableView.backgroundColor = UIColor.black
         
@@ -90,6 +93,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
+        filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         tableView.tableHeaderView = searchController.searchBar
     }
 

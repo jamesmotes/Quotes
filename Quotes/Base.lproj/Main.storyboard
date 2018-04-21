@@ -490,32 +490,40 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oif-eX-iq2">
-                                            <rect key="frame" x="300" y="0.0" width="75" height="50"/>
-                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxM-le-EiI">
+                                            <rect key="frame" x="209" y="11" width="150" height="28"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="4P1-PU-OXr"/>
+                                                <constraint firstAttribute="width" constant="150" id="S0e-fH-vOQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="Delete">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="deleteAlarm:" destination="3ie-gH-CaO" eventType="touchUpInside" id="wDa-3e-42E"/>
-                                            </connections>
-                                        </button>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="San-ze-YJP">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="5sw-Ph-hDD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="oif-eX-iq2" firstAttribute="top" secondItem="yvG-mu-Tvz" secondAttribute="top" id="DbU-hx-58p"/>
-                                        <constraint firstAttribute="trailing" secondItem="oif-eX-iq2" secondAttribute="trailing" id="F3m-T8-69z"/>
-                                        <constraint firstAttribute="bottom" secondItem="oif-eX-iq2" secondAttribute="bottom" id="OLc-Hb-DD1"/>
+                                        <constraint firstItem="oxM-le-EiI" firstAttribute="top" secondItem="yvG-mu-Tvz" secondAttribute="topMargin" id="Lqf-Ph-r3K"/>
+                                        <constraint firstItem="San-ze-YJP" firstAttribute="top" secondItem="yvG-mu-Tvz" secondAttribute="top" id="XDj-Ic-CIZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oxM-le-EiI" secondAttribute="trailing" id="Yca-f4-xUa"/>
+                                        <constraint firstAttribute="bottom" secondItem="San-ze-YJP" secondAttribute="bottom" id="f56-8O-lWg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oxM-le-EiI" secondAttribute="bottom" id="oMR-8D-TI6"/>
+                                        <constraint firstItem="San-ze-YJP" firstAttribute="leading" secondItem="yvG-mu-Tvz" secondAttribute="leading" id="v50-ec-loP"/>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outlet property="deleteButton" destination="oif-eX-iq2" id="NHj-o4-cKl"/>
+                                    <outlet property="name" destination="oxM-le-EiI" id="hrG-eY-irb"/>
+                                    <outlet property="time" destination="San-ze-YJP" id="cEE-tU-Jle"/>
                                     <outletCollection property="gestureRecognizers" destination="zV2-zD-ZbX" appends="YES" id="F3N-YX-mzb"/>
                                     <segue destination="R9t-lx-BPB" kind="presentation" id="wOT-We-srG"/>
                                 </connections>

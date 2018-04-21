@@ -166,7 +166,7 @@ class AlarmsTableViewController: UITableViewController {
     
     func sortAlarms(){
         if AlarmSetTime.count < 2 {
-            return 
+            return
         }
         for k in AlarmSetPeople {
             for i in 0...(AlarmSetTime.count-2){
@@ -220,9 +220,10 @@ class AlarmsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AlarmMenuCell
 
-        cell.textLabel?.textColor = UIColor.white
+        cell.time.textColor = UIColor.white
+        cell.name.textColor = UIColor.white
         
         //print(alarms[indexPath].trigger)
         // Configure the cell...
@@ -232,12 +233,15 @@ class AlarmsTableViewController: UITableViewController {
         //print(t.dateComponents.hour)
         //var hour = t.dateComponents.hour!
         
+        var AM = "A.M."
+        
         var hour = AlarmSetTime[indexPath.row].hour!
+        if hour >= 12 {
+            AM = "P.M."
+            hour -= 12
+        }
         if hour == 0 {
             hour = 12
-        }
-        else if hour > 12 {
-            hour -= 12
         }
         //var minute = t.dateComponents.minute!
         let minute = AlarmSetTime[indexPath.row].minute!
@@ -252,7 +256,9 @@ class AlarmsTableViewController: UITableViewController {
         //let p : UNNotificationContent = alarms[indexPath.item].content
         let p = AlarmSetPeople[indexPath.row]
         
-        cell.textLabel?.text = "\(hour):"+minuteString + "   \(p)"
+        //cell.textLabel?.text = "\(hour):"+minuteString+AM + "   \(p)"
+        cell.time.text = "\(hour):"+minuteString+AM
+        cell.name.text = "\(p)"
         return cell
     }
     
