@@ -36,6 +36,7 @@
 		812405F420884398006E7AB7 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 812405F320884397006E7AB7 /* Fonts */; };
 		812405F620884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf in Resources */ = {isa = PBXBuildFile; fileRef = 812405F520884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf */; };
 		812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F7208BCB0A006E7AB7 /* ContactInfo.swift */; };
+		812405FA208BF548006E7AB7 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F9208BF548006E7AB7 /* Customization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,6 +85,7 @@
 		812405F320884397006E7AB7 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
 		812405F520884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TradeGothic-BoldCondTwenty.otf"; path = "Fonts/TradeGothic-BoldCondTwenty.otf"; sourceTree = "<group>"; };
 		812405F7208BCB0A006E7AB7 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		812405F9208BF548006E7AB7 /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				1A0999FE2019873600B22EDE /* IAP.swift */,
 				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
+				812405F9208BF548006E7AB7 /* Customization.swift */,
 				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
 				1AA3841E20523792007E4241 /* SettingsPage.swift */,
 				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
@@ -334,6 +337,7 @@
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
 				812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */,
+				812405FA208BF548006E7AB7 /* Customization.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
 				1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,

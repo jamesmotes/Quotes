@@ -57,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if #available( iOS 10.3,*){
                 SKStoreReviewController.requestReview()
             }
+            defaults.set(10, forKey: "reviewCountdown")
         } else {
             let countdown = defaults.integer(forKey: "reviewCountdown") - 1
             defaults.set(countdown, forKey: "reviewCountdown")
