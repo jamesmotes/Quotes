@@ -11,7 +11,7 @@
 
 import UIKit
 
-let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms"]
+let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms", "Contact Us"]
 let peopleOptions = ["Elon Musk", "Lebron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady"]
 let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Happy", "Motivational", "Sad", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
@@ -99,6 +99,9 @@ class MainMenuTableViewController: UITableViewController {
                 print("The settings were selected.")
                 performSegue(withIdentifier: "viewSettings", sender: nil)
                 //dismiss(animated: true, completion: nil)
+            case 5:    // Contact Us
+                print("conact us was selected")
+                performSegue(withIdentifier: "viewContactInfo", sender: nil)
             default:    // Random, or something fails
                 isRandom = true
                 print("Random quotes were selected, or something failed.")

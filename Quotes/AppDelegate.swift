@@ -14,8 +14,10 @@ import FirebaseInstanceID
 import FirebaseDatabase
 import RealmSwift
 import GoogleMobileAds
+import StoreKit
 
 var notificationQuote : String = ""
+
 
 
 @UIApplicationMain
@@ -44,11 +46,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set([], forKey: "AlarmSetPeople")
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
+            defaults.set(10, forKey: "reviewCountdown")
         }
         else{
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
         }
+        
+        if(defaults.integer(forKey: "reviewCountdown") == 0){
+            if #available( iOS 10.3,*){
+                SKStoreReviewController.requestReview()
+            }
+        } else {
+            let countdown = defaults.integer(forKey: "reviewCountdown") - 1
+            defaults.set(countdown, forKey: "reviewCountdown")
+        }
+        
         
         
         
@@ -87,6 +100,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         return true
     }
+    
+    
     
     func registerForPushNotifications() {
         UNUserNotificationCenter.current().delegate = self as! UNUserNotificationCenterDelegate

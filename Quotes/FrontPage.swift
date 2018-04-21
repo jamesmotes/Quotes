@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 import GoogleMobileAds
 import Foundation
+import StoreKit
 
 var pers = ""
 var category = ""

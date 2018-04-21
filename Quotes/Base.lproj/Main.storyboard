@@ -246,6 +246,7 @@
                     <connections>
                         <outlet property="backButton" destination="5xz-UK-Amm" id="ciu-St-Ua1"/>
                         <segue destination="oMg-y0-1Gy" kind="presentation" identifier="viewSettings" id="66w-Ug-y9a"/>
+                        <segue destination="puL-XP-wNs" kind="presentation" identifier="viewContactInfo" id="tEp-pp-up3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,6 +335,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4T-bx-58k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="621.60000000000002" y="-961.16941529235385"/>
+        </scene>
+        <!--Contact Info-->
+        <scene sceneID="2ci-KF-vZr">
+            <objects>
+                <viewController id="puL-XP-wNs" customClass="ContactInfo" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gmH-FV-Boy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-nb-rXk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="71p-zV-fg5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title=" Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedBack:" destination="puL-XP-wNs" eventType="touchUpInside" id="IgS-bV-3hI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gbjcontact@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjS-b3-uiV">
+                                <rect key="frame" x="0.0" y="253" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="obi-tH-bgB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions, comments, or concerns? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpO-MV-hW0">
+                                <rect key="frame" x="0.0" y="113" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="YhW-0t-NEV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ySu-nb-rXk" firstAttribute="top" secondItem="aSc-n6-j6G" secondAttribute="top" id="0Af-Cv-sF5"/>
+                            <constraint firstItem="ySu-nb-rXk" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="0yh-bR-VjI"/>
+                            <constraint firstItem="fpO-MV-hW0" firstAttribute="trailing" secondItem="aSc-n6-j6G" secondAttribute="trailing" id="4RT-58-17O"/>
+                            <constraint firstItem="AjS-b3-uiV" firstAttribute="top" secondItem="fpO-MV-hW0" secondAttribute="bottom" constant="40" id="SXs-ko-Luu"/>
+                            <constraint firstItem="aSc-n6-j6G" firstAttribute="trailing" secondItem="AjS-b3-uiV" secondAttribute="trailing" id="eqh-zt-hMc"/>
+                            <constraint firstItem="ySu-nb-rXk" firstAttribute="trailing" secondItem="aSc-n6-j6G" secondAttribute="trailing" id="l1J-GM-UCu"/>
+                            <constraint firstItem="AjS-b3-uiV" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="qLL-52-nkU"/>
+                            <constraint firstItem="fpO-MV-hW0" firstAttribute="top" secondItem="ySu-nb-rXk" secondAttribute="bottom" constant="72" id="rBa-G1-Ah6"/>
+                            <constraint firstItem="fpO-MV-hW0" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="rnb-fk-Jym"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aSc-n6-j6G"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="fpO-MV-hW0" id="EoV-6D-sHG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHQ-sf-dGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1050.4000000000001" y="-134.48275862068968"/>
         </scene>
         <!--Settings Page-->
         <scene sceneID="mTa-ZC-P9M">
