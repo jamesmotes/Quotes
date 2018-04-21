@@ -83,15 +83,29 @@ class AlarmsTableViewController: UITableViewController {
         print(alarms)
         for a in alarms {
             print(a)
-            var index = a.content.body.index(a.content.body.startIndex, offsetBy: 3)
-            let name = a.content.body[index...]
+            let char : Character = "-"
+            var check : Substring = Substring()
+            
+            
+            for i in 1...a.content.body.count-1 {
+                var index = a.content.body.index(a.content.body.endIndex, offsetBy: (-1)*i)
+                check = a.content.body[index...]
+                if(check.contains(char)){
+                    break
+                }
+            }
+            
+            let checkString = String(check)
+            let index = checkString.index(checkString.startIndex, offsetBy: 2)
+            let name = String(checkString[index...])
+            
             print("Name being found by the substring formula thing.....")
             print(name)
             let t : UNCalendarNotificationTrigger  = a.trigger as! UNCalendarNotificationTrigger
             
             print(AlarmSetPeople)
-            if !AlarmSetPeople.contains(String(name)) {
-                AlarmSetPeople.append(String(name))
+            if !AlarmSetPeople.contains(name) {
+                AlarmSetPeople.append(name)
                 AlarmSetTime.append(t.dateComponents)
             }
             else {
@@ -104,7 +118,7 @@ class AlarmsTableViewController: UITableViewController {
                     }
                 }
                 if(!Repeat){
-                    AlarmSetPeople.append(String(name))
+                    AlarmSetPeople.append(name)
                     AlarmSetTime.append(t.dateComponents)
                 }
             }

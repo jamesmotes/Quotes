@@ -153,12 +153,12 @@ class MainMenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tableHeight = tableView.bounds.height// - 60
-//        print(backButton.backgroundRect(forBounds: <#T##CGRect#>))
+        let tableHeight = tableView.bounds.height - backButton.frame.size.height*2.7
+        print("+++++++++++\(backButton.frame.minY)++++++++++++")
         if currentMenu == MAIN_MENU {
             
         }
-        let div = tableHeight/CGFloat(tableOptions[currentMenu].count)
+        let div = tableHeight/CGFloat(tableOptions[currentMenu].count) //- 10
 
         return div > MinHeight ? div : MinHeight
     }
