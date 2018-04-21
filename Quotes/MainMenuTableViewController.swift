@@ -23,7 +23,7 @@ let CAT_MENU = 2
 
 class MainMenuTableViewController: UITableViewController {
     
-    let tableOptions = [mainMenuOptions, peopleOptions, catOptions/*, moodOptions*/]
+    var tableOptions = [mainMenuOptions, peopleOptions, catOptions/*, moodOptions*/]
     var currentMenu = MAIN_MENU
     let MinHeight: CGFloat = 100.0
     
@@ -32,6 +32,12 @@ class MainMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        for i in 1...(tableOptions.count-1) {
+            tableOptions[i] = tableOptions[i].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        }
+        
+        
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.backgroundColor = UIColor.black
         navigationController?.navigationBar.isTranslucent = true
