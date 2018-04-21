@@ -45,10 +45,27 @@ class AlarmsTableViewController: UITableViewController {
                 AlarmSetTime.append(t.dateComponents)
             }
             else if !AlarmSetTime.contains(t.dateComponents) {
-                AlarmSetPeople.append(String(name))
-                AlarmSetTime.append(t.dateComponents)
+                //AlarmSetPeople.append(String(name))
+                //AlarmSetTime.append(t.dateComponents)
+                
+                for i in 0...(AlarmSetTime.count-1){
+                    if t.dateComponents.hour! < AlarmSetTime[i].hour! {
+                        AlarmSetTime.insert(t.dateComponents, at: i)
+                        AlarmSetPeople.insert(String(name), at: i)
+                    }
+                    else if t.dateComponents.hour! == AlarmSetTime[i].hour! {
+                        if t.dateComponents.minute! < AlarmSetTime[i].minute! {
+                            AlarmSetTime.insert(t.dateComponents, at: i)
+                            AlarmSetPeople.insert(String(name), at: i)
+                        }
+                    }
+                }
             }
         }
+        
+        
+        
+        
         tableView.reloadData()
         
         if(alarms.count > 0){
@@ -107,6 +124,7 @@ class AlarmsTableViewController: UITableViewController {
             if !AlarmSetPeople.contains(name) {
                 AlarmSetPeople.append(name)
                 AlarmSetTime.append(t.dateComponents)
+                
             }
             else {
                 var Repeat = false
@@ -118,18 +136,62 @@ class AlarmsTableViewController: UITableViewController {
                     }
                 }
                 if(!Repeat){
-                    AlarmSetPeople.append(name)
-                    AlarmSetTime.append(t.dateComponents)
+                    //AlarmSetPeople.append(String(name))
+                    //AlarmSetTime.append(t.dateComponents)
+                    
+                    for i in 0...(AlarmSetTime.count-1){
+                        if t.dateComponents.hour! < AlarmSetTime[i].hour! {
+                            AlarmSetTime.insert(t.dateComponents, at: i)
+                            AlarmSetPeople.insert(String(name), at: i)
+                        }
+                        else if t.dateComponents.hour! == AlarmSetTime[i].hour! {
+                            if t.dateComponents.minute! < AlarmSetTime[i].minute! {
+                                AlarmSetTime.insert(t.dateComponents, at: i)
+                                AlarmSetPeople.insert(String(name), at: i)
+                            }
+                        }
+                    }
                 }
             }
             
         }
+        sortAlarms()
         tableView.reloadData()
         
         if(alarms.count > 0){
             let t : UNCalendarNotificationTrigger  = alarms[0].trigger as! UNCalendarNotificationTrigger
             print(t.dateComponents.hour!)
         }
+    }
+    
+    func sortAlarms(){
+        if AlarmSetTime.count < 2 {
+            return 
+        }
+        for k in AlarmSetPeople {
+            for i in 0...(AlarmSetTime.count-2){
+                if(!compareTimes(a: AlarmSetTime[i], b: AlarmSetTime[i+1])){
+                    let temp = AlarmSetTime[i]
+                    AlarmSetTime[i] = AlarmSetTime[i+1]
+                    AlarmSetTime[i+1] = temp
+                    let person = AlarmSetPeople[i]
+                    AlarmSetPeople[i] = AlarmSetPeople[i+1]
+                    AlarmSetPeople[i+1] = person
+                }
+            }
+        }
+    }
+    
+    func compareTimes(a : DateComponents, b : DateComponents) -> Bool{
+        if a.hour! < b.hour! {
+            return true
+        }
+        else if a.hour == b.hour {
+            if a.minute! < b.minute! {
+                return true
+            }
+        }
+        return false
     }
 
     // MARK: - Table view data source
