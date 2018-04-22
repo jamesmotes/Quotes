@@ -19,6 +19,11 @@ var isFavorite = false
 var isDownvote = false
 var isRandom = false
 
+var firstOpen = true
+var globalFontStyle = "System"
+var globalFontColor = UIColor.white
+var globalBackgroundColor = UIColor.black
+
 class FrontPage: UIViewController , GADInterstitialDelegate {
 
     @IBOutlet weak var text: UILabel!
@@ -45,6 +50,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         let request = GADRequest()
         interstitial.load(request)
         
+        
         //navigationController?.isNavigationBarHidden = true
         //favButton.tintColor = UIColor.white
         
@@ -63,6 +69,21 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        if(firstOpen){
+            firstOpen = false
+        } else {
+            text.textColor = globalFontColor
+            var currentSize = 42
+            text.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
+            
+            person.textColor = globalFontColor
+            currentSize = 25
+            person.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
+            
+            self.view.backgroundColor = globalBackgroundColor
+            
+        }
         navigationController?.isNavigationBarHidden = true
         if(!didComeFromAdd){
             index = 0

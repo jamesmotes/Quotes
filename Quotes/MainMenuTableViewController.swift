@@ -11,7 +11,9 @@
 
 import UIKit
 
-let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms", "Customization", "Contact Us"]
+
+
+let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms", "Customization", "Create Quote", "Contact Us"]
 let peopleOptions = ["Elon Musk", "Lebron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady"]
 let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Happy", "Motivational", "Sad", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
@@ -55,6 +57,9 @@ class MainMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        if(changedFont){
+            dismiss(animated: true, completion: nil)
+        }
         // Reset params
         pers = ""
         category = ""
@@ -62,6 +67,7 @@ class MainMenuTableViewController: UITableViewController {
         isFavorite = false
         isDownvote = false
         isRandom = false
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,10 +105,13 @@ class MainMenuTableViewController: UITableViewController {
                 print("The settings were selected.")
                 performSegue(withIdentifier: "viewSettings", sender: nil)
                 //dismiss(animated: true, completion: nil)
-            case 5:    // Contact Us
+            case 5:    // Customization
                 print("customization")
                 performSegue(withIdentifier: "viewCustomization", sender: nil)
-            case 6:    // Contact Us
+            case 6:    // Create Quote
+                print("create quote was selected")
+                performSegue(withIdentifier: "createQuote", sender: nil)
+            case 7:    // Contact Us
                 print("conact us was selected")
                 performSegue(withIdentifier: "viewContactInfo", sender: nil)
             default:    // Random, or something fails

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var changedFont = false
+
 class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -57,6 +59,25 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch(indexPath.row){
+        case 0:
+            globalFontStyle = "Futura"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.gray
+        case 1:
+            globalFontStyle = "Zapfino"
+            globalFontColor = UIColor.cyan
+            globalBackgroundColor = UIColor.white
+        default :
+            globalFontStyle = "Symbol"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+        }
+        changedFont = true
+        dismiss(animated: true, completion: nil)
     }
     
 
