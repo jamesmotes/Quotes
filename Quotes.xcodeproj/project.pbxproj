@@ -38,6 +38,7 @@
 		812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F7208BCB0A006E7AB7 /* ContactInfo.swift */; };
 		812405FA208BF548006E7AB7 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F9208BF548006E7AB7 /* Customization.swift */; };
 		812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405FD208CDE50006E7AB7 /* FontCell.swift */; };
+		81F3E180208D2577003ED53D /* CreateQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3E17F208D2576003ED53D /* CreateQuote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +89,7 @@
 		812405F7208BCB0A006E7AB7 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		812405F9208BF548006E7AB7 /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
 		812405FD208CDE50006E7AB7 /* FontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCell.swift; sourceTree = "<group>"; };
+		81F3E17F208D2576003ED53D /* CreateQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateQuote.swift; path = /Users/blakenelson/Desktop/Quotes/Quotes/CreateQuote.swift; sourceTree = "<absolute>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 				812405FD208CDE50006E7AB7 /* FontCell.swift */,
 				812405F9208BF548006E7AB7 /* Customization.swift */,
 				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
+				81F3E17F208D2576003ED53D /* CreateQuote.swift */,
 				1AA3841E20523792007E4241 /* SettingsPage.swift */,
 				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
 				1AA438992033E521000C7238 /* QuoteClass.swift */,
@@ -341,6 +344,7 @@
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
 				812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */,
 				812405FA208BF548006E7AB7 /* Customization.swift in Sources */,
+				81F3E180208D2577003ED53D /* CreateQuote.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
 				1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
