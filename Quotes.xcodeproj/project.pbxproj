@@ -37,6 +37,9 @@
 		812405F620884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf in Resources */ = {isa = PBXBuildFile; fileRef = 812405F520884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf */; };
 		812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F7208BCB0A006E7AB7 /* ContactInfo.swift */; };
 		812405FA208BF548006E7AB7 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F9208BF548006E7AB7 /* Customization.swift */; };
+		812405FC208CDB15006E7AB7 /* FontSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405FB208CDB15006E7AB7 /* FontSelection.swift */; };
+		812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405FD208CDE50006E7AB7 /* FontCell.swift */; };
+		81240602208CECC0006E7AB7 /* TopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81240601208CECC0006E7AB7 /* TopCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +89,9 @@
 		812405F520884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TradeGothic-BoldCondTwenty.otf"; path = "Fonts/TradeGothic-BoldCondTwenty.otf"; sourceTree = "<group>"; };
 		812405F7208BCB0A006E7AB7 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		812405F9208BF548006E7AB7 /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
+		812405FB208CDB15006E7AB7 /* FontSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelection.swift; sourceTree = "<group>"; };
+		812405FD208CDE50006E7AB7 /* FontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCell.swift; sourceTree = "<group>"; };
+		81240601208CECC0006E7AB7 /* TopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCell.swift; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,6 +158,9 @@
 				1A0999FE2019873600B22EDE /* IAP.swift */,
 				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
+				81240601208CECC0006E7AB7 /* TopCell.swift */,
+				812405FB208CDB15006E7AB7 /* FontSelection.swift */,
+				812405FD208CDE50006E7AB7 /* FontCell.swift */,
 				812405F9208BF548006E7AB7 /* Customization.swift */,
 				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
 				1AA3841E20523792007E4241 /* SettingsPage.swift */,
@@ -333,14 +342,17 @@
 				1A0999FF2019873600B22EDE /* IAP.swift in Sources */,
 				1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */,
 				1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */,
+				81240602208CECC0006E7AB7 /* TopCell.swift in Sources */,
 				1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
 				812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */,
 				812405FA208BF548006E7AB7 /* Customization.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
+				812405FC208CDB15006E7AB7 /* FontSelection.swift in Sources */,
 				1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
+				812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1AB47C651FFC26BC00F547E4 /* PeopleQuotes.swift in Sources */,
 				1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */,
