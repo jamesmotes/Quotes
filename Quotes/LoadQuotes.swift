@@ -508,8 +508,8 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
           
                 
-        //Lebron James
-        name = "Lebron James"
+        //LeBron James
+        name = "LeBron James"
         
         text = "Don’t be afraid of failure. This is the way to succeed."
         cats = ["Success", "Sports"]

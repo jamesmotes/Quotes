@@ -48,7 +48,7 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         if(creating){
             creating = false
             
-            person.text = customName.text
+            person.text = "- " + customName.text!
             
             text.text = customQuote.text
             
@@ -66,8 +66,8 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         else {
             print("Save Quote")
             let quote = Quote()
-            quote.person = "- " + person.text!
-            quote.text = text.text!
+            quote.person = customName.text!
+            quote.text = customQuote.text!
             quote.categories.insert("Custom", at: quote.categories.count)
             quote.id = quoteIterator
             quoteIterator += 1

@@ -250,7 +250,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         let query : String = "id == " + String(quotes[index].id)
         let theQuote = realm.objects(Quote.self).filter(query).first
         realm.delete(theQuote!)
-        viewDidAppear(true)
+        showAfterMenu()
+        refresh()
     }
     @IBAction func swipedLeft(_ sender: Any) {
         if(index > 0){

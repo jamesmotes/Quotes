@@ -14,7 +14,7 @@ import UIKit
 
 
 let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms", "Customization", "Personal Quotes", "Contact Us"]
-let peopleOptions = ["Elon Musk", "Lebron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady"]
+let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady"]
 let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Happy", "Motivational", "Sad", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 

@@ -216,8 +216,10 @@ class AlarmsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 90
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AlarmMenuCell
@@ -257,7 +259,8 @@ class AlarmsTableViewController: UITableViewController {
         let p = AlarmSetPeople[indexPath.row]
         
         //cell.textLabel?.text = "\(hour):"+minuteString+AM + "   \(p)"
-        cell.time.text = "\(hour):"+minuteString+AM
+        cell.time.text = "\(hour):"+minuteString
+        cell.AM.text = AM
         cell.name.text = "\(p)"
         return cell
     }
