@@ -18,8 +18,9 @@ var md = ""
 var isFavorite = false
 var isDownvote = false
 var isRandom = false
+var personalQuotes = false
 
-var firstOpen = true
+var changedFont = false
 var globalFontStyle = "System"
 var globalFontColor = UIColor.white
 var globalBackgroundColor = UIColor.black
@@ -29,7 +30,11 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var person: UILabel!
     
+    @IBOutlet weak var createQuoteButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     let realm = try! Realm()
     
@@ -70,9 +75,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if(firstOpen){
-            firstOpen = false
-        } else {
+        if(changedFont){
+            changedFont = false
             text.textColor = globalFontColor
             var currentSize = 42
             text.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
@@ -82,8 +86,19 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             person.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
             
             self.view.backgroundColor = globalBackgroundColor
-            
         }
+        
+        if(self.view.backgroundColor == UIColor.white){
+            menuButton.setBackgroundImage(#imageLiteral(resourceName: "MenuBlack.png"), for: UIControlState.normal)
+            searchButton.setBackgroundImage(#imageLiteral(resourceName: "SearchBlack.png"), for: UIControlState.normal)
+            shareButton.setBackgroundImage(#imageLiteral(resourceName: "ShareBlack.png"), for: UIControlState.normal)
+        }
+        else {
+            menuButton.setBackgroundImage(#imageLiteral(resourceName: "MenuWhite.png"), for: UIControlState.normal)
+            searchButton.setBackgroundImage(#imageLiteral(resourceName: "SearchWhite.png"), for: UIControlState.normal)
+            shareButton.setBackgroundImage(#imageLiteral(resourceName: "ShareWhite.png"), for: UIControlState.normal)
+        }
+        
         navigationController?.isNavigationBarHidden = true
         if(!didComeFromAdd){
             index = 0
@@ -143,6 +158,30 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             quotes.shuffle()
             refresh()
         }
+        if personalQuotes {
+            quotes = Array(realm.objects(Quote.self))
+            var customQuotes : [Quote] = []
+            for q in quotes {
+                if q.custom {
+                    customQuotes.append(q)
+                }
+            }
+            quotes = customQuotes
+            refresh()
+            
+            favButton.isHidden = true
+            favButton.isEnabled = false
+            
+            createQuoteButton.isHidden = false
+            createQuoteButton.isEnabled = true
+        }
+        else {
+            favButton.isHidden = false
+            favButton.isEnabled = true
+            
+            createQuoteButton.isHidden = true
+            createQuoteButton.isEnabled = false
+        }
         if isFavorite {
             query += "favorite = true"
         }
@@ -195,7 +234,11 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         print(index)
     }
     
-
+   
+    @IBAction func createCustomQuote(_ sender: Any) {
+        performSegue(withIdentifier: "createQuote", sender: nil)
+    }
+    
     @IBAction func swipedLeft(_ sender: Any) {
         if(index > 0){
             index -= 1
