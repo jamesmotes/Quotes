@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="27" id="FAC-8N-BUg"/>
                                     <constraint firstAttribute="width" constant="27" id="b2W-Pg-7BE"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Screen Shot 2018-02-21 at 6.18.16 PM.png"/>
+                                <state key="normal" title="Button" image="MenuWhite.png"/>
                                 <connections>
                                     <segue destination="Bof-bY-n92" kind="presentation" identifier="showMainMenu" modalTransitionStyle="coverVertical" id="CRi-Xx-our"/>
                                 </connections>
@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="width" constant="27" id="0ga-Ks-C5H"/>
                                     <constraint firstAttribute="height" constant="27" id="XrW-Sf-2p0"/>
                                 </constraints>
-                                <state key="normal" image="share_icon_white.jpg"/>
+                                <state key="normal" image="ShareWhite.png"/>
                                 <connections>
                                     <action selector="share:" destination="dYJ-Kj-E20" eventType="touchUpInside" id="Fw7-A9-IWJ"/>
                                 </connections>
@@ -64,25 +64,41 @@
                                     <constraint firstAttribute="height" constant="27" id="WHN-nx-DMA"/>
                                     <constraint firstAttribute="width" constant="27" id="mEQ-U7-6by"/>
                                 </constraints>
-                                <state key="normal" image="search.png"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="SearchWhite.png"/>
                                 <connections>
                                     <segue destination="aI8-AM-MAE" kind="presentation" identifier="showSearchBar" modalTransitionStyle="coverVertical" id="Xg6-f8-KWb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-V2-zqV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-V2-zqV">
                                 <rect key="frame" x="16" y="90" width="343" height="373"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CT-qL-Isf">
+                                <rect key="frame" x="269" y="577" width="90" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="i3g-Gu-gsX"/>
+                                    <constraint firstAttribute="height" constant="30" id="sQf-Eq-45I"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add Quote"/>
+                                <connections>
+                                    <action selector="createCustomQuote:" destination="dYJ-Kj-E20" eventType="touchUpInside" id="AKU-zx-cXw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vSr-Gp-sZh" firstAttribute="top" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="23" id="0Uj-2J-cd9"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="3CT-qL-Isf" secondAttribute="bottom" constant="16" id="2aN-Iq-yBr"/>
                             <constraint firstItem="IK4-Bm-ay0" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="BJq-X1-JXI"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="vSr-Gp-sZh" secondAttribute="trailing" constant="48" id="Ch9-zG-2HM"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="3CT-qL-Isf" secondAttribute="trailing" constant="16" id="DWs-cX-PaN"/>
                             <constraint firstItem="r4S-V2-zqV" firstAttribute="top" secondItem="P2m-5i-EMa" secondAttribute="topMargin" constant="70" id="EkK-20-pMS"/>
                             <constraint firstItem="IK4-Bm-ay0" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" id="H3i-Mt-WzA"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="r4S-V2-zqV" secondAttribute="trailing" constant="16" id="HtE-yA-rhX"/>
@@ -106,9 +122,14 @@
                     <navigationItem key="navigationItem" id="bYd-5S-uqV"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="createQuoteButton" destination="3CT-qL-Isf" id="RXH-lc-nX5"/>
                         <outlet property="favButton" destination="aKE-V1-MAT" id="7lC-gq-vhP"/>
+                        <outlet property="menuButton" destination="IK4-Bm-ay0" id="uyR-pI-vrD"/>
                         <outlet property="person" destination="vSr-Gp-sZh" id="018-ZJ-mtS"/>
+                        <outlet property="searchButton" destination="91b-xX-bAC" id="tBt-FX-HRI"/>
+                        <outlet property="shareButton" destination="egb-Sh-Bpj" id="C4Z-7c-2Da"/>
                         <outlet property="text" destination="r4S-V2-zqV" id="n7z-Va-LBX"/>
+                        <segue destination="ZfQ-WE-u0E" kind="presentation" identifier="createQuote" id="bnF-u4-hgl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waZ-eh-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -339,7 +360,6 @@
                         <segue destination="oMg-y0-1Gy" kind="presentation" identifier="viewSettings" id="66w-Ug-y9a"/>
                         <segue destination="puL-XP-wNs" kind="presentation" identifier="viewContactInfo" id="tEp-pp-up3"/>
                         <segue destination="CyX-hj-2gF" kind="presentation" identifier="viewCustomization" id="ZL5-ZL-tmO"/>
-                        <segue destination="ZfQ-WE-u0E" kind="presentation" identifier="createQuote" id="6fP-NQ-Mo3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,8 +470,8 @@
                                     <action selector="clickedBack:" destination="puL-XP-wNs" eventType="touchUpInside" id="IgS-bV-3hI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gbjcontact@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AjS-b3-uiV">
-                                <rect key="frame" x="0.0" y="253" width="375" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contact@gbjmobile.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AjS-b3-uiV">
+                                <rect key="frame" x="16" y="253" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="obi-tH-bgB"/>
                                 </constraints>
@@ -475,9 +495,9 @@
                             <constraint firstItem="ySu-nb-rXk" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="0yh-bR-VjI"/>
                             <constraint firstItem="fpO-MV-hW0" firstAttribute="trailing" secondItem="aSc-n6-j6G" secondAttribute="trailing" id="4RT-58-17O"/>
                             <constraint firstItem="AjS-b3-uiV" firstAttribute="top" secondItem="fpO-MV-hW0" secondAttribute="bottom" constant="40" id="SXs-ko-Luu"/>
-                            <constraint firstItem="aSc-n6-j6G" firstAttribute="trailing" secondItem="AjS-b3-uiV" secondAttribute="trailing" id="eqh-zt-hMc"/>
+                            <constraint firstItem="aSc-n6-j6G" firstAttribute="trailing" secondItem="AjS-b3-uiV" secondAttribute="trailing" constant="16" id="gqH-MJ-1UU"/>
+                            <constraint firstItem="AjS-b3-uiV" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" constant="16" id="hj7-cD-bxG"/>
                             <constraint firstItem="ySu-nb-rXk" firstAttribute="trailing" secondItem="aSc-n6-j6G" secondAttribute="trailing" id="l1J-GM-UCu"/>
-                            <constraint firstItem="AjS-b3-uiV" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="qLL-52-nkU"/>
                             <constraint firstItem="fpO-MV-hW0" firstAttribute="top" secondItem="ySu-nb-rXk" secondAttribute="bottom" constant="72" id="rBa-G1-Ah6"/>
                             <constraint firstItem="fpO-MV-hW0" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="rnb-fk-Jym"/>
                         </constraints>
@@ -735,7 +755,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="- Name" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="eSo-cg-yGd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="eSo-cg-yGd">
                                 <rect key="frame" x="48" y="486" width="279" height="42"/>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -748,7 +768,6 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBr-H4-dQh">
                                 <rect key="frame" x="48" y="533" width="279" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YoS-7g-oWz"/>
                                 </constraints>
@@ -759,9 +778,8 @@
                                     <action selector="createQuote:" destination="ZfQ-WE-u0E" eventType="touchUpInside" id="9Tk-VM-TUg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFx-JC-hGn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFx-JC-hGn">
                                 <rect key="frame" x="48" y="571" width="279" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="T9r-NQ-zm8"/>
                                 </constraints>
@@ -801,10 +819,6 @@
                             <constraint firstItem="X11-62-h7l" firstAttribute="trailing" secondItem="yAv-ev-eye" secondAttribute="trailing" constant="16" id="x1U-bC-2Dx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X11-62-h7l"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="0Js-wA-zQu" appends="YES" id="eoG-Ag-KU7"/>
-                            <outletCollection property="gestureRecognizers" destination="YFY-Eo-QfT" appends="YES" id="iEc-qS-vaP"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8so-Ls-F3y"/>
@@ -819,24 +833,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzE-hM-brX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="0Js-wA-zQu" userLabel="Swipe Right">
-                    <connections>
-                        <action selector="swipedRight:" destination="ZfQ-WE-u0E" id="rQg-KH-HYs"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="YFY-Eo-QfT" userLabel="Swipe Left">
-                    <connections>
-                        <action selector="swipedLeft:" destination="ZfQ-WE-u0E" id="wxX-dE-6hj"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1943.2" y="-961.16941529235385"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2018-02-21 at 6.18.16 PM.png" width="460" height="420"/>
-        <image name="search.png" width="256" height="256"/>
-        <image name="share_icon_white.jpg" width="488" height="502"/>
+        <image name="MenuWhite.png" width="50" height="50"/>
+        <image name="SearchWhite.png" width="50" height="50"/>
+        <image name="ShareWhite.png" width="26" height="26"/>
         <image name="star" width="28" height="28"/>
     </resources>
 </document>

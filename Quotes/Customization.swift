@@ -8,7 +8,7 @@
 
 import UIKit
 
-var changedFont = false
+var justChanged = false
 
 class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var backButton: UIButton!
@@ -34,12 +34,24 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         switch(indexPath.row){
         case 0:
+            fontStyle = "Papyrus"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+        case 1:
+            fontStyle = "Zapfino"
+            textColor = UIColor.black
+            backgroundColor = UIColor.white
+        case 2:
             fontStyle = "Futura"
             textColor = UIColor.white
             backgroundColor = UIColor.gray
-        case 1:
-            fontStyle = "Zapfino"
-            textColor = UIColor.cyan
+        case 3:
+            fontStyle = "Chalkduster"
+            textColor = UIColor.white
+            backgroundColor = UIColor.purple
+        case 4:
+            fontStyle = "TradeGothic"
+            textColor = UIColor.black
             backgroundColor = UIColor.white
         default :
             fontStyle = "Symbol"
@@ -64,19 +76,32 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch(indexPath.row){
         case 0:
+            globalFontStyle = "Papyrus"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+        case 1:
+            globalFontStyle = "Zapfino"
+            globalFontColor = UIColor.black
+            globalBackgroundColor = UIColor.white
+        case 2:
             globalFontStyle = "Futura"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.gray
-        case 1:
-            globalFontStyle = "Zapfino"
-            globalFontColor = UIColor.cyan
+        case 3:
+            globalFontStyle = "Chalkduster"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.purple
+        case 4:
+            globalFontStyle = "TradeGothic"
+            globalFontColor = UIColor.black
             globalBackgroundColor = UIColor.white
         default :
-            globalFontStyle = "Symbol"
+            globalFontStyle = "System"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
         }
         changedFont = true
+        justChanged = true
         dismiss(animated: true, completion: nil)
     }
     

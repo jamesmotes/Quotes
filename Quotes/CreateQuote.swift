@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import RealmSwift
 
-class CreateQuote: UIViewController {
+class CreateQuote: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var customQuote: UITextField!
     @IBOutlet weak var customName: UITextField!
@@ -16,12 +17,18 @@ class CreateQuote: UIViewController {
     @IBOutlet weak var person: UILabel!
     @IBOutlet weak var text: UILabel!
     
+    let realm = try! Realm()
+    
     var creating : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         // Do any additional setup after loading the view.
+        self.customQuote.delegate = self
+        self.customName.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,13 +47,12 @@ class CreateQuote: UIViewController {
     @IBAction func createQuote(_ sender: Any) {
         if(creating){
             creating = false
+            
             person.text = customName.text
-            person.font = UIFont(name: globalFontStyle, size: 20)
-            person.textColor = globalFontColor
+            
             text.text = customQuote.text
-            text.font = UIFont(name: globalFontStyle, size: 42)
-            text.textColor = globalFontColor
-            self.view.backgroundColor = globalBackgroundColor
+            
+            
             
             customName.isHidden = true
             customQuote.isHidden = true
@@ -59,18 +65,40 @@ class CreateQuote: UIViewController {
         }
         else {
             print("Save Quote")
+            let quote = Quote()
+            quote.person = "- " + person.text!
+            quote.text = text.text!
+            quote.categories.insert("Custom", at: quote.categories.count)
+            quote.id = quoteIterator
+            quoteIterator += 1
+            quote.custom = true
+            
+            try! realm.write {
+                realm.add(quote)
+            }
+            dismiss(animated: true, completion: nil)
+            let defaults = UserDefaults.standard
+            defaults.set(quoteIterator, forKey: "quoteIterator")
         }
     }
     
     
     @IBAction func clickedEdit(_ sender: Any) {
         creating = true
+        creationButton.titleLabel?.text = "Create Quote"
         customName.isHidden = false
         customQuote.isHidden = false
         
         customName.isEnabled = true
         customQuote.isEnabled = true
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        textField.resignFirstResponder()
+        return false
+    }
+    
     
     
     

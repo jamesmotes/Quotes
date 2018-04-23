@@ -11,9 +11,11 @@
 import Foundation
 import RealmSwift
 
+
+var quoteIterator = 0
+
 class LoadQuotes {
     let realm = try! Realm()
-    var iterator = 0
     
     init(){
         
@@ -2110,8 +2112,8 @@ class LoadQuotes {
         for mood in _moods {
             quote.categories.insert(mood, at: quote.categories.count)
         }
-        quote.id = self.iterator
-        self.iterator += 1
+        quote.id = quoteIterator
+        quoteIterator += 1
         try! realm.write {
             realm.add(quote)
         }

@@ -13,7 +13,7 @@ import UIKit
 
 
 
-let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms", "Customization", "Create Quote", "Contact Us"]
+let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms", "Customization", "Personal Quotes", "Contact Us"]
 let peopleOptions = ["Elon Musk", "Lebron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady"]
 let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Happy", "Motivational", "Sad", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
@@ -57,9 +57,11 @@ class MainMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
-        if(changedFont){
+        if(justChanged){
+            justChanged = false
             dismiss(animated: true, completion: nil)
         }
+        
         // Reset params
         pers = ""
         category = ""
@@ -67,6 +69,7 @@ class MainMenuTableViewController: UITableViewController {
         isFavorite = false
         isDownvote = false
         isRandom = false
+        
         
     }
 
@@ -100,6 +103,7 @@ class MainMenuTableViewController: UITableViewController {
                 print("The favorites were selected.")
                 isFavorite = true   // Show favorited quotes on Front Page
 //                performSegue(withIdentifier: "toQuotesPage", sender: nil)
+                personalQuotes = false
                 dismiss(animated: true, completion: nil)
             case 4:     // Alarms
                 print("The settings were selected.")
@@ -108,9 +112,10 @@ class MainMenuTableViewController: UITableViewController {
             case 5:    // Customization
                 print("customization")
                 performSegue(withIdentifier: "viewCustomization", sender: nil)
-            case 6:    // Create Quote
+            case 6:    // Personal Quotes
                 print("create quote was selected")
-                performSegue(withIdentifier: "createQuote", sender: nil)
+                personalQuotes = true
+                dismiss(animated: true, completion: nil)
             case 7:    // Contact Us
                 print("conact us was selected")
                 performSegue(withIdentifier: "viewContactInfo", sender: nil)
@@ -118,6 +123,7 @@ class MainMenuTableViewController: UITableViewController {
                 isRandom = true
                 print("Random quotes were selected, or something failed.")
 //                performSegue(withIdentifier: "toQuotesPage", sender: nil)
+                personalQuotes = false
                 dismiss(animated: true, completion: nil)
             }
         }
@@ -136,7 +142,7 @@ class MainMenuTableViewController: UITableViewController {
             default:            // Something broke
                 break
             }
-            
+            personalQuotes = false
             dismiss(animated: true, completion: nil)
         }
         

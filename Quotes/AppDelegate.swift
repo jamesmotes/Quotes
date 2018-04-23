@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         else{
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
+            quoteIterator = defaults.integer(forKey: "quoteIterator")
         }
         
         if(defaults.integer(forKey: "reviewCountdown") == 0){
@@ -105,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     
     func registerForPushNotifications() {
-        UNUserNotificationCenter.current().delegate = self as! UNUserNotificationCenterDelegate
+        UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
             print("Permission granted: \(granted)")
@@ -260,7 +261,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func updateDatabase(){
         
         var lq : LoadQuotes = LoadQuotes()
-        
+        let defaults = UserDefaults.standard
+        defaults.set(quoteIterator, forKey: "quoteIterator")
         /*var ref: DatabaseReference!
         ref = Database.database().reference()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in

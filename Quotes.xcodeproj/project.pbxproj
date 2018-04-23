@@ -33,6 +33,12 @@
 		1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */; };
 		1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8853720523DCA0000B56A /* IMG_0739.GIF */; };
 		1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE885392052502C0000B56A /* AlarmsTableViewController.swift */; };
+		81056506208D821200BB9433 /* SearchBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056500208D820F00BB9433 /* SearchBlack.png */; };
+		81056507208D821200BB9433 /* SearchWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056501208D821000BB9433 /* SearchWhite.png */; };
+		81056508208D821300BB9433 /* ShareWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056502208D821000BB9433 /* ShareWhite.png */; };
+		81056509208D821300BB9433 /* MenuWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056503208D821100BB9433 /* MenuWhite.png */; };
+		8105650A208D821300BB9433 /* ShareBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056504208D821100BB9433 /* ShareBlack.png */; };
+		8105650B208D821300BB9433 /* MenuBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056505208D821200BB9433 /* MenuBlack.png */; };
 		812405F420884398006E7AB7 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 812405F320884397006E7AB7 /* Fonts */; };
 		812405F620884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf in Resources */ = {isa = PBXBuildFile; fileRef = 812405F520884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf */; };
 		812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F7208BCB0A006E7AB7 /* ContactInfo.swift */; };
@@ -84,6 +90,13 @@
 		1AE8853720523DCA0000B56A /* IMG_0739.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IMG_0739.GIF; path = Quotes/IMG_0739.GIF; sourceTree = SOURCE_ROOT; };
 		1AE885392052502C0000B56A /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
+		810564F3208D7B5800BB9433 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; path = "/Users/blakenelson/Desktop/Quotes/Quotes/imageFiles/Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<absolute>"; };
+		81056500208D820F00BB9433 /* SearchBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchBlack.png; sourceTree = "<group>"; };
+		81056501208D821000BB9433 /* SearchWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchWhite.png; sourceTree = "<group>"; };
+		81056502208D821000BB9433 /* ShareWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareWhite.png; sourceTree = "<group>"; };
+		81056503208D821100BB9433 /* MenuWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuWhite.png; sourceTree = "<group>"; };
+		81056504208D821100BB9433 /* ShareBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareBlack.png; sourceTree = "<group>"; };
+		81056505208D821200BB9433 /* MenuBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuBlack.png; sourceTree = "<group>"; };
 		812405F320884397006E7AB7 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
 		812405F520884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TradeGothic-BoldCondTwenty.otf"; path = "Fonts/TradeGothic-BoldCondTwenty.otf"; sourceTree = "<group>"; };
 		812405F7208BCB0A006E7AB7 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
@@ -110,6 +123,13 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				81056505208D821200BB9433 /* MenuBlack.png */,
+				81056503208D821100BB9433 /* MenuWhite.png */,
+				81056500208D820F00BB9433 /* SearchBlack.png */,
+				81056501208D821000BB9433 /* SearchWhite.png */,
+				81056504208D821100BB9433 /* ShareBlack.png */,
+				81056502208D821000BB9433 /* ShareWhite.png */,
+				810564F3208D7B5800BB9433 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */,
 				1AE8853720523DCA0000B56A /* IMG_0739.GIF */,
 				1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */,
 				1AA123752044F3CF0004C1AE /* share_icon_white.jpg */,
@@ -265,14 +285,20 @@
 			files = (
 				812405F620884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf in Resources */,
 				812405F420884398006E7AB7 /* Fonts in Resources */,
+				81056508208D821300BB9433 /* ShareWhite.png in Resources */,
 				1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */,
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
 				1AA123742044F22D0004C1AE /* Share-icon-iOS.jpg in Resources */,
+				8105650B208D821300BB9433 /* MenuBlack.png in Resources */,
+				81056509208D821300BB9433 /* MenuWhite.png in Resources */,
+				81056506208D821200BB9433 /* SearchBlack.png in Resources */,
+				8105650A208D821300BB9433 /* ShareBlack.png in Resources */,
 				1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
 				1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */,
 				1AA123782044F4B40004C1AE /* search.png in Resources */,
+				81056507208D821200BB9433 /* SearchWhite.png in Resources */,
 				1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */,
 				1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */,
 			);
