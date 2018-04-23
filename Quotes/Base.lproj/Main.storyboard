@@ -77,11 +77,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CT-qL-Isf">
-                                <rect key="frame" x="269" y="577" width="90" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CT-qL-Isf">
+                                <rect key="frame" x="249" y="541" width="110" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="i3g-Gu-gsX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="3ep-kS-O4R"/>
                                     <constraint firstAttribute="height" constant="30" id="sQf-Eq-45I"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,16 +90,31 @@
                                     <action selector="createCustomQuote:" destination="dYJ-Kj-E20" eventType="touchUpInside" id="AKU-zx-cXw"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-DZ-e2x">
+                                <rect key="frame" x="249" y="577" width="110" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="5Fw-KX-npP"/>
+                                    <constraint firstAttribute="height" constant="30" id="mCW-aJ-yl7"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Delete Quote"/>
+                                <connections>
+                                    <action selector="deleteQuote:" destination="dYJ-Kj-E20" eventType="touchUpInside" id="X44-kL-GPk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vSr-Gp-sZh" firstAttribute="top" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="23" id="0Uj-2J-cd9"/>
-                            <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="3CT-qL-Isf" secondAttribute="bottom" constant="16" id="2aN-Iq-yBr"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="hPb-DZ-e2x" secondAttribute="trailing" constant="16" id="3Rz-Ud-KUJ"/>
                             <constraint firstItem="IK4-Bm-ay0" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="BJq-X1-JXI"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="vSr-Gp-sZh" secondAttribute="trailing" constant="48" id="Ch9-zG-2HM"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="3CT-qL-Isf" secondAttribute="trailing" constant="16" id="DWs-cX-PaN"/>
+                            <constraint firstItem="hPb-DZ-e2x" firstAttribute="top" secondItem="3CT-qL-Isf" secondAttribute="bottom" constant="6" id="DlP-1Y-Qk7"/>
                             <constraint firstItem="r4S-V2-zqV" firstAttribute="top" secondItem="P2m-5i-EMa" secondAttribute="topMargin" constant="70" id="EkK-20-pMS"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="hPb-DZ-e2x" secondAttribute="bottom" constant="16" id="FaC-fM-ClV"/>
                             <constraint firstItem="IK4-Bm-ay0" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" id="H3i-Mt-WzA"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="r4S-V2-zqV" secondAttribute="trailing" constant="16" id="HtE-yA-rhX"/>
                             <constraint firstItem="egb-Sh-Bpj" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="LI4-LV-ole"/>
@@ -108,6 +123,8 @@
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="egb-Sh-Bpj" secondAttribute="bottom" constant="16" id="bSc-ab-lyE"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="160" id="hCU-cg-KiO"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="aKE-V1-MAT" secondAttribute="bottom" constant="16" id="p6y-q1-dpP"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="3CT-qL-Isf" secondAttribute="trailing" constant="16" id="pYX-Jp-wGW"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="hPb-DZ-e2x" secondAttribute="bottom" constant="16" id="vDU-PT-XKX"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="aKE-V1-MAT" secondAttribute="trailing" constant="16" id="wYf-tk-MTa"/>
                             <constraint firstItem="r4S-V2-zqV" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="yyL-or-ZA7"/>
                             <constraint firstItem="91b-xX-bAC" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" id="zcZ-jb-yXg"/>
@@ -123,6 +140,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="createQuoteButton" destination="3CT-qL-Isf" id="RXH-lc-nX5"/>
+                        <outlet property="deleteQuote" destination="hPb-DZ-e2x" id="KAC-Jn-giU"/>
+                        <outlet property="deleteQuoteButton" destination="hPb-DZ-e2x" id="5OK-Ww-XjC"/>
                         <outlet property="favButton" destination="aKE-V1-MAT" id="7lC-gq-vhP"/>
                         <outlet property="menuButton" destination="IK4-Bm-ay0" id="uyR-pI-vrD"/>
                         <outlet property="person" destination="vSr-Gp-sZh" id="018-ZJ-mtS"/>
@@ -671,7 +690,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="San-ze-YJP">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                            <rect key="frame" x="16" y="0.0" width="150" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="5sw-Ph-hDD"/>
                                             </constraints>
@@ -684,9 +703,9 @@
                                         <constraint firstItem="oxM-le-EiI" firstAttribute="top" secondItem="yvG-mu-Tvz" secondAttribute="topMargin" id="Lqf-Ph-r3K"/>
                                         <constraint firstItem="San-ze-YJP" firstAttribute="top" secondItem="yvG-mu-Tvz" secondAttribute="top" id="XDj-Ic-CIZ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="oxM-le-EiI" secondAttribute="trailing" id="Yca-f4-xUa"/>
+                                        <constraint firstItem="San-ze-YJP" firstAttribute="leading" secondItem="yvG-mu-Tvz" secondAttribute="leading" constant="16" id="Z7d-9k-Z12"/>
                                         <constraint firstAttribute="bottom" secondItem="San-ze-YJP" secondAttribute="bottom" id="f56-8O-lWg"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="oxM-le-EiI" secondAttribute="bottom" id="oMR-8D-TI6"/>
-                                        <constraint firstItem="San-ze-YJP" firstAttribute="leading" secondItem="yvG-mu-Tvz" secondAttribute="leading" id="v50-ec-loP"/>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>

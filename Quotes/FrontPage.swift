@@ -31,6 +31,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     @IBOutlet weak var person: UILabel!
     
     @IBOutlet weak var createQuoteButton: UIButton!
+    @IBOutlet weak var deleteQuoteButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
@@ -174,6 +175,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             
             createQuoteButton.isHidden = false
             createQuoteButton.isEnabled = true
+            
+            deleteQuoteButton.isHidden = false
+            deleteQuoteButton.isEnabled = true
         }
         else {
             favButton.isHidden = false
@@ -181,6 +185,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             
             createQuoteButton.isHidden = true
             createQuoteButton.isEnabled = false
+            
+            deleteQuoteButton.isHidden = true
+            deleteQuoteButton.isEnabled = false
         }
         if isFavorite {
             query += "favorite = true"
@@ -239,6 +246,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         performSegue(withIdentifier: "createQuote", sender: nil)
     }
     
+    @IBAction func deleteQuote(_ sender: Any) {
+        let query : String = "id == " + String(quotes[index].id)
+        let theQuote = realm.objects(Quote.self).filter(query).first
+        realm.delete(theQuote!)
+        viewDidAppear(true)
+    }
     @IBAction func swipedLeft(_ sender: Any) {
         if(index > 0){
             index -= 1

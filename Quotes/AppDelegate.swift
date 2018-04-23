@@ -92,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }*/
         
         registerForPushNotifications()
+        ConfigureNotifications()
         
         //application.registerForRemoteNotifications()
         //NotificationCenter.default.addObserver(self, selector: #selector(refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
