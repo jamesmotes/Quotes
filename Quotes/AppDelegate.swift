@@ -40,6 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let defaults = UserDefaults.standard
+        
+        
+        defaults.set(false, forKey: "full_unlock")
+        
         if (defaults.bool(forKey: "updated") == false){
             updateDatabase()
             defaults.set(true, forKey: "updated")
@@ -49,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
             defaults.set(10, forKey: "reviewCountdown")
+            defaults.set(false, forKey: "full_unlock")
         }
         else{
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
@@ -67,6 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         
         full_unlock = defaults.bool(forKey: "full_unlock")
+        print(full_unlock)
         
         
         /*if (defaults.dictionary(forKey: "favorites") != nil){
