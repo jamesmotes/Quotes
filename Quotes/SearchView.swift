@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
+
+var searchedSpecificQuote = false
+var selectedSpecificQuote = false
+var specificQuote : String = ""
 
 class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
     
@@ -15,6 +20,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     //@IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    let realm = try! Realm()
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -48,6 +55,15 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selected = filteredData[indexPath.row]
+        
+        if(searchedSpecificQuote){
+            selectedSpecificQuote = true
+            searchedSpecificQuote = false
+            specificQuote = selected
+            dismiss(animated: true, completion: nil)
+        }
+        
+        
         if peopleOptions.contains(selected){
             pers = selected
         }
@@ -65,6 +81,11 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(!full_unlock){
+            performSegue(withIdentifier: "unlockSegue", sender: nil)
+        }
+        
         data.append(contentsOf: peopleOptions)
         data.append(contentsOf: catOptions)
         //data.append(contentsOf: moodOptions)
@@ -150,6 +171,19 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         }
         // sort alphabetically
         filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        
+        if filteredData.count < 1{
+            
+            let query = "text CONTAINS '" + searchController.searchBar.text! + "'"
+            let quotes = Array(realm.objects(Quote.self).filter(query))
+            for q in quotes {
+                filteredData.append(q.text)
+            }
+            searchedSpecificQuote = true
+        }
+        else {
+            searchedSpecificQuote = false
+        }
         tableView.reloadData()
     }
     

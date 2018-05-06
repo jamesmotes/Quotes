@@ -122,42 +122,26 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             query += "person = '" + pers + "'"
         }
         if category != "" {
-            query += ""
-            quotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
+            //query += ""
+            var checkQuotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
             //var filterThis = quotes.filter(category + "IN categories")
             
             //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
             var remove : [Int] = [Int]()
-            for i in 0...(quotes.count - 1) {
-                if !quotes[i].categories.contains(category){
-                    remove.append(i)
+            quotes = []
+            for i in 0...(checkQuotes.count - 1) {
+                let string = checkQuotes[i].categories
+                if (checkQuotes[i].categories.contains(category)){
+                    quotes.append(checkQuotes[i])
                 }
-            }
+            }/*
             for i in 0...(remove.count-1){
-                quotes.remove(at: remove.count-i)
-            }
+                quotes.remove(at: remove.count-i-1)
+            }*/
+            print(quotes)
             quotes.shuffle()
             refresh()
-        }
-        if md != "" {
-            query += ""
-            
-            quotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
-            //var filterThis = quotes.filter(category + "IN categories")
-            
-            //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
-            
-            var remove : [Int] = [Int]()
-            for i in 0...(quotes.count - 1) {
-                if !quotes[i].moods.contains(md){
-                    remove.append(i)
-                }
-            }
-            for i in 0...(remove.count-1){
-                quotes.remove(at: remove.count-i)
-            }
-            quotes.shuffle()
-            refresh()
+            return
         }
         if personalQuotes {
             quotes = Array(realm.objects(Quote.self))
@@ -202,7 +186,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             quotes.shuffle()
             refresh()
         }
-        
+        if selectedSpecificQuote {
+            query = "text CONTAINS '" + specificQuote + "'"
+        }
         print("Query: \(query)")
         if query != "" {
             quotes = Array(realm.objects(Quote.self).filter(query))

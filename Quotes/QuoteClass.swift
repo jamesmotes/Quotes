@@ -19,7 +19,18 @@ final class Quote: Object {
     @objc dynamic var downvote = false
     @objc dynamic var custom = false
     @objc dynamic var id = 0
-    
+    /*
+    let change = false
+    let entrepreneur = false
+    let fitness = false
+    let happy = false
+    let hungry = false
+    let motivational = false
+    let relationships = false
+    let sad = false
+    let sports = false
+    let success = false
+    */
     override static func primaryKey() -> String? {
         return "text"
     }

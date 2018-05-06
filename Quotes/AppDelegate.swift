@@ -18,7 +18,9 @@ import StoreKit
 
 var notificationQuote : String = ""
 
+var purchasesController: PurchasesControllerProtocol = PurchasesController(withProductIDs: ["full_unlock", "feature_access"])
 
+var full_unlock = false
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -64,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(countdown, forKey: "reviewCountdown")
         }
         
-        
+        full_unlock = defaults.bool(forKey: "full_unlock")
         
         
         /*if (defaults.dictionary(forKey: "favorites") != nil){

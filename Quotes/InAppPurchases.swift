@@ -24,7 +24,7 @@ class InAppPurchases: NSObject{
     let paymentQueue = SKPaymentQueue.default()
     
     func getProducts() {
-        let products: Set = ["thomas_jefferson", "gabriel_wang"]
+        let products: Set = ["full_unlock"]
         
         let request = SKProductsRequest(productIdentifiers: products)
         request.delegate = self

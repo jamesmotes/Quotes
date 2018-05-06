@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/blakenelson/Desktop/Quotes/Quotes/imageFiles/Screen Shot 2018-02-21 at 6.18.16 PM.png">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/blakenelson/Desktop/Quotes/Quotes/CreateQuote.swift">
-   </FileRef>
-   <FileRef
       location = "group:Quotes.xcodeproj">
    </FileRef>
    <FileRef
