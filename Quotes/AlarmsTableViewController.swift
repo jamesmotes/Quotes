@@ -19,15 +19,18 @@ import UserNotifications
 var alarmSelected : String = String()
 
 class AlarmsTableViewController: UITableViewController {
+    @IBOutlet weak var navBar: UINavigationBar!
     
+    @IBOutlet weak var back: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     var alarms : [UNNotificationRequest] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
+        self.tableView.tableFooterView = UIView()
+        back.tintColor = globalFontColor
+        addButton.tintColor = globalFontColor
+        navBar.backgroundColor = globalBackgroundColor
         
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
@@ -92,6 +95,10 @@ class AlarmsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //alarms = []
+        
+        view.backgroundColor = globalBackgroundColor
+        tableView.backgroundColor = globalBackgroundColor
+        
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
             print(notifications)
@@ -222,8 +229,10 @@ class AlarmsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AlarmMenuCell
 
-        cell.time.textColor = UIColor.white
-        cell.name.textColor = UIColor.white
+        cell.time.textColor = globalFontColor
+        cell.name.textColor = globalFontColor
+        cell.AM.textColor = globalFontColor
+        cell.backgroundColor = globalBackgroundColor
         
         //print(alarms[indexPath].trigger)
         // Configure the cell...
