@@ -82,9 +82,9 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(!full_unlock){
-            performSegue(withIdentifier: "unlockSegue", sender: nil)
-        }
+//        if(!full_unlock){
+//            performSegue(withIdentifier: "unlockSegue", sender: nil)
+//        }
         
         data.append(contentsOf: peopleOptions)
         data.append(contentsOf: catOptions)

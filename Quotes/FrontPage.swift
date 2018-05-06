@@ -295,6 +295,15 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         self.present(activityVC, animated: true, completion: nil)
     }
     
+    @IBAction func search(_ sender: Any) {
+        if(!full_unlock) {
+            performSegue(withIdentifier: "unlockSegueFront", sender: nil)
+        }
+        else {
+            performSegue(withIdentifier: "showSearchBar", sender: nil)
+        }
+    }
+    
     func createAndLoadInterstitial() -> GADInterstitial {
         //the real deal
         //var interstitial = GADInterstitial(adUnitID: "ca-app-pub-1816441460162466~7930915740")

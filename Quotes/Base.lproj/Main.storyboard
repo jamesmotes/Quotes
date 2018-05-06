@@ -67,7 +67,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="SearchWhite.png"/>
                                 <connections>
-                                    <segue destination="aI8-AM-MAE" kind="presentation" identifier="showSearchBar" modalTransitionStyle="coverVertical" id="Xg6-f8-KWb"/>
+                                    <action selector="search:" destination="dYJ-Kj-E20" eventType="touchUpInside" id="KwD-DL-NE7"/>
+                                    <segue destination="lJr-9T-r4A" kind="show" identifier="unlockSegueFront" id="nOt-kM-mdw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-V2-zqV">
@@ -941,7 +942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMi-gh-5Sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="-1743"/>
+            <point key="canvasLocation" x="622" y="-1741"/>
         </scene>
         <!--Purchase View-->
         <scene sceneID="O5f-aV-Abg">
@@ -1024,4 +1025,7 @@
         <image name="ShareWhite.png" width="26" height="26"/>
         <image name="star" width="28" height="28"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nOt-kM-mdw"/>
+    </inferredMetricsTieBreakers>
 </document>
