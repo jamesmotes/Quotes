@@ -24,6 +24,11 @@ class AlarmsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
             print(notifications)
