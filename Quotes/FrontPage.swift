@@ -235,7 +235,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     @IBAction func deleteQuote(_ sender: Any) {
         let query : String = "id == " + String(quotes[index].id)
         let theQuote = realm.objects(Quote.self).filter(query).first
-        realm.delete(theQuote!)
+        try! realm.write {
+            realm.delete(theQuote!)
+        }
         showAfterMenu()
         refresh()
     }
