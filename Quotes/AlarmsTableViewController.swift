@@ -29,7 +29,6 @@ class AlarmsTableViewController: UITableViewController {
             print(notifications)
         }
         
-        
         for a in alarms {
             //print(a)
             let index = a.content.body.index(a.content.body.startIndex, offsetBy: a.content.body.count - 8)
@@ -62,9 +61,6 @@ class AlarmsTableViewController: UITableViewController {
                 }
             }
         }
-        
-        
-        
         
         tableView.reloadData()
         
@@ -214,12 +210,9 @@ class AlarmsTableViewController: UITableViewController {
         alarmSelected = AlarmSetPeople[indexPath.row]
     }
     
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AlarmMenuCell

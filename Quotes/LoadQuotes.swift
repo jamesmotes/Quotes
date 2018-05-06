@@ -2278,11 +2278,6 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "If you truly pour your heart into what you believe in, even if it makes you vulnerable, amazing things can and will happen."
-        cats = ["Success"]
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
         //Maya Angelou
         name = "Maya Angelou"
         
@@ -2500,165 +2495,165 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = []
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+//
+//        text = ""
+//        cats = []
+//        moos = []
+//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
     }
     

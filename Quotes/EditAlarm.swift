@@ -39,8 +39,6 @@ class EditAlarm: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
-    
     func removeAlarm(name: String){
         var person : String = String()
         var time : DateComponents = DateComponents()
@@ -123,7 +121,6 @@ class EditAlarm: UIViewController {
                 
                 //print("TriggerDate")
                 //print(triggerDate)
-                
                 
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                 
