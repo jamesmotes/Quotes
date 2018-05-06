@@ -122,8 +122,19 @@ class EditAlarm: UIViewController {
                 //print("TriggerDate")
                 //print(triggerDate)
                 
-                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                var adjustedTriggerDate = triggerDate
                 
+                if(index > 28){
+                    if(triggerDate.month == 2){
+                        adjustedTriggerDate.month = adjustedTriggerDate.month! + 1
+                    }
+                    else if(index > 30){
+                        if(triggerDate.month == 4 || triggerDate.month == 6 || triggerDate.month == 9 || triggerDate.month == 11 ){
+                            adjustedTriggerDate.month = adjustedTriggerDate.month! + 1
+                        }
+                    }
+                }
+                let trigger = UNCalendarNotificationTrigger(dateMatching: adjustedTriggerDate, repeats: false)
                 let identifier = q.person + (String)(index + currentCount * 31)
                 let request = UNNotificationRequest(identifier: identifier,
                                                     content: content, trigger: trigger)
