@@ -13,9 +13,9 @@ import UIKit
 
 
 
-let mainMenuOptions = ["People", "Categories",/* "Mood",*/ "Favorites", "General", "Alarms", "Customization", "Personal Quotes", "Contact Us"]
+let mainMenuOptions = ["General", "People", "Categories",/* "Mood",*/ "Favorites", "Alarms", "Customization", "Personal Quotes", "Contact Us"]
 let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Connor McGregor", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady"]
-let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Happy", "Motivational", "Sad", "Hungry"/*, "Death"*/]
+let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
 let MAIN_MENU = 0
@@ -24,7 +24,7 @@ let CAT_MENU = 2
 //let MOOD_MENU = 3
 
 class MainMenuTableViewController: UITableViewController {
-    
+
     var tableOptions = [mainMenuOptions, peopleOptions, catOptions/*, moodOptions*/]
     var currentMenu = MAIN_MENU
     let MinHeight: CGFloat = 100.0
@@ -70,7 +70,9 @@ class MainMenuTableViewController: UITableViewController {
         isDownvote = false
         isRandom = false
         
-        
+        view.backgroundColor = globalBackgroundColor
+        tableView.backgroundColor = globalBackgroundColor
+        backButton.backgroundColor = globalBackgroundColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,16 +92,16 @@ class MainMenuTableViewController: UITableViewController {
         if currentMenu == MAIN_MENU {   // Main menu, NOT submenu (could break things)
             print("Something from the main menu was selected.")
             switch indexPath.item {
-            case 0:     // People
+            case 1:     // People
                 print("A person was selected.")
                 currentMenu = PEOPLE_MENU
-            case 1:     // Categories
+            case 2:     // Categories
                 print("A category was selected.")
                 currentMenu = CAT_MENU
             /*case 2:     // Mood
                 print("A mood was selected.")
                 currentMenu = MOOD_MENU*/
-            case 2:     // Favorites
+            case 3:     // Favorites
                 print("The favorites were selected.")
                 isFavorite = true   // Show favorited quotes on Front Page
 //                performSegue(withIdentifier: "toQuotesPage", sender: nil)
@@ -172,9 +174,12 @@ class MainMenuTableViewController: UITableViewController {
         }
         cell.textLabel?.text = sortedArray[indexPath.item]                // Label text
         cell.textLabel?.textAlignment = .center                           // Center text
+        cell.backgroundColor = globalBackgroundColor
+        cell.textLabel?.backgroundColor = globalBackgroundColor                   // Set background color
+        let currentSize = 32
+        cell.textLabel?.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
+        cell.textLabel?.textColor = globalFontColor                         // Set font color
         cell.textLabel?.adjustsFontSizeToFitWidth = true                  // Set font size
-        cell.textLabel?.backgroundColor = UIColor.black                   // Set background color
-        cell.textLabel?.textColor = UIColor.white                         // Set font color
 
         return cell
     }

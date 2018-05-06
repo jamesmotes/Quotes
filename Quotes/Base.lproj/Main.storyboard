@@ -375,7 +375,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="backButton" destination="5xz-UK-Amm" id="ciu-St-Ua1"/>
+                        <outlet property="backButton" destination="5xz-UK-Amm" id="qiq-8c-aRy"/>
                         <segue destination="oMg-y0-1Gy" kind="presentation" identifier="viewSettings" id="66w-Ug-y9a"/>
                         <segue destination="puL-XP-wNs" kind="presentation" identifier="viewContactInfo" id="tEp-pp-up3"/>
                         <segue destination="CyX-hj-2gF" kind="presentation" identifier="viewCustomization" id="ZL5-ZL-tmO"/>
