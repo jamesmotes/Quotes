@@ -511,6 +511,11 @@ class LoadQuotes {
         //LeBron James
         name = "LeBron James"
         
+        text = "When you become lazy, it's disrespectful to those who believe in you."
+        cats = ["Success", "Sports"]
+        moos = ["Motivational"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
         text = "Don’t be afraid of failure. This is the way to succeed."
         cats = ["Success", "Sports"]
         moos = ["Motivational"]
@@ -2494,166 +2499,523 @@ class LoadQuotes {
         cats = []
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+   
+        //Jackie Chan
+        name = "Jackie Chan"
         
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-//
-//        text = ""
-//        cats = []
-//        moos = []
-//        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        text = "Don’t try to be like Jackie. There is only one Jackie. Study computers instead."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Do not let circumstances control you. You change your circumstances."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The best fights are the ones we avoid."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Cinema reflects culture and there is no harm in adapting technology, but not at the cost of losing your originality."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Now I am older, I understand we have to accept who we are."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Being still and doing nothing are two completely different things."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
+        text = "A lot of people ask me when I do a stunt, ‘Jackie, are you scared?’ Of course I’m scared. I’m not Superman."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
+        text = "I’m good for some things, bad for a lot of things."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
+        text = "I do small things. I try to do good things every day. If everyone does some good, think of what a good world this will be."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
+        text = "Family is not who’s blood is in you, it’s who you love and who loves you."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
+        text = "Most of the time, I’m not even working; I’m just helping people, because I feel that I am too lucky."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
+        text = "Sometimes it takes only one act of kindness and caring to change a person’s life."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I only want my work to make people happy."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
+        //Dr. Seuss
+        name = "Dr. Seuss"
+        
+        text = "Don't cry because it's over, smile because it happened."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You know you're in love when you can't fall asleep because reality is finally better than your dreams."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. You're on your own. And you know what you know. And YOU are the one who'll decide where to go..."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Sometimes the questions are complicated and the answers are simple."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Today you are You, that is truer than true. There is no one alive who is Youer than You."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The more that you read, the more things you will know. The more that you learn, the more places you'll go."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Why fit in when you were born to stand out?"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You're off to Great Places! Today is your day! Your mountain is waiting, So... get on your way!"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Today was good. Today was fun. Tomorrow is another one."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If things start happening, don't worry, don't stew, just go right along and you'll start happening too."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "All alone! Whether you like it or not, alone is something you'll be quite a lot!"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Only you can control your future."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You’ll miss the best things if you keep your eyes shut."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You can get help from teachers, but you are going to have to learn a lot by yourself, sitting alone in a room."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Think and wonder, wonder and think."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "To the world you may be one person; but to one person you may be the world."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "It's not about what it is, it's about what it can become."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When he worked, he really worked. But when he played, he really PLAYED."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        //Matthew McConaughey
+        name = "Matthew McConaughey"
+        
+        text = "You want to be a writer? Start writing. You want to be a filmmaker? Start shooting stuff on your phone right now."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "“If I’m doing something I do like to take it to the limit. I’ve got a high ceiling. A wide threshold for seeing what those boundaries are for myself. I’m very resilient inside. I find things that I like and do and boy, I do like to stick to them."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I’m a fan of the word selfish. Self. Ish. When I say I have gotten a lot more self-ish, I mean I am less concerned with what people think of me. I’m not worried about how I’m perceived. Selfish has always gotten a bad rap. You should do for you."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I believe in living in the present and making each day count. I don’t pay much attention to the past or the future."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The best education I’ve had in my life is to travel."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Life is not fair, it never was and it is now and it won’t ever be. Do not fall into the trap. The entitlement trap, of feeling like you’re a victim. You are not."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Life is a series of commas, not periods."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Give thanks. Appreciate what you DO have … the more we give thanks, the more we receive to be thankful for. Gratitude is the gift that always gives back."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "It’s a scientific fact that gratitude reciprocates."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I don’t want to just revolve. I want to evolve. As a man, as a human, as a father, as a lover."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Every hero doesn’t do this great big hero thing. They do the simple thing over and over… and they stick to it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "There are three things, to my account, that I need each day. One of them is something to look up to, another is something to look forward to, and another is someone to chase."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Life’s barely long enough to get good at one thing. So be careful what you get good at."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "’So, are you a hero?’ And I was like, ‘not even close. No, no, no.’ She said, ‘Why?’ I said, ‘Because my hero’s me at 35.’ So you see every day, every week, every month and every year of my life, my hero’s always 10 years away. I’m never gonna be my hero. I’m not gonna attain that. I know I’m not, and that’s just fine with me because that keeps me with somebody to keep on chasing."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Life is not a popularity contest. Take the hill, but first answer the question: What is my hill?"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        //Morgan Freeman
+        name = "Morgan Freeman"
+        
+        text = "Learning how to be still, to really be still and let life happen – that stillness becomes a radiance"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I always tell my kids if you lay down, people will step over you. But if you keep scrambling, if you keep going, someone will always, always give you a hand. Always. But you gotta keep dancing, you gotta keep your feet moving."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The best way to guarantee a loss is to quit."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I can say that life is good to me. Has been and is good. So I think my task is to be good to it. So how do you be good to life? You live it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If your life turns out to be good and you have a tremendous amount of luck in your life, it’s a good thing to turn around and make it work for others."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I’m not intimidated by lead roles. I’m better in them. I don’t feel pressure. I feel released at times like that. That’s what I’m born to do."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I have to remind myself that some birds aren’t meant to be caged. Their feathers are just too bright. And when they fly away, the part of you that knows it was a sin to lock them up does rejoice."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If you wake up and the snow is knee-deep outside, you are not filled with rage. It’s just something that you’ve got to cope with. If you’re living in a situation it’s the only situation that you know, and you’ve got to deal with it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If you want to see a miracle, be the miracle."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If you live a life of make-believe, your life isn’t worth anything until you do something that does challenge your reality."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We humans are more concerned with having than with being."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "How do we change the world? One random act of kindness at a time."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Never let pride be your guiding principle. Let your accomplishments speak for you."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "One of the things you can always depend on – this is one of the truths of the universe, and you heard it first from here – whatever we decide we want to do is what we do."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Very often, you know, you stop walking because you say, ‘Well, I’m tired of climbing this hill. I’m never going to get to the top.’ And you’re only two steps from the top."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Don’t be different just for different’s sake. If you see it differently, function that way. Follow your own muse, always."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "As long as you feel like a victim, you are one."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Don’t be afraid of what you want. This is your time. The barriers are down."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Get busy livin’ or get busy dyin’."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You can’t take credit for talent; you can only take credit for using it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+       
+        //Michelle Obama
+        name = "Michelle Obama"
+        
+        text = "There are still many causes worth sacrificing for, so much history yet to be made."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If my future were determined just by my performance on a standardized test, I wouldn't be here. I guarantee you that."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Whether you come from a council estate or a country estate, your success will be determined by your own confidence and fortitude."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You may not always have a comfortable life and you will not always be able to solve all of the world's problems at once but don't ever underestimate the importance you can have because history has shown us that courage can be contagious and hope can take on a life of its own."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We learned about honesty and integrity- that the truth matters... that you don't take shortcuts or play by your own set of rules... and success doesn't count unless you earn it fair and square"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "One of the lessons that I grew up with was to always stay true to yourself and never let what somebody else says distract you from your goals."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You can't make decisions based on fear and the possibility of what might happen."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Success is only meaningful and enjoyable if it feels like your own."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When I hear about negative and false attacks, I really don't invest any energy in them, because I know who I am."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We learned about dignity and decency - that how hard you work matters more than how much you make... that helping others means more than just getting ahead yourself."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Find people who will make you better."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We learned about gratitude and humility - that so many people had a hand in our success, from the teachers who inspired us to the janitors who kept our school clean... and we were taught to value everyone's contribution and treat everyone with respect."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Choose people who lift you up."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I am an example of what is possible when girls from the very beginning of their lives are loved and nurtured by people around them. I was surrounded by extraordinary women in my life who taught me about quiet strength and dignity."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When I get up and work out, I'm working out just as much for my girls as I am for me, because I want them to see a mother who loves them dearly, who invests in them, but who also invests in herself. It's just as much about letting them know as young women that it is okay to put yourself a little higher on your priority list."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "At the end of the day, when it comes time to make that decision, as president, all you have to guide you are your values, and your vision, and the life experiences that make you who you are."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I've seen firsthand that being president doesn't change who you are. It reveals who you are."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We need to do a better job of putting ourselves higher on our own 'to do' list."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "And Barack and I were raised with so many of the same values, like you work hard for what you want in life. That your word is your bond; that you do what you say you're going to do. That you treat people with dignity and respect, even if you don't know them and even if you don't agree with them."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Success isn't about how much money you make. It's about the difference you make in people's lives."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When they go low, we go high."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        //Eleanor Roosevelt
+        name = "Eleanor Roosevelt"
+        
+        text = "With the new day comes new strength and new thoughts."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The future belongs to those who believe in the beauty of their dreams."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We are afraid to care too much, for fear that the other person does not care at all."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Great minds discuss ideas; average minds discuss events; small minds discuss people."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "No one can make you feel inferior without your consent."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You must do the things you think you cannot do."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Never allow a person to tell you no who doesn't have the power to say yes."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "It takes as much energy to wish as it does to plan."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Happiness is not a goal; it is a by-product."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You gain strength, courage, and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself, 'I lived through this horror. I can take the next thing that comes along."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+
+
+
         
     }
     
