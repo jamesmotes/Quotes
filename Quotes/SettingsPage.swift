@@ -136,79 +136,84 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
     }
     @IBAction func createAlarm(_ sender: Any) {
         
+        print(numAlarms)
+        print(full_unlock)
         
-        
-        
-        var date = datePicker.date
-        print("Date entry")
-        print(date)
-        
-        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
-        
-        let query = "person = '" + filteredData[0] + "'"
-        var quotes = Array(realm.objects(Quote.self).filter(query))
-        //print(quotes)
-        quotes.shuffle()
-        
-        AlarmSetPeople.append(filteredData[0])
-        AlarmSetTime.append(triggerDate)
-        
-        
-        /*let defaults = UserDefaults.standard
-        defaults.set(AlarmSetPeople, forKey: "AlarmSetPeople")
-        defaults.set(AlarmSetTime, forKey: "AlarmSetTime")
-        */
-        triggerDate.day = triggerDate.day! - 1
-        
-        var index = 0
-        
-        while(index < 31){
-            for q in quotes {
-                var currentCount = 0
-                for i in AlarmSetPeople {
-                    if i == q.person {
-                        currentCount = currentCount + 1
+        if(numAlarms > 0 && !full_unlock){
+            performSegue(withIdentifier: "unlockAlarmsSegue", sender: nil)
+        }
+        else {
+            var date = datePicker.date
+            print("Date entry")
+            print(date)
+            
+            var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+            
+            let query = "person = '" + filteredData[0] + "'"
+            var quotes = Array(realm.objects(Quote.self).filter(query))
+            //print(quotes)
+            quotes.shuffle()
+            
+            AlarmSetPeople.append(filteredData[0])
+            AlarmSetTime.append(triggerDate)
+            
+            
+            /*let defaults = UserDefaults.standard
+             defaults.set(AlarmSetPeople, forKey: "AlarmSetPeople")
+             defaults.set(AlarmSetTime, forKey: "AlarmSetTime")
+             */
+            triggerDate.day = triggerDate.day! - 1
+            
+            var index = 0
+            
+            while(index < 31){
+                for q in quotes {
+                    var currentCount = 0
+                    for i in AlarmSetPeople {
+                        if i == q.person {
+                            currentCount = currentCount + 1
+                        }
                     }
-                }
-                
-                let content = UNMutableNotificationContent()
-                //content.title =
-                content.body = q.text + " - " + q.person
-                content.sound = UNNotificationSound.default()
-                content.categoryIdentifier = "RECEIVED_QUOTE"
-                
-                //should probably adjust for months with 30 and 28 days
-                triggerDate.day = triggerDate.day! + 1
-                if(triggerDate.day! > 31){
-                    triggerDate.day = 1
-                    triggerDate.month = triggerDate.month! + 1
-                    if(triggerDate.month! > 12){
-                        triggerDate.month = 1
+                    
+                    let content = UNMutableNotificationContent()
+                    //content.title =
+                    content.body = q.text + " - " + q.person
+                    content.sound = UNNotificationSound.default()
+                    content.categoryIdentifier = "RECEIVED_QUOTE"
+                    
+                    //should probably adjust for months with 30 and 28 days
+                    triggerDate.day = triggerDate.day! + 1
+                    if(triggerDate.day! > 31){
+                        triggerDate.day = 1
+                        triggerDate.month = triggerDate.month! + 1
+                        if(triggerDate.month! > 12){
+                            triggerDate.month = 1
+                        }
                     }
-                }
-                
-                //print("TriggerDate")
-                //print(triggerDate)
-                
-                
-                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-                
-                let identifier = q.person + (String)(index + currentCount * 31)
-                let request = UNNotificationRequest(identifier: identifier,
-                                                    content: content, trigger: trigger)
-                center.add(request, withCompletionHandler: { (error) in
-                    if let error = error {
-                        // Something went wrong
-                        print("something went wrong when adding the notification to the request center")
+                    
+                    //print("TriggerDate")
+                    //print(triggerDate)
+                    
+                    
+                    let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                    
+                    let identifier = q.person + (String)(index + currentCount * 31)
+                    let request = UNNotificationRequest(identifier: identifier,
+                                                        content: content, trigger: trigger)
+                    center.add(request, withCompletionHandler: { (error) in
+                        if let error = error {
+                            // Something went wrong
+                            print("something went wrong when adding the notification to the request center")
+                        }
+                    })
+                    index += 1
+                    if(index > 31){
+                        break
                     }
-                })
-                index += 1
-                if(index > 31){
-                    break
                 }
             }
+            dismiss(animated: true, completion: nil)
         }
-        dismiss(animated: true, completion: nil)
     }
     
     

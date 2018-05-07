@@ -1,5 +1,5 @@
 //
-//  UnlockPage.swift
+//  TooManyAlarmsViewController.swift
 //  Quotes
 //
 //  Created by James Motes on 5/6/18.
@@ -8,16 +8,15 @@
 
 import UIKit
 
-class UnlockPage: UIViewController {
-
-    @IBOutlet weak var backButton: UIButton!
+class TooManyAlarmsViewController: UIViewController {
     @IBOutlet weak var text: UILabel!
-    @IBOutlet weak var unlockButton: UIButton!
+    @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         text.textColor = globalFontColor
-        unlockButton.titleLabel?.textColor = globalFontColor
+        purchaseButton.titleLabel?.textColor = globalFontColor
         backButton.titleLabel?.textColor = globalFontColor
         view.backgroundColor = globalBackgroundColor
         // Do any additional setup after loading the view.
@@ -31,9 +30,9 @@ class UnlockPage: UIViewController {
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func goToPurchase(_ sender: Any) {
-        performSegue(withIdentifier: "purchaseSegue", sender: nil)
+        performSegue(withIdentifier: "alarmToPurchase", sender: nil)
     }
     /*
     // MARK: - Navigation

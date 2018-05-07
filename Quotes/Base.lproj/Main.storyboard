@@ -149,6 +149,7 @@
                         <outlet property="shareButton" destination="egb-Sh-Bpj" id="C4Z-7c-2Da"/>
                         <outlet property="text" destination="r4S-V2-zqV" id="n7z-Va-LBX"/>
                         <segue destination="ZfQ-WE-u0E" kind="presentation" identifier="createQuote" id="bnF-u4-hgl"/>
+                        <segue destination="aI8-AM-MAE" kind="presentation" identifier="showSearchBar" id="Zb5-7A-e4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waZ-eh-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -630,6 +631,7 @@
                     <connections>
                         <outlet property="datePicker" destination="Qel-aw-M7W" id="lrF-p9-c1u"/>
                         <outlet property="tableView" destination="dMj-nz-Zhz" id="tYM-8z-Dzq"/>
+                        <segue destination="k0i-66-vDR" kind="presentation" identifier="unlockAlarmsSegue" id="CRc-Qk-lbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndu-NN-W7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -691,17 +693,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="San-ze-YJP">
-                                            <rect key="frame" x="16" y="11" width="100" height="50"/>
+                                            <rect key="frame" x="16" y="11" width="140" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="BFz-jQ-fOs"/>
-                                                <constraint firstAttribute="width" constant="100" id="h9V-YE-oXk"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="WKj-xN-xNE"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grH-UO-Nlh">
-                                            <rect key="frame" x="116" y="11" width="100" height="50"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grH-UO-Nlh">
+                                            <rect key="frame" x="186" y="10" width="100" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="2nu-M7-Zrd"/>
                                                 <constraint firstAttribute="width" constant="100" id="QTL-Tk-q6s"/>
@@ -788,14 +790,14 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&quot;Type quote here.&quot;" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="nHu-5z-Px5">
                                 <rect key="frame" x="16" y="216" width="343" height="40"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="eSo-cg-yGd">
                                 <rect key="frame" x="48" y="279" width="279" height="42"/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="xZ3-YK-97h"/>
@@ -921,10 +923,14 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayu-qw-Vae">
                                 <rect key="frame" x="45" y="318" width="285" height="54"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Unlock Now!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToPurchase:" destination="lJr-9T-r4A" eventType="touchUpInside" id="rQe-Fb-0kO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -942,12 +948,79 @@
                         <viewLayoutGuide key="safeArea" id="wNp-HX-HTJ"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="9Y4-BU-C5L" id="vFN-Xb-75V"/>
+                        <outlet property="text" destination="IiQ-Ed-NcS" id="Og0-ot-dF4"/>
+                        <outlet property="unlockButton" destination="ayu-qw-Vae" id="fln-8f-ZnJ"/>
                         <segue destination="BzB-R6-sCp" kind="presentation" identifier="purchaseSegue" id="h4x-nu-l5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMi-gh-5Sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="622" y="-1741"/>
+        </scene>
+        <!--Too Many Alarms View Controller-->
+        <scene sceneID="qNo-bx-2af">
+            <objects>
+                <viewController id="k0i-66-vDR" customClass="TooManyAlarmsViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7jJ-Yy-ivw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewe-n5-04I">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1C4-Lb-ZaG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title=" Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="k0i-66-vDR" eventType="touchUpInside" id="UIz-Cl-INP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It looks like you have not unlocked more than one custom notification :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJc-Dh-LkG">
+                                <rect key="frame" x="16" y="141" width="343" height="239"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiC-AR-syE">
+                                <rect key="frame" x="45" y="413.5" width="285" height="54"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Unlock Now!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToPurchase:" destination="k0i-66-vDR" eventType="touchUpInside" id="d5v-3u-KJU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UiC-AR-syE" firstAttribute="leading" secondItem="6iW-hC-dBm" secondAttribute="leading" constant="45" id="AUC-iB-33P"/>
+                            <constraint firstItem="Ewe-n5-04I" firstAttribute="trailing" secondItem="6iW-hC-dBm" secondAttribute="trailing" id="RDB-J9-7mA"/>
+                            <constraint firstItem="Ewe-n5-04I" firstAttribute="leading" secondItem="6iW-hC-dBm" secondAttribute="leading" id="Rwh-j6-Q8D"/>
+                            <constraint firstItem="6iW-hC-dBm" firstAttribute="trailing" secondItem="UiC-AR-syE" secondAttribute="trailing" constant="45" id="VLd-6v-5Dg"/>
+                            <constraint firstItem="6iW-hC-dBm" firstAttribute="trailing" secondItem="gJc-Dh-LkG" secondAttribute="trailing" constant="16" id="aOS-8b-6yu"/>
+                            <constraint firstItem="Ewe-n5-04I" firstAttribute="top" secondItem="6iW-hC-dBm" secondAttribute="top" id="j1n-t3-HTQ"/>
+                            <constraint firstItem="gJc-Dh-LkG" firstAttribute="top" secondItem="Ewe-n5-04I" secondAttribute="bottom" constant="100" id="kfv-Z1-1ml"/>
+                            <constraint firstItem="UiC-AR-syE" firstAttribute="top" secondItem="gJc-Dh-LkG" secondAttribute="bottom" constant="33.5" id="v8Z-kI-VLE"/>
+                            <constraint firstItem="gJc-Dh-LkG" firstAttribute="leading" secondItem="6iW-hC-dBm" secondAttribute="leading" constant="16" id="wrr-8s-bM1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6iW-hC-dBm"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Ewe-n5-04I" id="AaX-UB-9CE"/>
+                        <outlet property="purchaseButton" destination="UiC-AR-syE" id="J5F-YM-XN6"/>
+                        <outlet property="text" destination="gJc-Dh-LkG" id="mI1-He-D6u"/>
+                        <segue destination="BzB-R6-sCp" kind="presentation" identifier="alarmToPurchase" id="Zct-qR-17f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZZ-ku-zfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="-134"/>
         </scene>
         <!--Purchase View-->
         <scene sceneID="O5f-aV-Abg">
@@ -971,8 +1044,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjM-yc-Hk3">
-                                <rect key="frame" x="45" y="287" width="285" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="45" y="277" width="285" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Lifetime Access $9.99">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -981,8 +1055,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-bw-cKc">
-                                <rect key="frame" x="45" y="215" width="285" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="45" y="214" width="285" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Monthly Subscription $0.99">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -991,8 +1066,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwg-jw-Wss">
-                                <rect key="frame" x="45" y="133" width="285" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <rect key="frame" x="45" y="133" width="285" height="48"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Free Two Week Trial!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1018,6 +1094,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ojF-6M-dRa"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="dl6-fd-G4J" id="brj-VS-Eie"/>
+                        <outlet property="fullButton" destination="NjM-yc-Hk3" id="vmp-eQ-8cm"/>
+                        <outlet property="monthlyButton" destination="HUt-bw-cKc" id="5qM-qo-bDe"/>
+                        <outlet property="twoWeekButton" destination="Mwg-jw-Wss" id="Ply-4S-aAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QH3-AO-mHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1031,6 +1113,7 @@
         <image name="star" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="h4x-nu-l5g"/>
         <segue reference="nOt-kM-mdw"/>
     </inferredMetricsTieBreakers>
 </document>

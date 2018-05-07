@@ -176,8 +176,8 @@ class MainMenuTableViewController: UITableViewController {
         cell.textLabel?.textAlignment = .center                           // Center text
         cell.backgroundColor = globalBackgroundColor
         cell.textLabel?.backgroundColor = globalBackgroundColor                   // Set background color
-        let currentSize = 32
-        cell.textLabel?.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
+        //let currentSize = 32
+        //cell.textLabel?.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
         cell.textLabel?.textColor = globalFontColor                         // Set font color
         cell.textLabel?.adjustsFontSizeToFitWidth = true                  // Set font size
 

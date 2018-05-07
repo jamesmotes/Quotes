@@ -16,6 +16,8 @@
 import UIKit
 import UserNotifications
 
+var numAlarms = 0
+
 var alarmSelected : String = String()
 
 class AlarmsTableViewController: UITableViewController {
@@ -71,7 +73,7 @@ class AlarmsTableViewController: UITableViewController {
         }
         
         tableView.reloadData()
-        
+        numAlarms = alarms.count
         if(alarms.count > 0){
             print("Alarm > 0")
             let t : UNCalendarNotificationTrigger  = alarms[0].trigger as! UNCalendarNotificationTrigger
@@ -165,7 +167,7 @@ class AlarmsTableViewController: UITableViewController {
         }
         sortAlarms()
         tableView.reloadData()
-        
+        numAlarms = alarms.count
         if(alarms.count > 0){
             let t : UNCalendarNotificationTrigger  = alarms[0].trigger as! UNCalendarNotificationTrigger
             print(t.dateComponents.hour!)
@@ -242,11 +244,11 @@ class AlarmsTableViewController: UITableViewController {
         //print(t.dateComponents.hour)
         //var hour = t.dateComponents.hour!
         
-        var AM = "A.M."
+        var AM = "a.m."
         
         var hour = AlarmSetTime[indexPath.row].hour!
         if hour >= 12 {
-            AM = "P.M."
+            AM = "p.m."
             hour -= 12
         }
         if hour == 0 {
@@ -266,8 +268,11 @@ class AlarmsTableViewController: UITableViewController {
         let p = AlarmSetPeople[indexPath.row]
         
         //cell.textLabel?.text = "\(hour):"+minuteString+AM + "   \(p)"
-        cell.time.text = "\(hour):"+minuteString
-        cell.AM.text = AM
+        let time = "\(hour):"+"\(minuteString)"+" \(AM)"
+        cell.time.text = time
+        
+        //cell.AM.text = AM
+        cell.AM.text = ""
         cell.name.text = "\(p)"
         return cell
     }

@@ -73,6 +73,18 @@ class PurchasesController: NSObject, PurchasesControllerProtocol {
     public func restorePurchases() {
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
+    
+    func loadSubscriptionOptions() {
+        
+        let monthlyAccess = "feature_access"
+        let forever = "full_unlock"
+        
+        let productIDs = Set([monthlyAccess, forever])
+        
+        let request = SKProductsRequest(productIdentifiers: productIDs)
+        request.delegate = self
+        request.start()
+    }
 }
 
 // MARK: - SKProductsRequestDelegate
@@ -133,4 +145,15 @@ extension PurchasesController: SKPaymentTransactionObserver {
         UserDefaults.standard.set(true, forKey: identifier)
         UserDefaults.standard.synchronize()
     }
+    
+    
+    /*func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        options = response.products.map { Subscription(product: $0) }
+    }
+    
+    func request(_ request: SKRequest, didFailWithError error: Error) {
+        if request is SKProductsRequest {
+            print("Subscription Options Failed Loading: \(error.localizedDescription)")
+        }
+    }*/
 }

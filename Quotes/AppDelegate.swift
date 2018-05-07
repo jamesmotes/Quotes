@@ -72,6 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         
         full_unlock = defaults.bool(forKey: "full_unlock")
+        //full_unlock = true
         print(full_unlock)
         
         
