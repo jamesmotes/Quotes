@@ -6,148 +6,111 @@
 //  Copyright © 2018 JDM. All rights reserved.
 //
 
+
+/**
+ * Copyright (c) 2017 Razeware LLC
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ */
+
 import Foundation
 import StoreKit
 
-protocol PurchasesControllerProtocol {
-    var canMakePayments: Bool { get }
-    
-    func buyItem(withProductID productID: String)
-    func restorePurchases()
-    
-    var onPurchase: ((String) -> ())? { get set }
-    var onRestore: ((String) -> ())? { get set }
-    var onFail: ((String) -> ())? { get set }
-    var onCancel: (() -> ())? { get set }
-}
 
-class PurchasesController: NSObject, PurchasesControllerProtocol {
+var SECRET = "142c41b9e7384d469f2b7cbb1f836e53"
+
+
+class PurchasesController: NSObject {
     
-    public var canMakePayments: Bool {
-        return SKPaymentQueue.canMakePayments()
+    static let sessionIdSetNotification = Notification.Name("SessionIdSetNotification")
+    static let optionsLoadedNotification = Notification.Name("OptionsLoadedNotification")
+    static let restoreSuccessfulNotification = Notification.Name("RestoreSuccessfulNotification")
+    static let purchaseSuccessfulNotification = Notification.Name("PurchaseSuccessfulNotification")
+
+    
+    static let shared = PurchasesController()
+    
+    
+    var hasReceiptData: Bool {
+        return loadReceipt() != nil
     }
     
-    public var onPurchase: ((String) -> ())?
-    public var onRestore: ((String) -> ())?
-    public var onFail: ((String) -> ())?
-    public var onCancel: (() -> ())?
-    
-    private var productRequest: SKProductsRequest?
-    private let productIdentifiers: [String]
-    fileprivate var products: [SKProduct]?
-    
-    init(withProductIDs productIDs: [String]) {
-        self.productIdentifiers = productIDs
-        
-        super.init()
-        
-        self.validateProductIdentifiers(productIdentifiers)
-        
-        SKPaymentQueue.default().add(self)
-    }
-    
-    deinit {
-        SKPaymentQueue.default().remove(self)
-    }
-    
-    // MARK: - Validation
-    private func validateProductIdentifiers(_ identifiers: [String]) {
-        self.productRequest = SKProductsRequest(productIdentifiers: Set(identifiers))
-        self.productRequest?.delegate = self
-        self.productRequest?.start()
-    }
-    
-    // MARK: - Payment
-    public func buyItem(withProductID productID: String) {
-        guard let product = products?.filter({ return $0.productIdentifier == productID }).first else {
-            return
+    var currentSessionId: String? {
+        didSet {
+            NotificationCenter.default.post(name: PurchasesController.sessionIdSetNotification, object: currentSessionId)
         }
-        buy(product)
     }
     
-    private func buy(_ product: SKProduct) {
-        let payment = SKPayment(product: product)
-        SKPaymentQueue.default().add(payment)
-    }
     
-    public func restorePurchases() {
-        SKPaymentQueue.default().restoreCompletedTransactions()
+    var currentSubscription: PaidSubscription?
+    
+    var options: [Subscription]? {
+        didSet {
+            NotificationCenter.default.post(name: PurchasesController.optionsLoadedNotification, object: options)
+        }
     }
     
     func loadSubscriptionOptions() {
-        
         let monthlyAccess = "feature_access"
-        let forever = "full_unlock"
         
-        let productIDs = Set([monthlyAccess, forever])
+        let productIDs = Set([monthlyAccess])
         
         let request = SKProductsRequest(productIdentifiers: productIDs)
         request.delegate = self
         request.start()
     }
-}
-
-// MARK: - SKProductsRequestDelegate
-extension PurchasesController: SKProductsRequestDelegate {
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        self.products = response.products
+    
+    func purchase(subscription: Subscription) {
+        let payment = SKPayment(product: subscription.product)
+        SKPaymentQueue.default().add(payment)
     }
-}
-
-// MARK: - SKPaymentTransactionObserver
-extension PurchasesController: SKPaymentTransactionObserver {
-    public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction in transactions {
-            switch (transaction.transactionState) {
-            case .purchased:
-                processPurchased(transaction: transaction)
-            case .failed:
-                processFailed(transaction: transaction)
-            case .restored:
-                processRestored(transaction: transaction)
-            case .deferred, .purchasing:
-                break
+    
+    func restorePurchases() {
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    func uploadReceipt(completion: ((_ success: Bool) -> Void)? = nil) {
+        if let receiptData = loadReceipt() {
+            SessionHandler.shared.upload(receipt: receiptData) { [weak self] (result) in
+                guard let strongSelf = self else { return }
+                switch result {
+                case .success(let result):
+                    strongSelf.currentSessionId = result.sessionId
+                    strongSelf.currentSubscription = result.currentSubscription
+                    completion?(true)
+                case .failure(let error):
+                    print("🚫 Receipt Upload Failed: \(error)")
+                    completion?(false)
+                }
             }
         }
     }
     
-    func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
-        onCancel?()
-    }
-    
-    private func processPurchased(transaction: SKPaymentTransaction) {
-        savePurchase(identifier: transaction.payment.productIdentifier)
-        SKPaymentQueue.default().finishTransaction(transaction)
-        
-        onPurchase?(transaction.payment.productIdentifier)
-    }
-    
-    private func processRestored(transaction: SKPaymentTransaction) {
-        guard let productIdentifier = transaction.original?.payment.productIdentifier else {
-            return
+    private func loadReceipt() -> Data? {
+        guard let url = Bundle.main.appStoreReceiptURL else {
+            return nil
         }
-        savePurchase(identifier: productIdentifier)
-        SKPaymentQueue.default().finishTransaction(transaction)
         
-        onRestore?(productIdentifier)
-    }
-    
-    private func processFailed(transaction: SKPaymentTransaction) {
-        SKPaymentQueue.default().finishTransaction(transaction)
-        
-        onFail?(transaction.payment.productIdentifier)
-    }
-    
-    private func savePurchase(identifier: String?) {
-        guard let identifier = identifier else {
-            return
+        do {
+            let data = try Data(contentsOf: url)
+            return data
+        } catch {
+            print("Error loading receipt data: \(error.localizedDescription)")
+            return nil
         }
-        UserDefaults.standard.set(true, forKey: identifier)
-        UserDefaults.standard.synchronize()
     }
-    
-    
-    /*func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+}
+
+extension PurchasesController: SKProductsRequestDelegate {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         options = response.products.map { Subscription(product: $0) }
     }
     
@@ -155,5 +118,110 @@ extension PurchasesController: SKPaymentTransactionObserver {
         if request is SKProductsRequest {
             print("Subscription Options Failed Loading: \(error.localizedDescription)")
         }
-    }*/
+    }
+}
+
+public enum Result<T> {
+    case failure(ServiceError)
+    case success(T)
+}
+public typealias LoadSelfieCompletion = (_ selfies: Result<Bool>) -> Void
+public typealias UploadReceiptCompletion = (_ result: Result<(sessionId: String, currentSubscription: PaidSubscription?)>) -> Void
+public typealias SessionId = String
+
+public enum ServiceError: Error {
+    case missingAccountSecret
+    case invalidSession
+    case noActiveSubscription
+    case other(Error)
+}
+
+class SessionHandler {
+    
+    public static let shared = SessionHandler()
+    let simulatedStartDate: Date
+    
+    private var sessions = [SessionId: Session]()
+    
+    init() {
+        let persistedDateKey = "RWSSimulatedStartDate"
+        if let persistedDate = UserDefaults.standard.object(forKey: persistedDateKey) as? Date {
+            simulatedStartDate = persistedDate
+        } else {
+            let date = Date().addingTimeInterval(-30) // 30 second difference to account for server/client drift.
+            UserDefaults.standard.set(date, forKey: "RWSSimulatedStartDate")
+            
+            simulatedStartDate = date
+        }
+    }
+    
+    
+    /// Trade receipt for session id
+    public func upload(receipt data: Data, completion: @escaping UploadReceiptCompletion) {
+        let body = [
+            "receipt-data": data.base64EncodedString(),
+            "password": SECRET
+        ]
+        let bodyData = try! JSONSerialization.data(withJSONObject: body, options: [])
+        
+        let url = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = bodyData
+        
+        let task = URLSession.shared.dataTask(with: request) { (responseData, response, error) in
+            if let error = error {
+                completion(.failure(.other(error)))
+            } else if let responseData = responseData {
+                let json = try! JSONSerialization.jsonObject(with: responseData, options: []) as! Dictionary<String, Any>
+                let session = Session(receiptData: data, parsedReceipt: json)
+                self.sessions[session.id] = session
+                let result = (sessionId: session.id, currentSubscription: session.currentSubscription)
+                completion(.success(result))
+            }
+        }
+        
+        task.resume()
+    }
+    
+    private func paidSubcriptions(since date: Date, for sessionId: SessionId) -> [PaidSubscription] {
+        if let session = sessions[sessionId] {
+            let subscriptions = session.paidSubscriptions.filter { $0.purchaseDate >= date }
+            return subscriptions.sorted { $0.purchaseDate < $1.purchaseDate }
+        } else {
+            return []
+        }
+    }
+    
+    /// Use sessionId to unlock
+    public func selfies(for sessionId: SessionId, completion: LoadSelfieCompletion?) {
+        guard SECRET != "142c41b9e7384d469f2b7cbb1f836e53" else {
+            completion?(.failure(.missingAccountSecret))
+            return
+        }
+        
+        guard let _ = sessions[sessionId] else {
+            completion?(.failure(.invalidSession))
+            return
+        }
+        
+        let paidSubscriptions = paidSubcriptions(since: simulatedStartDate, for: sessionId)
+        guard paidSubscriptions.count > 0 else {
+            completion?(.failure(.noActiveSubscription))
+            return
+        }
+        
+        for (_, subscription) in paidSubscriptions.enumerated() {
+            /*switch subscription.level {
+            default:
+            }*/
+            
+            monthly_unlock = true
+        }
+        
+        completion?(.success(monthly_unlock))
+    }
+    
+    
+    
 }

@@ -11,7 +11,7 @@ import StoreKit
 
 class PurchasePerson: UIViewController {
     
-    var purchasesController: PurchasesControllerProtocol = PurchasesController(withProductIDs: ["thomas_jefferson", "gabriel_wang"])
+    //var purchasesController: PurchasesControllerProtocol = PurchasesController(withProductIDs: ["thomas_jefferson", "gabriel_wang"])
 
     @IBOutlet weak var MainText: UILabel!
     override func viewDidLoad() {

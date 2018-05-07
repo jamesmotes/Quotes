@@ -22,6 +22,16 @@ class UnlockPage: UIViewController {
         view.backgroundColor = globalBackgroundColor
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        text.textColor = globalFontColor
+        unlockButton.titleLabel?.textColor = globalFontColor
+        backButton.titleLabel?.textColor = globalFontColor
+        view.backgroundColor = globalBackgroundColor
+        if(madePurchase){
+            dismiss(animated: true, completion: nil)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

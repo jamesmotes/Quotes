@@ -18,9 +18,10 @@ import StoreKit
 
 var notificationQuote : String = ""
 
-var purchasesController: PurchasesControllerProtocol = PurchasesController(withProductIDs: ["full_unlock", "feature_access"])
-
 var full_unlock = false
+var monthly_unlock = false
+var full_access = false
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -39,6 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        SKPaymentQueue.default().add(self)
+        
+        PurchasesController.shared.loadSubscriptionOptions()
+        
         let defaults = UserDefaults.standard
         
         
@@ -71,9 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(countdown, forKey: "reviewCountdown")
         }
         
-        full_unlock = defaults.bool(forKey: "full_unlock")
-        //full_unlock = true
-        print(full_unlock)
         
         
         /*if (defaults.dictionary(forKey: "favorites") != nil){
@@ -108,6 +110,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         //set up ads
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1816441460162466~7930915740")
+        
+        
+        
+        
+        //subsription stuff
+        guard PurchasesController.shared.currentSessionId != nil,
+            PurchasesController.shared.hasReceiptData else {
+                return true
+        }
+        monthly_unlock = true
+        
+        
+        
+        full_unlock = defaults.bool(forKey: "full_unlock")
+        //full_unlock = true
+        print(full_unlock)
+        
+        
+        if(monthly_unlock || full_unlock){
+            full_access = true
+        }
         
         
         return true
@@ -312,8 +335,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             print(error.localizedDescription)
         }*/
     }
-   
+    
 
+}
+
+extension AppDelegate: SKPaymentTransactionObserver {
+    
+    func paymentQueue(_ queue: SKPaymentQueue,
+                      updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchasing:
+                handlePurchasingState(for: transaction, in: queue)
+            case .purchased:
+                handlePurchasedState(for: transaction, in: queue)
+            case .restored:
+                handleRestoredState(for: transaction, in: queue)
+            case .failed:
+                handleFailedState(for: transaction, in: queue)
+            case .deferred:
+                handleDeferredState(for: transaction, in: queue)
+            }
+        }
+        
+    }
+    
+    func handlePurchasingState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        print("User is attempting to purchase product id: \(transaction.payment.productIdentifier)")
+        
+    }
+    
+    func handlePurchasedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        print("User purchased product id: \(transaction.payment.productIdentifier)")
+        
+        queue.finishTransaction(transaction)
+        PurchasesController.shared.uploadReceipt { (success) in
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: PurchasesController.purchaseSuccessfulNotification, object: nil)
+            }
+        }
+    }
+    
+    func handleRestoredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        print("Purchase restored for product id: \(transaction.payment.productIdentifier)")
+        queue.finishTransaction(transaction)
+        PurchasesController.shared.uploadReceipt { (success) in
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: PurchasesController.restoreSuccessfulNotification, object: nil)
+            }
+        }
+    }
+    
+    func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
+    }
+    
+    func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
+    }
 }
 
 extension UIView {

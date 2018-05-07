@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */; };
-		1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FC2019830C00B22EDE /* PurchasePerson.swift */; };
 		1A0999FF2019873600B22EDE /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FE2019873600B22EDE /* IAP.swift */; };
 		1A62EF0F209FA08E00F38F00 /* UnlockPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF0E209FA08E00F38F00 /* UnlockPage.swift */; };
 		1A62EF11209FA39100F38F00 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF10209FA39100F38F00 /* PurchaseView.swift */; };
 		1A62EF13209FE52200F38F00 /* TooManyAlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF12209FE52200F38F00 /* TooManyAlarmsViewController.swift */; };
+		1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1420A08E2800F38F00 /* Subscription.swift */; };
+		1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */; };
+		1A62EF1920A0922500F38F00 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1820A0922500F38F00 /* Session.swift */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
@@ -63,11 +65,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A0999FC2019830C00B22EDE /* PurchasePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePerson.swift; sourceTree = "<group>"; };
 		1A0999FE2019873600B22EDE /* IAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
 		1A62EF0E209FA08E00F38F00 /* UnlockPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockPage.swift; sourceTree = "<group>"; };
 		1A62EF10209FA39100F38F00 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		1A62EF12209FE52200F38F00 /* TooManyAlarmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooManyAlarmsViewController.swift; sourceTree = "<group>"; };
+		1A62EF1420A08E2800F38F00 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
+		1A62EF1820A0922500F38F00 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -175,10 +179,12 @@
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
 				1A96D549203FA31300254090 /* LoadQuotes.swift */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
+				1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */,
+				1A62EF1420A08E2800F38F00 /* Subscription.swift */,
 				1AA4389B2033E629000C7238 /* FrontPage.swift */,
 				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
 				1A0999FE2019873600B22EDE /* IAP.swift */,
-				1A0999FC2019830C00B22EDE /* PurchasePerson.swift */,
+				1A62EF1820A0922500F38F00 /* Session.swift */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
 				1A62EF12209FE52200F38F00 /* TooManyAlarmsViewController.swift */,
 				1A62EF0E209FA08E00F38F00 /* UnlockPage.swift */,
@@ -382,10 +388,12 @@
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
 				1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
+				1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */,
 				1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */,
 				812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
-				1A0999FD2019830C00B22EDE /* PurchasePerson.swift in Sources */,
+				1A62EF1920A0922500F38F00 /* Session.swift in Sources */,
+				1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */,
 				1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */,
 				1AAE1C332083F88B00345E1F /* AlarmMenuCell.swift in Sources */,
 			);

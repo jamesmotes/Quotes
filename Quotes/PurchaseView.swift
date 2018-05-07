@@ -10,6 +10,7 @@ import UIKit
 
 
 var didPurchase = false
+var madePurchase = false
 
 class PurchaseView: UIViewController {
 
@@ -17,11 +18,12 @@ class PurchaseView: UIViewController {
     @IBOutlet weak var twoWeekButton: UIButton!
     @IBOutlet weak var monthlyButton: UIButton!
     @IBOutlet weak var fullButton: UIButton!
+    
+    var options: [Subscription]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.purchasedLifeTimeAccess),name:NSNotification.Name(rawValue: "purchasedLifeTimeAccess"), object: nil)
 
         backButton.titleLabel?.textColor = globalFontColor
         twoWeekButton.titleLabel?.textColor = globalFontColor
@@ -38,6 +40,32 @@ class PurchaseView: UIViewController {
         
         
         // Do any additional setup after loading the view.
+        
+        //purchasing stuff
+        options = PurchasesController.shared.options
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleOptionsLoaded(notification:)),
+                                               name: PurchasesController.optionsLoadedNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handlePurchaseSuccessfull(notification:)),
+                                               name: PurchasesController.purchaseSuccessfulNotification,
+                                               object: nil)
+    }
+    
+    @objc func handleOptionsLoaded(notification: Notification) {
+        DispatchQueue.main.async { [weak self] in
+            self?.options = PurchasesController.shared.options
+        }
+    }
+    
+    @objc func handlePurchaseSuccessfull(notification: Notification) {
+        DispatchQueue.main.async { [weak self] in
+            madePurchase = true
+            self?.dismiss(animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,30 +78,45 @@ class PurchaseView: UIViewController {
     }
     
     @IBAction func trialAccess(_ sender: Any) {
+        PurchasesController.shared.purchase(subscription: options![0])
     }
     
     @IBAction func monthlyAccess(_ sender: Any) {
+        PurchasesController.shared.purchase(subscription: options![0])
     }
     
     @IBAction func lifetimeAccess(_ sender: Any) {
-        
-        didPurchase = false
-        
-        purchasesController.buyItem(withProductID: "full_unlock")
-        purchasesController.onPurchase = {
-            (itemID) in
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "purchasedLifeTimeAccess"), object: nil)
-        }
-        purchasesController.onRestore = {
-            (itemID) in
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "purchasedLifeTimeAccess"), object: nil)
-        }
+        PurchasesController.shared.purchase(subscription: options![1])
     }
     
-    @objc func purchasedLifeTimeAccess(){
-        full_unlock = true
-        let defaults = UserDefaults.standard
-        defaults.setValue(true, forKeyPath: "full_unlock")
+    private func showRestoreAlert() {
+        let alert = UIAlertController(title: "Subscription Issue", message: "We are having a hard time finding your subscription. If you've recently reinstalled the app or got a new device please choose to restore your purchase. Otherwise go Back to Subscribe.", preferredStyle: .alert)
+        
+        let restoreAction = UIAlertAction(title: "Restore", style: .default) { [weak self] _ in
+            PurchasesController.shared.restorePurchases()
+            self?.showRestoreInProgressAlert()
+        }
+        
+        let backAction = UIAlertAction(title: "Back", style: .cancel) { _ in
+            _ = self.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(restoreAction)
+        alert.addAction(backAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showRestoreInProgressAlert() {
+        let alert = UIAlertController(title: "Restoring Purchase", message: "Your purchase history is being restored. Upon completion this dialog will close and you will be sent back to the previous screen where you can then comeback in to load your purchases.", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(PurchaseView.dismissRestoreInProgressAlert(notification:)), name: PurchasesController.restoreSuccessfulNotification, object: nil)
+    }
+    
+    @objc private func dismissRestoreInProgressAlert(notification: Notification) {
+        dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     /*
