@@ -943,7 +943,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. it is wonderful how much may be done if we are always doing."
+        text = "Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."
         cats = []
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -2063,7 +2063,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
                 
         text = "I was never top of the class at school, but my classmates must have seen potential in me, because my nickname was 'Einstein.'"
-        cats = []
+        cats = ["Success"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
