@@ -176,6 +176,16 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
+        text = "If you need inspiring words, don't do it."
+        cats = ["Entrepreneur", "Success", "Motivation", "Hungry"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You should take the approach that you're wrong. Your goal is to be less wrong."
+        cats = ["Entrepreneur", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
         //Gary Vaynerchuck
         name = "Gary Vaynerchuck"
         
@@ -2168,7 +2178,7 @@ class LoadQuotes {
         //Wayne Gretzky
         name = "Wayne Gretzky"
         
-        text = "A good hockey player plays where the puck is. A great hoclkey player plays where the puck is going to be."
+        text = "A good hockey player plays where the puck is. A great hockey player plays where the puck is going to be."
         cats = ["Sports", "Motivational"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
@@ -2951,17 +2961,17 @@ class LoadQuotes {
         name = "Eleanor Roosevelt"
         
         text = "With the new day comes new strength and new thoughts."
-        cats = []
+        cats = ["Change"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The future belongs to those who believe in the beauty of their dreams."
-        cats = []
+        cats = ["Empowerment"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "We are afraid to care too much, for fear that the other person does not care at all."
-        cats = []
+        cats = ["Relationships"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -3000,7 +3010,185 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
+        //Serena Williams
+        name = "Serena Williams"
         
+        text = "Growing up I wasn’t the richest, but I had a rich family in spirit. Standing here with 19 championships is something I never thought would happen. I went on a court just with a ball and a racket and with a hope."
+        cats = ["Sports"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Think of all the girls who could become top athletes but quit sports because they’re afraid of having too many defined muscles and being made fun of or called unattractive."
+        cats = ["Sports", "Empowerment"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I decided I can’t pay a person to rewind time, so I may as well get over it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I think you have to love yourself before you fall in love. I’m still learning to love myself."
+        cats = ["Relationships"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I don’t like to lose — at anything… Yet I’ve grown most not from victories, but setbacks. If winning is God’s reward, then losing is how he teaches us."
+        cats = ["Hungry", "Sports"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Family’s first, and that’s what matters most. We realize that our love goes deeper than the tennis game."
+        cats = ["Relationships"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "With a defeat, when you lose, you get up, you make it better, you try again. That’s what I do in life, when I get down, when I get sick, I don’t want to just stop. I keep going and I try to do more. Everyone always says never give up but you really have to take that to heart and really do never definitely give up. Keep trying."
+        cats = ["Sports"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I am lucky that whatever fear I have inside me, my desire to win is always stronger."
+        cats = ["Sports", "Motivation"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I always believe I can beat the best, achieve the best. I always see myself in the top position."
+        cats = ["Sports", "Motivation", "Hungry"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I really think a champion is defined not by their wins but by how they can recover when they fall."
+        cats = ["Sports", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You have to believe in yourself when no one else does."
+        cats = ["Sports", "Empowerment", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Everything comes at a cost. Just what are you willing to pay for it?"
+        cats = ["Sports", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Luck has nothing to do with it, because I have spent many, many hours, countless hours, on the court working for my one moment in time, not knowing when it would come."
+        cats = ["Sports", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I think in life you should work on yourself until the day you die."
+        cats = ["Sports", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        //Margaret Thatcher
+        name = "Margaret Thatcher"
+        
+        text = "Don’t follow the crowd, let the crowd follow you."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Being powerful is like being a lady. If you have to tell people you are, you aren’t."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Look at a day when you are supremely satisfied at the end. It’s not a day when you lounge around doing nothing; it’s a day you’ve had everything to do and you’ve done it."
+        cats = ["Motivational"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You may have to fight a battle more than once to win it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If you just set out to be liked, you will be prepared to compromise on anything at anytime, and would achieve nothing."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I do not know anyone who has gotten to the top without hard work. That is the recipe. It will not always get you to the top, but it will get you pretty near."
+        cats = ["Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "It pays to know the enemy — not least because at some time you may have the opportunity to turn him into a friend."
+        cats = ["Relationships"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Disciplining yourself to do what you know is right and important, although difficult, is the highroad to pride, self-esteem, and personal satisfaction."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        //Richard Branson
+        name = "Richard Branson"
+        
+        text = "Respect is how to treat everyone, not just those you want to impress."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Train people well enough so they can leave, treat them well enough so they don’t want to."
+        cats = ["Entrepreneur"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "There is no greater thing you can do with your life and your work than follow your passions – in a way that serves the world and you."
+        cats = ["Entrepreneur"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "As soon as something stops being fun, I think it’s time to move on. Life is too short to be unhappy. Waking up stressed and miserable is not a good way to live."
+        cats = ["Entrepreneur"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You don’t learn to walk by following rules. You learn by doing, and by falling over."
+        cats = ["Entrepreneur"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Do not be embarrassed by your failures, learn from them and start again."
+        cats = ["Entrepreneur"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Luck is what happens when preparation meets opportunity."
+        cats = ["Entrepreneur", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Whatever your goal is you will never succeed unless you let go of your fears and fly."
+        cats = ["Entrepreneur", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Hard-won things are more valuable than those that come too easily."
+        cats = ["Entrepreneur", "Motivational"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "To be successful you have to be out there, you have to hit the ground running."
+        cats = ["Entrepreneur", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If you spot an opportunity and are really excited by it, throw yourself into it with everything you’ve got."
+        cats = ["Entrepreneur", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Chance favors the prepared mind. The more you practice, luckier you become."
+        cats = ["Entrepreneur", "Success"]
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
     }
     
     func MakeQuote(_name : String, _quote : String, _categories : [String], _moods : [String]) -> Void {
