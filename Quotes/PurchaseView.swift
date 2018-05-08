@@ -64,6 +64,7 @@ class PurchaseView: UIViewController {
     @objc func handlePurchaseSuccessfull(notification: Notification) {
         DispatchQueue.main.async { [weak self] in
             madePurchase = true
+            full_unlock = true
             self?.dismiss(animated: true, completion: nil)
         }
     }

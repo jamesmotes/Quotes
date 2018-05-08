@@ -60,15 +60,21 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
             selectedSpecificQuote = true
             searchedSpecificQuote = false
             specificQuote = selected
+            category = ""
+            pers = ""
             dismiss(animated: true, completion: nil)
         }
         
         
         if peopleOptions.contains(selected){
             pers = selected
+            category = ""
+            selectedSpecificQuote = false
         }
         else if catOptions.contains(selected) {
             category = selected
+            pers = ""
+            selectedSpecificQuote = false
         }/*
         else if moodOptions.contains(selected){
             md = selected

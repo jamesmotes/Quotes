@@ -60,8 +60,9 @@ class PurchasesController: NSObject {
     
     func loadSubscriptionOptions() {
         let monthlyAccess = "feature_access"
+        let lifetimeAccess = "lifetime_access"
         
-        let productIDs = Set([monthlyAccess])
+        let productIDs = Set([monthlyAccess, lifetimeAccess])
         
         let request = SKProductsRequest(productIdentifiers: productIDs)
         request.delegate = self
@@ -92,6 +93,10 @@ class PurchasesController: NSObject {
                 }
             }
         }
+        else {
+            self.currentSessionId = ""
+        }
+        print(self.currentSubscription)
     }
     
     private func loadReceipt() -> Data? {
@@ -101,6 +106,7 @@ class PurchasesController: NSObject {
         
         do {
             let data = try Data(contentsOf: url)
+            print(data)
             return data
         } catch {
             print("Error loading receipt data: \(error.localizedDescription)")
@@ -178,6 +184,8 @@ class SessionHandler {
                 self.sessions[session.id] = session
                 let result = (sessionId: session.id, currentSubscription: session.currentSubscription)
                 completion(.success(result))
+            } else {
+                print("Here")
             }
         }
         
@@ -193,8 +201,10 @@ class SessionHandler {
         }
     }
     
-    /// Use sessionId to unlock
+    
     public func selfies(for sessionId: SessionId, completion: LoadSelfieCompletion?) {
+        print(SECRET)
+        //initially !=
         guard SECRET != "142c41b9e7384d469f2b7cbb1f836e53" else {
             completion?(.failure(.missingAccountSecret))
             return
@@ -211,15 +221,18 @@ class SessionHandler {
             return
         }
         
-        for (_, subscription) in paidSubscriptions.enumerated() {
-            /*switch subscription.level {
-            default:
-            }*/
-            
-            monthly_unlock = true
-        }
+        /*for (index, subscription) in paidSubscriptions.enumerated() {
+            guard let set = selfieSet(number: index) else { continue }
+            switch subscription.level {
+            case .one:
+                selfieSets.append(set.setLimitedToOneSelfie())
+            case .all:
+                selfieSets.append(set)
+            }
+        }*/
+        full_unlock = true
         
-        completion?(.success(monthly_unlock))
+        completion?(.success(full_unlock))
     }
     
     

@@ -27,6 +27,7 @@ var globalBackgroundColor = UIColor.black
 
 class FrontPage: UIViewController , GADInterstitialDelegate {
 
+    
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var person: UILabel!
     
@@ -51,14 +52,11 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         interstitial = createAndLoadInterstitial()
         
         let request = GADRequest()
         interstitial.load(request)
-        
-        
-        //navigationController?.isNavigationBarHidden = true
-        //favButton.tintColor = UIColor.white
         
         quotes = Array(realm.objects(Quote.self))
         quotes.shuffle()
@@ -71,11 +69,28 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 }
             }
         }
+        //PurchasesController.shared.uploadReceipt()
         refresh()
+        
+        print(PurchasesController.shared.currentSessionId)
+        let sessionId = PurchasesController.shared.currentSessionId ?? ""
+        
+        SessionHandler.shared.selfies(for: sessionId) { [weak self] result in
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let selfies):
+                full_unlock = true
+            case .failure(let error): strongSelf.showErrorAlert(for: error)
+            }
+            
+        }
+
+        
     }
     
+    
+    
     override func viewDidAppear(_ animated: Bool) {
-        
         if(changedFont){
             changedFont = false
             text.textColor = globalFontColor
@@ -121,7 +136,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         if pers != "" {
             query += "person = '" + pers + "'"
         }
-        if category != "" {
+        else if category != "" {
             //query += ""
             var checkQuotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
             //var filterThis = quotes.filter(category + "IN categories")
@@ -143,7 +158,23 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             refresh()
             return
         }
-        if personalQuotes {
+        else if isFavorite {
+            query += "favorite = true"
+        }
+        else if isDownvote {     // Possibly remove when downvote functionality actually works
+            query += "downvote = false"
+        }
+        
+        else if isRandom {
+            query = ""
+            quotes = Array(realm.objects(Quote.self))
+            quotes.shuffle()
+            refresh()
+        }
+        else if selectedSpecificQuote {
+            query = "text CONTAINS '" + specificQuote + "'"
+        }
+        else if personalQuotes {
             quotes = Array(realm.objects(Quote.self))
             var customQuotes : [Quote] = []
             for q in quotes {
@@ -173,22 +204,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             deleteQuoteButton.isHidden = true
             deleteQuoteButton.isEnabled = false
         }
-        if isFavorite {
-            query += "favorite = true"
-        }
-        if isDownvote {     // Possibly remove when downvote functionality actually works
-            query += "downvote = false"
-        }
         
-        if isRandom {
-            query = ""
-            quotes = Array(realm.objects(Quote.self))
-            quotes.shuffle()
-            refresh()
-        }
-        if selectedSpecificQuote {
-            query = "text CONTAINS '" + specificQuote + "'"
-        }
         print("Query: \(query)")
         if query != "" {
             quotes = Array(realm.objects(Quote.self).filter(query))
@@ -296,12 +312,51 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     @IBAction func search(_ sender: Any) {
+        
+        
+        
+        guard PurchasesController.shared.currentSessionId != nil,
+            PurchasesController.shared.hasReceiptData else {
+                performSegue(withIdentifier: "unlockSegueFront", sender: nil)
+                return
+        }
+        full_unlock = true
+        performSegue(withIdentifier: "goToSearch", sender: nil)
+ 
+        return
         if(!full_unlock) {
             performSegue(withIdentifier: "unlockSegueFront", sender: nil)
         }
         else {
-            performSegue(withIdentifier: "showSearchBar", sender: nil)
+            performSegue(withIdentifier: "goToSearch", sender: nil)
         }
+    }
+    
+    private func showErrorAlert(for error: ServiceError) {
+        let title: String
+        let message: String
+        switch error {
+        case .missingAccountSecret:
+            title = "Account Secret Not Configured"
+            message = "You missed a step and did not add your iTunes Connect Account Secret, search in the tutorial for \"YOUR_ACCOUNT_SECRET\" for more info."
+        case .invalidSession:
+            title = "Invalid Session"
+            message = "Please go back and try again or relaunch the app."
+        case .noActiveSubscription:
+            title = "No Active Subscription"
+            message = "Please verify that you have an active subscription or sign up for a new one."
+        case .other(let otherError):
+            title = "Unexpected Error"
+            message = otherError.localizedDescription
+        }
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let backAction = UIAlertAction(title: "Back", style: .default) { (_) in
+            _ = self.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(backAction)
+        //present(alert, animated: true, completion: nil)
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dYJ-Kj-E20">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZdS-cj-6ld">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="CQW-SH-oRE">
+            <objects>
+                <viewController id="ZdS-cj-6ld" customClass="LoadingViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXj-1t-BfT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vqF-8D-Zxh">
+                                <rect key="frame" x="27" y="315" width="321" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vqF-8D-Zxh" firstAttribute="top" secondItem="cLQ-B4-uxt" secondAttribute="top" constant="295" id="HJ5-pQ-lsR"/>
+                            <constraint firstItem="cLQ-B4-uxt" firstAttribute="trailing" secondItem="vqF-8D-Zxh" secondAttribute="trailing" constant="27" id="QiQ-Uu-VEQ"/>
+                            <constraint firstItem="vqF-8D-Zxh" firstAttribute="leading" secondItem="cLQ-B4-uxt" secondAttribute="leading" constant="27" id="tQe-nC-gu9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cLQ-B4-uxt"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIcon" destination="vqF-8D-Zxh" id="RKj-T4-O3x"/>
+                        <segue destination="dYJ-Kj-E20" kind="show" identifier="loadFrontView" id="jSJ-vm-2j8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8k-1d-soc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1850" y="-1743"/>
+        </scene>
         <!--Front Page-->
         <scene sceneID="W3O-tO-gSy">
             <objects>
@@ -68,7 +98,6 @@
                                 <state key="normal" image="SearchWhite.png"/>
                                 <connections>
                                     <action selector="search:" destination="dYJ-Kj-E20" eventType="touchUpInside" id="KwD-DL-NE7"/>
-                                    <segue destination="lJr-9T-r4A" kind="show" identifier="unlockSegueFront" id="nOt-kM-mdw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-V2-zqV">
@@ -149,7 +178,8 @@
                         <outlet property="shareButton" destination="egb-Sh-Bpj" id="C4Z-7c-2Da"/>
                         <outlet property="text" destination="r4S-V2-zqV" id="n7z-Va-LBX"/>
                         <segue destination="ZfQ-WE-u0E" kind="presentation" identifier="createQuote" id="bnF-u4-hgl"/>
-                        <segue destination="aI8-AM-MAE" kind="presentation" identifier="showSearchBar" id="Zb5-7A-e4K"/>
+                        <segue destination="aI8-AM-MAE" kind="presentation" identifier="goToSearch" id="Cfa-Zw-AuA"/>
+                        <segue destination="lJr-9T-r4A" kind="presentation" identifier="unlockSegueFront" id="ezX-p2-Dbw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waZ-eh-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,7 +264,6 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="oB4-qV-Xnl" id="l2L-wQ-lev"/>
                         <outlet property="tableView" destination="DbF-6I-49D" id="Y4j-uy-Sjq"/>
-                        <segue destination="lJr-9T-r4A" kind="presentation" identifier="unlockSegue" id="DNr-4U-QHH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1D8-eS-MgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1114,6 +1143,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="h4x-nu-l5g"/>
-        <segue reference="nOt-kM-mdw"/>
     </inferredMetricsTieBreakers>
 </document>

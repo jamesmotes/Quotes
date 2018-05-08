@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let defaults = UserDefaults.standard
         
         
-        defaults.set(false, forKey: "full_unlock")
+        //defaults.set(false, forKey: "full_unlock")
         
         if (defaults.bool(forKey: "updated") == false){
             updateDatabase()
@@ -112,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1816441460162466~7930915740")
         
         
-        
+        print(PurchasesController.shared.currentSessionId)
         
         //subsription stuff
         guard PurchasesController.shared.currentSessionId != nil,
@@ -129,7 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         if(monthly_unlock || full_unlock){
-            full_access = true
+            full_unlock = true
         }
         
         
@@ -372,6 +372,7 @@ extension AppDelegate: SKPaymentTransactionObserver {
         PurchasesController.shared.uploadReceipt { (success) in
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: PurchasesController.purchaseSuccessfulNotification, object: nil)
+                full_unlock = true
             }
         }
     }
