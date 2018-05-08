@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		111C8B1C3E3B7158D8343E6F /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */; };
 		1A0999FF2019873600B22EDE /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0999FE2019873600B22EDE /* IAP.swift */; };
-		1A62EF0F209FA08E00F38F00 /* UnlockPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF0E209FA08E00F38F00 /* UnlockPage.swift */; };
 		1A62EF11209FA39100F38F00 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF10209FA39100F38F00 /* PurchaseView.swift */; };
-		1A62EF13209FE52200F38F00 /* TooManyAlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF12209FE52200F38F00 /* TooManyAlarmsViewController.swift */; };
 		1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1420A08E2800F38F00 /* Subscription.swift */; };
 		1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */; };
 		1A62EF1920A0922500F38F00 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1820A0922500F38F00 /* Session.swift */; };
@@ -35,6 +33,12 @@
 		1A62EF4120A1E6FD00F38F00 /* NoAdsWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF3720A1E6FB00F38F00 /* NoAdsWhite.png */; };
 		1A62EF4220A1E6FD00F38F00 /* AlarmIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF3820A1E6FC00F38F00 /* AlarmIconBlack.png */; };
 		1A62EF4320A1E6FD00F38F00 /* BackButtonBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF3920A1E6FC00F38F00 /* BackButtonBlack.png */; };
+		1A62EF4A20A25DB700F38F00 /* ContactUsBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4420A25DAC00F38F00 /* ContactUsBlack.png */; };
+		1A62EF4B20A25DB700F38F00 /* PeopleBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4520A25DAE00F38F00 /* PeopleBlack.png */; };
+		1A62EF4C20A25DB700F38F00 /* ContactUsWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4620A25DB000F38F00 /* ContactUsWhite.png */; };
+		1A62EF4D20A25DB700F38F00 /* PeopleWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4720A25DB100F38F00 /* PeopleWhite.png */; };
+		1A62EF4E20A25DB700F38F00 /* PersonalWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4820A25DB200F38F00 /* PersonalWhite.png */; };
+		1A62EF4F20A25DB700F38F00 /* PersonalBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4920A25DB500F38F00 /* PersonalBlack.png */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
@@ -54,7 +58,6 @@
 		1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C862001A4DA00F547E4 /* Images.xcassets */; };
 		1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */; };
 		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
-		1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */; };
 		1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8853720523DCA0000B56A /* IMG_0739.GIF */; };
 		1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE885392052502C0000B56A /* AlarmsTableViewController.swift */; };
 		1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCC5052093F0310021941B /* CreateQuote.swift */; };
@@ -86,9 +89,7 @@
 
 /* Begin PBXFileReference section */
 		1A0999FE2019873600B22EDE /* IAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
-		1A62EF0E209FA08E00F38F00 /* UnlockPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockPage.swift; sourceTree = "<group>"; };
 		1A62EF10209FA39100F38F00 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
-		1A62EF12209FE52200F38F00 /* TooManyAlarmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooManyAlarmsViewController.swift; sourceTree = "<group>"; };
 		1A62EF1420A08E2800F38F00 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
 		1A62EF1820A0922500F38F00 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -112,6 +113,12 @@
 		1A62EF3720A1E6FB00F38F00 /* NoAdsWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoAdsWhite.png; sourceTree = "<group>"; };
 		1A62EF3820A1E6FC00F38F00 /* AlarmIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlarmIconBlack.png; sourceTree = "<group>"; };
 		1A62EF3920A1E6FC00F38F00 /* BackButtonBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonBlack.png; sourceTree = "<group>"; };
+		1A62EF4420A25DAC00F38F00 /* ContactUsBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactUsBlack.png; sourceTree = "<group>"; };
+		1A62EF4520A25DAE00F38F00 /* PeopleBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PeopleBlack.png; sourceTree = "<group>"; };
+		1A62EF4620A25DB000F38F00 /* ContactUsWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactUsWhite.png; sourceTree = "<group>"; };
+		1A62EF4720A25DB100F38F00 /* PeopleWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PeopleWhite.png; sourceTree = "<group>"; };
+		1A62EF4820A25DB200F38F00 /* PersonalWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PersonalWhite.png; sourceTree = "<group>"; };
+		1A62EF4920A25DB500F38F00 /* PersonalBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PersonalBlack.png; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +141,6 @@
 		1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
 		1AE8853720523DCA0000B56A /* IMG_0739.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IMG_0739.GIF; path = Quotes/IMG_0739.GIF; sourceTree = SOURCE_ROOT; };
 		1AE885392052502C0000B56A /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
 		1AFCC5052093F0310021941B /* CreateQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuote.swift; sourceTree = "<group>"; };
@@ -168,9 +174,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A62EF5020A25DFE00F38F00 /* Alarms */ = {
+			isa = PBXGroup;
+			children = (
+				1AE885392052502C0000B56A /* AlarmsTableViewController.swift */,
+				1AA3841E20523792007E4241 /* SettingsPage.swift */,
+				1AAE1C322083F88B00345E1F /* AlarmMenuCell.swift */,
+				1AAE1C3420840E5D00345E1F /* EditAlarm.swift */,
+			);
+			path = Alarms;
+			sourceTree = "<group>";
+		};
+		1A62EF5120A25F0D00F38F00 /* Purchasing */ = {
+			isa = PBXGroup;
+			children = (
+				1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */,
+				1A62EF1420A08E2800F38F00 /* Subscription.swift */,
+				1A0999FE2019873600B22EDE /* IAP.swift */,
+				1A62EF1820A0922500F38F00 /* Session.swift */,
+				1A62EF2C20A1D31F00F38F00 /* PricingCollectionViewCell.swift */,
+				1A62EF10209FA39100F38F00 /* PurchaseView.swift */,
+			);
+			path = Purchasing;
+			sourceTree = "<group>";
+		};
+		1A62EF5220A25F2B00F38F00 /* MainFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+				1AA438992033E521000C7238 /* QuoteClass.swift */,
+				1A62EF1C20A151B500F38F00 /* LoadingViewController.swift */,
+				1A96D549203FA31300254090 /* LoadQuotes.swift */,
+				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
+				1AA4389B2033E629000C7238 /* FrontPage.swift */,
+				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
+			);
+			path = MainFunctionality;
+			sourceTree = "<group>";
+		};
+		1A62EF5320A25F6300F38F00 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1AA38419204B7D23007E4241 /* SearchView.swift */,
+				812405FD208CDE50006E7AB7 /* FontCell.swift */,
+				812405F9208BF548006E7AB7 /* Customization.swift */,
+				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
+				1AFCC5052093F0310021941B /* CreateQuote.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1A62EF4420A25DAC00F38F00 /* ContactUsBlack.png */,
+				1A62EF4620A25DB000F38F00 /* ContactUsWhite.png */,
+				1A62EF4520A25DAE00F38F00 /* PeopleBlack.png */,
+				1A62EF4720A25DB100F38F00 /* PeopleWhite.png */,
+				1A62EF4920A25DB500F38F00 /* PersonalBlack.png */,
+				1A62EF4820A25DB200F38F00 /* PersonalWhite.png */,
 				1A62EF3820A1E6FC00F38F00 /* AlarmIconBlack.png */,
 				1A62EF3320A1E6FA00F38F00 /* AlarmIconWhite.png */,
 				1A62EF3920A1E6FC00F38F00 /* BackButtonBlack.png */,
@@ -229,33 +290,13 @@
 			isa = PBXGroup;
 			children = (
 				812405F320884397006E7AB7 /* Fonts */,
-				1AE885392052502C0000B56A /* AlarmsTableViewController.swift */,
-				1AAE1C322083F88B00345E1F /* AlarmMenuCell.swift */,
-				1AAE1C3420840E5D00345E1F /* EditAlarm.swift */,
-				1AA38419204B7D23007E4241 /* SearchView.swift */,
+				1A62EF5020A25DFE00F38F00 /* Alarms */,
+				1A62EF5320A25F6300F38F00 /* Features */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
-				1A96D549203FA31300254090 /* LoadQuotes.swift */,
-				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
-				1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */,
-				1A62EF1420A08E2800F38F00 /* Subscription.swift */,
-				1AA4389B2033E629000C7238 /* FrontPage.swift */,
-				1A62EF1C20A151B500F38F00 /* LoadingViewController.swift */,
-				1AB47CAF20034BCE00F547E4 /* InAppPurchases.swift */,
-				1A0999FE2019873600B22EDE /* IAP.swift */,
-				1A62EF1820A0922500F38F00 /* Session.swift */,
+				1A62EF5220A25F2B00F38F00 /* MainFunctionality */,
+				1A62EF5120A25F0D00F38F00 /* Purchasing */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
-				1A62EF12209FE52200F38F00 /* TooManyAlarmsViewController.swift */,
-				1A62EF0E209FA08E00F38F00 /* UnlockPage.swift */,
-				1A62EF2C20A1D31F00F38F00 /* PricingCollectionViewCell.swift */,
-				1A62EF10209FA39100F38F00 /* PurchaseView.swift */,
-				812405FD208CDE50006E7AB7 /* FontCell.swift */,
-				812405F9208BF548006E7AB7 /* Customization.swift */,
-				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
-				1AFCC5052093F0310021941B /* CreateQuote.swift */,
-				1AA3841E20523792007E4241 /* SettingsPage.swift */,
-				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
-				1AA438992033E521000C7238 /* QuoteClass.swift */,
 				1AB47C862001A4DA00F547E4 /* Images.xcassets */,
 				1AA3841B205232BD007E4241 /* imageFiles */,
 				1AACFE9A1FF2F65E00E6424D /* LaunchScreen.storyboard */,
@@ -355,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A62EF4D20A25DB700F38F00 /* PeopleWhite.png in Resources */,
 				1A62EF4320A1E6FD00F38F00 /* BackButtonBlack.png in Resources */,
 				1A62EF2820A157C200F38F00 /* mountain.jpg in Resources */,
 				1A62EF4120A1E6FD00F38F00 /* NoAdsWhite.png in Resources */,
@@ -362,7 +404,9 @@
 				1A62EF3A20A1E6FD00F38F00 /* BackButtonWhite.png in Resources */,
 				1A62EF2720A157C200F38F00 /* Colorcloud.jpg in Resources */,
 				1A62EF2A20A157C200F38F00 /* babylion.jpg in Resources */,
+				1A62EF4C20A25DB700F38F00 /* ContactUsWhite.png in Resources */,
 				1A62EF2620A157C200F38F00 /* starrynight.jpg in Resources */,
+				1A62EF4B20A25DB700F38F00 /* PeopleBlack.png in Resources */,
 				812405F420884398006E7AB7 /* Fonts in Resources */,
 				1A62EF2B20A157C200F38F00 /* road.jpg in Resources */,
 				1A62EF3E20A1E6FD00F38F00 /* FontsWhite.png in Resources */,
@@ -374,10 +418,13 @@
 				1A62EF4020A1E6FD00F38F00 /* CategoriesWhite.png in Resources */,
 				8105650B208D821300BB9433 /* MenuBlack.png in Resources */,
 				81056509208D821300BB9433 /* MenuWhite.png in Resources */,
+				1A62EF4A20A25DB700F38F00 /* ContactUsBlack.png in Resources */,
 				81056506208D821200BB9433 /* SearchBlack.png in Resources */,
 				1A62EF3C20A1E6FD00F38F00 /* CategoriesBlack.png in Resources */,
 				8105650A208D821300BB9433 /* ShareBlack.png in Resources */,
 				1A62EF3F20A1E6FD00F38F00 /* NoAdsBlack.png in Resources */,
+				1A62EF4F20A25DB700F38F00 /* PersonalBlack.png in Resources */,
+				1A62EF4E20A25DB700F38F00 /* PersonalWhite.png in Resources */,
 				1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1A62EF2F20A1E4C200F38F00 /* lockicon.png in Resources */,
@@ -453,12 +500,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0999FF2019873600B22EDE /* IAP.swift in Sources */,
-				1AB47CB020034BCE00F547E4 /* InAppPurchases.swift in Sources */,
-				1A62EF13209FE52200F38F00 /* TooManyAlarmsViewController.swift in Sources */,
 				1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */,
 				1A62EF11209FA39100F38F00 /* PurchaseView.swift in Sources */,
 				1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */,
-				1A62EF0F209FA08E00F38F00 /* UnlockPage.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
 				812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */,

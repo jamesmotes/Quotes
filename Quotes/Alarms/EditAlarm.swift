@@ -111,6 +111,9 @@ class EditAlarm: UIViewController {
                 
                 //should probably adjust for months with 30 and 28 days
                 triggerDate.day = triggerDate.day! + 1
+                
+                triggerDate.second = 0
+                
                 if(triggerDate.day! > 31){
                     triggerDate.day = 1
                     triggerDate.month = triggerDate.month! + 1
