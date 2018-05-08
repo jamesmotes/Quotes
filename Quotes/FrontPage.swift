@@ -27,6 +27,7 @@ var globalBackgroundColor = UIColor.black
 
 class FrontPage: UIViewController , GADInterstitialDelegate {
 
+    @IBOutlet weak var image: UIImageView!
     
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var person: UILabel!
@@ -91,6 +92,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        if(globalImageFile != ""){
+            image.image = UIImage(named: globalImageFile)
+        }
+        else {
+            image.image = nil
+        }
+        
         if(changedFont){
             changedFont = false
             text.textColor = globalFontColor
@@ -103,6 +111,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             
             self.view.backgroundColor = globalBackgroundColor
         }
+        
         
         if(self.view.backgroundColor == UIColor.white){
             menuButton.setBackgroundImage(#imageLiteral(resourceName: "MenuBlack.png"), for: UIControlState.normal)

@@ -12,5 +12,6 @@ class FontCell: UICollectionViewCell {
     
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
 }

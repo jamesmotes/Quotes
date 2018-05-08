@@ -10,6 +10,7 @@ import RealmSwift
 
 class CreateQuote: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var customQuote: UITextField!
     @IBOutlet weak var customName: UITextField!
     @IBOutlet weak var creationButton: UIButton!
@@ -34,6 +35,10 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         editButton.isHidden = true
+        
+        if(globalImageFile != ""){
+            image.image = UIImage(named: globalImageFile)
+        }
     }
 
     override func didReceiveMemoryWarning() {

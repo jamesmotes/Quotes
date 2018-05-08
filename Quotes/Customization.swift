@@ -10,6 +10,9 @@ import UIKit
 
 var justChanged = false
 
+var hasImage = false
+var globalImageFile = ""
+
 class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -17,7 +20,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     //var collectionView: UICollectionView?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -31,6 +34,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         var fontStyle : String = String()
         var textColor = UIColor.white
+        var imageFile = ""
         
         switch(indexPath.row){
         case 0:
@@ -53,13 +57,55 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             fontStyle = "TradeGothic"
             textColor = UIColor.black
             backgroundColor = UIColor.white
+        case 5:
+            fontStyle = "TradeGothic"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+            imageFile = "babylion.jpg"
+        case 6:
+            fontStyle = "Georgia"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+            imageFile = "Colorcloud.jpg"
+        case 7:
+            fontStyle = "Didot"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+            imageFile = "mountain.jpg"
+        case 8:
+            fontStyle = "Georgia"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+            imageFile = "road.jpg"
+        case 9:
+            fontStyle = "Copperplate"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+            imageFile = "starrynight.jpg"
+        case 10:
+            fontStyle = "Copperplate"
+            textColor = UIColor.black
+            backgroundColor = UIColor.white
+            imageFile = "whitetower.jpg"
+        case 11:
+            fontStyle = "TradeGothic"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+            imageFile = "airballoons.jpg"
         default :
             fontStyle = "Symbol"
             textColor = UIColor.white
             backgroundColor = UIColor.black
         }
         
-        
+        if(imageFile != ""){
+            let im : UIImage = UIImage(named: imageFile)!
+            cell.image.image = im
+            hasImage = true
+        }
+        else {
+            hasImage = false
+        }
         cell.name.font = UIFont(name: fontStyle, size: 15)
         cell.quote.font = UIFont(name: fontStyle, size: 35)
         cell.name.textColor = textColor
@@ -95,6 +141,41 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             globalFontStyle = "TradeGothic"
             globalFontColor = UIColor.black
             globalBackgroundColor = UIColor.white
+        case 5:
+            globalFontStyle = "TradeGothic"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+            globalImageFile = "babylion.jpg"
+        case 6:
+            globalFontStyle = "Georgia"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+            globalImageFile = "Colorcloud.jpg"
+        case 7:
+            globalFontStyle = "Didot"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+            globalImageFile = "mountain.jpg"
+        case 8:
+            globalFontStyle = "Georgia"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+            globalImageFile = "road.jpg"
+        case 9:
+            globalFontStyle = "Copperplate"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+            globalImageFile = "starrynight.jpg"
+        case 10:
+            globalFontStyle = "Copperplate"
+            globalFontColor = UIColor.black
+            globalBackgroundColor = UIColor.white
+            globalImageFile = "whitetower.jpg"
+        case 11:
+            globalFontStyle = "TradeGothic"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+            globalImageFile = "airbaloons.jpg"
         default :
             globalFontStyle = "System"
             globalFontColor = UIColor.white
