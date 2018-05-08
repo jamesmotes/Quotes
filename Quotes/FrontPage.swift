@@ -20,7 +20,7 @@ var isDownvote = false
 var isRandom = false
 var personalQuotes = false
 
-var changedFont = false
+var changedFont = true
 var globalFontStyle = "System"
 var globalFontColor = UIColor.white
 var globalBackgroundColor = UIColor.black
@@ -322,8 +322,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     @IBAction func search(_ sender: Any) {
         
-        
-        
+
         guard PurchasesController.shared.currentSessionId != nil,
             PurchasesController.shared.hasReceiptData else {
                 performSegue(withIdentifier: "unlockSegueFront", sender: nil)

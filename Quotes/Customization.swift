@@ -125,22 +125,27 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             globalFontStyle = "Papyrus"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            globalImageFile = ""
         case 1:
             globalFontStyle = "Zapfino"
             globalFontColor = UIColor.black
             globalBackgroundColor = UIColor.white
+            globalImageFile = ""
         case 2:
             globalFontStyle = "Futura"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.gray
+            globalImageFile = ""
         case 3:
             globalFontStyle = "Chalkduster"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.purple
+            globalImageFile = ""
         case 4:
             globalFontStyle = "TradeGothic"
             globalFontColor = UIColor.black
             globalBackgroundColor = UIColor.white
+            globalImageFile = ""
         case 5:
             globalFontStyle = "TradeGothic"
             globalFontColor = UIColor.white

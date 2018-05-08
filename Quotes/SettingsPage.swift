@@ -163,7 +163,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
              defaults.set(AlarmSetTime, forKey: "AlarmSetTime")
              */
             triggerDate.day = triggerDate.day! - 1
-            
+            triggerDate.second = 0
             var index = 0
             
             while(index < 31){

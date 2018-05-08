@@ -59,11 +59,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(true, forKey: "HasBeenLaunched")
             defaults.set(10, forKey: "reviewCountdown")
             defaults.set(false, forKey: "full_unlock")
+            
+            storeCustomiationInfo()
         }
         else{
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
             quoteIterator = defaults.integer(forKey: "quoteIterator")
+            globalFontColor = defaults.colorForKey(key: "fontColor")!
+            globalFontStyle = defaults.string(forKey: "fontStyle")!
+            globalBackgroundColor = defaults.colorForKey(key: "backgroundColor")!
+            globalImageFile = defaults.string(forKey: "imageFile")!
         }
         
         if(defaults.integer(forKey: "reviewCountdown") == 0){
@@ -228,6 +234,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //defaults.set(favorites, forKey: "favorites")
         //defaults.set(dict, forKey: "unlockedPeople")
         Messaging.messaging().shouldEstablishDirectChannel = false
+        let defaults = UserDefaults.standard
+        storeCustomiationInfo()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -243,6 +251,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         //let defaults = UserDefaults.standard
         //defaults.set(favorites, forKey: "favorites")
+        
+        let defaults = UserDefaults.standard
+        storeCustomiationInfo()
     }
 /*
     func registerForPushNotifications() {
@@ -336,6 +347,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }*/
     }
     
+    func storeCustomiationInfo() {
+        let defaults = UserDefaults.standard
+        defaults.setColor(color: globalFontColor, forKey: "fontColor")
+        defaults.set(globalFontStyle, forKey: "fontStyle")
+        defaults.setColor(color: globalBackgroundColor, forKey: "backgroundColor")
+        defaults.set(globalImageFile, forKey: "imageFile")
+    }
+    
 
 }
 
@@ -416,6 +435,25 @@ extension UIView {
         gradient.endPoint = CGPoint(x: 0, y: 1)
         self.layer.insertSublayer(gradient, at: 0)
     }
+}
+
+
+extension UserDefaults {
+    func colorForKey(key: String) -> UIColor? {
+        var color: UIColor?
+        if let colorData = data(forKey: key) {
+            color = NSKeyedUnarchiver.unarchiveObject(with: colorData) as? UIColor
+        }
+        return color
+    }
+    func setColor(color: UIColor?, forKey key: String) {
+        var colorData: NSData?
+        if let color = color {
+            colorData = NSKeyedArchiver.archivedData(withRootObject: color) as NSData?
+        }
+        set(colorData, forKey: key)// UserDefault Built-in Method into Any?
+    }
+    
 }
 
 

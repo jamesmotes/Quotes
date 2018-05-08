@@ -25,14 +25,22 @@ class AlarmsTableViewController: UITableViewController {
     
     @IBOutlet weak var back: UIBarButtonItem!
     @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var navBarStuff: UINavigationItem!
     var alarms : [UNNotificationRequest] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableHeaderView?.backgroundColor = UIColor.clear
+        self.tableView.backgroundColor = globalBackgroundColor
         self.tableView.tableFooterView = UIView()
         back.tintColor = globalFontColor
         addButton.tintColor = globalFontColor
-        navBar.backgroundColor = globalBackgroundColor
+        
+        let textAttributes = [NSAttributedStringKey.foregroundColor:globalFontColor]
+        navBar.titleTextAttributes = textAttributes
+        navBar.tintColor = globalBackgroundColor
+        navBar.barTintColor = globalBackgroundColor
+        
         
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
@@ -100,6 +108,13 @@ class AlarmsTableViewController: UITableViewController {
         
         view.backgroundColor = globalBackgroundColor
         tableView.backgroundColor = globalBackgroundColor
+        tableView.tableHeaderView?.backgroundColor = UIColor.clear
+        navBar.barTintColor = globalBackgroundColor
+        navBar.tintColor = globalBackgroundColor
+        
+    
+        back.tintColor = globalFontColor
+        addButton.tintColor = globalFontColor
         
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications

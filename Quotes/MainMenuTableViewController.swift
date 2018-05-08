@@ -13,7 +13,7 @@ import UIKit
 
 
 
-let mainMenuOptions = ["General", "People", "Categories",/* "Mood",*/ "Favorites", "Alarms", "Customization", "Personal Quotes", "Contact Us"]
+let mainMenuOptions = ["General", "People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Contact Us"]
 let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt"]
 let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
@@ -32,6 +32,12 @@ class MainMenuTableViewController: UITableViewController {
     @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
+        
+        tableView.tableHeaderView?.backgroundColor = UIColor.clear
+        
+        view.backgroundColor = globalBackgroundColor
+        tableView.backgroundColor = globalBackgroundColor
+        
         super.viewDidLoad()
 
         backButton.imageEdgeInsets.right = view.frame.size.width - 30
@@ -42,7 +48,7 @@ class MainMenuTableViewController: UITableViewController {
         
         
         navigationController?.isNavigationBarHidden = false
-        navigationController?.navigationBar.backgroundColor = UIColor.black
+        navigationController?.navigationBar.backgroundColor = UIColor.clear
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.barTintColor = UIColor.clear
         

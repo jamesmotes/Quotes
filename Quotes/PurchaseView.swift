@@ -20,7 +20,9 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var notifications: UILabel!
     @IBOutlet weak var categories: UILabel!
     @IBOutlet weak var styles: UILabel!
+    @IBOutlet weak var search: UILabel!
     @IBOutlet weak var restoreButton: UIButton!
+    @IBOutlet weak var restoreBackground: UIImageView!
     
     @IBOutlet weak var image: UIImageView!
     
@@ -63,17 +65,19 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         notifications.textColor = globalFontColor
         categories.textColor = globalFontColor
         styles.textColor = globalFontColor
+        search.textColor = globalFontColor
         
+        search.text = "Search People, Categories,\nand Quotes"
         
         backButton.titleLabel?.adjustsFontSizeToFitWidth = true
         header.adjustsFontSizeToFitWidth = true
-        notifications.adjustsFontSizeToFitWidth = true
+        /*notifications.adjustsFontSizeToFitWidth = true
         let desc = UIFontDescriptor.init()
         ads.font = UIFont(descriptor: desc, size: (notifications.font.pointSize))
         categories.font = UIFont(descriptor: desc, size: (notifications.font.pointSize))
         styles.font = UIFont(descriptor: desc, size: (notifications.font.pointSize))
         // Do any additional setup after loading the view.
-        
+        */
         /********************************************/
         //background image
         
@@ -83,8 +87,15 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         else {
             image.image = nil
         }
+        /********************************************/
+        //background for restore button image
         
         
+        restoreBackground.layer.borderColor = globalFontColor.cgColor
+        restoreBackground.layer.borderWidth = 3.0
+        
+        
+        /********************************************/
         //purchasing stuff
         options = PurchasesController.shared.options
         
@@ -135,6 +146,7 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     @IBAction func restoreAccess(_ sender: Any) {
+        showRestoreAlert()
     }
     
     private func showRestoreAlert() {
@@ -163,6 +175,7 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     @objc private func dismissRestoreInProgressAlert(notification: Notification) {
+        didPurchase = true
         dismiss(animated: true, completion: nil)
         _ = navigationController?.popViewController(animated: true)
     }
@@ -203,11 +216,11 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         case 1:
             cell.topText.text = "One\nMonth"
             cell.topText.numberOfLines = 2
-            cell.bottomText.text = "0.99"
+            cell.bottomText.text = "$0.99"
         case 2:
             cell.topText.text = "Lifetime\nAccess"
             cell.topText.numberOfLines = 2
-            cell.bottomText.text = "9.99"
+            cell.bottomText.text = "$9.99"
         default:
             cell.topText.text = "FREE"
             cell.bottomText.text = "Two Week Trial"
