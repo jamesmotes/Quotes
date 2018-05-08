@@ -23,6 +23,7 @@
 		1A62EF2920A157C200F38F00 /* whitetower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF2220A157C100F38F00 /* whitetower.jpg */; };
 		1A62EF2A20A157C200F38F00 /* babylion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF2320A157C100F38F00 /* babylion.jpg */; };
 		1A62EF2B20A157C200F38F00 /* road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF2420A157C200F38F00 /* road.jpg */; };
+		1A62EF2D20A1D31F00F38F00 /* PricingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF2C20A1D31F00F38F00 /* PricingCollectionViewCell.swift */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
@@ -88,6 +89,7 @@
 		1A62EF2220A157C100F38F00 /* whitetower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whitetower.jpg; sourceTree = "<group>"; };
 		1A62EF2320A157C100F38F00 /* babylion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = babylion.jpg; sourceTree = "<group>"; };
 		1A62EF2420A157C200F38F00 /* road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = road.jpg; sourceTree = "<group>"; };
+		1A62EF2C20A1D31F00F38F00 /* PricingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,
 				1A62EF12209FE52200F38F00 /* TooManyAlarmsViewController.swift */,
 				1A62EF0E209FA08E00F38F00 /* UnlockPage.swift */,
+				1A62EF2C20A1D31F00F38F00 /* PricingCollectionViewCell.swift */,
 				1A62EF10209FA39100F38F00 /* PurchaseView.swift */,
 				812405FD208CDE50006E7AB7 /* FontCell.swift */,
 				812405F9208BF548006E7AB7 /* Customization.swift */,
@@ -418,6 +421,7 @@
 				812405FA208BF548006E7AB7 /* Customization.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
 				1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */,
+				1A62EF2D20A1D31F00F38F00 /* PricingCollectionViewCell.swift in Sources */,
 				1A62EF1D20A151B500F38F00 /* LoadingViewController.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
 				1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */,

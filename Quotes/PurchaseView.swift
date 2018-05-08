@@ -12,31 +12,44 @@ import UIKit
 var didPurchase = false
 var madePurchase = false
 
-class PurchaseView: UIViewController {
+class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var twoWeekButton: UIButton!
-    @IBOutlet weak var monthlyButton: UIButton!
-    @IBOutlet weak var fullButton: UIButton!
+
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var options: [Subscription]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        /********************************************/
+        //Collection View Setup
+        
+        
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        
+        collectionView.backgroundColor = UIColor.black
+        
+        let collectionViewFlowLayout = UICollectionViewFlowLayout()
+        collectionView?.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
+        collectionViewFlowLayout.minimumInteritemSpacing = 0
+        collectionViewFlowLayout.minimumLineSpacing = 0
+        
+        
+        collectionViewFlowLayout.itemSize = CGSize(width: collectionView.frame.width/4, height: 140)
+        
+        
+        /********************************************/
 
         backButton.titleLabel?.textColor = globalFontColor
-        twoWeekButton.titleLabel?.textColor = globalFontColor
-        monthlyButton.titleLabel?.textColor = globalFontColor
-        fullButton.titleLabel?.textColor = globalFontColor
         view.backgroundColor = globalBackgroundColor
         
         
         backButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        twoWeekButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        monthlyButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        let desc = UIFontDescriptor.init()
-        fullButton.titleLabel?.font = UIFont(descriptor: desc, size: (monthlyButton.titleLabel?.font.pointSize)!)
         
         
         // Do any additional setup after loading the view.
@@ -78,15 +91,15 @@ class PurchaseView: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func trialAccess(_ sender: Any) {
+    func trialAccess() {
         PurchasesController.shared.purchase(subscription: options![0])
     }
     
-    @IBAction func monthlyAccess(_ sender: Any) {
+    func monthlyAccess() {
         PurchasesController.shared.purchase(subscription: options![0])
     }
     
-    @IBAction func lifetimeAccess(_ sender: Any) {
+    func lifetimeAccess() {
         PurchasesController.shared.purchase(subscription: options![1])
     }
     
@@ -129,5 +142,63 @@ class PurchaseView: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    //collection view functionality
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pricingCell", for: indexPath) as! PricingCollectionViewCell
+        
+        /*
+        //make fonts same sizes for all the buttons
+        twoWeekButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        monthlyButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        let desc = UIFontDescriptor.init()
+        fullButton.titleLabel?.font = UIFont(descriptor: desc, size: (monthlyButton.titleLabel?.font.pointSize)!)
+        */
+        
+        switch(indexPath.row){
+        case 0:
+            cell.topText.text = "FREE"
+            cell.bottomText.text = "Two Week Trial!"
+            cell.topText.adjustsFontSizeToFitWidth = true
+            cell.bottomText.adjustsFontSizeToFitWidth = true
+        case 1:
+            cell.topText.text = "One\nMonth"
+            cell.topText.numberOfLines = 2
+            cell.bottomText.text = "0.99"
+        case 2:
+            cell.topText.text = "Lifetime\nAccess"
+            cell.topText.numberOfLines = 2
+            cell.bottomText.text = "9.99"
+        default:
+            cell.topText.text = "FREE"
+            cell.bottomText.text = "Two Week Trial"
+        }
+        
+        
+        cell.topText.textColor = globalFontColor
+        cell.bottomText.textColor = globalFontColor
+        cell.imageView.layer.borderWidth = 3.0
+        cell.imageView.layer.borderColor = globalFontColor.cgColor
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch(indexPath.row){
+        case 0:
+            trialAccess()
+        case 1:
+            monthlyAccess()
+        case 2:
+            lifetimeAccess()
+        default:
+            return
+        }
+    }
+    
+    
 }
