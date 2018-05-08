@@ -15,7 +15,14 @@ var madePurchase = false
 class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var backButton: UIButton!
-
+    @IBOutlet weak var header: UILabel!
+    @IBOutlet weak var ads: UILabel!
+    @IBOutlet weak var notifications: UILabel!
+    @IBOutlet weak var categories: UILabel!
+    @IBOutlet weak var styles: UILabel!
+    @IBOutlet weak var restoreButton: UIButton!
+    
+    @IBOutlet weak var image: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -42,17 +49,41 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         
         collectionViewFlowLayout.itemSize = CGSize(width: collectionView.frame.width/4, height: 140)
         
+        self.collectionView.backgroundColor = UIColor.clear
+        self.collectionView.backgroundView = UIView()
+        
         
         /********************************************/
-
+        //font color setup
         backButton.titleLabel?.textColor = globalFontColor
         view.backgroundColor = globalBackgroundColor
         
+        header.textColor = globalFontColor
+        ads.textColor = globalFontColor
+        notifications.textColor = globalFontColor
+        categories.textColor = globalFontColor
+        styles.textColor = globalFontColor
+        
         
         backButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        
+        header.adjustsFontSizeToFitWidth = true
+        notifications.adjustsFontSizeToFitWidth = true
+        let desc = UIFontDescriptor.init()
+        ads.font = UIFont(descriptor: desc, size: (notifications.font.pointSize))
+        categories.font = UIFont(descriptor: desc, size: (notifications.font.pointSize))
+        styles.font = UIFont(descriptor: desc, size: (notifications.font.pointSize))
         // Do any additional setup after loading the view.
+        
+        /********************************************/
+        //background image
+        
+        if(globalImageFile != ""){
+            image.image = UIImage(named: globalImageFile)
+        }
+        else {
+            image.image = nil
+        }
+        
         
         //purchasing stuff
         options = PurchasesController.shared.options
@@ -101,6 +132,9 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     
     func lifetimeAccess() {
         PurchasesController.shared.purchase(subscription: options![1])
+    }
+    
+    @IBAction func restoreAccess(_ sender: Any) {
     }
     
     private func showRestoreAlert() {

@@ -34,6 +34,7 @@ class MainMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        backButton.imageEdgeInsets.right = view.frame.size.width - 30
         
         for i in 1...(tableOptions.count-1) {
             tableOptions[i] = tableOptions[i].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }

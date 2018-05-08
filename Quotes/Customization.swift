@@ -219,7 +219,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
         collectionView?.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
         collectionViewFlowLayout.minimumInteritemSpacing = 0
-        collectionViewFlowLayout.minimumLineSpacing = 0
+        collectionViewFlowLayout.minimumLineSpacing = 10
         
         collectionViewFlowLayout.itemSize = CGSize(width: collectionView.frame.width/3.7, height: collectionView.frame.width/3.7)
         
