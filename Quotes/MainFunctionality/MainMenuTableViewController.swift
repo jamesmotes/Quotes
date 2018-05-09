@@ -269,6 +269,10 @@ class MainMenuTableViewController: UITableViewController {
             
             cell.label2.textColor = globalFontColor                         // Set font color
             cell.label2.adjustsFontSizeToFitWidth = true                  // Set font size
+            
+            cell.backgroundColor = globalBackgroundColor
+            cell.label2.backgroundColor = globalBackgroundColor                   // Set background color
+
         }
         else {
             cell.label2.text = ""

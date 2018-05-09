@@ -649,15 +649,6 @@
                                     <action selector="clickedBack:" destination="puL-XP-wNs" eventType="touchUpInside" id="IgS-bV-3hI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contact@gbjmobile.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AjS-b3-uiV">
-                                <rect key="frame" x="16" y="262" width="343" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="obi-tH-bgB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions, comments, or concerns? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpO-MV-hW0">
                                 <rect key="frame" x="0.0" y="122" width="375" height="100"/>
                                 <constraints>
@@ -667,15 +658,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8Y-oQ-j4E">
+                                <rect key="frame" x="16" y="262" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ed4-WT-riy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="contact@gbjmobile.com"/>
+                                <connections>
+                                    <action selector="sendEmail:" destination="puL-XP-wNs" eventType="touchUpInside" id="PQG-q5-oZR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ySu-nb-rXk" firstAttribute="top" secondItem="aSc-n6-j6G" secondAttribute="top" id="0Af-Cv-sF5"/>
                             <constraint firstItem="ySu-nb-rXk" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="0yh-bR-VjI"/>
+                            <constraint firstItem="q8Y-oQ-j4E" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" constant="16" id="36a-FE-7Cb"/>
                             <constraint firstItem="fpO-MV-hW0" firstAttribute="trailing" secondItem="aSc-n6-j6G" secondAttribute="trailing" id="4RT-58-17O"/>
-                            <constraint firstItem="AjS-b3-uiV" firstAttribute="top" secondItem="fpO-MV-hW0" secondAttribute="bottom" constant="40" id="SXs-ko-Luu"/>
-                            <constraint firstItem="aSc-n6-j6G" firstAttribute="trailing" secondItem="AjS-b3-uiV" secondAttribute="trailing" constant="16" id="gqH-MJ-1UU"/>
-                            <constraint firstItem="AjS-b3-uiV" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" constant="16" id="hj7-cD-bxG"/>
+                            <constraint firstItem="q8Y-oQ-j4E" firstAttribute="top" secondItem="fpO-MV-hW0" secondAttribute="bottom" constant="40" id="Q08-Kh-fKu"/>
+                            <constraint firstItem="aSc-n6-j6G" firstAttribute="trailing" secondItem="q8Y-oQ-j4E" secondAttribute="trailing" constant="16" id="eST-OX-jYS"/>
                             <constraint firstItem="fpO-MV-hW0" firstAttribute="top" secondItem="ySu-nb-rXk" secondAttribute="bottom" constant="72" id="rBa-G1-Ah6"/>
                             <constraint firstItem="fpO-MV-hW0" firstAttribute="leading" secondItem="aSc-n6-j6G" secondAttribute="leading" id="rnb-fk-Jym"/>
                         </constraints>

@@ -11,6 +11,8 @@ import UIKit
 class ContactInfo: UIViewController {
 
     @IBOutlet weak var email: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,14 +28,11 @@ class ContactInfo: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendEmail(_ sender: Any) {
+        let email = "contact@gbjmobile.com"
+        if let url = URL(string: "mailto:\(email)") {
+            UIApplication.shared.open(url)
+        }
     }
-    */
-
+    
 }

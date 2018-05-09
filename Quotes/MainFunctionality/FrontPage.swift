@@ -21,7 +21,7 @@ var isRandom = false
 var personalQuotes = false
 
 var changedFont = true
-var globalFontStyle = "System"
+var globalFontStyle = "Georgia"
 var globalFontColor = UIColor.white
 var globalBackgroundColor = UIColor.black
 
@@ -58,6 +58,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(globalImageFile != ""){
+            image.image = UIImage(named: globalImageFile)
+        }
+        else {
+            image.image = nil
+        }
+        
         interstitial = createAndLoadInterstitial()
         
         let request = GADRequest()
@@ -92,9 +99,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
 
         
     }
-    
-    
-    
+
     override func viewDidAppear(_ animated: Bool) {
         checkSubscription()
         if(globalImageFile != ""){
