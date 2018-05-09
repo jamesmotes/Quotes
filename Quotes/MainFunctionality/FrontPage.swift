@@ -96,6 +96,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        checkSubscription()
         if(globalImageFile != ""){
             image.image = UIImage(named: globalImageFile)
         }
@@ -113,8 +114,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             currentSize = 25
             person.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
             
-            createQuoteButton.titleLabel?.textColor = globalFontColor
-            deleteQuoteButton.titleLabel?.textColor = globalFontColor
+            createQuoteButton.setTitleColor(globalFontColor, for: .normal)
+            deleteQuoteButton.setTitleColor(globalFontColor, for: .normal)
             
             self.view.backgroundColor = globalBackgroundColor
         }
@@ -266,7 +267,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
 
     func refresh(){
         //display ads every 12 quotes
-        if interstitial.isReady && scrolls > 11 {
+        if interstitial.isReady && scrolls > 11 && !full_unlock{
             print("Time for add")
             print(index)
             interstitial.present(fromRootViewController: self)
@@ -377,13 +378,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         full_unlock = true
         performSegue(withIdentifier: "goToSearch", sender: nil)
  
-        return
+        return/*
         if(!full_unlock) {
             performSegue(withIdentifier: "unlockSegueFront", sender: nil)
         }
         else {
             performSegue(withIdentifier: "goToSearch", sender: nil)
-        }
+        }*/
     }
     
     private func showErrorAlert(for error: ServiceError) {
@@ -435,6 +436,15 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func checkSubscription(){
+        guard PurchasesController.shared.currentSessionId != nil,
+            PurchasesController.shared.hasReceiptData else {
+                full_unlock = false
+                return
+        }
+        full_unlock = true
+    }
 }
 
 

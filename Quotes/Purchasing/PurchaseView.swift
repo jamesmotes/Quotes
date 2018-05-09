@@ -12,7 +12,7 @@ import UIKit
 var didPurchase = false
 var madePurchase = false
 
-class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var header: UILabel!
@@ -48,13 +48,24 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         
         collectionView.backgroundColor = UIColor.black
         
-        let collectionViewFlowLayout = UICollectionViewFlowLayout()
+        /*let collectionViewFlowLayout = UICollectionViewFlowLayout()
         collectionView?.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
-        collectionViewFlowLayout.minimumInteritemSpacing = 0
+        
         collectionViewFlowLayout.minimumLineSpacing = 0
         
         
         collectionViewFlowLayout.itemSize = CGSize(width: collectionView.frame.width/4, height: 140)
+        
+        
+        
+        let totalWidth = collectionView.frame.width
+        let itemWidth = totalWidth/4
+        let gap = (totalWidth - 3*itemWidth)/2
+        
+        
+        collectionViewFlowLayout.minimumInteritemSpacing = gap
+        */
+        
         
         self.collectionView.backgroundColor = UIColor.clear
         self.collectionView.backgroundView = UIView()
@@ -71,6 +82,8 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         categories.textColor = globalFontColor
         styles.textColor = globalFontColor
         search.textColor = globalFontColor
+        
+        restoreButton.setTitleColor(globalFontColor, for: .normal)
         
         search.text = "Search People, Categories,\nand Quotes"
         
@@ -152,6 +165,13 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBAction func restoreAccess(_ sender: Any) {
         showRestoreAlert()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = collectionView.frame.width
+        let scaleFactor = (screenWidth / 3) - 8
+        
+        return CGSize(width: scaleFactor, height: 140)
     }
     
     private func showRestoreAlert() {
