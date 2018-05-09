@@ -63,6 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             storeCustomiationInfo()
         }
         else{
+            // TODO: Change to global Schema object
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
             quoteIterator = defaults.integer(forKey: "quoteIterator")
@@ -305,6 +306,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func updateDatabase(){
         
         var lq : LoadQuotes = LoadQuotes()
+        // TODO: create LoadSchemas()
         let defaults = UserDefaults.standard
         defaults.set(quoteIterator, forKey: "quoteIterator")
         /*var ref: DatabaseReference!
@@ -348,6 +350,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func storeCustomiationInfo() {
+        // TODO: Change to global Schema object
         let defaults = UserDefaults.standard
         defaults.setColor(color: globalFontColor, forKey: "fontColor")
         defaults.set(globalFontStyle, forKey: "fontStyle")

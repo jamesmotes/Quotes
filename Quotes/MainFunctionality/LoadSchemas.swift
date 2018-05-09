@@ -147,5 +147,8 @@ class LoadSchemas {
             }
         }
         
+        // TODO: Rename schema to theme
+        // TODO: Pull schemas to create global schema object
+        // TODO: query all schemas/themes in customization view
     }
 }
