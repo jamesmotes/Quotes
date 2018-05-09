@@ -40,8 +40,11 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     @IBOutlet weak var deleteQuoteImage: UIImageView!
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchBlack: UIButton!
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var menuBlack: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareBlack: UIButton!
     
     let realm = try! Realm()
     
@@ -126,14 +129,22 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         
         
         if(whiteBackground){
-            menuButton.setBackgroundImage(UIImage(named: "MenuBlack.png"), for: UIControlState.normal)
-            searchButton.setBackgroundImage(#imageLiteral(resourceName: "SearchBlack.png"), for: UIControlState.normal)
-            shareButton.setBackgroundImage(#imageLiteral(resourceName: "ShareBlack.png"), for: UIControlState.normal)
+            menuBlack.isHidden = false
+            searchBlack.isHidden = false
+            shareBlack.isHidden = false
+            
+            menuButton.isHidden = true
+            searchButton.isHidden = true
+            shareButton.isHidden = true
         }
         else {
-            menuButton.setBackgroundImage(#imageLiteral(resourceName: "MenuWhite.png"), for: UIControlState.normal)
-            searchButton.setBackgroundImage(#imageLiteral(resourceName: "SearchWhite.png"), for: UIControlState.normal)
-            shareButton.setBackgroundImage(#imageLiteral(resourceName: "ShareWhite.png"), for: UIControlState.normal)
+            menuBlack.isHidden = true
+            searchBlack.isHidden = true
+            shareBlack.isHidden = true
+            
+            menuButton.isHidden = false
+            searchButton.isHidden = false
+            shareButton.isHidden = false
         }
         
         navigationController?.isNavigationBarHidden = true

@@ -112,9 +112,21 @@ class AlarmsTableViewController: UITableViewController {
         navBar.barTintColor = globalBackgroundColor
         navBar.tintColor = globalBackgroundColor
         
+        tableView.separatorColor = UIColor.black
     
-        back.tintColor = globalFontColor
+        //back.tintColor = globalFontColor
         addButton.tintColor = globalFontColor
+        
+        if(whiteBackground){
+            back.image = UIImage(named: "BackButtonBlack.png")
+            //back.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+            tableView.separatorColor = UIColor.black
+        } else {
+            back.image = UIImage(named: "BackButtonWhite.png")
+            //back.imageView?.image = UIImage(named: "BackButtonWhite.png")
+            tableView.separatorColor = UIColor.white
+        }
+        
         
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications

@@ -23,6 +23,8 @@ let options: UNAuthorizationOptions = [.alert, .sound];
 
 class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
 
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     
     let realm = try! Realm()
@@ -44,8 +46,8 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         var cell = UITableViewCell()
         
         cell.textLabel?.text = filteredData[indexPath.row]
-        cell.textLabel?.textColor = UIColor.white
-        cell.backgroundColor = UIColor.black
+        cell.textLabel?.textColor = globalFontColor
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     
@@ -56,10 +58,21 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = globalBackgroundColor
+        datePicker.backgroundColor = globalBackgroundColor
+        
+        if(whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+        }
+        saveButton.setTitleColor(globalFontColor, for: .normal)
+        
         data.append(contentsOf: peopleOptions)
         data.shuffle()
         filteredData = data
-        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.setValue(globalFontColor, forKeyPath: "textColor")
         center.requestAuthorization(options: options) {
             (granted, error) in
             if !granted {
@@ -72,10 +85,10 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         //createNotification()
         
         
-        tableView.sectionIndexTrackingBackgroundColor = UIColor.black
-        tableView.sectionIndexBackgroundColor = UIColor.black
+        tableView.sectionIndexTrackingBackgroundColor = globalBackgroundColor
+        tableView.sectionIndexBackgroundColor = globalBackgroundColor
         let backView = UIView(frame: self.tableView.bounds)
-        backView.backgroundColor = UIColor.black // or whatever color
+        backView.backgroundColor = globalBackgroundColor // or whatever color
         self.tableView.backgroundView = backView
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
