@@ -252,7 +252,8 @@ class MainMenuTableViewController: UITableViewController {
         // Design item as necessary
         // sort array alphabetically
         var sortedArray : [String] = []
-        if(currentMenu != MAIN_MENU){
+        let labelFontSize = 21
+        if(currentMenu != MAIN_MENU){	
             sortedArray = tableOptions[currentMenu]//.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
             
             if(!full_unlock){
@@ -277,14 +278,16 @@ class MainMenuTableViewController: UITableViewController {
             cell.icon.image = nil
             cell.label2.textAlignment = .left
             
-            cell.label2.textColor = globalFontColor                         // Set font color
-            cell.label2.adjustsFontSizeToFitWidth = true                  // Set font size
+            cell.label2.font = UIFont(name: globalFontStyle, size: CGFloat(labelFontSize))  // Set font
+            cell.label2.textColor = globalFontColor                                         // Set font color
+            cell.label2.adjustsFontSizeToFitWidth = true                                    // Set font size
             
             cell.backgroundColor = globalBackgroundColor
             cell.label2.backgroundColor = globalBackgroundColor                   // Set background color
 
         }
         else {
+            // Main menu
             cell.label2.text = ""
             cell.lockImage.isHidden = true
             //sortedArray = tableOptions[currentMenu]
@@ -313,8 +316,9 @@ class MainMenuTableViewController: UITableViewController {
             //let currentSize = 100
             //cell.label.font = UIFont(name: "System", size: CGFloat(currentSize))
             
-            cell.label.textColor = globalFontColor                         // Set font color
-            cell.label.adjustsFontSizeToFitWidth = true
+            cell.label.font = UIFont(name: globalFontStyle, size: CGFloat(labelFontSize))   // Set font
+            cell.label.textColor = globalFontColor                                          // Set font color
+            cell.label.adjustsFontSizeToFitWidth = true                                     // Set font size
             
             //let currentSize = 32
             //cell.textLabel?.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
@@ -343,7 +347,6 @@ class MainMenuTableViewController: UITableViewController {
         let tableHeight = tableView.bounds.height - 45
         let numberOfRows = mainMenuOptions[currentMenu].count
         if(currentMenu == MAIN_MENU || currentMenu == CAT_MENU){
-            //print("+++++++++++\(backButton.frame.minY)++++++++++++")
             let numRows = CGFloat(tableOptions[currentMenu].count)
             return tableHeight/numRows
         }

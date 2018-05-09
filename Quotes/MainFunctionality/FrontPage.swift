@@ -99,10 +99,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 full_unlock = true
             case .failure(let error): strongSelf.showErrorAlert(for: error)
             }
-            
         }
-
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -166,7 +163,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     func showAfterMenu() {
-        
         if personalQuotes {
             quotes = Array(realm.objects(Quote.self))
             var customQuotes : [Quote] = []
