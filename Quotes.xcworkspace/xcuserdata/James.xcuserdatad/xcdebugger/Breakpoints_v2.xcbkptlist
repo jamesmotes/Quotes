@@ -1656,27 +1656,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/MainFunctionality/FrontPage.swift"
-            timestampString = "547590536.041424"
+            timestampString = "547591100.5029809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Quotes/MainFunctionality/FrontPage.swift"
-            timestampString = "547590536.041518"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1688,11 +1672,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/MainFunctionality/FrontPage.swift"
-            timestampString = "547590536.0415781"
+            timestampString = "547591100.503726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Quotes/MainFunctionality/FrontPage.swift"
+            timestampString = "547591100.504269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "showAfterMenu()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1704,11 +1704,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/MainFunctionality/FrontPage.swift"
-            timestampString = "547590536.041635"
+            timestampString = "547591100.504775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "showAfterMenu()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1720,11 +1720,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/MainFunctionality/FrontPage.swift"
-            timestampString = "547590536.041682"
+            timestampString = "547591100.5052249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "showAfterMenu()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1736,12 +1736,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/MainFunctionality/FrontPage.swift"
-            timestampString = "547590536.0417269"
+            timestampString = "547591100.5056649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "showAfterMenu()"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1752,11 +1752,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/MainFunctionality/FrontPage.swift"
-            timestampString = "547590536.0417711"
+            timestampString = "547591100.506107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1768,7 +1768,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/Purchasing/PurchaseView.swift"
-            timestampString = "547590536.041818"
+            timestampString = "547591100.506543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -1784,7 +1784,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/Purchasing/PurchaseView.swift"
-            timestampString = "547590536.042237"
+            timestampString = "547591100.506644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
@@ -1800,7 +1800,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/Purchasing/PurchaseView.swift"
-            timestampString = "547590536.042533"
+            timestampString = "547591100.506734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
@@ -1848,7 +1848,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/Purchasing/PurchaseView.swift"
-            timestampString = "547590536.0427901"
+            timestampString = "547591100.506852"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
@@ -1864,7 +1864,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/Purchasing/PurchaseView.swift"
-            timestampString = "547590536.043047"
+            timestampString = "547591100.506999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -1880,12 +1880,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quotes/Purchasing/PurchaseView.swift"
-            timestampString = "547590536.043298"
+            timestampString = "547591100.507111"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
             endingLineNumber = "141"
             landmarkName = "handlePurchaseSuccessfull(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Quotes/MainFunctionality/FrontPage.swift"
+            timestampString = "547591100.507219"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
