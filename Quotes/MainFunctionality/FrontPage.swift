@@ -146,12 +146,30 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             query += "person = '" + pers + "'"
         }
         else if category != "" {
-            //query += ""
             var checkQuotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
+            if(category != "General"){
+                var remove : [Int] = [Int]()
+                quotes = []
+                for i in 0...(checkQuotes.count - 1) {
+                    let string = checkQuotes[i].categories
+                    if (checkQuotes[i].categories.contains(category)){
+                        quotes.append(checkQuotes[i])
+                    }
+                }/*
+                 for i in 0...(remove.count-1){
+                 quotes.remove(at: remove.count-i-1)
+                 }*/
+                //print(quotes)
+            }
+            else {
+                quotes = checkQuotes
+            }
+            //query += ""
+            
             //var filterThis = quotes.filter(category + "IN categories")
             
             //self.registeredUsers = self.realm.objects(AppUser.self).filter("email != %@ && NOT (email IN %@)", self.user.email, memberEmails)
-            var remove : [Int] = [Int]()
+            /*var remove : [Int] = [Int]()
             quotes = []
             for i in 0...(checkQuotes.count - 1) {
                 let string = checkQuotes[i].categories
@@ -162,7 +180,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             for i in 0...(remove.count-1){
                 quotes.remove(at: remove.count-i-1)
             }*/
-            print(quotes)
+            */
+            //print(quotes)
             quotes.shuffle()
             refresh()
             return

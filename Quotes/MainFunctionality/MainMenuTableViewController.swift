@@ -11,11 +11,33 @@
 
 import UIKit
 
+class MainMenuTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
 
 
-let mainMenuOptions = ["General", "People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Contact Us"]
+let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Contact Us"]
+let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "AlarmIconWhite.png", "FontsWhite.png", "PersonalWhite.png", "ContactUsWhite.png"]
+
+
 let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt"]
-let catOptions = ["Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
+let catOptions = [/*"General",*/ "Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
 let MAIN_MENU = 0
@@ -32,6 +54,9 @@ class MainMenuTableViewController: UITableViewController {
     @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
+        
+        
+        self.tableView.tableFooterView = UIView()
         
         tableView.tableHeaderView?.backgroundColor = UIColor.clear
         
@@ -52,7 +77,7 @@ class MainMenuTableViewController: UITableViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.barTintColor = UIColor.clear
         
-        InAppPurchases.shared.getProducts()
+        //InAppPurchases.shared.getProducts()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -99,33 +124,33 @@ class MainMenuTableViewController: UITableViewController {
         if currentMenu == MAIN_MENU {   // Main menu, NOT submenu (could break things)
             print("Something from the main menu was selected.")
             switch indexPath.item {
-            case 1:     // People
+            case 0:     // People
                 print("A person was selected.")
                 currentMenu = PEOPLE_MENU
-            case 2:     // Categories
+            case 1:     // Categories
                 print("A category was selected.")
                 currentMenu = CAT_MENU
             /*case 2:     // Mood
                 print("A mood was selected.")
                 currentMenu = MOOD_MENU*/
-            case 3:     // Favorites
+            case 2:     // Favorites
                 print("The favorites were selected.")
                 isFavorite = true   // Show favorited quotes on Front Page
 //                performSegue(withIdentifier: "toQuotesPage", sender: nil)
                 personalQuotes = false
                 dismiss(animated: true, completion: nil)
-            case 4:     // Alarms
+            case 3:     // Alarms
                 print("The settings were selected.")
                 performSegue(withIdentifier: "viewSettings", sender: nil)
                 //dismiss(animated: true, completion: nil)
-            case 5:    // Customization
+            case 4:    // Customization
                 print("customization")
                 performSegue(withIdentifier: "viewCustomization", sender: nil)
-            case 6:    // Personal Quotes
+            case 5:    // Personal Quotes
                 print("create quote was selected")
                 personalQuotes = true
                 dismiss(animated: true, completion: nil)
-            case 7:    // Contact Us
+            case 6:    // Contact Us
                 print("conact us was selected")
                 performSegue(withIdentifier: "viewContactInfo", sender: nil)
             default:    // Random, or something fails
@@ -168,38 +193,85 @@ class MainMenuTableViewController: UITableViewController {
             tableView.alwaysBounceVertical = false
         }
         // Get the table item
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuRow", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MainMenuTableViewCell
+        
+        cell.textLabel?.text = ""
         
         // Design item as necessary
         // sort array alphabetically
         var sortedArray : [String] = []
         if(currentMenu != MAIN_MENU){
             sortedArray = tableOptions[currentMenu].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+            
+            if(currentMenu == CAT_MENU){
+                sortedArray = ["General"] + sortedArray
+            }
+            
+            cell.label.text = ""
+            
+            
+            cell.label2.text = sortedArray[indexPath.row]
+            cell.icon.image = nil
+            cell.label2.textAlignment = .left
+            
+            cell.label2.textColor = globalFontColor                         // Set font color
+            cell.label2.adjustsFontSizeToFitWidth = true                  // Set font size
         }
         else {
-            sortedArray = tableOptions[currentMenu]
+            cell.label2.text = ""
+            //sortedArray = tableOptions[currentMenu]
+            if(indexPath.row == 2){
+                cell.icon.image = #imageLiteral(resourceName: "star")
+                cell.icon.tintColor = UIColor.white
+            }
+            else {
+                cell.icon.image = UIImage(named: mainMenuWhiteIcons[indexPath.row])
+            }
+            cell.label.text = (tableOptions[currentMenu])[indexPath.row]                // Label text
+            //cell.textLabel?.textAlignment = .center                           // Center text
+            cell.backgroundColor = globalBackgroundColor
+            cell.label.backgroundColor = globalBackgroundColor                   // Set background color
+            
+            //let currentSize = 100
+            //cell.label.font = UIFont(name: "System", size: CGFloat(currentSize))
+            
+            cell.label.textColor = globalFontColor                         // Set font color
+            cell.label.adjustsFontSizeToFitWidth = true
+            
+            //let currentSize = 32
+            //cell.textLabel?.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
         }
-        cell.textLabel?.text = sortedArray[indexPath.item]                // Label text
-        cell.textLabel?.textAlignment = .center                           // Center text
+        /*
+        cell.label.text = sortedArray[indexPath.item]                // Label text
+        //cell.textLabel?.textAlignment = .center                           // Center text
         cell.backgroundColor = globalBackgroundColor
-        cell.textLabel?.backgroundColor = globalBackgroundColor                   // Set background color
+        cell.label.backgroundColor = globalBackgroundColor                   // Set background color
         //let currentSize = 32
         //cell.textLabel?.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
-        cell.textLabel?.textColor = globalFontColor                         // Set font color
-        cell.textLabel?.adjustsFontSizeToFitWidth = true                  // Set font size
+        cell.label.textColor = globalFontColor                         // Set font color
+        cell.label.adjustsFontSizeToFitWidth = true                  // Set font size
 
+        if(indexPath.row == 2){
+            cell.icon.tintColor = UIColor.white
+        }
+        else {
+            cell.icon.image = UIImage(named: mainMenuWhiteIcons[indexPath.row])
+        }
+        */
         return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tableHeight = tableView.bounds.height - backButton.frame.size.height*2.7
-        print("+++++++++++\(backButton.frame.minY)++++++++++++")
-        if currentMenu == MAIN_MENU {
-            
+        let tableHeight = tableView.bounds.height - 30
+        let numberOfRows = mainMenuOptions[currentMenu].count
+        if(currentMenu == MAIN_MENU || CGFloat(65*(numberOfRows)) < tableHeight){
+            //print("+++++++++++\(backButton.frame.minY)++++++++++++")
+            let numRows = CGFloat(tableOptions[currentMenu].count)
+            return tableHeight/numRows
         }
-        let div = tableHeight/CGFloat(tableOptions[currentMenu].count) //- 10
-
-        return div > MinHeight ? div : MinHeight
+        else {
+            return 65
+        }
     }
     
     @IBAction func backToView(_ sender: Any) {
@@ -211,9 +283,5 @@ class MainMenuTableViewController: UITableViewController {
         else {
             dismiss(animated: true, completion: nil)
         }
-    }
-    
-    @IBAction func swipedOnCell(_ sender: Any) {
-        
     }
 }

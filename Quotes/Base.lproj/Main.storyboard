@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -406,15 +407,53 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuRow" id="YQP-Fu-h2H">
-                                <rect key="frame" x="0.0" y="58" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="107" id="YQP-Fu-h2H" customClass="MainMenuTableViewCell" customModule="Quotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="58" width="375" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YQP-Fu-h2H" id="orr-r6-OId">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-t2-7Ov">
+                                            <rect key="frame" x="12" y="18" width="71" height="71"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="zNG-t2-7Ov" secondAttribute="height" multiplier="1:1" id="yj1-iu-Pf3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-NB-8g6">
+                                            <rect key="frame" x="99" y="19" width="260" height="69"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-Da-OKd">
+                                            <rect key="frame" x="12" y="18" width="62.5" height="70"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gQD-NB-8g6" secondAttribute="trailing" id="BLX-Fa-MK6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gQD-NB-8g6" secondAttribute="bottom" constant="8" id="Dr8-fZ-hve"/>
+                                        <constraint firstItem="zNG-t2-7Ov" firstAttribute="top" secondItem="orr-r6-OId" secondAttribute="top" constant="18" id="J3Q-qP-LTI"/>
+                                        <constraint firstItem="DbL-Da-OKd" firstAttribute="leading" secondItem="orr-r6-OId" secondAttribute="leading" constant="12" id="V4O-O3-Nlh"/>
+                                        <constraint firstItem="gQD-NB-8g6" firstAttribute="leading" secondItem="zNG-t2-7Ov" secondAttribute="trailing" constant="16" id="YQD-jq-N3w"/>
+                                        <constraint firstAttribute="bottom" secondItem="zNG-t2-7Ov" secondAttribute="bottom" constant="18" id="Yqp-NV-fEN"/>
+                                        <constraint firstAttribute="bottom" secondItem="DbL-Da-OKd" secondAttribute="bottom" constant="18" id="hDh-RJ-LUB"/>
+                                        <constraint firstItem="zNG-t2-7Ov" firstAttribute="leading" secondItem="orr-r6-OId" secondAttribute="leading" constant="12" id="mVk-Ub-mc2"/>
+                                        <constraint firstItem="DbL-Da-OKd" firstAttribute="top" secondItem="orr-r6-OId" secondAttribute="top" constant="18" id="qtM-iz-gGS"/>
+                                        <constraint firstItem="gQD-NB-8g6" firstAttribute="top" secondItem="orr-r6-OId" secondAttribute="topMargin" constant="8" id="sYl-mq-Y6u"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="icon" destination="zNG-t2-7Ov" id="79E-0f-kBn"/>
+                                    <outlet property="label" destination="gQD-NB-8g6" id="wKI-zb-FII"/>
+                                    <outlet property="label2" destination="DbL-Da-OKd" id="xtF-cF-yCl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
