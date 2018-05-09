@@ -59,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(true, forKey: "HasBeenLaunched")
             defaults.set(10, forKey: "reviewCountdown")
             defaults.set(false, forKey: "full_unlock")
+            defaults.set(false, forKey: "whiteBackground")
             
             storeCustomiationInfo()
         }
@@ -70,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             globalFontStyle = defaults.string(forKey: "fontStyle")!
             globalBackgroundColor = defaults.colorForKey(key: "backgroundColor")!
             globalImageFile = defaults.string(forKey: "imageFile")!
+            whiteBackground = defaults.bool(forKey: "whiteBackground")
         }
         
         if(defaults.integer(forKey: "reviewCountdown") == 0){
@@ -353,6 +355,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         defaults.set(globalFontStyle, forKey: "fontStyle")
         defaults.setColor(color: globalBackgroundColor, forKey: "backgroundColor")
         defaults.set(globalImageFile, forKey: "imageFile")
+        defaults.set(whiteBackground, forKey: "whiteBackground")
     }
     
 

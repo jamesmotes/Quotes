@@ -36,6 +36,8 @@ class MainMenuTableViewCell: UITableViewCell {
 let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Contact Us"]
 let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "AlarmIconWhite.png", "FontsWhite.png", "PersonalWhite.png", "ContactUsWhite.png"]
 
+let mainMenuBlackIcons = ["PeopleBlack.png", "CategoriesBlack.png", "star", "AlarmIconBlack.png", "FontsBlack.png", "PersonalBlack.png", "ContactUsBlack.png"]
+
 
 let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt"]
 let catOptions = [/*"General",*/ "Change", /*"Success",*/"Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
@@ -73,7 +75,9 @@ class MainMenuTableViewController: UITableViewController {
         tableView.backgroundColor = globalBackgroundColor
         
         super.viewDidLoad()
-
+        
+        
+        
         backButton.imageEdgeInsets.right = view.frame.size.width - 30
         
         for i in 1...(tableOptions.count-1) {
@@ -102,6 +106,12 @@ class MainMenuTableViewController: UITableViewController {
         if(justChanged){
             justChanged = false
             dismiss(animated: true, completion: nil)
+        }
+        
+        if(whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
         }
         
         checkSubscription()
@@ -280,10 +290,20 @@ class MainMenuTableViewController: UITableViewController {
             //sortedArray = tableOptions[currentMenu]
             if(indexPath.row == 2){
                 cell.icon.image = #imageLiteral(resourceName: "star")
-                cell.icon.tintColor = UIColor.white
+                if(whiteBackground){
+                    cell.icon.tintColor = UIColor.black
+                }
+                else {
+                    cell.icon.tintColor = UIColor.white
+                }
             }
             else {
-                cell.icon.image = UIImage(named: mainMenuWhiteIcons[indexPath.row])
+                if(whiteBackground){
+                    cell.icon.image = UIImage(named: mainMenuBlackIcons[indexPath.row])
+                }
+                else {
+                    cell.icon.image = UIImage(named: mainMenuWhiteIcons[indexPath.row])
+                }
             }
             cell.label.text = (tableOptions[currentMenu])[indexPath.row]                // Label text
             //cell.textLabel?.textAlignment = .center                           // Center text

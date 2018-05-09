@@ -11,11 +11,22 @@ import UIKit
 class ContactInfo: UIViewController {
 
     @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var text: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+        }
+        
+        view.backgroundColor = globalBackgroundColor
+        
+        text.textColor = globalFontColor
         // Do any additional setup after loading the view.
     }
 

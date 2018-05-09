@@ -33,10 +33,10 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
-        }
-        else {
-            backButton.setBackgroundImage(UIImage(named: "BackButtonWhite.png"), for: UIControlState.normal)
+        if(whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
         }
         
         /********************************************/

@@ -255,6 +255,14 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         checkSubscription()
         
+        view.backgroundColor = globalBackgroundColor
+        collectionView.backgroundColor = globalBackgroundColor
+        if(whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+        }
+        
         // Do any additional setup after loading the view.
         
     }

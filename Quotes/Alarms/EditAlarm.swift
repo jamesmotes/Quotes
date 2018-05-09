@@ -19,20 +19,26 @@ class EditAlarm: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
-        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.setValue(globalFontColor, forKeyPath: "textColor")
         super.viewDidLoad()
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
             //print(notifications)
         }
         
-        /*if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
+        view.backgroundColor = globalBackgroundColor
+        datePicker.backgroundColor = globalBackgroundColor
+
+        if(whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+            saveButton.setTitleColor(UIColor.black, for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+            saveButton.setTitleColor(UIColor.white, for: .normal)
         }
-        else {
-            backButton.setBackgroundImage(UIImage(named: "BackButtonWhite.png"), for: UIControlState.normal)
-        }*/
         
         // Do any additional setup after loading the view.
     }
