@@ -10,8 +10,8 @@ import UIKit
 
 var justChanged = false
 
-var hasImage = false
-var globalImageFile = ""
+var hasImage = true
+var globalImageFile = "Colorcloud.jpg"
 
 class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var backButton: UIButton!

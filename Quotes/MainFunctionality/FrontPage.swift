@@ -21,7 +21,7 @@ var isRandom = false
 var personalQuotes = false
 
 var changedFont = true
-var globalFontStyle = "System"
+var globalFontStyle = "Georgia"
 var globalFontColor = UIColor.white
 var globalBackgroundColor = UIColor.black
 
