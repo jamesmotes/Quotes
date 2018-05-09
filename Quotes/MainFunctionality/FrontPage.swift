@@ -20,7 +20,7 @@ var isDownvote = false
 var isRandom = false
 var personalQuotes = false
 
-var changedFont = true
+var changedFont = false
 var globalFontStyle = "System"
 var globalFontColor = UIColor.white
 var globalBackgroundColor = UIColor.black
@@ -33,7 +33,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     @IBOutlet weak var person: UILabel!
     
     @IBOutlet weak var createQuoteButton: UIButton!
+    @IBOutlet weak var createQuoteImage: UIImageView!
     @IBOutlet weak var deleteQuoteButton: UIButton!
+    @IBOutlet weak var deleteQuoteImage: UIImageView!
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
@@ -109,6 +111,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             currentSize = 25
             person.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
             
+            createQuoteButton.titleLabel?.textColor = globalFontColor
+            deleteQuoteButton.titleLabel?.textColor = globalFontColor
+            
             self.view.backgroundColor = globalBackgroundColor
         }
         
@@ -140,6 +145,51 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     func showAfterMenu() {
+        
+        if personalQuotes {
+            quotes = Array(realm.objects(Quote.self))
+            var customQuotes : [Quote] = []
+            for q in quotes {
+                if q.custom {
+                    customQuotes.append(q)
+                }
+            }
+            quotes = customQuotes
+            refresh()
+            
+            //favButton.isHidden = true
+            //favButton.isEnabled = false
+            
+            createQuoteButton.isHidden = false
+            createQuoteButton.isEnabled = true
+            
+            /*createQuoteImage.isHidden = false
+             createQuoteImage.layer.borderColor = globalFontColor.cgColor
+             createQuoteImage.layer.borderWidth = 3.0
+             */
+            deleteQuoteButton.isHidden = false
+            deleteQuoteButton.isEnabled = true
+            /*
+             deleteQuoteImage.isHidden = false
+             deleteQuoteImage.layer.borderColor = globalFontColor.cgColor
+             deleteQuoteImage.layer.borderWidth = 3.0
+             */
+        }
+        else {
+            //favButton.isHidden = false
+            //favButton.isEnabled = true
+            
+            createQuoteButton.isHidden = true
+            createQuoteButton.isEnabled = false
+            
+            createQuoteImage.isHidden = true
+            
+            deleteQuoteButton.isHidden = true
+            deleteQuoteButton.isEnabled = false
+            
+            deleteQuoteImage.isHidden = true
+        }
+        
         var query : String = ""
         print(category)
         if pers != "" {
@@ -202,36 +252,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         else if selectedSpecificQuote {
             query = "text CONTAINS '" + specificQuote + "'"
         }
-        else if personalQuotes {
-            quotes = Array(realm.objects(Quote.self))
-            var customQuotes : [Quote] = []
-            for q in quotes {
-                if q.custom {
-                    customQuotes.append(q)
-                }
-            }
-            quotes = customQuotes
-            refresh()
-            
-            favButton.isHidden = true
-            favButton.isEnabled = false
-            
-            createQuoteButton.isHidden = false
-            createQuoteButton.isEnabled = true
-            
-            deleteQuoteButton.isHidden = false
-            deleteQuoteButton.isEnabled = true
-        }
-        else {
-            favButton.isHidden = false
-            favButton.isEnabled = true
-            
-            createQuoteButton.isHidden = true
-            createQuoteButton.isEnabled = false
-            
-            deleteQuoteButton.isHidden = true
-            deleteQuoteButton.isEnabled = false
-        }
+        
         
         print("Query: \(query)")
         if query != "" {
@@ -240,6 +261,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             refresh()
         }
         query = ""
+        refresh()
     }
 
     func refresh(){
