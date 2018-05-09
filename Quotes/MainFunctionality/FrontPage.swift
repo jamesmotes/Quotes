@@ -56,14 +56,16 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     var didComeFromAdd = false
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
         if(globalImageFile != ""){
             image.image = UIImage(named: globalImageFile)
         }
         else {
             image.image = nil
+            view.backgroundColor = globalBackgroundColor
         }
+        super.viewDidLoad()
+        
+        
         
         interstitial = createAndLoadInterstitial()
         

@@ -20,6 +20,7 @@ class LoadingViewController: UIViewController {
                                                object: nil)
         // Do any additional setup after loading the view.
         PurchasesController.shared.uploadReceipt()
+        
     }
     @objc func handleSessionId(notification: Notification) {
         OperationQueue.main.addOperation { [weak self] in
