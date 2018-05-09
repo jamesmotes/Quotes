@@ -20,7 +20,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     //var collectionView: UICollectionView?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return 11
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -87,11 +87,6 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             textColor = UIColor.black
             backgroundColor = UIColor.white
             imageFile = "whitetower.jpg"
-        case 11:
-            fontStyle = "TradeGothic"
-            textColor = UIColor.white
-            backgroundColor = UIColor.black
-            imageFile = "airballoons.jpg"
         default :
             fontStyle = "Symbol"
             textColor = UIColor.white
@@ -114,7 +109,6 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         cell.backgroundColor = backgroundColor
         
         //cell.sizeThatFits(CGSize(width: collectionView.frame.width/3.1, height: collectionView.frame.width/3.1))
-        
         
         return cell
     }
@@ -187,12 +181,6 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             globalBackgroundColor = UIColor.white
             whiteBackground = true
             globalImageFile = "whitetower.jpg"
-        case 11:
-            globalFontStyle = "TradeGothic"
-            globalFontColor = UIColor.white
-            globalBackgroundColor = UIColor.black
-            whiteBackground = false
-            globalImageFile = "airbaloons.jpg"
         default :
             globalFontStyle = "System"
             globalFontColor = UIColor.white
