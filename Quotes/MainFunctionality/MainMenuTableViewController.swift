@@ -17,6 +17,7 @@ class MainMenuTableViewCell: UITableViewCell {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var lockImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +38,7 @@ let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "Ala
 
 
 let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt"]
-let catOptions = [/*"General",*/ "Change", "Success","Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
+let catOptions = [/*"General",*/ "Change", /*"Success",*/"Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
 let MAIN_MENU = 0
@@ -78,6 +79,7 @@ class MainMenuTableViewController: UITableViewController {
         for i in 1...(tableOptions.count-1) {
             tableOptions[i] = tableOptions[i].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         }
+        tableOptions[CAT_MENU] = ["General", "Success"] + tableOptions[CAT_MENU]
         
         
         navigationController?.isNavigationBarHidden = false
@@ -102,6 +104,7 @@ class MainMenuTableViewController: UITableViewController {
             dismiss(animated: true, completion: nil)
         }
         
+        checkSubscription()
         
         // Reset params
         pers = ""
@@ -114,6 +117,15 @@ class MainMenuTableViewController: UITableViewController {
         view.backgroundColor = globalBackgroundColor
         tableView.backgroundColor = globalBackgroundColor
         backButton.backgroundColor = globalBackgroundColor
+    }
+    
+    func checkSubscription(){
+        guard PurchasesController.shared.currentSessionId != nil,
+            PurchasesController.shared.hasReceiptData else {
+                full_unlock = false
+                return
+        }
+        full_unlock = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -135,7 +147,13 @@ class MainMenuTableViewController: UITableViewController {
             switch indexPath.item {
             case 0:     // People
                 print("A person was selected.")
-                currentMenu = PEOPLE_MENU
+                if(full_unlock){
+                    currentMenu = PEOPLE_MENU
+                }
+                else {
+                    performSegue(withIdentifier: "menuToPurchase", sender: nil)
+                    return
+                }
             case 1:     // Categories
                 print("A category was selected.")
                 currentMenu = CAT_MENU
@@ -175,10 +193,25 @@ class MainMenuTableViewController: UITableViewController {
             switch currentMenu {
             case PEOPLE_MENU:   // A Person was selected
                 pers = tableOptions[currentMenu][indexPath.item]
-                print("\(pers) was selected.")
+                
+                //print("\(pers) was selected.")
             case CAT_MENU:      // A Category was selected
-                category = tableOptions[currentMenu][indexPath.item]
-                print("\(category) was selected.")
+                
+                if(full_unlock){
+                    category = tableOptions[currentMenu][indexPath.item]
+                }
+                else {
+                    if(tableOptions[currentMenu][indexPath.item] == "General" || tableOptions[currentMenu][indexPath.item] == "Success"){
+                        category = tableOptions[currentMenu][indexPath.item]
+                    }
+                    else{
+                        performSegue(withIdentifier: "menuToPurchase", sender: nil)
+                        return
+                    }
+                }
+                
+                
+                //print("\(category) was selected.")
             /*case MOOD_MENU:     // A Mood was selected
                 md = tableOptions[currentMenu][indexPath.item]
                 print("\(md) was selected.")*/
@@ -210,15 +243,26 @@ class MainMenuTableViewController: UITableViewController {
         // sort array alphabetically
         var sortedArray : [String] = []
         let labelFontSize = 21
-        if(currentMenu != MAIN_MENU){
-            // Submenu (Categories, People, etc.)
-            sortedArray = tableOptions[currentMenu].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        if(currentMenu != MAIN_MENU){	
+            sortedArray = tableOptions[currentMenu]//.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
             
-            if(currentMenu == CAT_MENU){
-                sortedArray = ["General"] + sortedArray
+            if(!full_unlock){
+                if(currentMenu == CAT_MENU){
+                    if(sortedArray[indexPath.row] == "General" || sortedArray[indexPath.row] == "Success"){
+                        cell.lockImage.isHidden = true
+                    }
+                    else{
+                        cell.lockImage.isHidden = false
+                    }
+                }
+                else{
+                    cell.lockImage.isHidden = true
+                }
             }
             
             cell.label.text = ""
+            
+            
             
             cell.label2.text = sortedArray[indexPath.row]
             cell.icon.image = nil
@@ -235,6 +279,7 @@ class MainMenuTableViewController: UITableViewController {
         else {
             // Main menu
             cell.label2.text = ""
+            cell.lockImage.isHidden = true
             //sortedArray = tableOptions[currentMenu]
             if(indexPath.row == 2){
                 cell.icon.image = #imageLiteral(resourceName: "star")

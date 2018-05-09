@@ -58,15 +58,15 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             textColor = UIColor.black
             backgroundColor = UIColor.white
         case 5:
-            fontStyle = "TradeGothic"
-            textColor = UIColor.white
-            backgroundColor = UIColor.black
-            imageFile = "babylion.jpg"
-        case 6:
             fontStyle = "Georgia"
             textColor = UIColor.white
             backgroundColor = UIColor.black
             imageFile = "Colorcloud.jpg"
+        case 6:
+            fontStyle = "TradeGothic"
+            textColor = UIColor.white
+            backgroundColor = UIColor.black
+            imageFile = "babylion.jpg"
         case 7:
             fontStyle = "Didot"
             textColor = UIColor.white
@@ -108,12 +108,24 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         cell.backgroundColor = backgroundColor
         
+        if(!full_unlock && indexPath.row > 5){
+            cell.lockImage.isHidden = false
+        }
+        
         //cell.sizeThatFits(CGSize(width: collectionView.frame.width/3.1, height: collectionView.frame.width/3.1))
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if(!full_unlock && indexPath.row > 5){
+            performSegue(withIdentifier: "fontsToPurchase", sender: nil)
+            return
+        }
+        
+        
+        
         switch(indexPath.row){
         case 0:
             globalFontStyle = "Papyrus"
@@ -146,17 +158,17 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             whiteBackground = true
             globalImageFile = ""
         case 5:
-            globalFontStyle = "TradeGothic"
-            globalFontColor = UIColor.white
-            globalBackgroundColor = UIColor.black
-            whiteBackground = false
-            globalImageFile = "babylion.jpg"
-        case 6:
             globalFontStyle = "Georgia"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
             whiteBackground = false
             globalImageFile = "Colorcloud.jpg"
+        case 6:
+            globalFontStyle = "TradeGothic"
+            globalFontColor = UIColor.white
+            globalBackgroundColor = UIColor.black
+            whiteBackground = false
+            globalImageFile = "babylion.jpg"
         case 7:
             globalFontStyle = "Didot"
             globalFontColor = UIColor.white
@@ -229,7 +241,19 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         collectionViewFlowLayout.itemSize = CGSize(width: collectionView.frame.width/3.7, height: collectionView.frame.width/3.7)
         
+        checkSubscription()
+        
         // Do any additional setup after loading the view.
+        
+    }
+    
+    func checkSubscription(){
+        guard PurchasesController.shared.currentSessionId != nil,
+            PurchasesController.shared.hasReceiptData else {
+                full_unlock = false
+                return
+        }
+        full_unlock = true
     }
     
     /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) ->CGSize {
