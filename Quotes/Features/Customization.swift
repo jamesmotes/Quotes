@@ -125,66 +125,79 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             globalFontStyle = "Papyrus"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
             globalImageFile = ""
         case 1:
             globalFontStyle = "Zapfino"
             globalFontColor = UIColor.black
             globalBackgroundColor = UIColor.white
+            whiteBackground = true
             globalImageFile = ""
         case 2:
             globalFontStyle = "Futura"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.gray
+            whiteBackground = false
             globalImageFile = ""
         case 3:
             globalFontStyle = "Chalkduster"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.purple
+            whiteBackground = false
             globalImageFile = ""
         case 4:
             globalFontStyle = "TradeGothic"
             globalFontColor = UIColor.black
             globalBackgroundColor = UIColor.white
+            whiteBackground = true
             globalImageFile = ""
         case 5:
             globalFontStyle = "TradeGothic"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
             globalImageFile = "babylion.jpg"
         case 6:
             globalFontStyle = "Georgia"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
             globalImageFile = "Colorcloud.jpg"
         case 7:
             globalFontStyle = "Didot"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
             globalImageFile = "mountain.jpg"
         case 8:
             globalFontStyle = "Georgia"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
             globalImageFile = "road.jpg"
         case 9:
             globalFontStyle = "Copperplate"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
             globalImageFile = "starrynight.jpg"
         case 10:
             globalFontStyle = "Copperplate"
             globalFontColor = UIColor.black
             globalBackgroundColor = UIColor.white
+            whiteBackground = true
             globalImageFile = "whitetower.jpg"
         case 11:
             globalFontStyle = "TradeGothic"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
             globalImageFile = "airbaloons.jpg"
         default :
             globalFontStyle = "System"
             globalFontColor = UIColor.white
             globalBackgroundColor = UIColor.black
+            whiteBackground = false
         }
         changedFont = true
         justChanged = true

@@ -20,10 +20,12 @@ var isDownvote = false
 var isRandom = false
 var personalQuotes = false
 
-var changedFont = false
+var changedFont = true
 var globalFontStyle = "System"
 var globalFontColor = UIColor.white
 var globalBackgroundColor = UIColor.black
+
+var whiteBackground = false
 
 class FrontPage: UIViewController , GADInterstitialDelegate {
 
@@ -118,8 +120,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         }
         
         
-        if(self.view.backgroundColor == UIColor.white){
-            menuButton.setBackgroundImage(#imageLiteral(resourceName: "MenuBlack.png"), for: UIControlState.normal)
+        if(whiteBackground){
+            menuButton.setBackgroundImage(UIImage(named: "MenuBlack.png"), for: UIControlState.normal)
             searchButton.setBackgroundImage(#imageLiteral(resourceName: "SearchBlack.png"), for: UIControlState.normal)
             shareButton.setBackgroundImage(#imageLiteral(resourceName: "ShareBlack.png"), for: UIControlState.normal)
         }
@@ -182,12 +184,10 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             createQuoteButton.isHidden = true
             createQuoteButton.isEnabled = false
             
-            createQuoteImage.isHidden = true
             
             deleteQuoteButton.isHidden = true
             deleteQuoteButton.isEnabled = false
             
-            deleteQuoteImage.isHidden = true
         }
         
         var query : String = ""
@@ -284,7 +284,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             self.text.text = quotes[index].text
             self.person.text = "- " + quotes[index].person
             if(!quotes[index].favorite){
-                self.favButton.tintColor = UIColor.white
+                if(whiteBackground){
+                    self.favButton.tintColor = UIColor.lightGray
+                }
+                else {
+                    self.favButton.tintColor = UIColor.white
+                }
             }
             else {
                 self.favButton.tintColor = UIColor.orange

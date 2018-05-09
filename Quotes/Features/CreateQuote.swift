@@ -18,6 +18,7 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var person: UILabel!
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var saveQuote: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     let realm = try! Realm()
     
@@ -26,7 +27,11 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        /*if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
+        }
+        else {
+            backButton.setBackgroundImage(UIImage(named: "BackButtonWhite.png"), for: UIControlState.normal)
+        }*/
         
         // Do any additional setup after loading the view.
         self.customQuote.delegate = self
@@ -38,6 +43,12 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         
         if(globalImageFile != ""){
             image.image = UIImage(named: globalImageFile)
+        }
+        if(whiteBackground){
+            view.backgroundColor = UIColor.white
+        }
+        else {
+            view.backgroundColor = globalBackgroundColor
         }
     }
 

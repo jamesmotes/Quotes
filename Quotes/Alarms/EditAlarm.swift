@@ -18,6 +18,7 @@ class EditAlarm: UIViewController {
     var alarms : [UNNotificationRequest] = []
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
@@ -26,6 +27,12 @@ class EditAlarm: UIViewController {
             self.alarms = notifications
             //print(notifications)
         }
+        
+        /*if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
+        }
+        else {
+            backButton.setBackgroundImage(UIImage(named: "BackButtonWhite.png"), for: UIControlState.normal)
+        }*/
         
         // Do any additional setup after loading the view.
     }
