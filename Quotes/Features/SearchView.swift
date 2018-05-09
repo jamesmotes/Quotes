@@ -18,6 +18,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     var data : [String] = [String]()
     var filteredData : [String] = [String]()
     
+    @IBOutlet weak var backButton: UIButton!
     //@IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -87,6 +88,12 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
+        }
+        else {
+            backButton.setBackgroundImage(UIImage(named: "BackButtonWhite.png"), for: UIControlState.normal)
+        }
         
         data.append(contentsOf: peopleOptions)
         data.append(contentsOf: catOptions)

@@ -55,12 +55,20 @@ class MainMenuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         
+        /*if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
+        }
+        else {
+            backButton.setBackgroundImage(UIImage(named: "BackButtonWhite.png"), for: UIControlState.normal)
+        }*/
         
         self.tableView.tableFooterView = UIView()
         
         tableView.tableHeaderView?.backgroundColor = UIColor.clear
         
         view.backgroundColor = globalBackgroundColor
+        if(whiteBackground){
+            view.backgroundColor = UIColor.white
+        }
         tableView.backgroundColor = globalBackgroundColor
         
         super.viewDidLoad()
@@ -93,6 +101,7 @@ class MainMenuTableViewController: UITableViewController {
             justChanged = false
             dismiss(animated: true, completion: nil)
         }
+        
         
         // Reset params
         pers = ""
