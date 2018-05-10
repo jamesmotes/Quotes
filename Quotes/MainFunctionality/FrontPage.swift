@@ -29,6 +29,8 @@ var changedFont = true
 
 class FrontPage: UIViewController , GADInterstitialDelegate {
 
+    var sharing = false
+    
     @IBOutlet weak var image: UIImageView!
     
     @IBOutlet weak var text: UILabel!
@@ -81,7 +83,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             }
         }
         //PurchasesController.shared.uploadReceipt()
-        refresh()
+        if(!sharing || !changedFont){
+            refresh()
+        }else{
+            sharing = false
+            changedFont = false
+        }
         
         print(PurchasesController.shared.currentSessionId)
         let sessionId = PurchasesController.shared.currentSessionId ?? ""
@@ -89,7 +96,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         SessionHandler.shared.selfies(for: sessionId) { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
-            case .success(let selfies):
+            case .success(let _):
                 full_unlock = true
             case .failure(let error): strongSelf.showErrorAlert(for: error)
             }
@@ -143,18 +150,18 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         checkSubscription()
-        setSchema()
-        
+        refresh()
         
         
         navigationController?.isNavigationBarHidden = true
-        if(!didComeFromAdd){
+        if(didComeFromAdd || changedFont || sharing){
+            didComeFromAdd = false
+        }
+        else {
             index = 0
             showAfterMenu()
         }
-        else {
-            didComeFromAdd = false
-        }
+        setSchema()
     }
 
     override func didReceiveMemoryWarning() {
@@ -375,6 +382,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     @IBAction func share(_ sender: Any) {
+        sharing = true
         let activityVC = UIActivityViewController(activityItems: [screenShotMethod(), self.text.text! + " " + self.person.text!], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         

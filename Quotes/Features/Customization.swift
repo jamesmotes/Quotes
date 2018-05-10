@@ -288,6 +288,10 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
+    
     func setSchema(){
         view.backgroundColor = globalSchema.getBackgroundColor()
         if(globalSchema.whiteBackground){

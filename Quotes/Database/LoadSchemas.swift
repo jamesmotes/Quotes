@@ -84,13 +84,13 @@ class LoadSchemas {
         backgroundColor = UIColor.white
         imageFile = "whitetower.jpg"
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
-        
+        /*
         imageFile = "basketballcourt.jpg"
         fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
-        
+        */
         imageFile = "City.jpg"
         fontStyle = "Copperplate"
         textColor = UIColor.white
@@ -103,12 +103,12 @@ class LoadSchemas {
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
-        imageFile = "towerdown.jpg"
+        /*imageFile = "towerdown.jpg"
         fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
-        
+        */
         imageFile = "whitemountain.jpg"
         fontStyle = "Copperplate"
         textColor = UIColor.white
@@ -127,18 +127,19 @@ class LoadSchemas {
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         */
+        /*
         imageFile = "clouds.jpg"
         fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
-        
+        */
         imageFile = "colorsky.jpg"
         fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
-        
+ 
         imageFile = "desertwalk.jpg"
         fontStyle = "Copperplate"
         textColor = UIColor.white
