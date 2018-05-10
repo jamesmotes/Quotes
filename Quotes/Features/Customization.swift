@@ -123,6 +123,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             hasImage = true
         }
         else {
+            cell.image.image = nil
             hasImage = false
         }
         
@@ -135,6 +136,9 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         if(!full_unlock && indexPath.row > 5){
             cell.lockImage.isHidden = false
+        }
+        else {
+            cell.lockImage.isHidden = true
         }
         
         //cell.sizeThatFits(CGSize(width: collectionView.frame.width/3.1, height: collectionView.frame.width/3.1))
@@ -266,10 +270,12 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
         collectionView?.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
-        collectionViewFlowLayout.minimumInteritemSpacing = 0
-        collectionViewFlowLayout.minimumLineSpacing = 10
+        collectionViewFlowLayout.minimumInteritemSpacing = 6
+        collectionViewFlowLayout.minimumLineSpacing = 6
+        //collectionViewFlowLayout.minimumLineSpacing = collectionViewFlowLayout.minimumLineSpacing
         
-        collectionViewFlowLayout.itemSize = CGSize(width: collectionView.frame.width/3.7, height: collectionView.frame.width/3.7)
+        collectionViewFlowLayout.itemSize = CGSize(width: view.frame.width/3 - 6, height: view.frame.width/3 - 6)
+        
         
         checkSubscription()
         

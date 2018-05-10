@@ -197,7 +197,11 @@ class MainMenuTableViewController: UITableViewController {
                 dismiss(animated: true, completion: nil)
             case 6:    // Contact Us
                 print("conact us was selected")
-                performSegue(withIdentifier: "viewContactInfo", sender: nil)
+                //performSegue(withIdentifier: "viewContactInfo", sender: nil)
+                let email = "contact@gbjmobile.com"
+                if let url = URL(string: "mailto:\(email)") {
+                    UIApplication.shared.open(url)
+                }
             default:    // Random, or something fails
                 isRandom = true
                 print("Random quotes were selected, or something failed.")
