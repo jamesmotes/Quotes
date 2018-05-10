@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
 
 var justChanged = false
 
 var hasImage = true
-var globalImageFile = "Colorcloud.jpg"
+//var globalImageFile = "Colorcloud.jpg"
+
+var globalSchema : Schema = Schema()
 
 class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let realm = try! Realm()
+    var array : [Schema] = []
+    
     //var collectionView: UICollectionView?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -29,7 +35,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FontCell
         
         // Configure the cell
-        
+        /*
         var backgroundColor = UIColor.black
         
         var fontStyle : String = String()
@@ -92,7 +98,8 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             textColor = UIColor.white
             backgroundColor = UIColor.black
         }
-        
+        */
+        /*
         if(imageFile != ""){
             let im : UIImage = UIImage(named: imageFile)!
             cell.image.image = im
@@ -101,12 +108,30 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         else {
             hasImage = false
         }
+        
         cell.name.font = UIFont(name: fontStyle, size: 15)
         cell.quote.font = UIFont(name: fontStyle, size: 35)
         cell.name.textColor = textColor
         cell.quote.textColor = textColor
         
         cell.backgroundColor = backgroundColor
+        */
+        if(array[indexPath.row].imageFile != ""){
+            let imageFile = array[indexPath.row].imageFile
+            let im : UIImage = UIImage(named: imageFile)!
+            cell.image.image = im
+            hasImage = true
+        }
+        else {
+            hasImage = false
+        }
+        
+        cell.name.font = UIFont(name: array[indexPath.row].font, size: 15)
+        cell.quote.font = UIFont(name: array[indexPath.row].font, size: 35)
+        cell.name.textColor = array[indexPath.row].getTextColor()
+        cell.quote.textColor = array[indexPath.row].getTextColor()
+        
+        cell.backgroundColor = array[indexPath.row].getBackgroundColor()
         
         if(!full_unlock && indexPath.row > 5){
             cell.lockImage.isHidden = false
@@ -125,7 +150,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         }
         
         
-        
+        /*
         switch(indexPath.row){
         case 0:
             globalFontStyle = "Papyrus"
@@ -199,6 +224,10 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             globalBackgroundColor = UIColor.black
             whiteBackground = false
         }
+        */
+
+        globalSchema = array[indexPath.row]
+        
         changedFont = true
         justChanged = true
         dismiss(animated: true, completion: nil)
@@ -207,6 +236,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setSchema()
         /*collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
         collectionView?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView!)
@@ -243,16 +273,24 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         checkSubscription()
         
-        view.backgroundColor = globalBackgroundColor
-        collectionView.backgroundColor = globalBackgroundColor
-        if(whiteBackground){
-            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
-        } else {
-            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
-        }
+        
+        
+        array = Array(realm.objects(Schema.self))
+        collectionView.reloadData()
         
         // Do any additional setup after loading the view.
         
+    }
+    
+    func setSchema(){
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        if(globalSchema.whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+            collectionView.backgroundColor = UIColor.black
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+            collectionView.backgroundColor = UIColor.white
+        }
     }
     
     func checkSubscription(){

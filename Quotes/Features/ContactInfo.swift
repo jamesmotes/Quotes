@@ -17,17 +17,21 @@ class ContactInfo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setSchema()
         
-        if(whiteBackground){
+        // Do any additional setup after loading the view.
+    }
+    
+    func setSchema(){
+        if(globalSchema.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
         }
         
-        view.backgroundColor = globalBackgroundColor
+        view.backgroundColor = globalSchema.getBackgroundColor()
         
-        text.textColor = globalFontColor
-        // Do any additional setup after loading the view.
+        text.textColor = globalSchema.getTextColor()
     }
 
     override func didReceiveMemoryWarning() {

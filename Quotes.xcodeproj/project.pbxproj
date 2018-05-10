@@ -201,6 +201,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0DC0E220A3E02E007FEA6B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				1AA438992033E521000C7238 /* QuoteClass.swift */,
+				1A96D549203FA31300254090 /* LoadQuotes.swift */,
+				81542FAE20A3A4550018D234 /* LoadSchemas.swift */,
+				81542FAC20A397420018D234 /* Schema.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		1A62EF5020A25DFE00F38F00 /* Alarms */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,13 +239,10 @@
 		1A62EF5220A25F2B00F38F00 /* MainFunctionality */ = {
 			isa = PBXGroup;
 			children = (
-				1AA438992033E521000C7238 /* QuoteClass.swift */,
 				1A62EF1C20A151B500F38F00 /* LoadingViewController.swift */,
-				1A96D549203FA31300254090 /* LoadQuotes.swift */,
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AA4389B2033E629000C7238 /* FrontPage.swift */,
 				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
-				81542FAE20A3A4550018D234 /* LoadSchemas.swift */,
 			);
 			path = MainFunctionality;
 			sourceTree = "<group>";
@@ -247,7 +255,6 @@
 				812405F9208BF548006E7AB7 /* Customization.swift */,
 				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
 				1AFCC5052093F0310021941B /* CreateQuote.swift */,
-				81542FAC20A397420018D234 /* Schema.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -337,6 +344,7 @@
 				1A62EF5320A25F6300F38F00 /* Features */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
 				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
+				1A0DC0E220A3E02E007FEA6B /* Database */,
 				1A62EF5220A25F2B00F38F00 /* MainFunctionality */,
 				1A62EF5120A25F0D00F38F00 /* Purchasing */,
 				1AACFE951FF2F65E00E6424D /* Main.storyboard */,

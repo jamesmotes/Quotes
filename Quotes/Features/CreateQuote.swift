@@ -26,7 +26,7 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setSchema()
         /*if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
         }
         else {
@@ -39,21 +39,21 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if(whiteBackground){
+        editButton.isHidden = true
+        setSchema()
+    }
+    
+    func setSchema(){
+        if(globalSchema.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+            view.backgroundColor = UIColor.white
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+            view.backgroundColor = globalSchema.getBackgroundColor()
         }
-        editButton.isHidden = true
         
-        if(globalImageFile != ""){
-            image.image = UIImage(named: globalImageFile)
-        }
-        if(whiteBackground){
-            view.backgroundColor = UIColor.white
-        }
-        else {
-            view.backgroundColor = globalBackgroundColor
+        if(globalSchema.imageFile != ""){
+            image.image = UIImage(named: globalSchema.imageFile)
         }
     }
 

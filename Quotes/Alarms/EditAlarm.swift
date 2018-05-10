@@ -22,25 +22,28 @@ class EditAlarm: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
-        datePicker.setValue(globalFontColor, forKeyPath: "textColor")
         super.viewDidLoad()
+        setSchema()
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
             //print(notifications)
         }
+        // Do any additional setup after loading the view.
+    }
+    
+    func setSchema(){
+        datePicker.setValue(globalSchema.getTextColor(), forKeyPath: "textColor")
         
-        view.backgroundColor = globalBackgroundColor
-        datePicker.backgroundColor = globalBackgroundColor
-
-        if(whiteBackground){
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        datePicker.backgroundColor = globalSchema.getBackgroundColor()
+        
+        if(globalSchema.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
             saveButton.setTitleColor(UIColor.black, for: .normal)
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
             saveButton.setTitleColor(UIColor.white, for: .normal)
         }
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

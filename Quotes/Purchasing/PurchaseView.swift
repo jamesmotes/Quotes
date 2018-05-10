@@ -32,12 +32,7 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if(whiteBackground){
-            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
-        } else {
-            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
-        }
+        setSchema()
         
         /********************************************/
         //Collection View Setup
@@ -46,7 +41,6 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         collectionView?.delegate = self
         collectionView?.dataSource = self
         
-        collectionView.backgroundColor = UIColor.black
         
         /*let collectionViewFlowLayout = UICollectionViewFlowLayout()
         collectionView?.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
@@ -67,23 +61,9 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         */
         
         
-        self.collectionView.backgroundColor = UIColor.clear
-        self.collectionView.backgroundView = UIView()
         
         
-        /********************************************/
-        //font color setup
-        backButton.titleLabel?.textColor = globalFontColor
-        view.backgroundColor = globalBackgroundColor
         
-        header.textColor = globalFontColor
-        ads.textColor = globalFontColor
-        notifications.textColor = globalFontColor
-        categories.textColor = globalFontColor
-        styles.textColor = globalFontColor
-        search.textColor = globalFontColor
-        
-        restoreButton.setTitleColor(globalFontColor, for: .normal)
         
         search.text = "Search People, Categories,\nand Quotes"
         
@@ -96,21 +76,6 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         styles.font = UIFont(descriptor: desc, size: (notifications.font.pointSize))
         // Do any additional setup after loading the view.
         */
-        /********************************************/
-        //background image
-        
-        if(globalImageFile != ""){
-            image.image = UIImage(named: globalImageFile)
-        }
-        else {
-            image.image = nil
-        }
-        /********************************************/
-        //background for restore button image
-        
-        
-        restoreBackground.layer.borderColor = globalFontColor.cgColor
-        restoreBackground.layer.borderWidth = 3.0
         
         
         /********************************************/
@@ -126,6 +91,48 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
                                                selector: #selector(handlePurchaseSuccessfull(notification:)),
                                                name: PurchasesController.purchaseSuccessfulNotification,
                                                object: nil)
+    }
+    
+    func setSchema(){
+        if(globalSchema.whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+        }
+        
+        self.collectionView.backgroundColor = UIColor.clear
+        self.collectionView.backgroundView = UIView()
+        
+        /********************************************/
+        //font color setup
+        backButton.titleLabel?.textColor = globalSchema.getTextColor()
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        
+        header.textColor = globalSchema.getTextColor()
+        ads.textColor = globalSchema.getTextColor()
+        notifications.textColor = globalSchema.getTextColor()
+        categories.textColor = globalSchema.getTextColor()
+        styles.textColor = globalSchema.getTextColor()
+        search.textColor = globalSchema.getTextColor()
+        
+        restoreButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        
+        /********************************************/
+        //background image
+        
+        if(globalSchema.imageFile != ""){
+            image.image = UIImage(named: globalSchema.imageFile)
+        }
+        else {
+            image.image = nil
+        }
+        /********************************************/
+        //background for restore button image
+        
+        
+        restoreBackground.layer.borderColor = globalSchema.getTextColor()?.cgColor
+        restoreBackground.layer.borderWidth = 3.0
+        
     }
     
     @objc func handleOptionsLoaded(notification: Notification) {
@@ -252,10 +259,10 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         }
         
         
-        cell.topText.textColor = globalFontColor
-        cell.bottomText.textColor = globalFontColor
+        cell.topText.textColor = globalSchema.getTextColor()
+        cell.bottomText.textColor = globalSchema.getTextColor()
         cell.imageView.layer.borderWidth = 3.0
-        cell.imageView.layer.borderColor = globalFontColor.cgColor
+        cell.imageView.layer.borderColor = globalSchema.getTextColor()?.cgColor
         return cell
     }
     

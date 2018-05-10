@@ -21,11 +21,11 @@ var isRandom = false
 var personalQuotes = false
 
 var changedFont = true
-var globalFontStyle = "Georgia"
-var globalFontColor = UIColor.white
-var globalBackgroundColor = UIColor.black
+//var globalFontStyle = "Georgia"
+//var globalFontColor = UIColor.white
+//var globalBackgroundColor = UIColor.black
 
-var whiteBackground = false
+//var whiteBackground = false
 
 class FrontPage: UIViewController , GADInterstitialDelegate {
 
@@ -59,13 +59,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     var didComeFromAdd = false
     
     override func viewDidLoad() {
-        if(globalImageFile != ""){
-            image.image = UIImage(named: globalImageFile)
-        }
-        else {
-            image.image = nil
-            view.backgroundColor = globalBackgroundColor
-        }
+        setSchema()
         super.viewDidLoad()
         
         
@@ -101,34 +95,33 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             }
         }
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        checkSubscription()
-        if(globalImageFile != ""){
-            image.image = UIImage(named: globalImageFile)
+    
+    func setSchema(){
+        if(globalSchema.imageFile != ""){
+            image.image = UIImage(named: globalSchema.imageFile)
         }
         else {
             image.image = nil
+            view.backgroundColor = globalSchema.getBackgroundColor()
         }
-        
         if(changedFont){
             changedFont = false
-            text.textColor = globalFontColor
+            text.textColor = globalSchema.getTextColor()
             var currentSize = 42
-            text.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
+            text.font = UIFont(name: globalSchema.font, size: CGFloat(currentSize))
             
-            person.textColor = globalFontColor
+            person.textColor = globalSchema.getTextColor()
             currentSize = 25
-            person.font = UIFont(name: globalFontStyle, size: CGFloat(currentSize))
+            person.font = UIFont(name: globalSchema.font, size: CGFloat(currentSize))
             
-            createQuoteButton.setTitleColor(globalFontColor, for: .normal)
-            deleteQuoteButton.setTitleColor(globalFontColor, for: .normal)
+            createQuoteButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
+            deleteQuoteButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
             
-            self.view.backgroundColor = globalBackgroundColor
+            self.view.backgroundColor = globalSchema.getBackgroundColor()
         }
         
         
-        if(whiteBackground){
+        if(globalSchema.whiteBackground){
             menuBlack.isHidden = false
             searchBlack.isHidden = false
             shareBlack.isHidden = false
@@ -146,6 +139,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             searchButton.isHidden = false
             shareButton.isHidden = false
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        checkSubscription()
+        setSchema()
+        
+        
         
         navigationController?.isNavigationBarHidden = true
         if(!didComeFromAdd){
@@ -299,7 +299,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             self.text.text = quotes[index].text
             self.person.text = "- " + quotes[index].person
             if(!quotes[index].favorite){
-                if(whiteBackground){
+                if(globalSchema.whiteBackground){
                     self.favButton.tintColor = UIColor.lightGray
                 }
                 else {

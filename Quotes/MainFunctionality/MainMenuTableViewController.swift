@@ -65,19 +65,8 @@ class MainMenuTableViewController: UITableViewController {
         }*/
         
         self.tableView.tableFooterView = UIView()
-        
-        tableView.tableHeaderView?.backgroundColor = UIColor.clear
-        
-        view.backgroundColor = globalBackgroundColor
-        if(whiteBackground){
-            view.backgroundColor = UIColor.white
-        }
-        tableView.backgroundColor = globalBackgroundColor
-        
         super.viewDidLoad()
-        
-        
-        
+ 
         backButton.imageEdgeInsets.right = view.frame.size.width - 30
         
         for i in 1...(tableOptions.count-1) {
@@ -100,19 +89,41 @@ class MainMenuTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    func setSchema(){
+        tableView.tableHeaderView?.backgroundColor = UIColor.clear
+        
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        if(globalSchema.whiteBackground){
+            view.backgroundColor = UIColor.white
+        }
+        else {
+            view.backgroundColor = UIColor.black
+        }
+        tableView.backgroundColor = globalSchema.getBackgroundColor()
+        
+        
+        if(globalSchema.whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+        }
+        
+        
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        tableView.backgroundColor = globalSchema.getBackgroundColor()
+        backButton.backgroundColor = globalSchema.getBackgroundColor()
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
+        setSchema()
         navigationController?.isNavigationBarHidden = false
         if(justChanged){
             justChanged = false
             dismiss(animated: true, completion: nil)
         }
         
-        if(whiteBackground){
-            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
-        } else {
-            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
-        }
+        
         
         checkSubscription()
         
@@ -124,9 +135,6 @@ class MainMenuTableViewController: UITableViewController {
         isDownvote = false
         isRandom = false
         
-        view.backgroundColor = globalBackgroundColor
-        tableView.backgroundColor = globalBackgroundColor
-        backButton.backgroundColor = globalBackgroundColor
     }
     
     func checkSubscription(){
@@ -278,12 +286,12 @@ class MainMenuTableViewController: UITableViewController {
             cell.icon.image = nil
             cell.label2.textAlignment = .left
             
-            cell.label2.font = UIFont(name: globalFontStyle, size: CGFloat(labelFontSize))  // Set font
-            cell.label2.textColor = globalFontColor                                         // Set font color
-            cell.label2.adjustsFontSizeToFitWidth = true                                    // Set font size
+            cell.label2.font = UIFont(name: globalSchema.font, size: CGFloat(labelFontSize))  // Set font
+            cell.label2.textColor = globalSchema.getTextColor()                               // Set font color
+            cell.label2.adjustsFontSizeToFitWidth = true                                      // Set font size
             
-            cell.backgroundColor = globalBackgroundColor
-            cell.label2.backgroundColor = globalBackgroundColor                   // Set background color
+            cell.backgroundColor = globalSchema.getBackgroundColor()
+            cell.label2.backgroundColor = globalSchema.getBackgroundColor()               // Set background color
 
         }
         else {
@@ -293,7 +301,7 @@ class MainMenuTableViewController: UITableViewController {
             //sortedArray = tableOptions[currentMenu]
             if(indexPath.row == 2){
                 cell.icon.image = #imageLiteral(resourceName: "star")
-                if(whiteBackground){
+                if(globalSchema.whiteBackground){
                     cell.icon.tintColor = UIColor.black
                 }
                 else {
@@ -301,23 +309,23 @@ class MainMenuTableViewController: UITableViewController {
                 }
             }
             else {
-                if(whiteBackground){
+                if(globalSchema.whiteBackground){
                     cell.icon.image = UIImage(named: mainMenuBlackIcons[indexPath.row])
                 }
                 else {
                     cell.icon.image = UIImage(named: mainMenuWhiteIcons[indexPath.row])
                 }
             }
-            cell.label.text = (tableOptions[currentMenu])[indexPath.row]                // Label text
+            cell.label.text = (tableOptions[currentMenu])[indexPath.row]        // Label text
             //cell.textLabel?.textAlignment = .center                           // Center text
-            cell.backgroundColor = globalBackgroundColor
-            cell.label.backgroundColor = globalBackgroundColor                   // Set background color
+            cell.backgroundColor = globalSchema.getBackgroundColor()
+            cell.label.backgroundColor = globalSchema.getBackgroundColor()      // Set background color
             
             //let currentSize = 100
             //cell.label.font = UIFont(name: "System", size: CGFloat(currentSize))
             
-            cell.label.font = UIFont(name: globalFontStyle, size: CGFloat(labelFontSize))   // Set font
-            cell.label.textColor = globalFontColor                                          // Set font color
+            cell.label.font = UIFont(name: globalSchema.font, size: CGFloat(labelFontSize))   // Set font
+            cell.label.textColor = globalSchema.getTextColor()                                          // Set font color
             cell.label.adjustsFontSizeToFitWidth = true                                     // Set font size
             
             //let currentSize = 32

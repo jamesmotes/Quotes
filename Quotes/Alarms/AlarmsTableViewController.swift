@@ -31,15 +31,7 @@ class AlarmsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableHeaderView?.backgroundColor = UIColor.clear
-        self.tableView.backgroundColor = globalBackgroundColor
-        self.tableView.tableFooterView = UIView()
-        back.tintColor = globalFontColor
-        addButton.tintColor = globalFontColor
-        
-        let textAttributes = [NSAttributedStringKey.foregroundColor:globalFontColor]
-        navBar.titleTextAttributes = textAttributes
-        navBar.tintColor = globalBackgroundColor
-        navBar.barTintColor = globalBackgroundColor
+        setSchema()
         
         
         center.getPendingNotificationRequests { (notifications) in
@@ -97,6 +89,36 @@ class AlarmsTableViewController: UITableViewController {
         self.tableView.addGestureRecognizer(recognizer)
         
     }
+    
+    func setSchema(){
+        self.tableView.backgroundColor = globalSchema.getBackgroundColor()
+        self.tableView.tableFooterView = UIView()
+        back.tintColor = globalSchema.getTextColor()
+        addButton.tintColor = globalSchema.getTextColor()
+        
+        let textAttributes = [NSAttributedStringKey.foregroundColor:globalSchema.getTextColor()]
+        navBar.titleTextAttributes = textAttributes
+        navBar.tintColor = globalSchema.getBackgroundColor()
+        navBar.barTintColor = globalSchema.getBackgroundColor()
+        
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        tableView.backgroundColor = globalSchema.getBackgroundColor()
+        tableView.tableHeaderView?.backgroundColor = UIColor.clear
+        navBar.barTintColor = globalSchema.getBackgroundColor()
+        navBar.tintColor = globalSchema.getBackgroundColor()
+        
+        addButton.tintColor = globalSchema.getTextColor()
+        
+        if(globalSchema.whiteBackground){
+            back.image = UIImage(named: "BackButtonBlack.png")
+            //back.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+            tableView.separatorColor = UIColor.black
+        } else {
+            back.image = UIImage(named: "BackButtonWhite.png")
+            //back.imageView?.image = UIImage(named: "BackButtonWhite.png")
+            tableView.separatorColor = UIColor.white
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -106,26 +128,13 @@ class AlarmsTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         //alarms = []
         
-        view.backgroundColor = globalBackgroundColor
-        tableView.backgroundColor = globalBackgroundColor
-        tableView.tableHeaderView?.backgroundColor = UIColor.clear
-        navBar.barTintColor = globalBackgroundColor
-        navBar.tintColor = globalBackgroundColor
         
-        tableView.separatorColor = UIColor.black
+        
+        //tableView.separatorColor = UIColor.black
     
         //back.tintColor = globalFontColor
-        addButton.tintColor = globalFontColor
         
-        if(whiteBackground){
-            back.image = UIImage(named: "BackButtonBlack.png")
-            //back.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
-            tableView.separatorColor = UIColor.black
-        } else {
-            back.image = UIImage(named: "BackButtonWhite.png")
-            //back.imageView?.image = UIImage(named: "BackButtonWhite.png")
-            tableView.separatorColor = UIColor.white
-        }
+        
         
         
         center.getPendingNotificationRequests { (notifications) in
@@ -258,10 +267,10 @@ class AlarmsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AlarmMenuCell
 
-        cell.time.textColor = globalFontColor
-        cell.name.textColor = globalFontColor
-        cell.AM.textColor = globalFontColor
-        cell.backgroundColor = globalBackgroundColor
+        cell.time.textColor = globalSchema.getTextColor()
+        cell.name.textColor = globalSchema.getTextColor()
+        cell.AM.textColor = globalSchema.getTextColor()
+        cell.backgroundColor = globalSchema.getBackgroundColor()
         
         //print(alarms[indexPath].trigger)
         // Configure the cell...

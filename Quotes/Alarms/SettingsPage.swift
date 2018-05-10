@@ -46,7 +46,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         var cell = UITableViewCell()
         
         cell.textLabel?.text = filteredData[indexPath.row]
-        cell.textLabel?.textColor = globalFontColor
+        cell.textLabel?.textColor = globalSchema.getTextColor()
         cell.backgroundColor = UIColor.clear
         return cell
     }
@@ -58,21 +58,11 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = globalBackgroundColor
-        datePicker.backgroundColor = globalBackgroundColor
-        
-        if(whiteBackground){
-            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
-        } else {
-            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
-        }
-        saveButton.setTitleColor(globalFontColor, for: .normal)
+        setSchema()
         
         data.append(contentsOf: peopleOptions)
         data.shuffle()
         filteredData = data
-        datePicker.setValue(globalFontColor, forKeyPath: "textColor")
         center.requestAuthorization(options: options) {
             (granted, error) in
             if !granted {
@@ -85,15 +75,30 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         //createNotification()
         
         
-        tableView.sectionIndexTrackingBackgroundColor = globalBackgroundColor
-        tableView.sectionIndexBackgroundColor = globalBackgroundColor
         let backView = UIView(frame: self.tableView.bounds)
-        backView.backgroundColor = globalBackgroundColor // or whatever color
+        backView.backgroundColor = globalSchema.getBackgroundColor()// or whatever color
         self.tableView.backgroundView = backView
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
         tableView.tableHeaderView = searchController.searchBar
+        
+    }
+    
+    func setSchema(){
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        datePicker.backgroundColor = globalSchema.getBackgroundColor()
+        
+        if(globalSchema.whiteBackground){
+            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+        } else {
+            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+        }
+        saveButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        
+        datePicker.setValue(globalSchema.getTextColor(), forKeyPath: "textColor")
+        tableView.sectionIndexTrackingBackgroundColor = globalSchema.getBackgroundColor()
+        tableView.sectionIndexBackgroundColor = globalSchema.getBackgroundColor()
         
     }
 

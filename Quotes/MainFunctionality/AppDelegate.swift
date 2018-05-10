@@ -60,7 +60,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(10, forKey: "reviewCountdown")
             defaults.set(false, forKey: "full_unlock")
             defaults.set(false, forKey: "whiteBackground")
-            
+            globalSchema.setTextColor(color: UIColor.white)
+            globalSchema.font = "Georgia"
+            globalSchema.setBackgroundColor(color: UIColor.black)
+            globalSchema.imageFile = "Colorcloud.jpg"
+            globalSchema.whiteBackground = false
             storeCustomiationInfo()
         }
         else{
@@ -68,11 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
             quoteIterator = defaults.integer(forKey: "quoteIterator")
-            globalFontColor = defaults.colorForKey(key: "fontColor")!
-            globalFontStyle = defaults.string(forKey: "fontStyle")!
-            globalBackgroundColor = defaults.colorForKey(key: "backgroundColor")!
-            globalImageFile = defaults.string(forKey: "imageFile")!
-            whiteBackground = defaults.bool(forKey: "whiteBackground")
+            globalSchema.setTextColor(color: defaults.colorForKey(key: "fontColor")!)
+            globalSchema.font = defaults.string(forKey: "fontStyle")!
+            globalSchema.setBackgroundColor(color: defaults.colorForKey(key: "backgroundColor")!)
+            globalSchema.imageFile = defaults.string(forKey: "imageFile")!
+            globalSchema.whiteBackground = defaults.bool(forKey: "whiteBackground")
         }
         
         if(defaults.integer(forKey: "reviewCountdown") == 0){
@@ -307,7 +311,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func updateDatabase(){
         
-        var lq : LoadQuotes = LoadQuotes()
+        var _ : LoadQuotes = LoadQuotes()
+        var _ : LoadSchemas = LoadSchemas()
         // TODO: create LoadSchemas()
         let defaults = UserDefaults.standard
         defaults.set(quoteIterator, forKey: "quoteIterator")
@@ -354,11 +359,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func storeCustomiationInfo() {
         // TODO: Change to global Schema object
         let defaults = UserDefaults.standard
-        defaults.setColor(color: globalFontColor, forKey: "fontColor")
-        defaults.set(globalFontStyle, forKey: "fontStyle")
-        defaults.setColor(color: globalBackgroundColor, forKey: "backgroundColor")
-        defaults.set(globalImageFile, forKey: "imageFile")
-        defaults.set(whiteBackground, forKey: "whiteBackground")
+        defaults.setColor(color: globalSchema.getTextColor(), forKey: "fontColor")
+        defaults.set(globalSchema.font, forKey: "fontStyle")
+        defaults.setColor(color: globalSchema.getBackgroundColor(), forKey: "backgroundColor")
+        defaults.set(globalSchema.imageFile, forKey: "imageFile")
+        defaults.set(globalSchema.whiteBackground, forKey: "whiteBackground")
     }
     
 

@@ -49,7 +49,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         
         cell.textLabel?.text = filteredData[indexPath.row]
-        cell.textLabel?.textColor = globalFontColor
+        cell.textLabel?.textColor = globalSchema.getTextColor()
         cell.backgroundColor = UIColor.clear
         return cell
     }
@@ -88,14 +88,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setSchema()
         
-        if(whiteBackground){
-            backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
-        } else {
-            backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
-        }
-        
-        view.backgroundColor = globalBackgroundColor
         
         data.append(contentsOf: peopleOptions)
         data.append(contentsOf: catOptions)
@@ -103,16 +97,12 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         data.shuffle()
         filteredData = data
         filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
-        tableView.backgroundView?.backgroundColor = globalBackgroundColor
-        tableView.backgroundColor = globalBackgroundColor
         
         //searchBar.barTintColor = UIColor.black
         //tableView.sectionIndexTrackingBackgroundColor = globalBackgroundColor
         //tableView.sectionIndexBackgroundColor = globalBackgroundColor
         
-        let backView = UIView(frame: self.tableView.bounds)
-        backView.backgroundColor = globalBackgroundColor // or whatever color
-        self.tableView.backgroundView = backView
+        
         // Do any additional setup after loading the view.
         
         /*searchController.searchResultsUpdater = self
@@ -129,12 +119,24 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         tableView.tableHeaderView = searchController.searchBar
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if(whiteBackground){
+    func setSchema(){
+        if(globalSchema.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
         }
+        
+        tableView.backgroundView?.backgroundColor = globalSchema.getBackgroundColor()
+        tableView.backgroundColor = globalSchema.getBackgroundColor()
+        view.backgroundColor = globalSchema.getBackgroundColor()
+        
+        let backView = UIView(frame: self.tableView.bounds)
+        backView.backgroundColor = globalSchema.getBackgroundColor() // or whatever color
+        self.tableView.backgroundView = backView
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setSchema()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
