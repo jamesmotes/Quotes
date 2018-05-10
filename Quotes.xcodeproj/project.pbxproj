@@ -81,6 +81,8 @@
 		812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F7208BCB0A006E7AB7 /* ContactInfo.swift */; };
 		812405FA208BF548006E7AB7 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405F9208BF548006E7AB7 /* Customization.swift */; };
 		812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812405FD208CDE50006E7AB7 /* FontCell.swift */; };
+		81542FAD20A397420018D234 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81542FAC20A397420018D234 /* Schema.swift */; };
+		81542FAF20A3A4550018D234 /* LoadSchemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81542FAE20A3A4550018D234 /* LoadSchemas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -180,6 +182,8 @@
 		812405F7208BCB0A006E7AB7 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		812405F9208BF548006E7AB7 /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
 		812405FD208CDE50006E7AB7 /* FontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCell.swift; sourceTree = "<group>"; };
+		81542FAC20A397420018D234 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
+		81542FAE20A3A4550018D234 /* LoadSchemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSchemas.swift; sourceTree = "<group>"; };
 		D5C9F4AF315A58A95F012AA3 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
 		E35B5BE74640BD28174D4574 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,6 +234,7 @@
 				1AACFE911FF2F65E00E6424D /* AppDelegate.swift */,
 				1AA4389B2033E629000C7238 /* FrontPage.swift */,
 				1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */,
+				81542FAE20A3A4550018D234 /* LoadSchemas.swift */,
 			);
 			path = MainFunctionality;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				812405F9208BF548006E7AB7 /* Customization.swift */,
 				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
 				1AFCC5052093F0310021941B /* CreateQuote.swift */,
+				81542FAC20A397420018D234 /* Schema.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -549,8 +555,10 @@
 				1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */,
 				1A62EF11209FA39100F38F00 /* PurchaseView.swift in Sources */,
 				1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */,
+				81542FAD20A397420018D234 /* Schema.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
+				81542FAF20A3A4550018D234 /* LoadSchemas.swift in Sources */,
 				812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */,
 				812405FA208BF548006E7AB7 /* Customization.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
