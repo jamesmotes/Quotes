@@ -48,6 +48,11 @@
 		1A62EF4D20A25DB700F38F00 /* PeopleWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4720A25DB100F38F00 /* PeopleWhite.png */; };
 		1A62EF4E20A25DB700F38F00 /* PersonalWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4820A25DB200F38F00 /* PersonalWhite.png */; };
 		1A62EF4F20A25DB700F38F00 /* PersonalBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4920A25DB500F38F00 /* PersonalBlack.png */; };
+		1A7BCA1420A4037C001241E6 /* City.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA0F20A4037C001241E6 /* City.jpg */; };
+		1A7BCA1520A4037C001241E6 /* colorhallway.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1020A4037C001241E6 /* colorhallway.jpg */; };
+		1A7BCA1620A4037C001241E6 /* basketballcourt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */; };
+		1A7BCA1720A4037C001241E6 /* whitemountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1220A4037C001241E6 /* whitemountain.jpg */; };
+		1A7BCA1820A4037C001241E6 /* towerdown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1320A4037C001241E6 /* towerdown.jpg */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
@@ -109,11 +114,6 @@
 		1A0DC0D120A3DED9007FEA6B /* aurora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aurora.jpg; sourceTree = "<group>"; };
 		1A0DC0D220A3DEDA007FEA6B /* colorsky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colorsky.jpg; sourceTree = "<group>"; };
 		1A0DC0D320A3DEDC007FEA6B /* desertwalk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desertwalk.jpg; sourceTree = "<group>"; };
-		1A0DC0DD20A3DEEE007FEA6B /* basketballcourt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basketballcourt.jpg; path = "/Users/James/Documents/Not School/AppExamples/Quotes0_7/Quotes/Quotes/imageFiles/basketballcourt.jpg"; sourceTree = "<absolute>"; };
-		1A0DC0DE20A3DEEE007FEA6B /* colorhallway.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colorhallway.jpg; path = "/Users/James/Documents/Not School/AppExamples/Quotes0_7/Quotes/Quotes/imageFiles/colorhallway.jpg"; sourceTree = "<absolute>"; };
-		1A0DC0DF20A3DEEE007FEA6B /* whitemountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whitemountain.jpg; path = "/Users/James/Documents/Not School/AppExamples/Quotes0_7/Quotes/Quotes/imageFiles/whitemountain.jpg"; sourceTree = "<absolute>"; };
-		1A0DC0E020A3DEEF007FEA6B /* City.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = City.jpg; path = "/Users/James/Documents/Not School/AppExamples/Quotes0_7/Quotes/Quotes/imageFiles/City.jpg"; sourceTree = "<absolute>"; };
-		1A0DC0E120A3DEEF007FEA6B /* towerdown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = towerdown.jpg; path = "/Users/James/Documents/Not School/AppExamples/Quotes0_7/Quotes/Quotes/imageFiles/towerdown.jpg"; sourceTree = "<absolute>"; };
 		1A62EF10209FA39100F38F00 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		1A62EF1420A08E2800F38F00 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
@@ -144,6 +144,11 @@
 		1A62EF4720A25DB100F38F00 /* PeopleWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PeopleWhite.png; sourceTree = "<group>"; };
 		1A62EF4820A25DB200F38F00 /* PersonalWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PersonalWhite.png; sourceTree = "<group>"; };
 		1A62EF4920A25DB500F38F00 /* PersonalBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PersonalBlack.png; sourceTree = "<group>"; };
+		1A7BCA0F20A4037C001241E6 /* City.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = City.jpg; path = ../../../../../../../Downloads/morepics/City.jpg; sourceTree = "<group>"; };
+		1A7BCA1020A4037C001241E6 /* colorhallway.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colorhallway.jpg; path = ../../../../../../../Downloads/morepics/colorhallway.jpg; sourceTree = "<group>"; };
+		1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basketballcourt.jpg; path = ../../../../../../../Downloads/morepics/basketballcourt.jpg; sourceTree = "<group>"; };
+		1A7BCA1220A4037C001241E6 /* whitemountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whitemountain.jpg; path = ../../../../../../../Downloads/morepics/whitemountain.jpg; sourceTree = "<group>"; };
+		1A7BCA1320A4037C001241E6 /* towerdown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = towerdown.jpg; path = ../../../../../../../Downloads/morepics/towerdown.jpg; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -262,11 +267,11 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
-				1A0DC0DD20A3DEEE007FEA6B /* basketballcourt.jpg */,
-				1A0DC0E020A3DEEF007FEA6B /* City.jpg */,
-				1A0DC0DE20A3DEEE007FEA6B /* colorhallway.jpg */,
-				1A0DC0E120A3DEEF007FEA6B /* towerdown.jpg */,
-				1A0DC0DF20A3DEEE007FEA6B /* whitemountain.jpg */,
+				1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */,
+				1A7BCA0F20A4037C001241E6 /* City.jpg */,
+				1A7BCA1020A4037C001241E6 /* colorhallway.jpg */,
+				1A7BCA1320A4037C001241E6 /* towerdown.jpg */,
+				1A7BCA1220A4037C001241E6 /* whitemountain.jpg */,
 				1A0DC0D120A3DED9007FEA6B /* aurora.jpg */,
 				1A0DC0CD20A3DED2007FEA6B /* butterfly.jpg */,
 				1A0DC0CB20A3DEC5007FEA6B /* clouds.jpg */,
@@ -459,11 +464,13 @@
 				1A62EF2A20A157C200F38F00 /* babylion.jpg in Resources */,
 				1A62EF4C20A25DB700F38F00 /* ContactUsWhite.png in Resources */,
 				1A62EF2620A157C200F38F00 /* starrynight.jpg in Resources */,
+				1A7BCA1420A4037C001241E6 /* City.jpg in Resources */,
 				1A0DC0D620A3DEDF007FEA6B /* butterfly.jpg in Resources */,
 				1A0DC0DC20A3DEDF007FEA6B /* desertwalk.jpg in Resources */,
 				1A62EF4B20A25DB700F38F00 /* PeopleBlack.png in Resources */,
 				812405F420884398006E7AB7 /* Fonts in Resources */,
 				1A0DC0DA20A3DEDF007FEA6B /* aurora.jpg in Resources */,
+				1A7BCA1520A4037C001241E6 /* colorhallway.jpg in Resources */,
 				1A62EF2B20A157C200F38F00 /* road.jpg in Resources */,
 				1A62EF3E20A1E6FD00F38F00 /* FontsWhite.png in Resources */,
 				1A62EF3D20A1E6FD00F38F00 /* AlarmIconWhite.png in Resources */,
@@ -474,6 +481,7 @@
 				1A62EF4020A1E6FD00F38F00 /* CategoriesWhite.png in Resources */,
 				8105650B208D821300BB9433 /* MenuBlack.png in Resources */,
 				81056509208D821300BB9433 /* MenuWhite.png in Resources */,
+				1A7BCA1820A4037C001241E6 /* towerdown.jpg in Resources */,
 				1A62EF4A20A25DB700F38F00 /* ContactUsBlack.png in Resources */,
 				81056506208D821200BB9433 /* SearchBlack.png in Resources */,
 				1A62EF3C20A1E6FD00F38F00 /* CategoriesBlack.png in Resources */,
@@ -482,6 +490,7 @@
 				1A0DC0D920A3DEDF007FEA6B /* ferriswheel.jpg in Resources */,
 				1A62EF4F20A25DB700F38F00 /* PersonalBlack.png in Resources */,
 				1A62EF4E20A25DB700F38F00 /* PersonalWhite.png in Resources */,
+				1A7BCA1720A4037C001241E6 /* whitemountain.jpg in Resources */,
 				1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1A62EF2F20A1E4C200F38F00 /* lockicon.png in Resources */,
@@ -493,6 +502,7 @@
 				81056507208D821200BB9433 /* SearchWhite.png in Resources */,
 				1A62EF3B20A1E6FD00F38F00 /* FontsBlack.png in Resources */,
 				1A62EF2520A157C200F38F00 /* airballoons.jpg in Resources */,
+				1A7BCA1620A4037C001241E6 /* basketballcourt.jpg in Resources */,
 				1A0DC0DB20A3DEDF007FEA6B /* colorsky.jpg in Resources */,
 				1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */,
 				1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */,

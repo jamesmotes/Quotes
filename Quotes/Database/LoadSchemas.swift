@@ -18,7 +18,6 @@ class LoadSchemas {
         // var whiteBackground : Bool = Bool()
         var textColor : UIColor = UIColor()
         var backgroundColor : UIColor = UIColor()
-        var schemas = [Schema]()
         
         imageFile = ""
         fontStyle = "Papyrus"
@@ -86,86 +85,86 @@ class LoadSchemas {
         imageFile = "whitetower.jpg"
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
-        /*imageFile = "basketballcourt.png"
-        fontStyle = "Symbol"
+        imageFile = "basketballcourt.jpg"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
- 
+        
         imageFile = "City.jpg"
-        fontStyle = "System"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
  
         imageFile = "colorhallway.jpg"
-        fontStyle = "System"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "towerdown.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "whitemountain.jpg"
-        fontStyle = "Symbol"
-        textColor = UIColor.white
-        backgroundColor = UIColor.black
-        addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
-        */
-        imageFile = "aurora.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
+        imageFile = "aurora.jpg"
+        fontStyle = "Copperplate"
+        textColor = UIColor.white
+        backgroundColor = UIColor.black
+        addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
+        /*
         imageFile = "butterfly.jpg"
         fontStyle = "Symbol"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
-        
+        */
         imageFile = "clouds.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "colorsky.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "desertwalk.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "ferriswheel.jpg"
-        fontStyle = "Symbol"
-        textColor = UIColor.white
-        backgroundColor = UIColor.black
+        fontStyle = "Copperplate"
+        textColor = UIColor.black
+        backgroundColor = UIColor.white
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "fyah.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "hotair.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
  
         imageFile = "tempestuousocean.jpg"
-        fontStyle = "Symbol"
+        fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black
         addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
@@ -194,6 +193,12 @@ class LoadSchemas {
         schema.font = fontStyle
         schema.setTextColor(color: textColor)
         schema.setBackgroundColor(color: backgroundColor)
+        if(backgroundColor == UIColor.white){
+            schema.whiteBackground = true
+        }
+        else {
+            schema.whiteBackground = false
+        }
         try! realm.write {
             realm.add(schema)
         }

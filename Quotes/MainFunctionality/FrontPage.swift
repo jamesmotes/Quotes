@@ -375,10 +375,37 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     @IBAction func share(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: [self.text.text! + " " + self.person.text!], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: [screenShotMethod(), self.text.text! + " " + self.person.text!], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         
         self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    func screenShotMethod() -> UIImage{
+        //Create the UIImage
+        UIGraphicsBeginImageContext(view.frame.size)
+        
+        
+        createQuoteButton.isHidden = true
+        deleteQuoteButton.isHidden = true
+        menuBlack.isHidden = true
+        searchBlack.isHidden = true
+        shareBlack.isHidden = true
+        
+        menuButton.isHidden = true
+        searchButton.isHidden = true
+        shareButton.isHidden = true
+        favButton.isHidden = true
+        
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        //Save it to the camera roll
+        //UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        
+        favButton.isHidden = false
+        setSchema()
+        return image!
     }
     
     @IBAction func search(_ sender: Any) {
