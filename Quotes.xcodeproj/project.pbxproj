@@ -53,6 +53,8 @@
 		1A7BCA1620A4037C001241E6 /* basketballcourt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */; };
 		1A7BCA1720A4037C001241E6 /* whitemountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1220A4037C001241E6 /* whitemountain.jpg */; };
 		1A7BCA1820A4037C001241E6 /* towerdown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1320A4037C001241E6 /* towerdown.jpg */; };
+		1A7BCA1B20A5219B001241E6 /* unlockwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1920A5219A001241E6 /* unlockwhite.png */; };
+		1A7BCA1C20A5219B001241E6 /* unlockblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1A20A5219B001241E6 /* unlockblack.png */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
@@ -149,6 +151,8 @@
 		1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basketballcourt.jpg; path = ../../../../../../../Downloads/morepics/basketballcourt.jpg; sourceTree = "<group>"; };
 		1A7BCA1220A4037C001241E6 /* whitemountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whitemountain.jpg; path = ../../../../../../../Downloads/morepics/whitemountain.jpg; sourceTree = "<group>"; };
 		1A7BCA1320A4037C001241E6 /* towerdown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = towerdown.jpg; path = ../../../../../../../Downloads/morepics/towerdown.jpg; sourceTree = "<group>"; };
+		1A7BCA1920A5219A001241E6 /* unlockwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlockwhite.png; sourceTree = "<group>"; };
+		1A7BCA1A20A5219B001241E6 /* unlockblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlockblack.png; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1A7BCA1A20A5219B001241E6 /* unlockblack.png */,
+				1A7BCA1920A5219A001241E6 /* unlockwhite.png */,
 				1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */,
 				1A7BCA0F20A4037C001241E6 /* City.jpg */,
 				1A7BCA1020A4037C001241E6 /* colorhallway.jpg */,
@@ -465,6 +471,7 @@
 				1A62EF3A20A1E6FD00F38F00 /* BackButtonWhite.png in Resources */,
 				1A62EF2720A157C200F38F00 /* Colorcloud.jpg in Resources */,
 				1A0DC0D820A3DEDF007FEA6B /* tempestuousocean.jpg in Resources */,
+				1A7BCA1C20A5219B001241E6 /* unlockblack.png in Resources */,
 				1A62EF2A20A157C200F38F00 /* babylion.jpg in Resources */,
 				1A62EF4C20A25DB700F38F00 /* ContactUsWhite.png in Resources */,
 				1A62EF2620A157C200F38F00 /* starrynight.jpg in Resources */,
@@ -499,6 +506,7 @@
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1A62EF2F20A1E4C200F38F00 /* lockicon.png in Resources */,
 				1A62EF4220A1E6FD00F38F00 /* AlarmIconBlack.png in Resources */,
+				1A7BCA1B20A5219B001241E6 /* unlockwhite.png in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
 				1A62EF2920A157C200F38F00 /* whitetower.jpg in Resources */,
 				1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */,
