@@ -438,10 +438,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="wqu-62-yye">
-                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                    <rect key="frame" x="82" y="0.0" width="30" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="Ras-qN-Hoz"/>
-                                                        <constraint firstAttribute="height" constant="40" id="u3n-Iw-IAL"/>
+                                                        <constraint firstAttribute="width" constant="30" id="W6i-io-qoH"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Wab-1x-qjI"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -449,11 +449,11 @@
                                         <constraints>
                                             <constraint firstItem="66u-je-CCp" firstAttribute="top" secondItem="lA5-Rp-WcU" secondAttribute="top" id="7mX-QC-Yyw"/>
                                             <constraint firstItem="66u-je-CCp" firstAttribute="leading" secondItem="lA5-Rp-WcU" secondAttribute="leading" id="Ab1-Fh-e5K"/>
+                                            <constraint firstAttribute="trailing" secondItem="wqu-62-yye" secondAttribute="trailing" id="C4N-za-FZs"/>
                                             <constraint firstAttribute="trailing" secondItem="Vmh-3j-OKs" secondAttribute="trailing" id="Dbu-3b-1gh"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="AOr-En-iLx" secondAttribute="trailing" constant="12" id="LIA-D9-UaH"/>
                                             <constraint firstAttribute="bottom" secondItem="Vmh-3j-OKs" secondAttribute="bottom" id="Mqp-B0-2YU"/>
                                             <constraint firstItem="Vmh-3j-OKs" firstAttribute="top" secondItem="AOr-En-iLx" secondAttribute="bottom" constant="12" id="PJb-51-1Li"/>
-                                            <constraint firstItem="wqu-62-yye" firstAttribute="leading" secondItem="lA5-Rp-WcU" secondAttribute="leading" id="Tbg-cJ-kN7"/>
                                             <constraint firstAttribute="bottom" secondItem="66u-je-CCp" secondAttribute="bottom" id="Tnc-bl-4Nv"/>
                                             <constraint firstItem="AOr-En-iLx" firstAttribute="top" secondItem="lA5-Rp-WcU" secondAttribute="topMargin" constant="12" id="YfA-cw-Yz7"/>
                                             <constraint firstItem="Vmh-3j-OKs" firstAttribute="leading" secondItem="lA5-Rp-WcU" secondAttribute="leading" id="idt-rI-cv5"/>
@@ -610,7 +610,7 @@
                                     <action selector="backToMenu:" destination="Ih1-Xd-DY3" eventType="touchUpInside" id="14g-qp-fOY"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-SP-vL6">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-SP-vL6">
                                 <rect key="frame" x="0.0" y="80" width="375" height="216"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <date key="date" timeIntervalSinceReferenceDate="542269644.47494197">
@@ -1369,16 +1369,21 @@
                         <outlet property="ads" destination="S4T-k7-CcF" id="toU-Xh-yRP"/>
                         <outlet property="backButton" destination="dl6-fd-G4J" id="brj-VS-Eie"/>
                         <outlet property="categories" destination="tuy-Z4-VPT" id="WLy-ni-8JV"/>
+                        <outlet property="categoriesImage" destination="Q1T-xT-j3e" id="gQe-h7-T9e"/>
                         <outlet property="collectionView" destination="6lX-3Z-k2i" id="aeb-hm-jxj"/>
                         <outlet property="header" destination="4wO-6H-mpQ" id="gEE-GF-EZZ"/>
                         <outlet property="image" destination="raR-2Y-L0f" id="cEd-DM-fCH"/>
                         <outlet property="manageSubscriptions" destination="mZO-aS-X4y" id="VbM-PX-t9d"/>
                         <outlet property="notifications" destination="wlj-LT-4SN" id="Ttz-cv-R2x"/>
+                        <outlet property="notificationsImage" destination="t7k-fx-Ktc" id="F18-I1-fux"/>
                         <outlet property="privacyPolicy" destination="k48-6M-h3j" id="pB0-Ok-SA8"/>
+                        <outlet property="removeAdsImage" destination="D3e-6x-d0N" id="ibE-v0-Dmv"/>
                         <outlet property="restoreBackground" destination="PGs-bu-OOn" id="LVz-6h-cbR"/>
                         <outlet property="restoreButton" destination="aOA-g0-SNI" id="noE-rh-pzP"/>
                         <outlet property="search" destination="jAJ-PA-gwf" id="ebf-lU-Y6U"/>
+                        <outlet property="searchImage" destination="1Gr-H1-qAw" id="Ox6-KM-U7M"/>
                         <outlet property="styles" destination="hq2-KD-KBS" id="mrO-9W-STc"/>
+                        <outlet property="stylesImage" destination="QTL-AO-hCl" id="qK0-f5-oEQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QH3-AO-mHA" userLabel="First Responder" sceneMemberID="firstResponder"/>

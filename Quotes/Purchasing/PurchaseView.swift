@@ -27,6 +27,11 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var restoreButton: UIButton!
     @IBOutlet weak var restoreBackground: UIImageView!
     
+    @IBOutlet weak var removeAdsImage: UIImageView!
+    @IBOutlet weak var notificationsImage: UIImageView!
+    @IBOutlet weak var categoriesImage: UIImageView!
+    @IBOutlet weak var stylesImage: UIImageView!
+    @IBOutlet weak var searchImage: UIImageView!
     @IBOutlet weak var image: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -99,8 +104,19 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     func setSchema(){
         if(globalSchema.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
+            removeAdsImage.image = UIImage(named: "NoAdsBlack.png")
+            notificationsImage.image = UIImage(named: "AlarmIconBlack.png")
+            categoriesImage.image = UIImage(named: "CategoriesBlack.png")
+            stylesImage.image = UIImage(named: "FontsBlack.png")
+            searchImage.image = UIImage(named: "SearchBlack.png")
+            
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
+            removeAdsImage.image = UIImage(named: "NoAdsWhite.png")
+            notificationsImage.image = UIImage(named: "AlarmIconWhite.png")
+            categoriesImage.image = UIImage(named: "CategoriesWhite.png")
+            stylesImage.image = UIImage(named: "FontsWhite.png")
+            searchImage.image = UIImage(named: "SearchWhite.png")
         }
         
         self.collectionView.backgroundColor = UIColor.clear
@@ -121,6 +137,8 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         manageSubscriptions.setTitleColor(globalSchema.getTextColor(), for: .normal)
         
         restoreButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        
+        
         
         /********************************************/
         //background image
@@ -251,7 +269,7 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
             cell.topText.adjustsFontSizeToFitWidth = true
             cell.bottomText.adjustsFontSizeToFitWidth = true
         case 1:
-            cell.topText.text = "One\nMonth"
+            cell.topText.text = "Monthly\nAccess"
             cell.topText.numberOfLines = 2
             cell.bottomText.text = "$0.99"
         case 2:

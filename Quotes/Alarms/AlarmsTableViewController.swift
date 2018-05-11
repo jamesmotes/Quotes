@@ -142,7 +142,11 @@ class AlarmsTableViewController: UITableViewController {
             print(notifications)
         }
         
+        //AlarmSetTime = []
+        //AlarmSetPeople = []
+        
         print(AlarmSetPeople)
+        print(AlarmSetTime)
         print(alarms)
         for a in alarms {
             print(a)

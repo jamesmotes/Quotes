@@ -58,7 +58,7 @@ class EditAlarm: UIViewController {
     func removeAlarm(name: String){
         var person : String = String()
         var time : DateComponents = DateComponents()
-        for i in 0...(AlarmSetPeople.count-1) {
+        for i in 0...(AlarmSetPeople.count) {
             if AlarmSetPeople[i] == name {
                 AlarmSetPeople.remove(at: i)
                 AlarmSetTime.remove(at: i)
@@ -87,7 +87,7 @@ class EditAlarm: UIViewController {
     
     @IBAction func editAlarm(_ sender: Any) {
         removeAlarm(name: alarmSelected)
-        
+        /*
         var date = datePicker.date
         print("Date entry")
         print(date)
@@ -154,6 +154,79 @@ class EditAlarm: UIViewController {
                     }
                 }
                 let trigger = UNCalendarNotificationTrigger(dateMatching: adjustedTriggerDate, repeats: false)
+                let identifier = q.person + (String)(index + currentCount * 31)
+                let request = UNNotificationRequest(identifier: identifier,
+                                                    content: content, trigger: trigger)
+                center.add(request, withCompletionHandler: { (error) in
+                    if let error = error {
+                        // Something went wrong
+                        print("something went wrong when adding the notification to the request center")
+                    }
+                })
+                index += 1
+                if(index > 31){
+                    break
+                }
+            }
+        }*/
+        
+        let date = datePicker.date
+        print("Date entry")
+        print(date)
+        
+        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+        
+        let query = "person = '" + alarmSelected + "'"
+        var quotes = Array(realm.objects(Quote.self).filter(query))
+        //print(quotes)
+        quotes.shuffle()
+        
+        print(AlarmSetPeople)
+        print(AlarmSetTime)
+        
+        AlarmSetPeople.append(alarmSelected)
+        AlarmSetTime.append(triggerDate)
+        
+        
+        /*let defaults = UserDefaults.standard
+         defaults.set(AlarmSetPeople, forKey: "AlarmSetPeople")
+         defaults.set(AlarmSetTime, forKey: "AlarmSetTime")
+         */
+        triggerDate.day = triggerDate.day! - 1
+        triggerDate.second = 0
+        var index = 0
+        
+        while(index < 31){
+            for q in quotes {
+                var currentCount = 0
+                for i in AlarmSetPeople {
+                    if i == q.person {
+                        currentCount = currentCount + 1
+                    }
+                }
+                
+                let content = UNMutableNotificationContent()
+                //content.title =
+                content.body = q.text + " - " + q.person
+                content.sound = UNNotificationSound.default()
+                content.categoryIdentifier = "RECEIVED_QUOTE"
+                
+                //should probably adjust for months with 30 and 28 days
+                triggerDate.day = triggerDate.day! + 1
+                if(triggerDate.day! > 31){
+                    triggerDate.day = 1
+                    triggerDate.month = triggerDate.month! + 1
+                    if(triggerDate.month! > 12){
+                        triggerDate.month = 1
+                    }
+                }
+                
+                //print("TriggerDate")
+                //print(triggerDate)
+                
+                
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                
                 let identifier = q.person + (String)(index + currentCount * 31)
                 let request = UNNotificationRequest(identifier: identifier,
                                                     content: content, trigger: trigger)
