@@ -170,7 +170,14 @@ class SessionHandler {
         ]
         let bodyData = try! JSONSerialization.data(withJSONObject: body, options: [])
         
-        let url = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
+        var url : URL
+        if(DEVELOPMENT){
+            url = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
+        }
+        else {
+            url = URL(string: "https://buy.itunes.apple.com/verifyReceipt")!
+        }
+        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = bodyData

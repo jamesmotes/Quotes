@@ -1288,12 +1288,29 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k48-6M-h3j">
-                                <rect key="frame" x="16" y="637" width="343" height="30"/>
+                                <rect key="frame" x="16" y="637" width="150" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="eON-gB-DuP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Privacy Policy">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="viewPrivacyPolicy:" destination="BzB-R6-sCp" eventType="touchUpInside" id="s0e-8t-q4s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-aS-X4y">
+                                <rect key="frame" x="209" y="637" width="150" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="fqC-1B-UZC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Manage Subscriptions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="manageSubscriptions:" destination="BzB-R6-sCp" eventType="touchUpInside" id="5pu-ub-fTP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1309,9 +1326,9 @@
                             <constraint firstItem="PGs-bu-OOn" firstAttribute="top" secondItem="6lX-3Z-k2i" secondAttribute="bottom" constant="8" id="G2C-ae-Qmg"/>
                             <constraint firstItem="tuy-Z4-VPT" firstAttribute="leading" secondItem="Q1T-xT-j3e" secondAttribute="trailing" constant="8" id="GKp-qT-O6V"/>
                             <constraint firstItem="S4T-k7-CcF" firstAttribute="leading" secondItem="D3e-6x-d0N" secondAttribute="trailing" constant="8" id="GP2-Gs-5Bm"/>
+                            <constraint firstItem="mZO-aS-X4y" firstAttribute="top" secondItem="aOA-g0-SNI" secondAttribute="bottom" constant="4" id="GSI-0J-Ro3"/>
                             <constraint firstItem="aOA-g0-SNI" firstAttribute="leading" secondItem="ojF-6M-dRa" secondAttribute="leading" constant="16" id="GoX-XM-aow"/>
                             <constraint firstItem="QTL-AO-hCl" firstAttribute="top" secondItem="Q1T-xT-j3e" secondAttribute="bottom" constant="8" id="HX6-Tz-hG9"/>
-                            <constraint firstItem="ojF-6M-dRa" firstAttribute="trailing" secondItem="k48-6M-h3j" secondAttribute="trailing" constant="16" id="KZW-sT-pNQ"/>
                             <constraint firstItem="Q1T-xT-j3e" firstAttribute="top" secondItem="t7k-fx-Ktc" secondAttribute="bottom" constant="8" id="LgS-KR-Hxd"/>
                             <constraint firstItem="k48-6M-h3j" firstAttribute="leading" secondItem="ojF-6M-dRa" secondAttribute="leading" constant="16" id="MFF-M3-YVq"/>
                             <constraint firstItem="hq2-KD-KBS" firstAttribute="top" secondItem="tuy-Z4-VPT" secondAttribute="bottom" constant="8" id="O0K-cR-UKJ"/>
@@ -1328,6 +1345,7 @@
                             <constraint firstItem="raR-2Y-L0f" firstAttribute="leading" secondItem="ojF-6M-dRa" secondAttribute="leading" id="ch4-9V-68e"/>
                             <constraint firstItem="k48-6M-h3j" firstAttribute="top" secondItem="aOA-g0-SNI" secondAttribute="bottom" constant="4" id="dKO-Uo-q6g"/>
                             <constraint firstItem="ojF-6M-dRa" firstAttribute="trailing" secondItem="4wO-6H-mpQ" secondAttribute="trailing" constant="57" id="eHF-ee-rmn"/>
+                            <constraint firstItem="ojF-6M-dRa" firstAttribute="trailing" secondItem="mZO-aS-X4y" secondAttribute="trailing" constant="16" id="f2T-AI-8xe"/>
                             <constraint firstItem="1Gr-H1-qAw" firstAttribute="leading" secondItem="ojF-6M-dRa" secondAttribute="leading" constant="45" id="htp-rz-mFE"/>
                             <constraint firstItem="raR-2Y-L0f" firstAttribute="trailing" secondItem="ojF-6M-dRa" secondAttribute="trailing" id="i52-oD-Rye"/>
                             <constraint firstItem="tuy-Z4-VPT" firstAttribute="top" secondItem="wlj-LT-4SN" secondAttribute="bottom" constant="8" id="kHR-co-0gK"/>
@@ -1354,6 +1372,7 @@
                         <outlet property="collectionView" destination="6lX-3Z-k2i" id="aeb-hm-jxj"/>
                         <outlet property="header" destination="4wO-6H-mpQ" id="gEE-GF-EZZ"/>
                         <outlet property="image" destination="raR-2Y-L0f" id="cEd-DM-fCH"/>
+                        <outlet property="manageSubscriptions" destination="mZO-aS-X4y" id="VbM-PX-t9d"/>
                         <outlet property="notifications" destination="wlj-LT-4SN" id="Ttz-cv-R2x"/>
                         <outlet property="privacyPolicy" destination="k48-6M-h3j" id="pB0-Ok-SA8"/>
                         <outlet property="restoreBackground" destination="PGs-bu-OOn" id="LVz-6h-cbR"/>

@@ -16,6 +16,7 @@ var madePurchase = false
 class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var privacyPolicy: UIButton!
+    @IBOutlet weak var manageSubscriptions: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var ads: UILabel!
@@ -117,6 +118,7 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         styles.textColor = globalSchema.getTextColor()
         search.textColor = globalSchema.getTextColor()
         privacyPolicy.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        manageSubscriptions.setTitleColor(globalSchema.getTextColor(), for: .normal)
         
         restoreButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
         
@@ -284,14 +286,16 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBAction func viewPrivacyPolicy(_ sender: Any) {
         if let url = URL(string: "http://gbjmobile.com/privacy_policy.html") {
-        //if let url = URL(string: "http://www.google.com") {
-            //UIApplication.shared.open(url, options: [:])
             let svc = SFSafariViewController(url: url)
             present(svc, animated: true, completion: nil)
         }
-        //UIApplication.shared.openURL(NSURL(string: "http://www.google.com")! as URL)
-
-        //UIApplication.shared.open(<#T##url: URL##URL#>, options: <#T##[String : Any]#>, completionHandler: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+    }
+    
+    @IBAction func manageSubscriptions(_ sender: Any) {
+        if let url = URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions") {
+            let svc = SFSafariViewController(url: url)
+            present(svc, animated: true, completion: nil)
+        }
     }
     
     

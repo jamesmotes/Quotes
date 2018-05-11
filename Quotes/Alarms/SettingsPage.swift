@@ -161,7 +161,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
             performSegue(withIdentifier: "unlockAlarmsSegue", sender: nil)
         }
         else {
-            var date = datePicker.date
+            let date = datePicker.date
             print("Date entry")
             print(date)
             

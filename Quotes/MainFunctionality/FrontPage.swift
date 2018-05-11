@@ -90,7 +90,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             changedFont = false
         }
         
-        print(PurchasesController.shared.currentSessionId)
+        //print(PurchasesController.shared.currentSessionId)
         let sessionId = PurchasesController.shared.currentSessionId ?? ""
         
         SessionHandler.shared.selfies(for: sessionId) { [weak self] result in
@@ -465,10 +465,14 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-        //the real deal
-        //var interstitial = GADInterstitial(adUnitID: "ca-app-pub-1816441460162466~7930915740")
-        //test add
-        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        var interstitial : GADInterstitial
+        if(DEVELOPMENT){
+            //test add
+            interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        } else {
+            //the real deal
+            interstitial = GADInterstitial(adUnitID: "ca-app-pub-1816441460162466~7930915740")
+        }
         interstitial.delegate = self
         interstitial.load(GADRequest())
         return interstitial
