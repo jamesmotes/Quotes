@@ -12,6 +12,7 @@ import RealmSwift
 var searchedSpecificQuote = false
 var selectedSpecificQuote = false
 var specificQuote : String = ""
+var allPeople : [String] = []
 
 class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
     
@@ -67,7 +68,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         }
         
         
-        if peopleOptions.contains(selected){
+        //if peopleOptions.contains(selected){
+        if allPeople.contains(selected) {
             pers = selected
             category = ""
             selectedSpecificQuote = false
@@ -91,7 +93,16 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         setSchema()
         
         
-        data.append(contentsOf: peopleOptions)
+        let allQuotes = Array(realm.objects(Quote.self))
+        allPeople = []
+        for q in allQuotes {
+            if !allPeople.contains(q.person) {
+                allPeople.append(q.person)
+            }
+        }
+        print(allPeople)
+        //data.append(contentsOf: peopleOptions)
+        data.append(contentsOf: allPeople)
         data.append(contentsOf: catOptions)
         //data.append(contentsOf: moodOptions)
         data.shuffle()
