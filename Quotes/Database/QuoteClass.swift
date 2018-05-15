@@ -34,4 +34,5 @@ final class Quote: Object {
     override static func primaryKey() -> String? {
         return "text"
     }
+    
 }

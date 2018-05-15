@@ -154,7 +154,7 @@ class AlarmsTableViewController: UITableViewController {
             var check : Substring = Substring()
             
             
-            for i in 1...a.content.body.count-1 {
+            for i in 1...a.content.body.count{//-1 {
                 let index = a.content.body.index(a.content.body.endIndex, offsetBy: (-1)*i)
                 check = a.content.body[index...]
                 if(check.contains(char)){

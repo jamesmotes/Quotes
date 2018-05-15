@@ -22,7 +22,7 @@ var full_unlock = false
 var monthly_unlock = false
 var full_access = false
 
-var DEVELOPMENT = true
+var DEVELOPMENT = false
 
 
 @UIApplicationMain
@@ -57,6 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
+        let token = Messaging.messaging().fcmToken
+        print("FCM token: \(token ?? "")")
         
         
         application.registerForRemoteNotifications()
@@ -155,7 +157,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
        Messaging.messaging().shouldEstablishDirectChannel = false
         
         //set up ads
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-1816441460162466~7930915740")
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-1816441460162466~9409574717")
         
         
         print(PurchasesController.shared.currentSessionId)
@@ -176,6 +178,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         if(monthly_unlock || full_unlock){
             full_unlock = true
+        }
+        
+        
+        // Check if launched from notification
+        // 1
+        if let notification = launchOptions?[.remoteNotification] as? [String: AnyObject] {
+            // 2
+            let aps = notification 
+            makeNewQuote(aps: aps)
+            // 3
+            //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
         }
         
         
@@ -272,6 +285,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                     
                 } else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
                     notificationQuote = response.notification.request.content.body
+                    print(response)
+                    print(notificationQuote)
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "frontPage") as! FrontPage
@@ -287,6 +302,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler(UNNotificationPresentationOptions.sound)
+    }
+    
+    func makeNewQuote(aps : [String : AnyObject]){
+        print(aps)
     }
     
     //Firebase notification handling

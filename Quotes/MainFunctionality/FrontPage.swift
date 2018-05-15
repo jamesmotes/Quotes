@@ -67,6 +67,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         
         
         interstitial = createAndLoadInterstitial()
+        interstitial.delegate = self
         
         let request = GADRequest()
         interstitial.load(request)
@@ -74,14 +75,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         quotes = Array(realm.objects(Quote.self))
         quotes.shuffle()
         
-        if(notificationQuote != "") {
-            for j in 0...(quotes.count - 1) {
-                if notificationQuote.range(of:(quotes[j].text)) != nil {
-                    index = j
-                    notificationQuote = ""
-                }
-            }
-        }
+        
         //PurchasesController.shared.uploadReceipt()
         if(!sharing || !changedFont){
             refresh()
@@ -150,6 +144,52 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         checkSubscription()
+        if(notificationQuote != "") {
+            quotes = Array(realm.objects(Quote.self))
+            var found = false
+            for j in 0...(quotes.count - 1) {
+                if notificationQuote.range(of:(quotes[j].text)) != nil {
+                    index = j
+                    found = true
+                    //notificationQuote = ""
+                }
+            }
+            if(!found){
+                print(notificationQuote)
+                let char : Character = "-"
+                var check : Substring = Substring()
+                var quote : Substring = Substring()
+                
+                
+                for i in 1...notificationQuote.count{//-1 {
+                    var nameIndex = notificationQuote.index(notificationQuote.endIndex, offsetBy: (-1)*i)
+                    check = notificationQuote[nameIndex...]
+                    if(check.contains(char)){
+                        nameIndex = notificationQuote.index(notificationQuote.endIndex, offsetBy: (-1)*i - 2)
+                        quote = notificationQuote[...nameIndex]
+                        break
+                    }
+                }
+                
+                let checkString = String(check)
+                let nameIndex = checkString.index(checkString.startIndex, offsetBy: 2)
+                let name = String(checkString[nameIndex...])
+                let quoteString = String(quote)
+                print(quote)
+                let newQuote : Quote = Quote()
+                newQuote.person = name
+                newQuote.text = quoteString
+                newQuote.id = quoteIterator
+                quoteIterator = quoteIterator + 1
+                let defaults = UserDefaults.standard
+                defaults.set(quoteIterator, forKey: "quoteIterator")
+                try! realm.write {
+                    realm.add(newQuote)
+                }
+                quotes.append(newQuote)
+                index = quotes.count - 1
+            }
+        }
         refresh()
         
         
@@ -158,7 +198,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             didComeFromAdd = false
         }
         else {
-            index = 0
+            if(notificationQuote == ""){
+                index = 0
+            }
+            else {
+                notificationQuote = ""
+            }
             showAfterMenu()
         }
         setSchema()
@@ -288,7 +333,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
 
     func refresh(){
         //display ads every 12 quotes
-        if interstitial.isReady && scrolls > 11 && !full_unlock{
+        if (interstitial.isReady && scrolls > 11 && !full_unlock){
             print("Time for add")
             print(index)
             interstitial.present(fromRootViewController: self)
@@ -471,7 +516,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         } else {
             //the real deal
-            interstitial = GADInterstitial(adUnitID: "ca-app-pub-1816441460162466~7930915740")
+            interstitial = GADInterstitial(adUnitID: "ca-app-pub-1816441460162466/7954976526")
         }
         interstitial.delegate = self
         interstitial.load(GADRequest())
@@ -480,6 +525,16 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         interstitial = createAndLoadInterstitial()
+    }
+    
+    /// Tells the delegate an ad request succeeded.
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("interstitialDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
     }
     /*
     // MARK: - Navigation

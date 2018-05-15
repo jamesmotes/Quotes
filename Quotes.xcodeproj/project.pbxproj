@@ -77,8 +77,8 @@
 		1AAE1C3520840E5E00345E1F /* EditAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE1C3420840E5D00345E1F /* EditAlarm.swift */; };
 		1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C6E1FFC461B00F547E4 /* Podfile */; };
 		1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C862001A4DA00F547E4 /* Images.xcassets */; };
-		1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */; };
 		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
+		1AC3C98020AA050D0024D91D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C97F20AA050D0024D91D /* GoogleService-Info.plist */; };
 		1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8853720523DCA0000B56A /* IMG_0739.GIF */; };
 		1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE885392052502C0000B56A /* AlarmsTableViewController.swift */; };
 		1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCC5052093F0310021941B /* CreateQuote.swift */; };
@@ -182,9 +182,9 @@
 		1AAE1C3420840E5D00345E1F /* EditAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarm.swift; sourceTree = "<group>"; };
 		1AB47C6E1FFC461B00F547E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1AB47C862001A4DA00F547E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1AC3C97F20AA050D0024D91D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AE8853720523DCA0000B56A /* IMG_0739.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IMG_0739.GIF; path = Quotes/IMG_0739.GIF; sourceTree = SOURCE_ROOT; };
 		1AE885392052502C0000B56A /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
 		1AFCC5052093F0310021941B /* CreateQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuote.swift; sourceTree = "<group>"; };
@@ -371,11 +371,11 @@
 		1AACFE901FF2F65E00E6424D /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				1AC3C97F20AA050D0024D91D /* GoogleService-Info.plist */,
 				812405F320884397006E7AB7 /* Fonts */,
 				1A62EF5020A25DFE00F38F00 /* Alarms */,
 				1A62EF5320A25F6300F38F00 /* Features */,
 				1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */,
-				1AB47C8A2001DBEE00F547E4 /* GoogleService-Info.plist */,
 				1A0DC0E220A3E02E007FEA6B /* Database */,
 				1A62EF5220A25F2B00F38F00 /* MainFunctionality */,
 				1A62EF5120A25F0D00F38F00 /* Purchasing */,
@@ -503,6 +503,7 @@
 				1A0DC0DC20A3DEDF007FEA6B /* desertwalk.jpg in Resources */,
 				1A62EF4B20A25DB700F38F00 /* PeopleBlack.png in Resources */,
 				812405F420884398006E7AB7 /* Fonts in Resources */,
+				1AC3C98020AA050D0024D91D /* GoogleService-Info.plist in Resources */,
 				1A0DC0DA20A3DEDF007FEA6B /* aurora.jpg in Resources */,
 				1A7BCA1520A4037C001241E6 /* colorhallway.jpg in Resources */,
 				1A62EF2B20A157C200F38F00 /* road.jpg in Resources */,
@@ -533,7 +534,6 @@
 				1A7BCA1B20A5219B001241E6 /* unlockwhite.png in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
 				1A62EF2920A157C200F38F00 /* whitetower.jpg in Resources */,
-				1AB47C8B2001DBF000F547E4 /* GoogleService-Info.plist in Resources */,
 				1AA123782044F4B40004C1AE /* search.png in Resources */,
 				81056507208D821200BB9433 /* SearchWhite.png in Resources */,
 				1A62EF3B20A1E6FD00F38F00 /* FontsBlack.png in Resources */,

@@ -176,6 +176,7 @@ class SessionHandler {
         }
         else {
             url = URL(string: "https://buy.itunes.apple.com/verifyReceipt")!
+            //url = Bundle.main.appStoreReceiptURL!
         }
         
         var request = URLRequest(url: url)
