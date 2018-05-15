@@ -87,6 +87,7 @@ class EditAlarm: UIViewController {
     
     @IBAction func editAlarm(_ sender: Any) {
         removeAlarm(name: alarmSelected)
+        didEdit = true
         /*
         var date = datePicker.date
         print("Date entry")
@@ -192,8 +193,13 @@ class EditAlarm: UIViewController {
          defaults.set(AlarmSetPeople, forKey: "AlarmSetPeople")
          defaults.set(AlarmSetTime, forKey: "AlarmSetTime")
          */
-        triggerDate.day = triggerDate.day! - 1
         triggerDate.second = 0
+        
+        if(triggerDate.hour == timeSelected.hour && triggerDate.minute == timeSelected.minute){
+            didEdit = false
+        }
+        
+        triggerDate.day = triggerDate.day! - 1
         var index = 0
         
         while(index < 31){

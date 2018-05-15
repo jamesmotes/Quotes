@@ -19,6 +19,9 @@ import UserNotifications
 var numAlarms = 0
 
 var alarmSelected : String = String()
+var timeSelected : DateComponents = DateComponents()
+var didEdit = false
+var indexSelected = 0
 
 class AlarmsTableViewController: UITableViewController {
     @IBOutlet weak var navBar: UINavigationBar!
@@ -171,6 +174,7 @@ class AlarmsTableViewController: UITableViewController {
             let t : UNCalendarNotificationTrigger  = a.trigger as! UNCalendarNotificationTrigger
             
             print(AlarmSetPeople)
+            //let checkEdit = (didEdit && name == alarmSelected &&  t.dateComponents.hour == timeSelected.hour && t.dateComponents.minute == timeSelected.minute)
             if !AlarmSetPeople.contains(name) {
                 AlarmSetPeople.append(name)
                 AlarmSetTime.append(t.dateComponents)
@@ -188,8 +192,10 @@ class AlarmsTableViewController: UITableViewController {
                 if(!Repeat){
                     //AlarmSetPeople.append(String(name))
                     //AlarmSetTime.append(t.dateComponents)
-                    
                     for i in 0...(AlarmSetTime.count-1){
+                        /*if(didEdit && AlarmSetPeople[i] == alarmSelected && AlarmSetTime[i] == timeSelected){
+                            break
+                        }*/
                         if t.dateComponents.hour! < AlarmSetTime[i].hour! {
                             AlarmSetTime.insert(t.dateComponents, at: i)
                             AlarmSetPeople.insert(String(name), at: i)
@@ -206,12 +212,30 @@ class AlarmsTableViewController: UITableViewController {
             
         }
         sortAlarms()
-        tableView.reloadData()
         numAlarms = alarms.count
         if(alarms.count > 0){
             let t : UNCalendarNotificationTrigger  = alarms[0].trigger as! UNCalendarNotificationTrigger
             print(t.dateComponents.hour!)
         }
+        
+        if(didEdit){
+            print(AlarmSetPeople)
+            for i in 0...AlarmSetPeople.count-1 {
+                print(AlarmSetTime[i])
+                print(AlarmSetPeople[i])
+                print(alarmSelected)
+                print(timeSelected)
+                if(AlarmSetPeople[i] == alarmSelected && AlarmSetTime[i].hour == timeSelected.hour && AlarmSetTime[i].minute == timeSelected.minute){
+                    AlarmSetPeople.remove(at: i)
+                    AlarmSetTime.remove(at: i)
+                    break
+                }
+            }
+            didEdit = false
+        }
+        
+        tableView.reloadData()
+        
     }
     
     func sortAlarms(){
@@ -262,6 +286,8 @@ class AlarmsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         alarmSelected = AlarmSetPeople[indexPath.row]
+        timeSelected = AlarmSetTime[indexPath.row]
+        indexSelected = indexPath.row
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
