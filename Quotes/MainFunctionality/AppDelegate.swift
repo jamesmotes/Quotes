@@ -22,7 +22,7 @@ var full_unlock = false
 var monthly_unlock = false
 var full_access = false
 
-var DEVELOPMENT = false
+var DEVELOPMENT = true
 
 
 @UIApplicationMain

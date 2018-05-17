@@ -317,7 +317,39 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             refresh()
         }
         else if selectedSpecificQuote {
-            query = "text CONTAINS '" + specificQuote + "'"
+            var charIndex = specificQuote.startIndex
+            var partials : [String] = []
+            var remainingQuote = specificQuote
+            for i in 0...specificQuote.count-1 {
+                print(specificQuote)
+                charIndex = specificQuote.index(specificQuote.startIndex, offsetBy: i)
+                let check = specificQuote[charIndex]
+                print(check)
+                if(check == "\'"){
+                    charIndex = specificQuote.index(specificQuote.startIndex, offsetBy: i-1)
+                    partials.append(String(remainingQuote[...charIndex]))
+                    charIndex = specificQuote.index(specificQuote.startIndex, offsetBy: i+1)
+                    remainingQuote = String(specificQuote[charIndex...])
+                }
+                if(i == specificQuote.count - 1){
+                    partials.append(remainingQuote)
+                }
+            }
+            //specificQuote = (specificQuote as NSString).replacingOccurrences(of: "\'", with: "'")
+            /*if(partials.count < 1){
+                query = "text CONTAINS '" + specificQuote + "'"
+            }
+            else {
+                for p in partials {
+                    query = query + "AND text CONTAINS '" + p + "'"
+                }
+            }*/
+            query = "text CONTAINS '" + partials[0] + "'"
+            if(partials.count > 1){
+                for i in 1...partials.count-1 {
+                    query = query + " AND text CONTAINS '" + partials[i] + "'"
+                }
+            }
         }
         
         
@@ -463,7 +495,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     
     @IBAction func search(_ sender: Any) {
-        
+        if(DEVELOPMENT){
+            performSegue(withIdentifier: "goToSearch", sender: nil)
+        }
 
         guard PurchasesController.shared.currentSessionId != nil,
             PurchasesController.shared.hasReceiptData else {

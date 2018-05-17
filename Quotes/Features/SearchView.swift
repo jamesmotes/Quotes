@@ -131,6 +131,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     }
     
     func setSchema(){
+        self.tableView.backgroundColor = globalSchema.getBackgroundColor()
+        self.tableView.tableFooterView = UIView()
         if(globalSchema.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
         } else {
