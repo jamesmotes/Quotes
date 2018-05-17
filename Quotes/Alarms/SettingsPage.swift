@@ -157,7 +157,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         print(numAlarms)
         print(full_unlock)
         
-        if(numAlarms > 0 && !full_unlock){
+        if(numAlarms > 0 && !full_unlock && !DEVELOPMENT){
             performSegue(withIdentifier: "unlockAlarmsSegue", sender: nil)
         }
         else {

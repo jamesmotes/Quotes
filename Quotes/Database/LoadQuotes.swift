@@ -3188,6 +3188,32 @@ class LoadQuotes {
         cats = ["Entrepreneur", "Success"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Florence Griffith Joyner"
+        
+        text = "Conventional is not for me. I like things that are uniquely Flo. I like being different."
+        cats = ["Sports"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "People want to think that staying in shape costs a lot of money. They couldn't be more wrong. It doesn't cost anything to walk. And it's probably a lot cheaper to go to the corner store and buy vegetables than take a family out for fast food."
+        cats = ["Fitness"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I don't always have the best eating habits. I like butter and ice cream. There are days when I should work out and I don't. But it's never too late to change old habits."
+        cats = ["Fitness"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When anyone tells me I can't do anything... I'm just not listening any more."
+        cats = ["Sports", "Empowerment"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "If you want to run as fast as the men, you've got to train like the men."
+        cats = ["Sports"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "I've always overworked in the weight room. I love working with weights. I knew they'd give me the strength I needed."
+        cats = ["Sports"]
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
 
     }
     
