@@ -16,6 +16,7 @@ var madePurchase = false
 class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var privacyPolicy: UIButton!
+    @IBOutlet weak var termsOfUse: UIButton!
     @IBOutlet weak var manageSubscriptions: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var header: UILabel!
@@ -134,6 +135,7 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         styles.textColor = globalSchema.getTextColor()
         search.textColor = globalSchema.getTextColor()
         privacyPolicy.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        termsOfUse.setTitleColor(globalSchema.getTextColor(), for: .normal)
         manageSubscriptions.setTitleColor(globalSchema.getTextColor(), for: .normal)
         
         restoreButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
@@ -292,9 +294,11 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch(indexPath.row){
         case 0:
-            trialAccess()
+            //trialAccess()
+            performSegue(withIdentifier: "showMonthlyConfirm", sender: nil)
         case 1:
-            monthlyAccess()
+            //monthlyAccess()
+            performSegue(withIdentifier: "showMonthlyConfirm", sender: nil)
         case 2:
             lifetimeAccess()
         default:
@@ -309,6 +313,12 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         }
     }
     
+    @IBAction func viewTermsOfUse(_ sender: Any) {
+        if let url = URL(string: "http://gbjmobile.com/terms_and_conditions.html") {
+            let svc = SFSafariViewController(url: url)
+            present(svc, animated: true, completion: nil)
+        }
+    }
     @IBAction func manageSubscriptions(_ sender: Any) {
         if let url = URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions") {
             let svc = SFSafariViewController(url: url)

@@ -79,6 +79,7 @@
 		1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB47C862001A4DA00F547E4 /* Images.xcassets */; };
 		1AB47CAE20033B7E00F547E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB47CAD20033B7E00F547E4 /* StoreKit.framework */; };
 		1AC3C98020AA050D0024D91D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C97F20AA050D0024D91D /* GoogleService-Info.plist */; };
+		1AC3C98220B3A5D70024D91D /* ConfirmMonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3C98120B3A5D70024D91D /* ConfirmMonthlyView.swift */; };
 		1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8853720523DCA0000B56A /* IMG_0739.GIF */; };
 		1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE885392052502C0000B56A /* AlarmsTableViewController.swift */; };
 		1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCC5052093F0310021941B /* CreateQuote.swift */; };
@@ -185,6 +186,7 @@
 		1AB47C8C2001DD3D00F547E4 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		1AB47CAD20033B7E00F547E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1AC3C97F20AA050D0024D91D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1AC3C98120B3A5D70024D91D /* ConfirmMonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMonthlyView.swift; sourceTree = "<group>"; };
 		1AE8853720523DCA0000B56A /* IMG_0739.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IMG_0739.GIF; path = Quotes/IMG_0739.GIF; sourceTree = SOURCE_ROOT; };
 		1AE885392052502C0000B56A /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
 		1AFCC5052093F0310021941B /* CreateQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuote.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				1A62EF1820A0922500F38F00 /* Session.swift */,
 				1A62EF2C20A1D31F00F38F00 /* PricingCollectionViewCell.swift */,
 				1A62EF10209FA39100F38F00 /* PurchaseView.swift */,
+				1AC3C98120B3A5D70024D91D /* ConfirmMonthlyView.swift */,
 			);
 			path = Purchasing;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				1A62EF2D20A1D31F00F38F00 /* PricingCollectionViewCell.swift in Sources */,
 				1A62EF1D20A151B500F38F00 /* LoadingViewController.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
+				1AC3C98220B3A5D70024D91D /* ConfirmMonthlyView.swift in Sources */,
 				1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */,
 				1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */,
 				812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */,
