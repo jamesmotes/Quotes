@@ -23,7 +23,7 @@ class EditAlarm: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSchema()
+        setTheme()
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
             //print(notifications)
@@ -31,13 +31,13 @@ class EditAlarm: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func setSchema(){
-        datePicker.setValue(globalSchema.getTextColor(), forKeyPath: "textColor")
+    func setTheme(){
+        datePicker.setValue(globalTheme.getTextColor(), forKeyPath: "textColor")
         
-        view.backgroundColor = globalSchema.getBackgroundColor()
-        datePicker.backgroundColor = globalSchema.getBackgroundColor()
+        view.backgroundColor = globalTheme.getBackgroundColor()
+        datePicker.backgroundColor = globalTheme.getBackgroundColor()
         
-        if(globalSchema.whiteBackground){
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
             saveButton.setTitleColor(UIColor.black, for: .normal)
         } else {

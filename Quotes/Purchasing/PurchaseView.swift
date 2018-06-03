@@ -41,7 +41,7 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSchema()
+        setTheme()
         
         /********************************************/
         //Collection View Setup
@@ -102,8 +102,8 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
                                                object: nil)
     }
     
-    func setSchema(){
-        if(globalSchema.whiteBackground){
+    func setTheme(){
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
             removeAdsImage.image = UIImage(named: "NoAdsBlack.png")
             notificationsImage.image = UIImage(named: "AlarmIconBlack.png")
@@ -125,37 +125,38 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         
         /********************************************/
         //font color setup
-        backButton.titleLabel?.textColor = globalSchema.getTextColor()
-        view.backgroundColor = globalSchema.getBackgroundColor()
+        backButton.titleLabel?.textColor = globalTheme.getTextColor()
+        view.backgroundColor = globalTheme.getBackgroundColor()
         
-        header.textColor = globalSchema.getTextColor()
-        ads.textColor = globalSchema.getTextColor()
-        notifications.textColor = globalSchema.getTextColor()
-        categories.textColor = globalSchema.getTextColor()
-        styles.textColor = globalSchema.getTextColor()
-        search.textColor = globalSchema.getTextColor()
-        privacyPolicy.setTitleColor(globalSchema.getTextColor(), for: .normal)
-        termsOfUse.setTitleColor(globalSchema.getTextColor(), for: .normal)
-        manageSubscriptions.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        header.textColor = globalTheme.getTextColor()
+        ads.textColor = globalTheme.getTextColor()
+        notifications.textColor = globalTheme.getTextColor()
+        categories.textColor = globalTheme.getTextColor()
+        styles.textColor = globalTheme.getTextColor()
+        search.textColor = globalTheme.getTextColor()
+        privacyPolicy.setTitleColor(globalTheme.getTextColor(), for: .normal)
+        termsOfUse.setTitleColor(globalTheme.getTextColor(), for: .normal)
+        manageSubscriptions.setTitleColor(globalTheme.getTextColor(), for: .normal)
         
-        restoreButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        restoreButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
         
         
         
         /********************************************/
         //background image
         
-        if(globalSchema.imageFile != ""){
+        /*if(globalSchema.imageFile != ""){
             image.image = UIImage(named: globalSchema.imageFile)
         }
         else {
             image.image = nil
-        }
+        }*/
+        image.image = globalTheme.getImage()
         /********************************************/
         //background for restore button image
         
         
-        restoreBackground.layer.borderColor = globalSchema.getTextColor()?.cgColor
+        restoreBackground.layer.borderColor = globalTheme.getTextColor()?.cgColor
         restoreBackground.layer.borderWidth = 3.0
         
     }
@@ -284,10 +285,10 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
         }
         
         
-        cell.topText.textColor = globalSchema.getTextColor()
-        cell.bottomText.textColor = globalSchema.getTextColor()
+        cell.topText.textColor = globalTheme.getTextColor()
+        cell.bottomText.textColor = globalTheme.getTextColor()
         cell.imageView.layer.borderWidth = 3.0
-        cell.imageView.layer.borderColor = globalSchema.getTextColor()?.cgColor
+        cell.imageView.layer.borderColor = globalTheme.getTextColor()?.cgColor
         return cell
     }
     

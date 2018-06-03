@@ -23,6 +23,11 @@
 		1A1E301D20A5589000EA6687 /* QuoteIcon167.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E301820A5589000EA6687 /* QuoteIcon167.png */; };
 		1A1E301E20A5589000EA6687 /* QuoteIcon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E301920A5589000EA6687 /* QuoteIcon120.png */; };
 		1A1E301F20A5589000EA6687 /* QuoteIcon1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E301A20A5589000EA6687 /* QuoteIcon1024.jpg */; };
+		1A4E02CF20C0E02700671DA9 /* LoadCustomImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */; };
+		1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D020C42F9800671DA9 /* Theme.swift */; };
+		1A4E02D320C4306D00671DA9 /* LoadThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D220C4306D00671DA9 /* LoadThemes.swift */; };
+		1A4E02D720C43DDF00671DA9 /* plussign.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E02D620C43DDF00671DA9 /* plussign.png */; };
+		1A4E02D920C441F800671DA9 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E02D820C441F700671DA9 /* photo.png */; };
 		1A62EF11209FA39100F38F00 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF10209FA39100F38F00 /* PurchaseView.swift */; };
 		1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1420A08E2800F38F00 /* Subscription.swift */; };
 		1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */; };
@@ -127,6 +132,11 @@
 		1A1E301820A5589000EA6687 /* QuoteIcon167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuoteIcon167.png; sourceTree = "<group>"; };
 		1A1E301920A5589000EA6687 /* QuoteIcon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuoteIcon120.png; sourceTree = "<group>"; };
 		1A1E301A20A5589000EA6687 /* QuoteIcon1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = QuoteIcon1024.jpg; sourceTree = "<group>"; };
+		1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCustomImageController.swift; sourceTree = "<group>"; };
+		1A4E02D020C42F9800671DA9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1A4E02D220C4306D00671DA9 /* LoadThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThemes.swift; sourceTree = "<group>"; };
+		1A4E02D620C43DDF00671DA9 /* plussign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plussign.png; sourceTree = "<group>"; };
+		1A4E02D820C441F700671DA9 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		1A62EF10209FA39100F38F00 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		1A62EF1420A08E2800F38F00 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
@@ -228,6 +238,8 @@
 				1A96D549203FA31300254090 /* LoadQuotes.swift */,
 				81542FAE20A3A4550018D234 /* LoadSchemas.swift */,
 				81542FAC20A397420018D234 /* Schema.swift */,
+				1A4E02D020C42F9800671DA9 /* Theme.swift */,
+				1A4E02D220C4306D00671DA9 /* LoadThemes.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -288,6 +300,7 @@
 				812405F9208BF548006E7AB7 /* Customization.swift */,
 				812405F7208BCB0A006E7AB7 /* ContactInfo.swift */,
 				1AFCC5052093F0310021941B /* CreateQuote.swift */,
+				1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -295,6 +308,8 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1A4E02D820C441F700671DA9 /* photo.png */,
+				1A4E02D620C43DDF00671DA9 /* plussign.png */,
 				1A1E302020A5589F00EA6687 /* AppIcons */,
 				1A7BCA1A20A5219B001241E6 /* unlockblack.png */,
 				1A7BCA1920A5219A001241E6 /* unlockwhite.png */,
@@ -488,6 +503,7 @@
 			files = (
 				1A62EF4D20A25DB700F38F00 /* PeopleWhite.png in Resources */,
 				1A62EF4320A1E6FD00F38F00 /* BackButtonBlack.png in Resources */,
+				1A4E02D920C441F800671DA9 /* photo.png in Resources */,
 				1A62EF2820A157C200F38F00 /* mountain.jpg in Resources */,
 				1A62EF4120A1E6FD00F38F00 /* NoAdsWhite.png in Resources */,
 				812405F620884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf in Resources */,
@@ -535,6 +551,7 @@
 				1A62EF2F20A1E4C200F38F00 /* lockicon.png in Resources */,
 				1A62EF4220A1E6FD00F38F00 /* AlarmIconBlack.png in Resources */,
 				1A7BCA1B20A5219B001241E6 /* unlockwhite.png in Resources */,
+				1A4E02D720C43DDF00671DA9 /* plussign.png in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
 				1A62EF2920A157C200F38F00 /* whitetower.jpg in Resources */,
 				1AA123782044F4B40004C1AE /* search.png in Resources */,
@@ -631,6 +648,7 @@
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
 				81542FAF20A3A4550018D234 /* LoadSchemas.swift in Sources */,
+				1A4E02CF20C0E02700671DA9 /* LoadCustomImageController.swift in Sources */,
 				812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */,
 				812405FA208BF548006E7AB7 /* Customization.swift in Sources */,
 				1AA3841A204B7D23007E4241 /* SearchView.swift in Sources */,
@@ -638,7 +656,9 @@
 				1A62EF2D20A1D31F00F38F00 /* PricingCollectionViewCell.swift in Sources */,
 				1A62EF1D20A151B500F38F00 /* LoadingViewController.swift in Sources */,
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
+				1A4E02D320C4306D00671DA9 /* LoadThemes.swift in Sources */,
 				1AC3C98220B3A5D70024D91D /* ConfirmMonthlyView.swift in Sources */,
+				1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */,
 				1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */,
 				1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */,
 				812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */,

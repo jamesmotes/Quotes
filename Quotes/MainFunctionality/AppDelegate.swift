@@ -76,29 +76,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(true, forKey: "updated")
         }
         if(defaults.bool(forKey: "HasBeenLaunched") == false){
+            defaults.set(true, forKey: "FirstUpdate")
             defaults.set([], forKey: "AlarmSetPeople")
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
             defaults.set(10, forKey: "reviewCountdown")
             defaults.set(false, forKey: "full_unlock")
             defaults.set(false, forKey: "whiteBackground")
-            globalSchema.setTextColor(color: UIColor.white)
-            globalSchema.font = "Georgia"
-            globalSchema.setBackgroundColor(color: UIColor.black)
-            globalSchema.imageFile = "Colorcloud.jpg"
-            globalSchema.whiteBackground = false
+            globalTheme.setTextColor(color: UIColor.white)
+            globalTheme.font = "Georgia"
+            globalTheme.setBackgroundColor(color: UIColor.black)
+            globalTheme.imageFile = "Colorcloud.jpg"
+            let initialImage = UIImage(named: "Colorcloud.jpg")
+            globalTheme.setImage(_image: initialImage)
+            globalTheme.whiteBackground = false
             storeCustomiationInfo()
         }
         else{
+            //First App Update
+            if(defaults.bool(forKey: "FirstUpdate") == false){
+                defaults.set(true, forKey: "FirstUpdate")
+                var _ : LoadThemes = LoadThemes()
+                
+                let initialImage = UIImage(named: "Colorcloud.jpg")
+                globalTheme.setImage(_image: initialImage)
+                
+                defaults.set(globalTheme.image, forKey: "image")
+            }
+            
+            
             // TODO: Change to global Schema object
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
             quoteIterator = defaults.integer(forKey: "quoteIterator")
-            globalSchema.setTextColor(color: defaults.colorForKey(key: "fontColor")!)
-            globalSchema.font = defaults.string(forKey: "fontStyle")!
-            globalSchema.setBackgroundColor(color: defaults.colorForKey(key: "backgroundColor")!)
-            globalSchema.imageFile = defaults.string(forKey: "imageFile")!
-            globalSchema.whiteBackground = defaults.bool(forKey: "whiteBackground")
+            globalTheme.setTextColor(color: defaults.colorForKey(key: "fontColor")!)
+            globalTheme.font = defaults.string(forKey: "fontStyle")!
+            globalTheme.setBackgroundColor(color: defaults.colorForKey(key: "backgroundColor")!)
+            globalTheme.imageFile = defaults.string(forKey: "imageFile")!
+            globalTheme.image = defaults.data(forKey: "image") as! NSData
+            globalTheme.whiteBackground = defaults.bool(forKey: "whiteBackground")
         }
         
         if(defaults.integer(forKey: "reviewCountdown") == 0){
@@ -111,6 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(countdown, forKey: "reviewCountdown")
         }
         
+
         
         
         /*if (defaults.dictionary(forKey: "favorites") != nil){
@@ -433,8 +450,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func updateDatabase(){
         
         var _ : LoadQuotes = LoadQuotes()
-        var _ : LoadSchemas = LoadSchemas()
-        // TODO: create LoadSchemas()
+        //var _ : LoadSchemas = LoadSchemas()
+        var _ : LoadThemes = LoadThemes()
+        
+        
         let defaults = UserDefaults.standard
         defaults.set(quoteIterator, forKey: "quoteIterator")
         /*var ref: DatabaseReference!
@@ -478,13 +497,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func storeCustomiationInfo() {
-        // TODO: Change to global Schema object
+        // TODO: Change to global Theme object
         let defaults = UserDefaults.standard
-        defaults.setColor(color: globalSchema.getTextColor(), forKey: "fontColor")
-        defaults.set(globalSchema.font, forKey: "fontStyle")
-        defaults.setColor(color: globalSchema.getBackgroundColor(), forKey: "backgroundColor")
-        defaults.set(globalSchema.imageFile, forKey: "imageFile")
-        defaults.set(globalSchema.whiteBackground, forKey: "whiteBackground")
+        defaults.setColor(color: globalTheme.getTextColor(), forKey: "fontColor")
+        defaults.set(globalTheme.font, forKey: "fontStyle")
+        defaults.setColor(color: globalTheme.getBackgroundColor(), forKey: "backgroundColor")
+        defaults.set(globalTheme.imageFile, forKey: "imageFile")
+        defaults.set(globalTheme.whiteBackground, forKey: "whiteBackground")
+        
+        defaults.set(globalTheme.image, forKey: "image")
     }
     
 

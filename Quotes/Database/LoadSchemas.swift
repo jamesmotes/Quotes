@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
+//var imageIterator = 0
+
 class LoadSchemas {
     let realm = try! Realm()
     
@@ -18,6 +20,12 @@ class LoadSchemas {
         // var whiteBackground : Bool = Bool()
         var textColor : UIColor = UIColor()
         var backgroundColor : UIColor = UIColor()
+        
+        imageFile = ""
+        fontStyle = "System"
+        textColor = UIColor.white
+        backgroundColor = UIColor.black
+        addSchema(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = ""
         fontStyle = "Papyrus"

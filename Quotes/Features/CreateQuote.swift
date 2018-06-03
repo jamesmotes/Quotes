@@ -26,7 +26,7 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSchema()
+        setTheme()
         /*if(whiteBackground){ backButton.setBackgroundImage(UIImage(named: "BackButtonBlack.png"), for: UIControlState.normal)
         }
         else {
@@ -40,21 +40,22 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         editButton.isHidden = true
-        setSchema()
+        setTheme()
     }
     
-    func setSchema(){
-        if(globalSchema.whiteBackground){
+    func setTheme(){
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
             view.backgroundColor = UIColor.white
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
-            view.backgroundColor = globalSchema.getBackgroundColor()
+            view.backgroundColor = globalTheme.getBackgroundColor()
         }
         
-        if(globalSchema.imageFile != ""){
-            image.image = UIImage(named: globalSchema.imageFile)
-        }
+        /*if(globalTheme.imageFile != ""){
+            image.image = UIImage(named: globalTheme.imageFile)
+        }*/
+        image.image = globalTheme.getImage()
     }
 
     override func didReceiveMemoryWarning() {

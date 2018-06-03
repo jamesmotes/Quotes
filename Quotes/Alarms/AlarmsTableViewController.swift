@@ -34,7 +34,7 @@ class AlarmsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableHeaderView?.backgroundColor = UIColor.clear
-        setSchema()
+        setTheme()
         
         
         center.getPendingNotificationRequests { (notifications) in
@@ -93,26 +93,26 @@ class AlarmsTableViewController: UITableViewController {
         
     }
     
-    func setSchema(){
-        self.tableView.backgroundColor = globalSchema.getBackgroundColor()
+    func setTheme(){
+        self.tableView.backgroundColor = globalTheme.getBackgroundColor()
         self.tableView.tableFooterView = UIView()
-        back.tintColor = globalSchema.getTextColor()
-        addButton.tintColor = globalSchema.getTextColor()
+        back.tintColor = globalTheme.getTextColor()
+        addButton.tintColor = globalTheme.getTextColor()
         
-        let textAttributes = [NSAttributedStringKey.foregroundColor:globalSchema.getTextColor()]
+        let textAttributes = [NSAttributedStringKey.foregroundColor:globalTheme.getTextColor()]
         navBar.titleTextAttributes = textAttributes
-        navBar.tintColor = globalSchema.getBackgroundColor()
-        navBar.barTintColor = globalSchema.getBackgroundColor()
+        navBar.tintColor = globalTheme.getBackgroundColor()
+        navBar.barTintColor = globalTheme.getBackgroundColor()
         
-        view.backgroundColor = globalSchema.getBackgroundColor()
-        tableView.backgroundColor = globalSchema.getBackgroundColor()
+        view.backgroundColor = globalTheme.getBackgroundColor()
+        tableView.backgroundColor = globalTheme.getBackgroundColor()
         tableView.tableHeaderView?.backgroundColor = UIColor.clear
-        navBar.barTintColor = globalSchema.getBackgroundColor()
-        navBar.tintColor = globalSchema.getBackgroundColor()
+        navBar.barTintColor = globalTheme.getBackgroundColor()
+        navBar.tintColor = globalTheme.getBackgroundColor()
         
-        addButton.tintColor = globalSchema.getTextColor()
+        addButton.tintColor = globalTheme.getTextColor()
         
-        if(globalSchema.whiteBackground){
+        if(globalTheme.whiteBackground){
             back.image = UIImage(named: "BackButtonBlack.png")
             //back.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
             tableView.separatorColor = UIColor.black
@@ -297,10 +297,10 @@ class AlarmsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AlarmMenuCell
 
-        cell.time.textColor = globalSchema.getTextColor()
-        cell.name.textColor = globalSchema.getTextColor()
-        cell.AM.textColor = globalSchema.getTextColor()
-        cell.backgroundColor = globalSchema.getBackgroundColor()
+        cell.time.textColor = globalTheme.getTextColor()
+        cell.name.textColor = globalTheme.getTextColor()
+        cell.AM.textColor = globalTheme.getTextColor()
+        cell.backgroundColor = globalTheme.getBackgroundColor()
         
         //print(alarms[indexPath].trigger)
         // Configure the cell...

@@ -14,14 +14,19 @@ var justChanged = false
 var hasImage = true
 //var globalImageFile = "Colorcloud.jpg"
 
-var globalSchema : Schema = Schema()
+//var globalSchema : Schema = Schema()
+var globalTheme : Theme = Theme()
 
-class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+var loadedImage : UIImage = UIImage()
+
+class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     let realm = try! Realm()
-    var array : [Schema] = []
+    var array : [Theme] = []
+    
     
     //var collectionView: UICollectionView?
     
@@ -127,6 +132,8 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
             hasImage = false
         }
         
+        cell.image.image = array[indexPath.row].getImage()
+        
         cell.name.font = UIFont(name: array[indexPath.row].font, size: 15)
         cell.quote.font = UIFont(name: array[indexPath.row].font, size: 35)
         cell.name.textColor = array[indexPath.row].getTextColor()
@@ -134,11 +141,18 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         cell.backgroundColor = array[indexPath.row].getBackgroundColor()
         
-        if(!full_unlock && indexPath.row > 5){
+        if((!full_unlock && indexPath.row > 6) || (indexPath.row == 0 && !full_unlock)){
             cell.lockImage.isHidden = false
         }
         else {
             cell.lockImage.isHidden = true
+        }
+        
+        if(indexPath.row == 0){
+            cell.quote.text = ""
+            cell.name.text = ""
+            cell.backgroundColor = UIColor.black
+            cell.image.backgroundColor = UIColor.black
         }
         
         //cell.sizeThatFits(CGSize(width: collectionView.frame.width/3.1, height: collectionView.frame.width/3.1))
@@ -148,7 +162,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if(!full_unlock && indexPath.row > 5){
+        if(!full_unlock && indexPath.row > 6){
             performSegue(withIdentifier: "fontsToPurchase", sender: nil)
             return
         }
@@ -230,17 +244,81 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         }
         */
 
-        globalSchema = array[indexPath.row]
+        if(indexPath.row == 0){
+            let customImage = UIImagePickerController()
+            customImage.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            
+            customImage.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            
+            customImage.allowsEditing = false
+            
+            self.present(customImage, animated: true){
+                
+            }
+            
+            
+        }
+        else {
+            globalTheme = array[indexPath.row]
+            changedFont = true
+            justChanged = true
+            dismiss(animated: true, completion: nil)
+        }
         
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            loadedImage = image
+            
+            
+            self.dismiss(animated: true, completion: nil)
+            performSegue(withIdentifier: "loadCustomImage", sender: nil)
+        }
+        else {
+            print("got problems with image loading")
+            self.dismiss(animated: true, completion: nil)
+        }
+        //self.dismiss(animated: true, completion: nil)
+    }
+    
+    func saveImage(imageName: String) -> String{
+        let fileManager = FileManager.default
+        
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+        
+        let data = UIImagePNGRepresentation(loadedImage)
+        
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+        
+        return imagePath
+    }
+    
+    func selectedImage(){
+        let imageCount = self.array.count
+        let imageName = "customImage" + String(imageCount)
+        let imagePath = self.saveImage(imageName: imageName)
+        
+        print(imagePath)
+        
+        var customTheme : Theme = Theme()
+        customTheme.imageFile = imagePath + "//" + imageName
+        customTheme.font = "Copperplate"
+        customTheme.setTextColor(color: UIColor.white)
+        customTheme.setBackgroundColor(color: UIColor.black)
+        customTheme.whiteBackground = false
+        try! self.realm.write {
+            self.realm.add(customTheme)
+        }
+        globalTheme = customTheme
         changedFont = true
         justChanged = true
-        dismiss(animated: true, completion: nil)
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSchema()
+        setTheme()
         /*collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
         collectionView?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView!)
@@ -266,6 +344,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         collectionView?.delegate = self
         collectionView?.dataSource = self
         
+        
         collectionView.backgroundColor = UIColor.black
         
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -281,7 +360,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         
         
-        array = Array(realm.objects(Schema.self))
+        array = Array(realm.objects(Theme.self))
         collectionView.reloadData()
         
         // Do any additional setup after loading the view.
@@ -290,11 +369,15 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     override func viewDidAppear(_ animated: Bool) {
         collectionView.reloadData()
+        if(savedImage == true){
+            dismiss(animated: true, completion: nil)
+            savedImage = false
+        }
     }
     
-    func setSchema(){
-        view.backgroundColor = globalSchema.getBackgroundColor()
-        if(globalSchema.whiteBackground){
+    func setTheme(){
+        view.backgroundColor = globalTheme.getBackgroundColor()
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
             collectionView.backgroundColor = UIColor.black
         } else {

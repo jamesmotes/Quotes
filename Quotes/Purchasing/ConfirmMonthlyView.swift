@@ -32,12 +32,12 @@ class ConfirmMonthlyView: UIViewController {
         super.viewDidLoad()
         
         options = PurchasesController.shared.options
-        setSchema()
+        setTheme()
         // Do any additional setup after loading the view.
     }
     
-    func setSchema(){
-        if(globalSchema.whiteBackground){
+    func setTheme(){
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
@@ -45,35 +45,36 @@ class ConfirmMonthlyView: UIViewController {
         
         /********************************************/
         //font color setup
-        backButton.titleLabel?.textColor = globalSchema.getTextColor()
-        view.backgroundColor = globalSchema.getBackgroundColor()
+        backButton.titleLabel?.textColor = globalTheme.getTextColor()
+        view.backgroundColor = globalTheme.getBackgroundColor()
         
-        itemTitle.textColor = globalSchema.getTextColor()
-        headerText.textColor = globalSchema.getTextColor()
-        priceLabel.textColor = globalSchema.getTextColor()
-        freeTrial.textColor = globalSchema.getTextColor()
-        autoRenew.textColor = globalSchema.getTextColor()
-        charged24.textColor = globalSchema.getTextColor()
-        managedAt.textColor = globalSchema.getTextColor()
-        unusedFree.textColor = globalSchema.getTextColor()
-        confirmPurchaseButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        itemTitle.textColor = globalTheme.getTextColor()
+        headerText.textColor = globalTheme.getTextColor()
+        priceLabel.textColor = globalTheme.getTextColor()
+        freeTrial.textColor = globalTheme.getTextColor()
+        autoRenew.textColor = globalTheme.getTextColor()
+        charged24.textColor = globalTheme.getTextColor()
+        managedAt.textColor = globalTheme.getTextColor()
+        unusedFree.textColor = globalTheme.getTextColor()
+        confirmPurchaseButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
         
         
         
         /********************************************/
         //background image
         
-        if(globalSchema.imageFile != ""){
+        /*if(globalSchema.imageFile != ""){
             image.image = UIImage(named: globalSchema.imageFile)
         }
         else {
             image.image = nil
-        }
+        }*/
+        image.image = globalTheme.getImage()
         /********************************************/
         //background for restore button image
         
         
-        confirmPurchaseBackground.layer.borderColor = globalSchema.getTextColor()?.cgColor
+        confirmPurchaseBackground.layer.borderColor = globalTheme.getTextColor()?.cgColor
         confirmPurchaseBackground.layer.borderWidth = 3.0
         
     }

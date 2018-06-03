@@ -89,34 +89,34 @@ class MainMenuTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func setSchema(){
+    func setTheme(){
         tableView.tableHeaderView?.backgroundColor = UIColor.clear
         
-        view.backgroundColor = globalSchema.getBackgroundColor()
-        if(globalSchema.whiteBackground){
+        view.backgroundColor = globalTheme.getBackgroundColor()
+        if(globalTheme.whiteBackground){
             view.backgroundColor = UIColor.white
         }
         else {
             view.backgroundColor = UIColor.black
         }
-        tableView.backgroundColor = globalSchema.getBackgroundColor()
+        tableView.backgroundColor = globalTheme.getBackgroundColor()
         
         
-        if(globalSchema.whiteBackground){
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
         }
         
         
-        view.backgroundColor = globalSchema.getBackgroundColor()
-        tableView.backgroundColor = globalSchema.getBackgroundColor()
-        backButton.backgroundColor = globalSchema.getBackgroundColor()
+        view.backgroundColor = globalTheme.getBackgroundColor()
+        tableView.backgroundColor = globalTheme.getBackgroundColor()
+        backButton.backgroundColor = globalTheme.getBackgroundColor()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
-        setSchema()
+        setTheme()
         navigationController?.isNavigationBarHidden = false
         if(justChanged){
             justChanged = false
@@ -294,12 +294,12 @@ class MainMenuTableViewController: UITableViewController {
             cell.icon.image = nil
             cell.label2.textAlignment = .left
             
-            cell.label2.font = UIFont(name: globalSchema.font, size: CGFloat(labelFontSize))  // Set font
-            cell.label2.textColor = globalSchema.getTextColor()                               // Set font color
+            cell.label2.font = UIFont(name: globalTheme.font, size: CGFloat(labelFontSize))  // Set font
+            cell.label2.textColor = globalTheme.getTextColor()                               // Set font color
             cell.label2.adjustsFontSizeToFitWidth = true                                      // Set font size
             
-            cell.backgroundColor = globalSchema.getBackgroundColor()
-            cell.label2.backgroundColor = globalSchema.getBackgroundColor()               // Set background color
+            cell.backgroundColor = globalTheme.getBackgroundColor()
+            cell.label2.backgroundColor = globalTheme.getBackgroundColor()               // Set background color
 
         }
         else {
@@ -309,7 +309,7 @@ class MainMenuTableViewController: UITableViewController {
             //sortedArray = tableOptions[currentMenu]
             if(indexPath.row == 2){
                 cell.icon.image = #imageLiteral(resourceName: "star")
-                if(globalSchema.whiteBackground){
+                if(globalTheme.whiteBackground){
                     cell.icon.tintColor = UIColor.black
                 }
                 else {
@@ -317,7 +317,7 @@ class MainMenuTableViewController: UITableViewController {
                 }
             }
             else {
-                if(globalSchema.whiteBackground){
+                if(globalTheme.whiteBackground){
                     cell.icon.image = UIImage(named: mainMenuBlackIcons[indexPath.row])
                 }
                 else {
@@ -326,14 +326,14 @@ class MainMenuTableViewController: UITableViewController {
             }
             cell.label.text = (tableOptions[currentMenu])[indexPath.row]        // Label text
             //cell.textLabel?.textAlignment = .center                           // Center text
-            cell.backgroundColor = globalSchema.getBackgroundColor()
-            cell.label.backgroundColor = globalSchema.getBackgroundColor()      // Set background color
+            cell.backgroundColor = globalTheme.getBackgroundColor()
+            cell.label.backgroundColor = globalTheme.getBackgroundColor()      // Set background color
             
             //let currentSize = 100
             //cell.label.font = UIFont(name: "System", size: CGFloat(currentSize))
             
-            cell.label.font = UIFont(name: globalSchema.font, size: CGFloat(labelFontSize))   // Set font
-            cell.label.textColor = globalSchema.getTextColor()                                          // Set font color
+            cell.label.font = UIFont(name: globalTheme.font, size: CGFloat(labelFontSize))   // Set font
+            cell.label.textColor = globalTheme.getTextColor()                                          // Set font color
             cell.label.adjustsFontSizeToFitWidth = true                                     // Set font size
             
             //let currentSize = 32

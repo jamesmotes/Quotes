@@ -61,7 +61,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     var didComeFromAdd = false
     
     override func viewDidLoad() {
-        setSchema()
+        setTheme()
         super.viewDidLoad()
         
         
@@ -96,10 +96,15 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             }
         }
     }
-    
+    /*
     func setSchema(){
         if(globalSchema.imageFile != ""){
-            image.image = UIImage(named: globalSchema.imageFile)
+            if(didUploadImage == false){
+                image.image = UIImage(named: globalSchema.imageFile)
+            }
+            else {
+                image.image = uploadedImage
+            }
         }
         else {
             image.image = nil
@@ -123,6 +128,48 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         
         
         if(globalSchema.whiteBackground){
+            menuBlack.isHidden = false
+            searchBlack.isHidden = false
+            shareBlack.isHidden = false
+            
+            menuButton.isHidden = true
+            searchButton.isHidden = true
+            shareButton.isHidden = true
+        }
+        else {
+            menuBlack.isHidden = true
+            searchBlack.isHidden = true
+            shareBlack.isHidden = true
+            
+            menuButton.isHidden = false
+            searchButton.isHidden = false
+            shareButton.isHidden = false
+        }
+    }*/
+    
+    func setTheme(){
+        image.image = globalTheme.getImage()
+        print (globalTheme.getImage())
+        view.backgroundColor = globalTheme.getBackgroundColor()
+        
+        if(changedFont){
+            changedFont = false
+            text.textColor = globalTheme.getTextColor()
+            var currentSize = 42
+            text.font = UIFont(name: globalTheme.font, size: CGFloat(currentSize))
+            
+            person.textColor = globalTheme.getTextColor()
+            currentSize = 25
+            person.font = UIFont(name: globalTheme.font, size: CGFloat(currentSize))
+            
+            createQuoteButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
+            deleteQuoteButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
+            
+            self.view.backgroundColor = globalTheme.getBackgroundColor()
+        }
+        
+        
+        if(globalTheme.whiteBackground){
             menuBlack.isHidden = false
             searchBlack.isHidden = false
             shareBlack.isHidden = false
@@ -206,7 +253,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             }
             showAfterMenu()
         }
-        setSchema()
+        setTheme()
     }
 
     override func didReceiveMemoryWarning() {
@@ -383,7 +430,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             self.text.text = quotes[index].text
             self.person.text = "- " + quotes[index].person
             if(!quotes[index].favorite){
-                if(globalSchema.whiteBackground){
+                if(globalTheme.whiteBackground){
                     self.favButton.tintColor = UIColor.lightGray
                 }
                 else {
@@ -489,7 +536,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         //UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
         
         favButton.isHidden = false
-        setSchema()
+        setTheme()
         return image!
     }
     

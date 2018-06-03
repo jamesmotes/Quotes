@@ -50,7 +50,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         filteredData = filteredData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         
         cell.textLabel?.text = filteredData[indexPath.row]
-        cell.textLabel?.textColor = globalSchema.getTextColor()
+        cell.textLabel?.textColor = globalTheme.getTextColor()
         cell.backgroundColor = UIColor.clear
         return cell
     }
@@ -90,7 +90,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSchema()
+        setTheme()
         
         
         let allQuotes = Array(realm.objects(Quote.self))
@@ -130,26 +130,26 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         tableView.tableHeaderView = searchController.searchBar
     }
     
-    func setSchema(){
-        self.tableView.backgroundColor = globalSchema.getBackgroundColor()
+    func setTheme(){
+        self.tableView.backgroundColor = globalTheme.getBackgroundColor()
         self.tableView.tableFooterView = UIView()
-        if(globalSchema.whiteBackground){
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
         }
         
-        tableView.backgroundView?.backgroundColor = globalSchema.getBackgroundColor()
-        tableView.backgroundColor = globalSchema.getBackgroundColor()
-        view.backgroundColor = globalSchema.getBackgroundColor()
+        tableView.backgroundView?.backgroundColor = globalTheme.getBackgroundColor()
+        tableView.backgroundColor = globalTheme.getBackgroundColor()
+        view.backgroundColor = globalTheme.getBackgroundColor()
         
         let backView = UIView(frame: self.tableView.bounds)
-        backView.backgroundColor = globalSchema.getBackgroundColor() // or whatever color
+        backView.backgroundColor = globalTheme.getBackgroundColor() // or whatever color
         self.tableView.backgroundView = backView
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setSchema()
+        setTheme()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -46,7 +46,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         var cell = UITableViewCell()
         
         cell.textLabel?.text = filteredData[indexPath.row]
-        cell.textLabel?.textColor = globalSchema.getTextColor()
+        cell.textLabel?.textColor = globalTheme.getTextColor()
         cell.backgroundColor = UIColor.clear
         return cell
     }
@@ -58,7 +58,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSchema()
+        setTheme()
         
         data.append(contentsOf: peopleOptions)
         data.shuffle()
@@ -76,7 +76,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         
         
         let backView = UIView(frame: self.tableView.bounds)
-        backView.backgroundColor = globalSchema.getBackgroundColor()// or whatever color
+        backView.backgroundColor = globalTheme.getBackgroundColor()// or whatever color
         self.tableView.backgroundView = backView
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
@@ -85,20 +85,20 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         
     }
     
-    func setSchema(){
-        view.backgroundColor = globalSchema.getBackgroundColor()
-        datePicker.backgroundColor = globalSchema.getBackgroundColor()
+    func setTheme(){
+        view.backgroundColor = globalTheme.getBackgroundColor()
+        datePicker.backgroundColor = globalTheme.getBackgroundColor()
         
-        if(globalSchema.whiteBackground){
+        if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
         }
-        saveButton.setTitleColor(globalSchema.getTextColor(), for: .normal)
+        saveButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
         
-        datePicker.setValue(globalSchema.getTextColor(), forKeyPath: "textColor")
-        tableView.sectionIndexTrackingBackgroundColor = globalSchema.getBackgroundColor()
-        tableView.sectionIndexBackgroundColor = globalSchema.getBackgroundColor()
+        datePicker.setValue(globalTheme.getTextColor(), forKeyPath: "textColor")
+        tableView.sectionIndexTrackingBackgroundColor = globalTheme.getBackgroundColor()
+        tableView.sectionIndexBackgroundColor = globalTheme.getBackgroundColor()
         
     }
 
