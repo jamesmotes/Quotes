@@ -33,10 +33,10 @@ class MainMenuTableViewCell: UITableViewCell {
 }
 
 
-let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Unlock Features", "Contact Us"]
-let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "AlarmIconWhite.png", "FontsWhite.png", "PersonalWhite.png", "unlockwhite.png", "ContactUsWhite.png"]
+let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Unlock Features", "Recommended Motivators", "Contact Us"]
+let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "AlarmIconWhite.png", "FontsWhite.png", "PersonalWhite.png", "unlockwhite.png", "influencer_white.png", "ContactUsWhite.png"]
 
-let mainMenuBlackIcons = ["PeopleBlack.png", "CategoriesBlack.png", "star", "AlarmIconBlack.png", "FontsBlack.png", "PersonalBlack.png", "unlockblack.png", "ContactUsBlack.png"]
+let mainMenuBlackIcons = ["PeopleBlack.png", "CategoriesBlack.png", "star", "AlarmIconBlack.png", "FontsBlack.png", "PersonalBlack.png", "unlockblack.png", "influencer_black.png", "ContactUsBlack.png"]
 
 
 let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt", "Serena Williams", "Margaret Thatcher", "Richard Branson"]
@@ -46,6 +46,7 @@ let catOptions = [/*"General",*/ "Change", /*"Success",*/"Entrepreneur", "Fitnes
 let MAIN_MENU = 0
 let PEOPLE_MENU = 1
 let CAT_MENU = 2
+let INF_MENU = 3
 //let MOOD_MENU = 3
 
 class MainMenuTableViewController: UITableViewController {
@@ -199,7 +200,11 @@ class MainMenuTableViewController: UITableViewController {
                 print("unlock")
                 //performSegue(withIdentifier: "viewContactInfo", sender: nil)
                 performSegue(withIdentifier: "menuToPurchase", sender: nil)
-            case 7:    // Contact Us
+            case 7:    // Influencers
+                print("recommended Motivators was selected")
+                //performSegue(withIdentifier: "viewRecommendedMotivators", sender: nil)
+                currentMenu = INF_MENU
+            case 8:    // Contact Us
                 print("conact us was selected")
                 //performSegue(withIdentifier: "viewContactInfo", sender: nil)
                 let email = "contact@gbjmobile.com"
@@ -241,6 +246,10 @@ class MainMenuTableViewController: UITableViewController {
             /*case MOOD_MENU:     // A Mood was selected
                 md = tableOptions[currentMenu][indexPath.item]
                 print("\(md) was selected.")*/
+            case INF_MENU:
+                selectedInfluencer = influencers[indexPath.item]
+                performSegue(withIdentifier: "viewRecommendedMotivators", sender: nil)
+                return
             default:            // Something broke
                 break
             }
@@ -253,7 +262,13 @@ class MainMenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableOptions[currentMenu].count
+        if(currentMenu == INF_MENU) {
+            return influencers.count
+        }
+        else {
+            return tableOptions[currentMenu].count
+        }
+        
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -265,11 +280,13 @@ class MainMenuTableViewController: UITableViewController {
         
         cell.textLabel?.text = ""
         
+        cell.icon.layer.borderColor = UIColor.clear.cgColor
+        
         // Design item as necessary
         // sort array alphabetically
         var sortedArray : [String] = []
         let labelFontSize = 21
-        if(currentMenu != MAIN_MENU){	
+        if(currentMenu != MAIN_MENU && currentMenu != INF_MENU){
             sortedArray = tableOptions[currentMenu]//.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
             
             if(!full_unlock){
@@ -301,6 +318,27 @@ class MainMenuTableViewController: UITableViewController {
             cell.backgroundColor = globalTheme.getBackgroundColor()
             cell.label2.backgroundColor = globalTheme.getBackgroundColor()               // Set background color
 
+        }
+        else if(currentMenu == INF_MENU){
+            cell.label.text = influencers[indexPath.row].name
+
+            //cell.label2.text = sortedArray[indexPath.row]
+            //cell.icon.image = influencers[indexPath.row].image
+            cell.icon.image = selectedInfluencer.image
+            cell.icon.layer.cornerRadius = cell.icon.frame.size.width / 2;
+            cell.icon.clipsToBounds = true;
+            cell.icon.layer.borderWidth = 0.5
+            cell.icon.layer.borderColor = UIColor.white.cgColor
+            cell.icon.image = influencers[indexPath.row].image
+            //cell.icon.contentMode = .scaleAspectFill
+            //cell.label2.textAlignment = .left
+            
+            //cell.label2.font = UIFont(name: globalTheme.font, size: CGFloat(labelFontSize))  // Set font
+            //cell.label2.textColor = globalTheme.getTextColor()                               // Set font color
+            //cell.label2.adjustsFontSizeToFitWidth = true                                      // Set font size
+            
+            cell.backgroundColor = globalTheme.getBackgroundColor()
+            //cell.label2.backgroundColor = globalTheme.getBackgroundColor()               // Set background color
         }
         else {
             // Main menu

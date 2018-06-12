@@ -27,7 +27,6 @@
 		1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D020C42F9800671DA9 /* Theme.swift */; };
 		1A4E02D320C4306D00671DA9 /* LoadThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D220C4306D00671DA9 /* LoadThemes.swift */; };
 		1A4E02D720C43DDF00671DA9 /* plussign.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E02D620C43DDF00671DA9 /* plussign.png */; };
-		1A4E02D920C441F800671DA9 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E02D820C441F700671DA9 /* photo.png */; };
 		1A62EF11209FA39100F38F00 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF10209FA39100F38F00 /* PurchaseView.swift */; };
 		1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1420A08E2800F38F00 /* Subscription.swift */; };
 		1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */; };
@@ -65,6 +64,16 @@
 		1A7BCA1820A4037C001241E6 /* towerdown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1320A4037C001241E6 /* towerdown.jpg */; };
 		1A7BCA1B20A5219B001241E6 /* unlockwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1920A5219A001241E6 /* unlockwhite.png */; };
 		1A7BCA1C20A5219B001241E6 /* unlockblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1A20A5219B001241E6 /* unlockblack.png */; };
+		1A8FEA3920C567D3004303FD /* Influencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FEA3820C567D3004303FD /* Influencer.swift */; };
+		1A8FEA3C20C80E17004303FD /* influencer_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FEA3A20C80E16004303FD /* influencer_white.png */; };
+		1A8FEA3D20C80E17004303FD /* influecner_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FEA3B20C80E17004303FD /* influecner_black.png */; };
+		1A8FEA3F20C81051004303FD /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FEA3E20C81051004303FD /* photo.png */; };
+		1A8FEA4120C8245C004303FD /* RecommendedMotivators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FEA4020C8245C004303FD /* RecommendedMotivators.swift */; };
+		1A8FEA4320C8C58C004303FD /* InfluencerLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FEA4220C8C58C004303FD /* InfluencerLinkCell.swift */; };
+		1A8FEA4520C8C661004303FD /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FEA4420C8C65E004303FD /* youtube.png */; };
+		1A8FEA4920C8C6B9004303FD /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FEA4820C8C6B9004303FD /* twitter.png */; };
+		1A8FEA4B20C8C6CA004303FD /* safari.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FEA4A20C8C6C9004303FD /* safari.png */; };
+		1A8FEA4D20C8CB50004303FD /* insta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FEA4C20C8CB50004303FD /* insta.png */; };
 		1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */; };
 		1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D549203FA31300254090 /* LoadQuotes.swift */; };
 		1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */; };
@@ -136,7 +145,6 @@
 		1A4E02D020C42F9800671DA9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1A4E02D220C4306D00671DA9 /* LoadThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThemes.swift; sourceTree = "<group>"; };
 		1A4E02D620C43DDF00671DA9 /* plussign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plussign.png; sourceTree = "<group>"; };
-		1A4E02D820C441F700671DA9 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		1A62EF10209FA39100F38F00 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		1A62EF1420A08E2800F38F00 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
@@ -174,6 +182,16 @@
 		1A7BCA1320A4037C001241E6 /* towerdown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = towerdown.jpg; path = ../../../../../../../Downloads/morepics/towerdown.jpg; sourceTree = "<group>"; };
 		1A7BCA1920A5219A001241E6 /* unlockwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlockwhite.png; sourceTree = "<group>"; };
 		1A7BCA1A20A5219B001241E6 /* unlockblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlockblack.png; sourceTree = "<group>"; };
+		1A8FEA3820C567D3004303FD /* Influencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Influencer.swift; sourceTree = "<group>"; };
+		1A8FEA3A20C80E16004303FD /* influencer_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = influencer_white.png; sourceTree = "<group>"; };
+		1A8FEA3B20C80E17004303FD /* influecner_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = influecner_black.png; sourceTree = "<group>"; };
+		1A8FEA3E20C81051004303FD /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		1A8FEA4020C8245C004303FD /* RecommendedMotivators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedMotivators.swift; sourceTree = "<group>"; };
+		1A8FEA4220C8C58C004303FD /* InfluencerLinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfluencerLinkCell.swift; sourceTree = "<group>"; };
+		1A8FEA4420C8C65E004303FD /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
+		1A8FEA4820C8C6B9004303FD /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		1A8FEA4A20C8C6C9004303FD /* safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = safari.png; sourceTree = "<group>"; };
+		1A8FEA4C20C8CB50004303FD /* insta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insta.png; sourceTree = "<group>"; };
 		1A96D545203E43F500254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-21 at 6.18.16 PM.png"; sourceTree = "<group>"; };
 		1A96D549203FA31300254090 /* LoadQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadQuotes.swift; sourceTree = "<group>"; };
 		1AA123712044E9870004C1AE /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +258,7 @@
 				81542FAC20A397420018D234 /* Schema.swift */,
 				1A4E02D020C42F9800671DA9 /* Theme.swift */,
 				1A4E02D220C4306D00671DA9 /* LoadThemes.swift */,
+				1A8FEA3820C567D3004303FD /* Influencer.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -308,9 +327,15 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
-				1A4E02D820C441F700671DA9 /* photo.png */,
-				1A4E02D620C43DDF00671DA9 /* plussign.png */,
+				1A8FEA4C20C8CB50004303FD /* insta.png */,
+				1A8FEA4A20C8C6C9004303FD /* safari.png */,
+				1A8FEA4820C8C6B9004303FD /* twitter.png */,
+				1A8FEA4420C8C65E004303FD /* youtube.png */,
+				1A8FEA3E20C81051004303FD /* photo.png */,
 				1A1E302020A5589F00EA6687 /* AppIcons */,
+				1A8FEA3B20C80E17004303FD /* influecner_black.png */,
+				1A8FEA3A20C80E16004303FD /* influencer_white.png */,
+				1A4E02D620C43DDF00671DA9 /* plussign.png */,
 				1A7BCA1A20A5219B001241E6 /* unlockblack.png */,
 				1A7BCA1920A5219A001241E6 /* unlockwhite.png */,
 				1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */,
@@ -402,6 +427,8 @@
 				1AA3841B205232BD007E4241 /* imageFiles */,
 				1AACFE9A1FF2F65E00E6424D /* LaunchScreen.storyboard */,
 				1AACFE9D1FF2F65E00E6424D /* Info.plist */,
+				1A8FEA4020C8245C004303FD /* RecommendedMotivators.swift */,
+				1A8FEA4220C8C58C004303FD /* InfluencerLinkCell.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -503,7 +530,6 @@
 			files = (
 				1A62EF4D20A25DB700F38F00 /* PeopleWhite.png in Resources */,
 				1A62EF4320A1E6FD00F38F00 /* BackButtonBlack.png in Resources */,
-				1A4E02D920C441F800671DA9 /* photo.png in Resources */,
 				1A62EF2820A157C200F38F00 /* mountain.jpg in Resources */,
 				1A62EF4120A1E6FD00F38F00 /* NoAdsWhite.png in Resources */,
 				812405F620884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf in Resources */,
@@ -511,6 +537,7 @@
 				1A62EF3A20A1E6FD00F38F00 /* BackButtonWhite.png in Resources */,
 				1A62EF2720A157C200F38F00 /* Colorcloud.jpg in Resources */,
 				1A0DC0D820A3DEDF007FEA6B /* tempestuousocean.jpg in Resources */,
+				1A8FEA3D20C80E17004303FD /* influecner_black.png in Resources */,
 				1A7BCA1C20A5219B001241E6 /* unlockblack.png in Resources */,
 				1A1E301D20A5589000EA6687 /* QuoteIcon167.png in Resources */,
 				1A62EF2A20A157C200F38F00 /* babylion.jpg in Resources */,
@@ -520,11 +547,15 @@
 				1A7BCA1420A4037C001241E6 /* City.jpg in Resources */,
 				1A0DC0D620A3DEDF007FEA6B /* butterfly.jpg in Resources */,
 				1A0DC0DC20A3DEDF007FEA6B /* desertwalk.jpg in Resources */,
+				1A8FEA3F20C81051004303FD /* photo.png in Resources */,
 				1A62EF4B20A25DB700F38F00 /* PeopleBlack.png in Resources */,
+				1A8FEA4920C8C6B9004303FD /* twitter.png in Resources */,
+				1A8FEA4B20C8C6CA004303FD /* safari.png in Resources */,
 				812405F420884398006E7AB7 /* Fonts in Resources */,
 				1AC3C98020AA050D0024D91D /* GoogleService-Info.plist in Resources */,
 				1A0DC0DA20A3DEDF007FEA6B /* aurora.jpg in Resources */,
 				1A7BCA1520A4037C001241E6 /* colorhallway.jpg in Resources */,
+				1A8FEA3C20C80E17004303FD /* influencer_white.png in Resources */,
 				1A62EF2B20A157C200F38F00 /* road.jpg in Resources */,
 				1A62EF3E20A1E6FD00F38F00 /* FontsWhite.png in Resources */,
 				1A62EF3D20A1E6FD00F38F00 /* AlarmIconWhite.png in Resources */,
@@ -544,6 +575,7 @@
 				1A0DC0D920A3DEDF007FEA6B /* ferriswheel.jpg in Resources */,
 				1A62EF4F20A25DB700F38F00 /* PersonalBlack.png in Resources */,
 				1A62EF4E20A25DB700F38F00 /* PersonalWhite.png in Resources */,
+				1A8FEA4D20C8CB50004303FD /* insta.png in Resources */,
 				1A7BCA1720A4037C001241E6 /* whitemountain.jpg in Resources */,
 				1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
@@ -552,6 +584,7 @@
 				1A62EF4220A1E6FD00F38F00 /* AlarmIconBlack.png in Resources */,
 				1A7BCA1B20A5219B001241E6 /* unlockwhite.png in Resources */,
 				1A4E02D720C43DDF00671DA9 /* plussign.png in Resources */,
+				1A8FEA4520C8C661004303FD /* youtube.png in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
 				1A62EF2920A157C200F38F00 /* whitetower.jpg in Resources */,
 				1AA123782044F4B40004C1AE /* search.png in Resources */,
@@ -658,6 +691,7 @@
 				1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */,
 				1A4E02D320C4306D00671DA9 /* LoadThemes.swift in Sources */,
 				1AC3C98220B3A5D70024D91D /* ConfirmMonthlyView.swift in Sources */,
+				1A8FEA4320C8C58C004303FD /* InfluencerLinkCell.swift in Sources */,
 				1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */,
 				1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */,
 				1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */,
@@ -666,6 +700,8 @@
 				1A62EF1920A0922500F38F00 /* Session.swift in Sources */,
 				1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */,
 				1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */,
+				1A8FEA4120C8245C004303FD /* RecommendedMotivators.swift in Sources */,
+				1A8FEA3920C567D3004303FD /* Influencer.swift in Sources */,
 				1AAE1C332083F88B00345E1F /* AlarmMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

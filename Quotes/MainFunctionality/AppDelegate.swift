@@ -24,6 +24,8 @@ var full_access = false
 
 var DEVELOPMENT = false
 
+var influencers : [Influencer] = []
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
@@ -34,6 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     let realm = try! Realm()
     
     var notify = false
+    
+    
+    var usedImages : [String] = []
+    var newInfluencerImages : [InfluencerImage] = []
     
     override init() {
     }
@@ -80,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set([], forKey: "AlarmSetPeople")
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
-            defaults.set(10, forKey: "reviewCountdown")
+            defaults.set(3, forKey: "reviewCountdown")
             defaults.set(false, forKey: "full_unlock")
             defaults.set(false, forKey: "whiteBackground")
             globalTheme.setTextColor(color: UIColor.white)
@@ -127,41 +133,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(countdown, forKey: "reviewCountdown")
         }
         
-
-        
-        
-        /*if (defaults.dictionary(forKey: "favorites") != nil){
-            favorites = defaults.dictionary(forKey: "favorites") as! [String : String]
-        }
-        else {
-            defaults.set(favorites, forKey: "favorites")
-        }
-        
-        if (defaults.dictionary(forKey: "unlockedPeople") != nil){
-            dict = defaults.dictionary(forKey: "unlockedPeople") as! [String : Bool]
-        }
-        else {
-            defaults.set(dict, forKey: "unlockedPeople")
-        }*/
-        
-        //setupNotifications
-        /*UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
-            if (error == nil){
-                print("Successful authoriation")
-                application.registerForRemoteNotifications()
-                NotificationCenter.default.addObserver(self, selector: #selector(self.refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
-                self.ConfigureNotifications()
-            }
-        }*/
         
         registerForPushNotifications()
         ConfigureNotifications()
         
-        //application.registerForRemoteNotifications()
-        //NotificationCenter.default.addObserver(self, selector: #selector(refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
-        
-        //Messaging.messaging().delegate = self
-        
+
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             if (error == nil){
                 print("Successful authoriation")
@@ -178,6 +154,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         print(PurchasesController.shared.currentSessionId)
+        
+        // Check if launched from notification
+        // 1
+        if let notification = launchOptions?[.remoteNotification] as? [String: AnyObject] {
+            // 2
+            let aps = notification
+            makeNewQuote(aps: aps)
+            // 3
+            //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+        }
+        
+        
+        loadInfluencers()
+        
         
         //subsription stuff
         guard PurchasesController.shared.currentSessionId != nil,
@@ -196,19 +186,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if(monthly_unlock || full_unlock){
             full_unlock = true
         }
-        
-        
-        // Check if launched from notification
-        // 1
-        if let notification = launchOptions?[.remoteNotification] as? [String: AnyObject] {
-            // 2
-            let aps = notification 
-            makeNewQuote(aps: aps)
-            // 3
-            //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
-        }
-        
-        
+
         return true
     }
     
@@ -360,6 +338,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //}
         
         // Print full message.
+        
+        
+        
         print(userInfo)
         
         completionHandler(UIBackgroundFetchResult.newData)
@@ -381,6 +362,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         storeCustomiationInfo()
+        
+        let storedImages = Array(self.realm.objects(InfluencerImage.self))
+        for i in storedImages {
+            if !usedImages.contains(i.name) {
+                try! self.realm.write {
+                    self.realm.delete(i)
+                }
+            }
+        }
+        for i in newInfluencerImages {
+            try! self.realm.write {
+                self.realm.add(i)
+            }
+        }
+        let images = Array(self.realm.objects(InfluencerImage.self))
+        newInfluencerImages = []
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -397,8 +394,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //let defaults = UserDefaults.standard
         //defaults.set(favorites, forKey: "favorites")
         
-        let defaults = UserDefaults.standard
         storeCustomiationInfo()
+        print("terminating")
+        
+        let storedImages = Array(self.realm.objects(InfluencerImage.self))
+        for i in storedImages {
+            if !usedImages.contains(i.name) {
+                try! self.realm.write {
+                    self.realm.delete(i)
+                }
+            }
+        }
+        for i in newInfluencerImages {
+            try! self.realm.write {
+                self.realm.add(i)
+            }
+        }
+        let images = Array(self.realm.objects(InfluencerImage.self))
+        newInfluencerImages = []
+        
     }
 /*
     func registerForPushNotifications() {
@@ -508,6 +522,81 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         defaults.set(globalTheme.image, forKey: "image")
     }
     
+    
+    func loadInfluencers() {
+        //load influencers
+        
+        
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
+        
+        _ = ref.child("Influencers").observeSingleEvent(of: .value, with: { (snapshot) in
+            let influencerList = snapshot.value as? NSDictionary
+            for (_, inf) in influencerList! {
+                let influencer = inf as? NSDictionary
+                let newInf : Influencer = Influencer()
+                for(key, handle) in influencer! {
+                    if(key as! String == "insta") {
+                        newInf.insta = handle as! String
+                    }
+                    else if(key as! String == "name") {
+                        newInf.name = handle as! String
+                    }
+                    else if(key as! String == "twitter") {
+                        newInf.twitter = handle as! String
+                    }
+                    else if(key as! String == "website") {
+                        newInf.website = handle as! String
+                    }
+                    else if(key as! String == "youtube") {
+                        newInf.youtube = handle as! String
+                    }
+                    else if(key as! String == "imageURL") {
+                        newInf.imageURL = handle as! String
+                    }
+                }
+                
+                //get influencer image
+                //check realm for image first
+                let query = "name CONTAINS '" + newInf.name + "'"
+                let allImages = Array(self.realm.objects(InfluencerImage.self))
+                let storedImages = Array(self.realm.objects(InfluencerImage.self).filter(query))
+                if storedImages.count > 0 {
+                    let storedImage = storedImages[0]
+                    newInf.image = storedImage.getImage()!
+                }
+                else {
+                    let url = NSURL(string: newInf.imageURL)
+                    URLSession.shared.dataTask(with: url! as URL, completionHandler: {(data, response, error) in
+                        if error != nil {
+                            print(error as Any)
+                            return
+                        }
+                        newInf.image = UIImage(data: data!)!
+                        let InfImage = InfluencerImage()
+                        InfImage.name = newInf.name
+                        InfImage.setImage(_image: newInf.image)
+                        self.newInfluencerImages.append(InfImage)
+                    }).resume()
+                }
+                self.usedImages.append(newInf.imageURL)
+                
+                
+                
+                influencers.append(newInf)
+                for infl in influencers {
+                    print(infl.name)
+                    print(infl.insta)
+                    print(infl.twitter)
+                    print(infl.website)
+                    print(infl.youtube)
+                }
+            }
+        })
+        //TODO Clear Realm of unused influencer images and store all current images
+        
+    }
 
 }
 

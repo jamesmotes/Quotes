@@ -563,6 +563,109 @@
             </objects>
             <point key="canvasLocation" x="-1850" y="-134"/>
         </scene>
+        <!--Recommended Motivators-->
+        <scene sceneID="Gmn-2L-Nho">
+            <objects>
+                <viewController id="fje-LK-dcR" customClass="RecommendedMotivators" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sHk-Ap-FUE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-dj-ltz">
+                                <rect key="frame" x="0.0" y="547" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="dqL-dp-hJB"/>
+                                    <constraint firstAttribute="height" constant="100" id="dzD-tT-8j8"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Duc-sp-yJM">
+                                    <size key="itemSize" width="103" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="influencerCell" id="sG0-WQ-ZXu" customClass="InfluencerLinkCell" customModule="Quotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="103" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEI-iq-wav">
+                                                    <rect key="frame" x="8" y="8" width="87" height="74"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="KEI-iq-wav" secondAttribute="trailing" id="3oj-cL-wCN"/>
+                                            <constraint firstItem="KEI-iq-wav" firstAttribute="leading" secondItem="sG0-WQ-ZXu" secondAttribute="leadingMargin" id="9jm-iV-Hsj"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="KEI-iq-wav" secondAttribute="bottom" id="N73-rK-zBO"/>
+                                            <constraint firstItem="KEI-iq-wav" firstAttribute="top" secondItem="sG0-WQ-ZXu" secondAttribute="topMargin" id="zPd-Af-Gdd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="KEI-iq-wav" id="4v0-rs-cAp"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJw-vp-5yt">
+                                <rect key="frame" x="16" y="156" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DJw-vp-5yt" secondAttribute="height" multiplier="1:1" id="0W4-J4-tw1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Influencer Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSP-cE-Fkg">
+                                <rect key="frame" x="54" y="20" width="267" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ooS-2E-Dcy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-KX-lXP">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="HVT-uq-u81"/>
+                                    <constraint firstAttribute="height" constant="30" id="h45-rd-RNq"/>
+                                </constraints>
+                                <state key="normal" image="BackButtonWhite.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="BzB-R6-sCp" eventType="touchUpInside" id="HBb-Nz-JDG"/>
+                                    <action selector="goBack:" destination="fje-LK-dcR" eventType="touchUpInside" id="mbB-iQ-Z28"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sfw-Hs-qLv" firstAttribute="bottom" secondItem="2zT-dj-ltz" secondAttribute="bottom" constant="20" id="1ps-lX-m0p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gSP-cE-Fkg" secondAttribute="trailing" constant="38" id="2cU-rF-M7N"/>
+                            <constraint firstItem="Btu-KX-lXP" firstAttribute="leading" secondItem="sHk-Ap-FUE" secondAttribute="leadingMargin" id="47v-CB-UlT"/>
+                            <constraint firstItem="2zT-dj-ltz" firstAttribute="leading" secondItem="Sfw-Hs-qLv" secondAttribute="leading" id="788-p4-uRy"/>
+                            <constraint firstItem="gSP-cE-Fkg" firstAttribute="top" secondItem="Sfw-Hs-qLv" secondAttribute="top" id="DV3-qF-kNN"/>
+                            <constraint firstItem="gSP-cE-Fkg" firstAttribute="leading" secondItem="sHk-Ap-FUE" secondAttribute="leadingMargin" constant="38" id="HIT-CD-pZI"/>
+                            <constraint firstItem="Btu-KX-lXP" firstAttribute="top" secondItem="Sfw-Hs-qLv" secondAttribute="top" id="IUr-ex-W0R"/>
+                            <constraint firstItem="2zT-dj-ltz" firstAttribute="trailing" secondItem="Sfw-Hs-qLv" secondAttribute="trailing" id="SIA-g4-uXh"/>
+                            <constraint firstItem="DJw-vp-5yt" firstAttribute="leading" secondItem="Sfw-Hs-qLv" secondAttribute="leading" constant="16" id="ZPS-gP-vK2"/>
+                            <constraint firstItem="Sfw-Hs-qLv" firstAttribute="trailing" secondItem="DJw-vp-5yt" secondAttribute="trailing" constant="16" id="coV-6E-zjF"/>
+                            <constraint firstItem="DJw-vp-5yt" firstAttribute="top" secondItem="gSP-cE-Fkg" secondAttribute="bottom" constant="8" id="qxC-ZS-igI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sfw-Hs-qLv"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Btu-KX-lXP" id="9mZ-OB-yRQ"/>
+                        <outlet property="collectionView" destination="2zT-dj-ltz" id="8A5-uW-Q9M"/>
+                        <outlet property="image" destination="DJw-vp-5yt" id="lYe-Cp-Oag"/>
+                        <outlet property="name" destination="gSP-cE-Fkg" id="OpM-Vp-fL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQE-aL-38Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2012" y="-961.16941529235385"/>
+        </scene>
         <!--Main Menu Table View Controller-->
         <scene sceneID="Et7-bh-p6w">
             <objects>
@@ -653,6 +756,7 @@
                         <segue destination="puL-XP-wNs" kind="presentation" identifier="viewContactInfo" id="tEp-pp-up3"/>
                         <segue destination="CyX-hj-2gF" kind="presentation" identifier="viewCustomization" id="ZL5-ZL-tmO"/>
                         <segue destination="BzB-R6-sCp" kind="presentation" identifier="menuToPurchase" id="4Hv-jR-xTt"/>
+                        <segue destination="fje-LK-dcR" kind="presentation" identifier="viewRecommendedMotivators" id="6GB-e4-F08"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a23-OG-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1176,7 +1280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzE-hM-brX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1850" y="-961"/>
+            <point key="canvasLocation" x="-1050" y="-2428"/>
         </scene>
         <!--Purchase View-->
         <scene sceneID="O5f-aV-Abg">
@@ -1665,7 +1769,7 @@ subscription to that publication, where applicable</string>
         <image name="star" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NDX-ac-7ng"/>
+        <segue reference="4Hv-jR-xTt"/>
         <segue reference="CRi-Xx-our"/>
     </inferredMetricsTieBreakers>
 </document>

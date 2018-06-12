@@ -162,7 +162,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if(!full_unlock && indexPath.row > 6){
+        if(!full_unlock && (indexPath.row > 6 || indexPath.row == 0)){
             performSegue(withIdentifier: "fontsToPurchase", sender: nil)
             return
         }
