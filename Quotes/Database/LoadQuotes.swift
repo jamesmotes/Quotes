@@ -3189,6 +3189,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
+        //Florence Griffith Joyner
         name = "Florence Griffith Joyner"
         
         text = "Conventional is not for me. I like things that are uniquely Flo. I like being different."
@@ -3214,6 +3215,245 @@ class LoadQuotes {
         text = "I've always overworked in the weight room. I love working with weights. I knew they'd give me the strength I needed."
         cats = ["Sports"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        //Robert Kiyosaki
+        name = "Robert Kiyosaki"
+        
+        text = "In the real world, the smartest people are people who make mistakes and learn. In school, the smartest people don’t make mistakes."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "It’s not what you say out of your mouth that determines your life,it’s what you whisper to yourself that has the most power!"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "It’s more important to grow your income than cut your expenses. It’s more important to grow your spirit than cut your dreams."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The most successful people in life are the ones who ask questions. They’re always learning. They’re always growing. They’re always pushing."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Don’t be addicted to money. Work to learn. don’t work for money. Work for knowledge."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "It’s easier to stand on the sidelines, criticize, and say why you shouldn’t do something. The sidelines are crowded. Get in the game."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Complaining about your current position in life is worthless. Have a spine and do something about it instead."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The fear of being different prevents most people from seeking new ways to solve their problems."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Winners are not afraid of losing. But losers are. Failure is part of the process of success. People who avoid failure also avoid success."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Successful people ask questions. They seek new teachers. They’re always learning."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "If you want to be rich, you need to develop your vision. You must be standing on the edge of time gazing into the future."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The size of your success is measured by the strength of your desire; the size of your dream; and how you handle disappointment along the way."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "I’d rather welcome change than cling to the past."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The more a person seeks security, the more that person gives up control over his life."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Hoping drains your energy. Action creates energy."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Everyone can tell you the risk. An entrepreneur can see the reward."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "You’ll often find that it’s not mom or dad, husband or wife, or the kids that’s stopping you. It’s you. Get out of your own way."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The only difference between a rich person and poor person is how they use their time."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Your choices decide your fate. Take the time to make the right ones. If you make a mistake, that’s fine; learn from it & don’t make it again."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "If you’re the kind of person who has no guts, you just give up every time life pushes you. If you’re that kind of person, you’ll live all your life playing it safe, doing the right things, saving yourself for something that never happens. Then, you die a boring old person."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "Talk is cheap. Learn to listen with your eyes. Actions do speak louder than words. Watch what a person does more than what he says."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "You will make some mistakes but, if you learn from those mistakes, those mistakes will become wisdom and wisdom is essential to becoming wealthy."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "If you realize that you’re the problem, then you can change yourself, learn something and grow wiser. Don’t blame other people for your problems."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "As I said, I wish I could say it was easy. It wasn’t, but it wasn’t hard either. But without a strong reason or purpose, anything in life is hard."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+                
+        text = "The single most powerful asset we all have is our mind. If it is trained well, it can create enormous wealth in what seems to be an instant."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Find the game where you can win, and then commit your life to playing it; and play to win."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "The power of “can’t”: The word “can’t” makes strong people weak, blinds people who can see, saddens happy people, turns brave people into cowards, robs a genius of their brilliance, causes rich people to think poorly, and limits the achievements of that great person living inside us all."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Start small and dream big."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "You’re only poor if you give up. The most important thing is that you did something. Most people only talk and dream of getting rich. You’ve done something."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Sight is what you see with your eyes, vision is what you see with your mind."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Never say you cannot afford something. That is a poor man’s attitude. Ask HOW to afford it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Your future is created by what you do today, not tomorrow."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Find out where you are at, where you are going and build a plan to get there."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Most people want everyone else in the world to change themselves. Let me tell you, it’s easier to change yourself than everyone else."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "People who dream small dreams continue to live as small people."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "There are those who make things happen, there are those who watch things happen and there are those who say ‘what happened?"
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Losers quit when they fail. Winners fail until they succeed."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Education is cheap; experience is expensive."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "We all have tremendous potential, and we all are blessed with gifts. Yet, the one thing that holds all of us back is some degree of self-doubt. It is not so much the lack of technical information that holds us back, but more the lack of self-confidence."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Tomorrows only exist in the minds of dreamers and losers."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Excuses cost a dime and that’s why the poor could afford a lot of it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "People need to wake up and realize that life doesn’t wait for you. If you want something, get up and go after it."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "When people are lame, they love to blame."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "It is easy to stay the same but it is not easy to change. Most people choose to stay the same all their lives."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "A winning strategy must include losing."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Face your fears and doubts, and new worlds will open to you."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "Sometimes you win, sometimes you learn."
+        cats = []
+        moos = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
 
     }
     
