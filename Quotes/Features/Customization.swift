@@ -356,7 +356,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         collectionViewFlowLayout.itemSize = CGSize(width: view.frame.width/3 - 6, height: view.frame.width/3 - 6)
         
         
-        checkSubscription()
+        //checkSubscription()
         
         
         

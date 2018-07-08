@@ -11,6 +11,7 @@ import RealmSwift
 import GoogleMobileAds
 import Foundation
 import StoreKit
+import SwiftyStoreKit
 
 var pers = ""
 var category = ""
@@ -64,6 +65,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         setTheme()
         super.viewDidLoad()
         
+        IAPService.shared.GetProducts()
         
         
         interstitial = createAndLoadInterstitial()
@@ -85,16 +87,56 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         }
         
         //print(PurchasesController.shared.currentSessionId)
-        let sessionId = PurchasesController.shared.currentSessionId ?? ""
+        //let sessionId = PurchasesController.shared.currentSessionId ?? ""
         
-        SessionHandler.shared.selfies(for: sessionId) { [weak self] result in
+        /*SessionHandler.shared.selfies(for: sessionId) { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success(let _):
                 full_unlock = true
-            case .failure(let error): strongSelf.showErrorAlert(for: error)
+            case .failure(let error):
+                strongSelf.showErrorAlert(for: error)
+                print(error)
             }
+        }*/
+        verifyReceipt()
+        
+        
+        
+        
+    }
+    
+    func verifyReceipt(){
+        NetworkActivityIndicatorManager.NetworkOperationsStarted()
+        var validator = AppleReceiptValidator(service: .production, sharedSecret: SECRET)
+        if(DEVELOPMENT){
+            validator = AppleReceiptValidator(service: .sandbox, sharedSecret: SECRET)
         }
+        SwiftyStoreKit.verifyReceipt(using: validator, forceRefresh: true, completion: {
+            result in
+            NetworkActivityIndicatorManager.networkOperationFinished()
+            
+            //self.showAlert(alert: SwiftyIAP.shared.alertForVerifyReceipt(result: result))
+            print(result)
+            if case .error(let error) = result {
+                print(error)
+                full_unlock = false
+            }
+            else {
+                print("success")
+                full_unlock = true
+            }
+            
+        })
+    }
+    
+    func showAlert(alert : UIAlertController){
+        guard let _ = self.presentedViewController else {
+         self.present(alert, animated: true, completion: nil)
+         return
+         }
+        //UIApplication.shared.delegate?.window??.inputViewController?.present(alert, animated: true, completion: nil)
+        
     }
     /*
     func setSchema(){
@@ -190,7 +232,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        checkSubscription()
+        //checkSubscription()
+        verifyReceipt()
         if(notificationQuote != "") {
             quotes = Array(realm.objects(Quote.self))
             var found = false
@@ -442,6 +485,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             }
         }
         print(index)
+        //self.text.text = Bundle.main.appStoreReceiptURL?.absoluteString
     }
     
    
@@ -546,7 +590,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             performSegue(withIdentifier: "goToSearch", sender: nil)
         }
 
-        guard PurchasesController.shared.currentSessionId != nil,
+        /*guard PurchasesController.shared.currentSessionId != nil,
             PurchasesController.shared.hasReceiptData else {
                 performSegue(withIdentifier: "unlockSegueFront", sender: nil)
                 return
@@ -554,13 +598,14 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         full_unlock = true
         performSegue(withIdentifier: "goToSearch", sender: nil)
  
-        return/*
+        return*/
+        print(full_unlock)
         if(!full_unlock) {
             performSegue(withIdentifier: "unlockSegueFront", sender: nil)
         }
         else {
             performSegue(withIdentifier: "goToSearch", sender: nil)
-        }*/
+        }
     }
     
     private func showErrorAlert(for error: ServiceError) {

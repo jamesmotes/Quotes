@@ -90,7 +90,8 @@ class ConfirmMonthlyView: UIViewController {
     }
     
     @IBAction func confirmPurchase(_ sender: Any) {
-        PurchasesController.shared.purchase(subscription: options![0])
+        //PurchasesController.shared.purchase(subscription: options![0])
+        SwiftyIAP.shared.purchase(purchase: .autoRenewingSubscription)
     }
     /*
     // MARK: - Navigation

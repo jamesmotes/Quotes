@@ -15,6 +15,7 @@ import FirebaseDatabase
 import RealmSwift
 import GoogleMobileAds
 import StoreKit
+import SwiftyStoreKit
 
 var notificationQuote : String = ""
 
@@ -87,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
             defaults.set(3, forKey: "reviewCountdown")
-            defaults.set(false, forKey: "full_unlock")
+            //defaults.set(false, forKey: "full_unlock")
             defaults.set(false, forKey: "whiteBackground")
             globalTheme.setTextColor(color: UIColor.white)
             globalTheme.font = "Georgia"
@@ -168,9 +169,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         loadInfluencers()
         
+        //Swifty Store Kit Setup
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+            for purchase in purchases {
+                switch purchase.transaction.transactionState {
+                case .purchased, .restored:
+                    if purchase.needsFinishTransaction {
+                        // Deliver content from server, then:
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
+                full_unlock = true
+                case .failed, .purchasing, .deferred:
+                    break // do nothing
+                }
+            }
+        }
+        
         
         //subsription stuff
-        guard PurchasesController.shared.currentSessionId != nil,
+        /*guard PurchasesController.shared.currentSessionId != nil,
             PurchasesController.shared.hasReceiptData else {
                 return true
         }
@@ -186,7 +203,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if(monthly_unlock || full_unlock){
             full_unlock = true
         }
-
+*/
         return true
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZdS-cj-6ld">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZdS-cj-6ld">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -609,12 +609,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJw-vp-5yt">
-                                <rect key="frame" x="16" y="156" width="343" height="343"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DJw-vp-5yt" secondAttribute="height" multiplier="1:1" id="0W4-J4-tw1"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Influencer Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSP-cE-Fkg">
                                 <rect key="frame" x="54" y="20" width="267" height="128"/>
                                 <constraints>
@@ -638,6 +632,9 @@
                                     <action selector="goBack:" destination="fje-LK-dcR" eventType="touchUpInside" id="mbB-iQ-Z28"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJw-vp-5yt">
+                                <rect key="frame" x="87" y="183" width="200" height="300"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -649,8 +646,7 @@
                             <constraint firstItem="gSP-cE-Fkg" firstAttribute="leading" secondItem="sHk-Ap-FUE" secondAttribute="leadingMargin" constant="38" id="HIT-CD-pZI"/>
                             <constraint firstItem="Btu-KX-lXP" firstAttribute="top" secondItem="Sfw-Hs-qLv" secondAttribute="top" id="IUr-ex-W0R"/>
                             <constraint firstItem="2zT-dj-ltz" firstAttribute="trailing" secondItem="Sfw-Hs-qLv" secondAttribute="trailing" id="SIA-g4-uXh"/>
-                            <constraint firstItem="DJw-vp-5yt" firstAttribute="leading" secondItem="Sfw-Hs-qLv" secondAttribute="leading" constant="16" id="ZPS-gP-vK2"/>
-                            <constraint firstItem="Sfw-Hs-qLv" firstAttribute="trailing" secondItem="DJw-vp-5yt" secondAttribute="trailing" constant="16" id="coV-6E-zjF"/>
+                            <constraint firstItem="DJw-vp-5yt" firstAttribute="leading" secondItem="Sfw-Hs-qLv" secondAttribute="leading" constant="15" id="i5c-E8-XQ5"/>
                             <constraint firstItem="DJw-vp-5yt" firstAttribute="top" secondItem="gSP-cE-Fkg" secondAttribute="bottom" constant="8" id="qxC-ZS-igI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sfw-Hs-qLv"/>

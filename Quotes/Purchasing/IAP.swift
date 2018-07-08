@@ -25,7 +25,7 @@ import Foundation
 import StoreKit
 
 
-var SECRET = "142c41b9e7384d469f2b7cbb1f836e53"
+//var SECRET = "142c41b9e7384d469f2b7cbb1f836e53"
 
 
 class PurchasesController: NSObject {
@@ -100,10 +100,15 @@ class PurchasesController: NSObject {
     }
     
     private func loadReceipt() -> Data? {
+        print(Bundle.main.appStoreReceiptURL)
         guard let url = Bundle.main.appStoreReceiptURL else {
             return nil
         }
-        
+        /*URL(string: "https://buy.itunes.apple.com/verifyReceipt")
+        guard let url = URL(string: "https://buy.itunes.apple.com/verifyReceipt") else {
+            return nil
+        }*/
+        print(url)
         do {
             let data = try Data(contentsOf: url)
             print(data)
@@ -175,7 +180,7 @@ class SessionHandler {
             url = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
         }
         else {
-            url = URL(string: "https://buy.itunes.apple.com/verifyReceipt")!
+            url = URL(string:  "https://buy.itunes.apple.com/verifyReceipt")!
             //url = Bundle.main.appStoreReceiptURL!
         }
         

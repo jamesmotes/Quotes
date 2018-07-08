@@ -68,11 +68,26 @@ class RecommendedMotivators: UIViewController, UICollectionViewDelegate, UIColle
             backButton.setImage(UIImage(named: "BackButtonWhite.png"), for: .normal)
         }
         
+        let cons : NSLayoutConstraint = NSLayoutConstraint(item: image, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1, constant: self.view.frame.width-30)
+        image.addConstraint(cons)
+        
+        let cons2 : NSLayoutConstraint = NSLayoutConstraint(item: image, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1, constant: self.view.frame.width-30)
+        image.addConstraint(cons2)
+        
+        
+        cons.isActive = true
+        cons2.isActive = true
+ 
         image.image = selectedInfluencer.image
-        image.layer.cornerRadius = image.frame.size.width / 2;
-        image.clipsToBounds = true;
-        image.layer.borderWidth = 3
         image.layer.borderColor = UIColor.white.cgColor
+        image.layer.cornerRadius = (self.view.frame.width-30)/2//image.frame.width/2
+        image.layer.masksToBounds = false
+        image.clipsToBounds = true
+        image.layer.borderWidth = 1
+        //image.contentMode = UIViewContentMode.scaleAspectFill
+  
+        
+        
         
         name.text = selectedInfluencer.name
         
@@ -96,7 +111,7 @@ class RecommendedMotivators: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = collectionView.frame.width
-        let scaleFactor = (screenWidth / 4) - 8
+        let scaleFactor = (screenWidth / CGFloat(links.count)) - 8
         
         return CGSize(width: scaleFactor, height: scaleFactor)
     }

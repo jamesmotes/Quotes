@@ -185,19 +185,24 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func trialAccess() {
-        PurchasesController.shared.purchase(subscription: options![0])
+        //PurchasesController.shared.purchase(subscription: options![0])
+        IAPService.shared.Purchase(product: .autoRenewingSubscription)
     }
     
     func monthlyAccess() {
-        PurchasesController.shared.purchase(subscription: options![0])
+        //PurchasesController.shared.purchase(subscription: options![0])
+        IAPService.shared.Purchase(product: .autoRenewingSubscription)
     }
     
     func lifetimeAccess() {
-        PurchasesController.shared.purchase(subscription: options![1])
+        //PurchasesController.shared.purchase(subscription: options![1])
+        //IAPService.shared.Purchase(product: .nonRenewingSubscription)
+        SwiftyIAP.shared.purchase(purchase: RegisteredPurchase.nonRenewingSubscription)
     }
     
     @IBAction func restoreAccess(_ sender: Any) {
-        showRestoreAlert()
+        SwiftyIAP.shared.restorePurchases()
+        //showRestoreAlert()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -325,6 +330,15 @@ class PurchaseView: UIViewController, UICollectionViewDelegate, UICollectionView
             let svc = SFSafariViewController(url: url)
             present(svc, animated: true, completion: nil)
         }
+    }
+    
+    func showAlert(alert : UIAlertController){
+        guard let _ = self.presentedViewController else {
+         self.present(alert, animated: true, completion: nil)
+         return
+         }
+        
+        
     }
     
     

@@ -23,6 +23,8 @@
 		1A1E301D20A5589000EA6687 /* QuoteIcon167.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E301820A5589000EA6687 /* QuoteIcon167.png */; };
 		1A1E301E20A5589000EA6687 /* QuoteIcon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E301920A5589000EA6687 /* QuoteIcon120.png */; };
 		1A1E301F20A5589000EA6687 /* QuoteIcon1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E301A20A5589000EA6687 /* QuoteIcon1024.jpg */; };
+		1A34173820DAA53400723322 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173720DAA53400723322 /* IAPProducts.swift */; };
+		1A34173A20DAA5DD00723322 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173920DAA5DD00723322 /* IAPService.swift */; };
 		1A4E02CF20C0E02700671DA9 /* LoadCustomImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */; };
 		1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D020C42F9800671DA9 /* Theme.swift */; };
 		1A4E02D320C4306D00671DA9 /* LoadThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D220C4306D00671DA9 /* LoadThemes.swift */; };
@@ -57,6 +59,8 @@
 		1A62EF4D20A25DB700F38F00 /* PeopleWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4720A25DB100F38F00 /* PeopleWhite.png */; };
 		1A62EF4E20A25DB700F38F00 /* PersonalWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4820A25DB200F38F00 /* PersonalWhite.png */; };
 		1A62EF4F20A25DB700F38F00 /* PersonalBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A62EF4920A25DB500F38F00 /* PersonalBlack.png */; };
+		1A79BB4C20E15D2600005278 /* ReviewWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A79BB4A20E15D2600005278 /* ReviewWhite.png */; };
+		1A79BB4D20E15D2600005278 /* ReviewBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A79BB4B20E15D2600005278 /* ReviewBlack.png */; };
 		1A7BCA1420A4037C001241E6 /* City.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA0F20A4037C001241E6 /* City.jpg */; };
 		1A7BCA1520A4037C001241E6 /* colorhallway.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1020A4037C001241E6 /* colorhallway.jpg */; };
 		1A7BCA1620A4037C001241E6 /* basketballcourt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */; };
@@ -96,6 +100,7 @@
 		1AC3C98220B3A5D70024D91D /* ConfirmMonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3C98120B3A5D70024D91D /* ConfirmMonthlyView.swift */; };
 		1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8853720523DCA0000B56A /* IMG_0739.GIF */; };
 		1AE8853A2052502C0000B56A /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE885392052502C0000B56A /* AlarmsTableViewController.swift */; };
+		1AEF11D120E816DD003B50B4 /* SwiftyIAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF11D020E816DD003B50B4 /* SwiftyIAP.swift */; };
 		1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCC5052093F0310021941B /* CreateQuote.swift */; };
 		81056506208D821200BB9433 /* SearchBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056500208D820F00BB9433 /* SearchBlack.png */; };
 		81056507208D821200BB9433 /* SearchWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 81056501208D821000BB9433 /* SearchWhite.png */; };
@@ -141,6 +146,8 @@
 		1A1E301820A5589000EA6687 /* QuoteIcon167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuoteIcon167.png; sourceTree = "<group>"; };
 		1A1E301920A5589000EA6687 /* QuoteIcon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuoteIcon120.png; sourceTree = "<group>"; };
 		1A1E301A20A5589000EA6687 /* QuoteIcon1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = QuoteIcon1024.jpg; sourceTree = "<group>"; };
+		1A34173720DAA53400723322 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
+		1A34173920DAA5DD00723322 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCustomImageController.swift; sourceTree = "<group>"; };
 		1A4E02D020C42F9800671DA9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1A4E02D220C4306D00671DA9 /* LoadThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThemes.swift; sourceTree = "<group>"; };
@@ -175,6 +182,8 @@
 		1A62EF4720A25DB100F38F00 /* PeopleWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PeopleWhite.png; sourceTree = "<group>"; };
 		1A62EF4820A25DB200F38F00 /* PersonalWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PersonalWhite.png; sourceTree = "<group>"; };
 		1A62EF4920A25DB500F38F00 /* PersonalBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PersonalBlack.png; sourceTree = "<group>"; };
+		1A79BB4A20E15D2600005278 /* ReviewWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReviewWhite.png; sourceTree = "<group>"; };
+		1A79BB4B20E15D2600005278 /* ReviewBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReviewBlack.png; sourceTree = "<group>"; };
 		1A7BCA0F20A4037C001241E6 /* City.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = City.jpg; path = ../../../../../../../Downloads/morepics/City.jpg; sourceTree = "<group>"; };
 		1A7BCA1020A4037C001241E6 /* colorhallway.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colorhallway.jpg; path = ../../../../../../../Downloads/morepics/colorhallway.jpg; sourceTree = "<group>"; };
 		1A7BCA1120A4037C001241E6 /* basketballcourt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basketballcourt.jpg; path = ../../../../../../../Downloads/morepics/basketballcourt.jpg; sourceTree = "<group>"; };
@@ -217,6 +226,7 @@
 		1AC3C98120B3A5D70024D91D /* ConfirmMonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMonthlyView.swift; sourceTree = "<group>"; };
 		1AE8853720523DCA0000B56A /* IMG_0739.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IMG_0739.GIF; path = Quotes/IMG_0739.GIF; sourceTree = SOURCE_ROOT; };
 		1AE885392052502C0000B56A /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
+		1AEF11D020E816DD003B50B4 /* SwiftyIAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyIAP.swift; sourceTree = "<group>"; };
 		1AFCC5052093F0310021941B /* CreateQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuote.swift; sourceTree = "<group>"; };
 		2A8CF04DADF9897ECF626049 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		81056500208D820F00BB9433 /* SearchBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchBlack.png; sourceTree = "<group>"; };
@@ -292,10 +302,13 @@
 				1A62EF1620A08E8900F38F00 /* PaidSubscription.swift */,
 				1A62EF1420A08E2800F38F00 /* Subscription.swift */,
 				1A0999FE2019873600B22EDE /* IAP.swift */,
+				1AEF11D020E816DD003B50B4 /* SwiftyIAP.swift */,
 				1A62EF1820A0922500F38F00 /* Session.swift */,
 				1A62EF2C20A1D31F00F38F00 /* PricingCollectionViewCell.swift */,
 				1A62EF10209FA39100F38F00 /* PurchaseView.swift */,
 				1AC3C98120B3A5D70024D91D /* ConfirmMonthlyView.swift */,
+				1A34173720DAA53400723322 /* IAPProducts.swift */,
+				1A34173920DAA5DD00723322 /* IAPService.swift */,
 			);
 			path = Purchasing;
 			sourceTree = "<group>";
@@ -327,6 +340,8 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1A79BB4B20E15D2600005278 /* ReviewBlack.png */,
+				1A79BB4A20E15D2600005278 /* ReviewWhite.png */,
 				1A8FEA4C20C8CB50004303FD /* insta.png */,
 				1A8FEA4A20C8C6C9004303FD /* safari.png */,
 				1A8FEA4820C8C6B9004303FD /* twitter.png */,
@@ -464,7 +479,6 @@
 				1AACFE8C1FF2F65E00E6424D /* Resources */,
 				A0A4354D9B87439B75CA7DE7 /* [CP] Embed Pods Frameworks */,
 				1AA438982033E2DB000C7238 /* Embed Frameworks */,
-				F92AFA186D34D80A7CE385FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -565,11 +579,13 @@
 				1AA123742044F22D0004C1AE /* Share-icon-iOS.jpg in Resources */,
 				1A62EF4020A1E6FD00F38F00 /* CategoriesWhite.png in Resources */,
 				8105650B208D821300BB9433 /* MenuBlack.png in Resources */,
+				1A79BB4C20E15D2600005278 /* ReviewWhite.png in Resources */,
 				81056509208D821300BB9433 /* MenuWhite.png in Resources */,
 				1A7BCA1820A4037C001241E6 /* towerdown.jpg in Resources */,
 				1A62EF4A20A25DB700F38F00 /* ContactUsBlack.png in Resources */,
 				81056506208D821200BB9433 /* SearchBlack.png in Resources */,
 				1A62EF3C20A1E6FD00F38F00 /* CategoriesBlack.png in Resources */,
+				1A79BB4D20E15D2600005278 /* ReviewBlack.png in Resources */,
 				8105650A208D821300BB9433 /* ShareBlack.png in Resources */,
 				1A62EF3F20A1E6FD00F38F00 /* NoAdsBlack.png in Resources */,
 				1A0DC0D920A3DEDF007FEA6B /* ferriswheel.jpg in Resources */,
@@ -617,6 +633,7 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -626,6 +643,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,21 +669,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F92AFA186D34D80A7CE385FA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quotes/Pods-Quotes-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -675,11 +678,13 @@
 			files = (
 				1A0999FF2019873600B22EDE /* IAP.swift in Sources */,
 				1AA4389A2033E521000C7238 /* QuoteClass.swift in Sources */,
+				1A34173820DAA53400723322 /* IAPProducts.swift in Sources */,
 				1A62EF11209FA39100F38F00 /* PurchaseView.swift in Sources */,
 				1AA123722044E9870004C1AE /* MainMenuTableViewController.swift in Sources */,
 				81542FAD20A397420018D234 /* Schema.swift in Sources */,
 				1AA4389C2033E629000C7238 /* FrontPage.swift in Sources */,
 				1AA3841F20523792007E4241 /* SettingsPage.swift in Sources */,
+				1AEF11D120E816DD003B50B4 /* SwiftyIAP.swift in Sources */,
 				81542FAF20A3A4550018D234 /* LoadSchemas.swift in Sources */,
 				1A4E02CF20C0E02700671DA9 /* LoadCustomImageController.swift in Sources */,
 				812405F8208BCB0A006E7AB7 /* ContactInfo.swift in Sources */,
@@ -694,6 +699,7 @@
 				1A8FEA4320C8C58C004303FD /* InfluencerLinkCell.swift in Sources */,
 				1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */,
 				1A62EF1720A08E8900F38F00 /* PaidSubscription.swift in Sources */,
+				1A34173A20DAA5DD00723322 /* IAPService.swift in Sources */,
 				1AFCC5062093F0310021941B /* CreateQuote.swift in Sources */,
 				812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
