@@ -84,6 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         if(defaults.bool(forKey: "HasBeenLaunched") == false){
             defaults.set(true, forKey: "FirstUpdate")
+            defaults.set(true, forKey: "SecondUpdate")
             defaults.set([], forKey: "AlarmSetPeople")
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
@@ -109,6 +110,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 globalTheme.setImage(_image: initialImage)
                 
                 defaults.set(globalTheme.image, forKey: "image")
+            }
+            if(defaults.bool(forKey: "SecondUpdate") == false){
+                reloadQuotes()
+                defaults.set(true, forKey: "SecondUpdate")
             }
             
             
@@ -525,6 +530,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }) { (error) in
             print(error.localizedDescription)
         }*/
+    }
+    
+    func reloadQuotes(){
+        let allQuotes = realm.objects(Quote.self)
+        try! realm.write {
+            realm.delete(allQuotes)
+        }
+        quoteIterator = 0
+        updateDatabase()
     }
     
     func storeCustomiationInfo() {

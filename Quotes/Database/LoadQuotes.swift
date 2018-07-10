@@ -3593,10 +3593,7 @@ class LoadQuotes {
         text = "May your choices reflect your hopes, not your fears."
         cats = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = "May your choices reflect your hopes, not your fears."
-        cats = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+
         
         text = "The greatest glory in living is not in falling, but in rising every time we fall."
         cats = []
@@ -3994,9 +3991,197 @@ class LoadQuotes {
         cats = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
+        name = "Confucius"
+        
         text = "I start early and I stay late, day after day, year after year. It took me 17 years and 114 days to become an overnight success."
         cats = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Helen Keller"
+        
+        text = "Security is mostly a superstition. Life is either a daring adventure or nothing."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Rob Siltanen"
+        
+        text = "People who are crazy enough to think they can change the world, are the ones who do."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "C.S. Lewis"
+        
+        text = "You are never too old to set another goal or to dream a new dream."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Brian Tracy"
+        
+        text = "Fake it until you make it! Act as if you had all the confidence you require until it becomes your reality."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Jack Canfield"
+        
+        text = "For every reason it’s not possible, there are hundreds of people who have faced the same circumstances and succeeded."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "John Wooden"
+        
+        text = "Things work out best for those who make the best of how things work out."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Michael Phelps"
+        
+        text = "I think goals should never be easy, they should force you to work, even if they are uncomfortable at the time."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Zig Ziglar"
+        
+        text = "You don’t have to be great to start, but you have to start to be great."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        text = "What you get by achieving your goals is not as important as what you become by achieving your goals."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "George Herbert"
+        
+        text = "Do not wait; the time will never be just right. Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        
+        name = "Sam Levenson"
+        
+        text = "Don’t watch the clock; do what it does. Keep going."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Michael Korda"
+        
+        text = "One way to keep momentum going is to have constantly greater goals."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Simone de Beauvoir"
+        
+        text = "Change your life today. Don’t gamble on the future, act now, without delay."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Kevin Ngo"
+        
+        text = "Why should you continue going after your dreams? Because seeing the look on the faces of the people who said you couldn’t… will be priceless."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Spryte Loriano"
+        
+        text = "Every great story on the planet happened when someone decided not to give up, but kept going no matter what."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Jim Rohn"
+        
+        text = "Successful people do what unsuccessful people are not willing to do. Don’t wish it were easier, wish you were better."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "John D. Rockefeller"
+        
+        text = "Don’t be afraid to give up the good to go for the great."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Henry Ford"
+        
+        text = "Obstacles are those frightful things you see when you take your eyes off your goals."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Seth Godin"
+        
+        text = "How dare you settle for less when the world has made it so easy for you to be remarkable?"
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Farrah Gray"
+        
+        text = "Build your own dreams or someone else will hire you to build theirs."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Karen Lamb"
+        
+        text = "A year from now you may wish you had started today."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Earl Nightingale"
+        
+        text = "Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Aldous Huxley"
+        
+        text = "There’s only one corner of the universe you can be certain of improving, and that’s your own self."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "George S. Patton"
+        
+        text = "Accept the challenges so that you can feel the exhilaration of victory."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Theodore Roosevelt"
+        
+        text = "Nobody cares how much you know, until they know how much you care."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Helen Keller"
+        
+        text = "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Carol Burnett"
+        
+        text = "Only I can change my life. No one can do it for me."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Og Mandino"
+        
+        text = "Failure will never overtake me if my determination to succeed is strong enough."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Ayn Rand"
+        
+        text = "A creative man is motivated by the desire to achieve, not by the desire to beat others."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "Kyle Chandler"
+        
+        text = "Opportunity does not knock, it presents itself when you beat down the door."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
+        name = "William James"
+        
+        text = "Act as if what you do makes a difference. It does."
+        cats = []
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
+        
         
         
 
