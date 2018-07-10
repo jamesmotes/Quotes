@@ -63,6 +63,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
     override func viewDidLoad() {
         setTheme()
+        verifyReceipt()
         super.viewDidLoad()
         
         IAPService.shared.GetProducts()
@@ -233,7 +234,6 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         //checkSubscription()
-        verifyReceipt()
         if(notificationQuote != "") {
             quotes = Array(realm.objects(Quote.self))
             var found = false
@@ -465,8 +465,14 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         
         //if query or menu option is empty
         if(quotes.count < 1){
-            self.text.text = "No quotes available :("
-            self.person.text = "- gb&j"
+            if(!isFavorite){
+                self.text.text = "No quotes available :("
+                self.person.text = "- gb&j"
+            }
+            else {
+                self.text.text = "Click the star in the bottom corner of a quote to add it to your favorites."
+                self.person.text = "- gb&j"
+            }
         }
         else {
             print(index)

@@ -17,6 +17,25 @@ var quoteIterator = 0
 class LoadQuotes {
     let realm = try! Realm()
     
+    func MakeQuote(_name : String, _quote : String, _categories : [String], _moods : [String]) -> Void {
+        
+        let quote = Quote()
+        
+        quote.person = _name
+        quote.text = _quote
+        for cat in _categories {
+            quote.categories.insert(cat, at: quote.categories.count)
+        }
+        for mood in _moods {
+            quote.categories.insert(mood, at: quote.categories.count)
+        }
+        quote.id = quoteIterator
+        quoteIterator += 1
+        try! realm.write {
+            realm.add(quote)
+        }
+    }
+    
     init(){
         
         
@@ -3802,7 +3821,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
 
         text = "Don’t be afraid to give your best to what seemingly are small jobs. Every time you conquer one it makes you that much stronger. If you do the little jobs well, the big ones will tend to take care of themselves."
-        cats = ["Success:]
+        cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Happiness doesn’t depend on any external conditions, it is governed by our mental attitude."
@@ -3933,7 +3952,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Nothing will serve you better than a strong work ethic. Nothing."
-        cats = ["Success:]
+        cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "I think it’s good to be confident. If I’m not on my team why should anybody else be?"
@@ -4166,7 +4185,7 @@ class LoadQuotes {
         
         name = "Ayn Rand"
         
-        text = "A creative man is motivated by the desire to achieve, not by the desire to beat others."
+        /*text = "A creative man is motivated by the desire to achieve, not by the desire to beat others."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -4180,31 +4199,9 @@ class LoadQuotes {
         
         text = "Act as if what you do makes a difference. It does."
         cats = ["Success"]
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        
-        
-
+        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)*/
     }
     
-    func MakeQuote(_name : String, _quote : String, _categories : [String], _moods : [String]) -> Void {
-        
-        var quote = Quote()
-        
-        quote.person = _name
-        quote.text = _quote
-        for cat in _categories {
-            quote.categories.insert(cat, at: quote.categories.count)
-        }
-        for mood in _moods {
-            quote.categories.insert(mood, at: quote.categories.count)
-        }
-        quote.id = quoteIterator
-        quoteIterator += 1
-        try! realm.write {
-            realm.add(quote)
-        }
-    }
     
     
 }

@@ -39,7 +39,7 @@ let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "Ala
 let mainMenuBlackIcons = ["PeopleBlack.png", "CategoriesBlack.png", "star", "AlarmIconBlack.png", "FontsBlack.png", "PersonalBlack.png", "unlockblack.png", /*"influencer_black.png",*/ "ContactUsBlack.png", "ReviewBlack.png"]
 
 
-let peopleOptions = ["Elon Musk", "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt", "Serena Williams", "Margaret Thatcher", "Richard Branson", "Robert Kiyosaki", "Florence Griffith Joyner", "Idris Elba", "Nelson Mandela", "Walt Disney", "Dale Carnegie", "Robert Downey Jr.", "Lionel Messi"]
+let peopleOptions = [/*"Elon Musk",*/ "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt", "Serena Williams", "Margaret Thatcher", "Richard Branson", "Robert Kiyosaki", "Florence Griffith Joyner", "Idris Elba", "Nelson Mandela", "Walt Disney", "Dale Carnegie", "Robert Downey Jr.", "Lionel Messi"]
 let catOptions = [/*"General",*/ "Change", /*"Success",*/"Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
@@ -74,6 +74,7 @@ class MainMenuTableViewController: UITableViewController {
             tableOptions[i] = tableOptions[i].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         }
         tableOptions[CAT_MENU] = ["General", "Success"] + tableOptions[CAT_MENU]
+        tableOptions[PEOPLE_MENU] = ["Elon Musk"] + tableOptions[PEOPLE_MENU]
         
         
         navigationController?.isNavigationBarHidden = false
@@ -166,13 +167,14 @@ class MainMenuTableViewController: UITableViewController {
             switch indexPath.item {
             case 0:     // People
                 print("A person was selected.")
-                if(full_unlock){
+                /*if(full_unlock){
                     currentMenu = PEOPLE_MENU
                 }
                 else {
                     performSegue(withIdentifier: "menuToPurchase", sender: nil)
                     return
-                }
+                }*/
+                currentMenu = PEOPLE_MENU
             case 1:     // Categories
                 print("A category was selected.")
                 currentMenu = CAT_MENU
@@ -236,7 +238,19 @@ class MainMenuTableViewController: UITableViewController {
         else {  // Inside a submenu, same case values don't apply
             switch currentMenu {
             case PEOPLE_MENU:   // A Person was selected
-                pers = tableOptions[currentMenu][indexPath.item]
+                
+                if(full_unlock){
+                    pers = tableOptions[currentMenu][indexPath.item]
+                }
+                else {
+                    if(tableOptions[currentMenu][indexPath.item] == "Elon Musk"){
+                        pers = tableOptions[currentMenu][indexPath.item]
+                    }
+                    else{
+                        performSegue(withIdentifier: "menuToPurchase", sender: nil)
+                        return
+                    }
+                }
                 
                 //print("\(pers) was selected.")
             case CAT_MENU:      // A Category was selected
@@ -303,8 +317,8 @@ class MainMenuTableViewController: UITableViewController {
             sortedArray = tableOptions[currentMenu]//.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
             
             if(!full_unlock){
-                if(currentMenu == CAT_MENU){
-                    if(sortedArray[indexPath.row] == "General" || sortedArray[indexPath.row] == "Success"){
+                if(currentMenu == CAT_MENU || currentMenu == PEOPLE_MENU){
+                    if(sortedArray[indexPath.row] == "General" || sortedArray[indexPath.row] == "Success" || sortedArray[indexPath.row] == "Elon Musk"){
                         cell.lockImage.isHidden = true
                     }
                     else{
