@@ -3253,7 +3253,7 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "It’s not what you say out of your mouth that determines your life,it’s what you whisper to yourself that has the most power!"
+        text = "It’s not what you say out of your mouth that determines your life, it’s what you whisper to yourself that has the most power!"
         cats = ["Entrepreneur", "Success", "Motivational"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)

@@ -288,12 +288,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             didComeFromAdd = false
         }
         else {
-            if(notificationQuote == ""){
-                index = 0
-            }
-            else {
+            if(notificationQuote != ""){
                 notificationQuote = ""
+                //index = 0
             }
+            //else {
+            //    notificationQuote = ""
+            //}
             showAfterMenu()
         }
         setTheme()
@@ -684,7 +685,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 full_unlock = false
                 return
         }
-        full_unlock = true
+        //full_unlock = true
     }
 }
 

@@ -105,7 +105,9 @@ class SwiftyIAP : NSObject {
             
             self.showAlert(alert: self.alertForVerifyReceipt(result: result))
             print(result)
+            full_unlock = true
             if case .error(let error) = result {
+                full_unlock = false
                 if case .noReceiptData = error {
                     self.refreshReceipt()
                 }

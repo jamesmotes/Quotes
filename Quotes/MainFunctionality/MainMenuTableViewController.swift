@@ -432,6 +432,10 @@ class MainMenuTableViewController: UITableViewController {
             let numRows = CGFloat(tableOptions[currentMenu].count)
             return tableHeight/numRows
         }
+        else if(currentMenu == PEOPLE_MENU) {
+            let numRows = CGFloat(tableOptions[CAT_MENU].count)
+            return tableHeight/numRows
+        }
         else {
             return 65
         }
