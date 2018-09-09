@@ -4463,7 +4463,7 @@ class LoadQuotes {
         name = "David Goggins"
         
         text = "It’s so easy to be great nowadays, because everyone else is weak. If you have ANY mental toughness, if you have any fraction of self-discipline; The ability to not want to do it, but still do it; If you can get through to doing things that you hate to do: on the other side is GREATNESS "
-        cats = ["Success"]
+        cats = ["Success", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "We live in an external world. Everything, you have to see it, touch it. If you can for the rest of your life, live inside yourself – to find greatness, you have to go inside."
@@ -4479,11 +4479,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The path to success will leave you callused, bruised, and very tired. It will also leave you empowered. "
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Don’t let your body or mind do exactly what it wants to do! Take control! "
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Never let people who choose the path of least resistance steer you away from your chosen path of most resistance."
@@ -4503,18 +4503,18 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "When you fall down, focus on the solution, not the problem. You might quit or fail 100 times. Keep that clear picture of where you want to be. "
-        cats = ["Success"]
+        cats = ["Success", "Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Teach yourself that it isn’t ok to take the easy way out. Make sure you are bothered by the things you set out to do but did not complete or make time for in the day. "
-        cats = ["Success"]
+        cats = ["Success", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "You can will yourself to do almost anything you want."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "When you think you’re done, you’re only at 40% of your body’s capability. "
+        text = "When you think you’re done, you’re only at 40% of your body’s capability."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -4523,15 +4523,15 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "We have the ability to make very easy things seem impossible. Stop losing the mind game against yourself."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "Comfort zones: If you like in one too long…that becomes your norm. Get comfortable being uncomfortable."
+        text = "Comfort zones: If you stay in one too long…that becomes your norm. Get comfortable being uncomfortable."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Get over whatever is stopping you from being your best self! Rather than use the obstacles and setbacks in your life as excuses, use them as the catalyst to get better and go further in life. "
-        cats = ["Success"]
+        cats = ["Success", "Change", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Most people who are criticizing and judging haven’t even tried what you failed at."
@@ -4551,11 +4551,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Sometimes you must go to war with yourself to fix yourself. "
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "A lot of people put motivational quotes up on the wall and all they do is collect dust. Become what that quote says. Live it every day."
-        cats = ["Success"]
+        cats = ["Success", "Change"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Show people, don’t tell people! "
@@ -4563,15 +4563,15 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Stop making excuses. Stop being a victim. Take personal responsibility. Hold yourself accountable. Get comfortable with the uncomfortable. And finally, make your dreams come true."
-        cats = ["Success"]
+        cats = ["Success", "Change", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "You may lose the battle of the morning but don’t lose the war of the day. "
-        cats = ["Success"]
+        cats = ["Success", "Change"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Most of the amazing things in this world come from people who know how to turn their failure into a success."
-        cats = ["Success"]
+        cats = ["Success", "Change"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "If you can see yourself doing something, you can do it. If you can’t see yourself doing it, usually you can’t achieve it. "
@@ -4601,7 +4601,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The most beautiful things in the world cannot be seen or even touched, they must be felt with the heart."
-        cats = ["Success"]
+        cats = ["Success", "Relationships"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "We can do anything we want to if we stick to it long enough."
@@ -4613,7 +4613,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "While they were saying among themselves it cannot be done, it was done."
-        cats = ["Success"]
+        cats = ["Success", "Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Avoiding danger is no safer in the long run than outright exposure. The fearful are caught as often as the bold."
@@ -4621,7 +4621,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Science may have found a cure for most evils; but it has found no remedy for the worst of them all -- the apathy of human beings."
-        cats = ["Success"]
+        cats = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Happiness does not come from without, it comes from within."
@@ -4639,7 +4639,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Your past does not equal your future."
-        cats = ["Success"]
+        cats = ["Success", "Change"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "It’s what you practice in private that you will be rewarded for in public."
@@ -4659,11 +4659,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Success is doing what you want to do, when you want, where you want, with whom you want, as much as you want."
-        cats = ["Success"]
+        cats = ["Success", "Motivation"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "We can change our lives. We can do, have, and be exactly what we wish"
-        cats = ["Success"]
+        cats = ["Success", "Change"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "When you are grateful fear disappears and abundance appears."
@@ -4699,7 +4699,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "I challenge you to make your life a masterpiece. I challenge you to join the ranks of those people who live what they teach, who walk their talk."
-        cats = ["Success"]
+        cats = ["Success", "Hungry", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "You don’t have to have a reason to feel good—you’re alive; you can feel good for no reason at all!"
@@ -4723,11 +4723,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Why live an ordinary life, when you can live an extraordinary one."
-        cats = ["Success"]
+        cats = ["Success", "Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Any time you sincerely want to make a change, the first thing you must do is to raise your standards."
-        cats = ["Success"]
+        cats = ["Success", "Change"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Stay committed to your decisions, but stay flexible in your approach."
@@ -4777,11 +4777,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The doubters said, ‘Man can not fly,’ The doers said, ‘Maybe, but we’ll try,’ and finally soared in the morning glow while non-believers watched from below."
-        cats = ["Success"]
+        cats = ["Success", "Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The key to immortality is first living a life worth remembering."
-        cats = ["Success"]
+        cats = ["Success", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Notice that the stiffest tree is most easily cracked, while the bamboo or willow survives by bending with the wind."
