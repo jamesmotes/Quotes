@@ -33,10 +33,10 @@ class MainMenuTableViewCell: UITableViewCell {
 }
 
 
-let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Unlock Features", /*"Recommended Motivators",*/ "Contact Us", "Review Us"]
-let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "AlarmIconWhite.png", "FontsWhite.png", "PersonalWhite.png", "unlockwhite.png", /*"influencer_white.png",*/ "ContactUsWhite.png", "ReviewWhite.png"]
+let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Unlock Features", "Recommended Motivators", "Contact Us", "Review Us"]
+let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "AlarmIconWhite.png", "FontsWhite.png", "PersonalWhite.png", "unlockwhite.png", "influencer_white.png", "ContactUsWhite.png", "ReviewWhite.png"]
 
-let mainMenuBlackIcons = ["PeopleBlack.png", "CategoriesBlack.png", "star", "AlarmIconBlack.png", "FontsBlack.png", "PersonalBlack.png", "unlockblack.png", /*"influencer_black.png",*/ "ContactUsBlack.png", "ReviewBlack.png"]
+let mainMenuBlackIcons = ["PeopleBlack.png", "CategoriesBlack.png", "star", "AlarmIconBlack.png", "FontsBlack.png", "PersonalBlack.png", "unlockblack.png", "influencer_black.png", "ContactUsBlack.png", "ReviewBlack.png"]
 
 
 let peopleOptions = [/*"Elon Musk",*/ "LeBron James", "Gary Vaynerchuck", "Big Brandon Carter", "DJ Khaled", "Barack Obama", "J.K. Rowling", "Beyonce", "Conor McGregor", "Dr. Seuss", "Thomas Jefferson", "Will Smith", "Grant Cardone", "Michael Jordan", "Muhammad Ali", "Steve Jobs", "Arnold Schwarzenegger", "Oprah Winfrey", "Tom Brady", "Stephen Hawking", "Floyd Mayweather", "Wayne Gretzky", "Emma Watson", "Maya Angelou", "Mark Twain", "Jackie Chan", "Matthew McConaughey", "Morgan Freeman", "Michelle Obama", "Eleanor Roosevelt", "Serena Williams", "Margaret Thatcher", "Richard Branson", "Robert Kiyosaki", "Florence Griffith Joyner", "Idris Elba", "Nelson Mandela", "Walt Disney", "Dale Carnegie", "Robert Downey Jr.", "Lionel Messi"]
@@ -202,18 +202,18 @@ class MainMenuTableViewController: UITableViewController {
                 print("unlock")
                 //performSegue(withIdentifier: "viewContactInfo", sender: nil)
                 performSegue(withIdentifier: "menuToPurchase", sender: nil)
-            /*case 7:    // Influencers
+            case 7:    // Influencers
                 print("recommended Motivators was selected")
                 //performSegue(withIdentifier: "viewRecommendedMotivators", sender: nil)
                 currentMenu = INF_MENU
-            */case 7:    // Contact Us
+            case 8:    // Contact Us
                 print("conact us was selected")
                 //performSegue(withIdentifier: "viewContactInfo", sender: nil)
                 let email = "contact@gbjmobile.com"
                 if let url = URL(string: "mailto:\(email)") {
                     UIApplication.shared.open(url)
                 }
-            case 8: // Review Us
+            case 9: // Review Us
                 print("review us was selected")
                 let appID = "1332578279"
                 //"itms-apps://itunes.apple.com/us/app/apple-store/1332578279?mt=8"

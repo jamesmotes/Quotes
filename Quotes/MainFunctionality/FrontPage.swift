@@ -236,6 +236,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         //checkSubscription()
         if(notificationQuote != "") {
             quotes = Array(realm.objects(Quote.self))
+            quotes.shuffle()
             var found = false
             for j in 0...(quotes.count - 1) {
                 if notificationQuote.range(of:(quotes[j].text)) != nil {
@@ -534,6 +535,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     @IBAction func favorite(_ sender: Any) {
+        if(quotes.count < 1){
+            return
+        }
         let realm = try! Realm()
         let query : String = "id == " + String(quotes[index].id)
         var theQuote = realm.objects(Quote.self).filter(query).first
