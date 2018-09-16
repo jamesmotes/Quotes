@@ -20,6 +20,7 @@ var isFavorite = false
 var isDownvote = false
 var isRandom = false
 var personalQuotes = false
+var addedPersonalQuote = false
 
 var changedFont = true
 //var globalFontStyle = "Georgia"
@@ -274,8 +275,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 quoteIterator = quoteIterator + 1
                 let defaults = UserDefaults.standard
                 defaults.set(quoteIterator, forKey: "quoteIterator")
-                try! realm.write {
-                    realm.add(newQuote)
+                do {
+                    try realm.write {
+                        realm.add(newQuote)
+                    }
+                }
+                catch {
+                    print("Error adding new quote")
                 }
                 quotes.append(newQuote)
                 index = quotes.count - 1
@@ -316,6 +322,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 }
             }
             quotes = customQuotes
+            if(addedPersonalQuote){
+                index = quotes.count - 1
+            }
             refresh()
             
             //favButton.isHidden = true
@@ -504,8 +513,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     @IBAction func deleteQuote(_ sender: Any) {
         let query : String = "id == " + String(quotes[index].id)
         let theQuote = realm.objects(Quote.self).filter(query).first
-        try! realm.write {
-            realm.delete(theQuote!)
+        do {
+            try realm.write {
+                realm.delete(theQuote!)
+            }
+        }
+        catch {
+            print("Error deleting quote")
         }
         showAfterMenu()
         refresh()
@@ -541,20 +555,25 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         let realm = try! Realm()
         let query : String = "id == " + String(quotes[index].id)
         var theQuote = realm.objects(Quote.self).filter(query).first
-        try! realm.write {
-            if(theQuote?.favorite)!{
-                theQuote!.favorite = false
-                quotes[index].favorite = false
-                self.favButton.tintColor = UIColor.white
-                if isFavorite {
-                    quotes.remove(at: index)
+        do {
+            try realm.write {
+                if(theQuote?.favorite)!{
+                    theQuote!.favorite = false
+                    quotes[index].favorite = false
+                    self.favButton.tintColor = UIColor.white
+                    if isFavorite {
+                        quotes.remove(at: index)
+                    }
+                }
+                else {
+                    quotes[index].favorite = true
+                    theQuote!.favorite = true
+                    self.favButton.tintColor = UIColor.yellow
                 }
             }
-            else {
-                quotes[index].favorite = true
-                theQuote!.favorite = true
-                self.favButton.tintColor = UIColor.yellow
-            }
+        }
+        catch {
+            print("Error adding favorite")
         }
         theQuote = realm.objects(Quote.self).filter("favorite == true").first
         refresh()
