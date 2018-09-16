@@ -3682,7 +3682,7 @@ class LoadQuotes {
         cats = ["Success", "Motivational", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
 
-        text = "It’s kind of fun to do the impossible.”"
+        text = "It’s kind of fun to do the impossible."
         cats = ["Success", "Motivational", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -4230,9 +4230,7 @@ class LoadQuotes {
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "If I have the belief that I can do it, I shall surely acquire the capacity to do it even if I may not have it at the beginning.
-
-"
+        text = "If I have the belief that I can do it, I shall surely acquire the capacity to do it even if I may not have it at the beginning."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         

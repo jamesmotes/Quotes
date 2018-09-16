@@ -80,7 +80,7 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         customName.isEnabled = false
         customQuote.isEnabled = false
         
-        sacedQuote()
+        savedQuote()
         /*
         //creationButton.titleLabel?.text = "Save Quote"
         editButton.isHidden = false

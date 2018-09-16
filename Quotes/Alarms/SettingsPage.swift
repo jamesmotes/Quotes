@@ -170,7 +170,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
             
             let query = "person = '" + filteredData[0] + "'"
             var quotes = Array(realm.objects(Quote.self).filter(query))
-            if(quotes.cout < 1){
+            if(quotes.count < 1){
                 var checkQuotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
                 if(filteredData[0] != "General"){
                     var remove : [Int] = [Int]()
