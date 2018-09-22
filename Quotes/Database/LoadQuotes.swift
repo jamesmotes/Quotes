@@ -4830,27 +4830,27 @@ class LoadQuotes {
         name = "Dalai Lama"
         
         text = "The goal is not to be better than the other man, but your previous self."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Happiness is not something ready made. It comes from your own actions."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "We need to learn to want what we have, not to have what we want, in order to get stable and steady happiness."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "It is under the greatest adversity that there exists the greatest potential for doing good, both for oneself and others."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Compassion is the radicalism of our time."
-        cats = ["Success"]
+        cats = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "To conquer oneself is a greater victory than to conquer thousands in a battle."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "People take different roads seeking fulfillment and happiness. Just because they’re not on your road doesn’t mean they’ve gotten lost."
@@ -4858,7 +4858,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "If you think you are too small to make a difference, try sleeping with a mosquito."
-        cats = ["Success"]
+        cats = ["Success", "Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "My religion is very simple. My religion is kindness."
@@ -4870,11 +4870,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "It is very rare or almost impossible that an event can be negative from all points of view."
-        cats = ["Success"]
+        cats = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "If you want others to be happy, practice compassion. If you want to be happy, practice compassion."
-        cats = ["Success"]
+        cats = ["Relationships"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Be kind whenever possible. It is always possible."
@@ -4886,11 +4886,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "A disciplined mind leads to happiness, and an undisciplined mind leads to suffering."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Remember that sometimes not getting what you want is a wonderful stroke of luck."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Just one small positive thought in the morning can change your whole day."
@@ -4898,7 +4898,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "There is a saying in Tibetan, 'Tragedy should be utilized as a source of strength.' No matter what sort of difficulties, how painful experience is, if we lose our hope, that's our real disaster."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Remember that the best relationship is one in which your love for each other exceeds your need for each other."
@@ -4944,18 +4944,18 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)        
         
         text = "To win big, you sometimes have to take big risks."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
                
         text = "Don’t compare yourself with anyone in this world. If you do so, you are insulting yourself."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)        
         
         text = "Life is not fair – get used to it!"
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)       
         
-        text = "I don’t know’ has become ‘I don’t know yet’."
+        text = "‘I don’t know’ has become ‘I don’t know yet’."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -4972,7 +4972,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "If you mess up, it’s not your parents’ fault, so don’t whine about your mistakes, learn from them."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)        
         
         text = "Before you were born, your parents weren’t as boring as they are now. They got that way from paying your bills, cleaning your clothes and listening to you talk about how cool you thought you are. So before you save the rain forest from the parasites of your parent’s generation, try delousing the closet in your own room."
@@ -4990,47 +4990,47 @@ class LoadQuotes {
         name = "Jillian Michaels"
         
         text = "A bad day for your ego is a great day for your soul."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)       
         
         text = "Get comfortable with being uncomfortable!"
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Unless You Puke, Faint or Die, Keep Going!"
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "It's not about perfect. It's about effort. And when you bring that effort every single day, that's where transformation happens. That's how change occurs."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Why choose to fail when success is an option?"
-        cats = ["Success"]
+        cats = ["Success", "Fitness", "Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "One setback is one setback—it is not the end of the world, nor is it the end of your journey toward a better you."
-        cats = ["Success"]
+        cats = ["Success", "Fitness", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The past does not define, you the present does."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Thriving. That's fighting... Surviving is barely getting by."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "I am doing the best I can given what I have today."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Will is a skill."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Having the right to happiness means having the right to earn it, not having it given to you without effort and action on your part."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Do you realize that there is nothing in our genes that tells us when to die? There are genetic codes that tell us how to grow, how to breathe, and how to sleep, but NOTHING that tells us to die. So why do we? Because we literally rust and decay our bodies from the inside out with poor food and lifestyle choices."
@@ -5038,11 +5038,11 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "You know when transformation happens? Right now. It’s a present activity. Who is the new you? Show me the new you."
-        cats = ["Success"]
+        cats = ["Success", "Fitness", "Change"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "At some point you have to stop acting as though life is happening to you and acknowledge the ways you are happening to it. Once you take responsibility for your side of the street, you grant yourself the power to improve every aspect of your life by simply acting and behaving differently."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "If you're not failing, you're not trying hard enough."
@@ -5050,29 +5050,29 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Feel the Fear. Do it anyway!"
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Your legs are not giving out. Your head is giving out. Keep going."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "If you want results, they don't come for free."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Every accomplishment starts with the decision to TRY."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Train insane or remain the same."
-        cats = ["Success"]
+        cats = ["Success", "Fitness"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         name = "Barbara Corcoran"
         
         text = "Don’t you dare underestimate the power of your own instinct."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "I have a theory and I really believe it. I think your worst weakness can become your greatest single strength."
@@ -5104,7 +5104,7 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Finding opportunity is a matter of believing it’s there."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "My best advice is to play up what you’re good at instead of sitting around criticizing yourself for all the things you don’t do well."
@@ -5112,104 +5112,84 @@ class LoadQuotes {
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Its your game; make up your own rules."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The hardest lessons to learn is that you’re more capable than you think you are."
-        cats = ["Success"]
+        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         name = "Mark Cuban"
         
         text = "What I've learned is that if you really want to be successful at something, you'll find that you put the time in. You won't just ask somebody if it's a good idea, you'll go figure out if it's a good idea."
-        cats = ["Success"]
+        cats = ["Success", "Hungry", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Sweat equity is the most valuable equity there is. Know your business and industry better than anyone else in the world. Love what you do or don't do it."
-        cats = ["Success"]
+        cats = ["Success", "Hungry", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Work like there is someone working 24 hours a day to take it all away from you."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur", "Hungry"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "If you're prepared and you know what it takes, it's not a risk. You just have to figure out how to get there. There is always a way to get there."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "It doesn't matter how many times you have failed, you only have to be right once."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur", "Motivational"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "When you've got 10,000 people trying to do the same thing, why would you want to be number 10,001"
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "I worked hard and smarter than most people in the businesses I have been in."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "It's not about money or connections--it's the willingness to outwork and outlearn everyone...And if it fails, you learn from what happened and do a better job next time."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The best way to predict the future is to invent it."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Find something you love to do. If you don’t make money at it, at least you love going to work."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Every no gets me closer to a yes."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Doesn’t matter if the glass is half-empty or half-full. All that matters is that you are the one pouring the water."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Always wake up with a smile knowing that today you are going to have fun accomplishing what others are too afraid to do."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "“Creating opportunities means looking where others are not."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "It’s not in the dreaming, it’s in the doing."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "Push yourself, because no one else is going to do it for you."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The only thing any entrepreneur, salesperson, or anyone in any position can control is their effort."
-        cats = ["Success"]
+        cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = ""
-        cats = ["Success"]
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = ["Success"]
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = ["Success"]
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = ""
-        cats = ["Success"]
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        
-        
-        
-        
-        
+       
         
         name = "Ayn Rand"
         
