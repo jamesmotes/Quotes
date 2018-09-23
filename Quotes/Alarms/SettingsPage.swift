@@ -61,6 +61,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         setTheme()
         
         data.append(contentsOf: peopleOptions)
+        data.append(contentsOf: catOptions)
         data.shuffle()
         filteredData = data
         center.requestAuthorization(options: options) {
@@ -169,6 +170,26 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
             
             let query = "person = '" + filteredData[0] + "'"
             var quotes = Array(realm.objects(Quote.self).filter(query))
+            if(quotes.count < 1){
+                var checkQuotes = Array(realm.objects(Quote.self))//.filter(category + " IN %@", ))
+                if(filteredData[0] != "General"){
+                    var remove : [Int] = [Int]()
+                    quotes = []
+                    for i in 0...(checkQuotes.count - 1) {
+                        let string = checkQuotes[i].categories
+                        if (checkQuotes[i].categories.contains(filteredData[0])){
+                            quotes.append(checkQuotes[i])
+                        }
+                    }/*
+                     for i in 0...(remove.count-1){
+                     quotes.remove(at: remove.count-i-1)
+                     }*/
+                    //print(quotes)
+                }
+                else {
+                    quotes = checkQuotes
+                }
+            }
             //print(quotes)
             quotes.shuffle()
             

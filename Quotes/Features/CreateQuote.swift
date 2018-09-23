@@ -80,6 +80,8 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         customName.isEnabled = false
         customQuote.isEnabled = false
         
+        savedQuote()
+        /*
         //creationButton.titleLabel?.text = "Save Quote"
         editButton.isHidden = false
         creationButton.isHidden = true
@@ -91,10 +93,12 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         
         text.isHidden = false
         person.isHidden = false
+ */
     }
     
     
-    @IBAction func savedQuote(_ sender: Any) {
+    //@IBAction func savedQuote(_ sender: Any) {
+    func savedQuote(){
         print("Save Quote")
         let quote = Quote()
         quote.person = customName.text!
@@ -104,9 +108,17 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         quoteIterator += 1
         quote.custom = true
         
-        try! realm.write {
-            realm.add(quote)
+        do {
+            try realm.write {
+                realm.add(quote)
+            }
         }
+        catch {
+            print("Error adding personal quote")
+        }
+        
+        addedPersonalQuote = true
+        
         dismiss(animated: true, completion: nil)
         let defaults = UserDefaults.standard
         defaults.set(quoteIterator, forKey: "quoteIterator")
