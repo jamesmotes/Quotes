@@ -165,10 +165,6 @@ class LoadQuotes {
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "Starting and growing a business is as much about the innovation, drive, and determination of the people behind it as the product they sell."
-        cats = ["Entrepreneur"]
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "The first step is to establish that something is possible; then probability will occur."
         cats = ["Entrepreneur", "Change"]
@@ -239,11 +235,7 @@ class LoadQuotes {
         cats = ["Entrepreneur", "Success"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)     
-        
-        text = "Any product that needs a manual to work is broken."
-        cats = ["Entrepreneur", "Success"]
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos) 
+
         
         text = "You want to be extra rigorous about making the best possible thing you can. Find everything that’s wrong with it and fix it. Seek negative feedback, particularly from friends."
         cats = ["Entrepreneur", "Success"]
@@ -254,11 +246,7 @@ class LoadQuotes {
         cats = ["Entrepreneur", "Success"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos) 
-        
-        text = "Any product that needs a manual to work is broken."
-        cats = ["Entrepreneur", "Success"]
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos) 
+
         
         text = "Any product that needs a manual to work is broken."
         cats = ["Entrepreneur", "Success"]
@@ -4465,10 +4453,6 @@ class LoadQuotes {
         
         text = "Work until you no longer have to introduce yourself."
         cats = ["Success", "Motivational", "Hungry", "Entrepreneur"]
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
-        text = "Anyone can do my job, but no one can be me."
-        cats = ["Success", "Empowerment"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
         text = "97% of people who gave up are employed by the 3% who never gave up."
