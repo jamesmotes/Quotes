@@ -1,4 +1,32 @@
 PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - Facebook-iOS-SDK (4.36.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit (= 4.36.0)
+    - Facebook-iOS-SDK/LoginKit (= 4.36.0)
+    - Facebook-iOS-SDK/MarketingKit (= 4.36.0)
+    - Facebook-iOS-SDK/PlacesKit (= 4.36.0)
+    - Facebook-iOS-SDK/ShareKit (= 4.36.0)
+    - Facebook-iOS-SDK/TVOSKit (= 4.36.0)
+  - Facebook-iOS-SDK/CoreKit (4.36.0):
+    - Bolts (~> 1.7)
+  - Facebook-iOS-SDK/LoginKit (4.36.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/MarketingKit (4.36.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/PlacesKit (4.36.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/ShareKit (4.36.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
   - Firebase/Auth (5.8.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.4)
@@ -72,14 +100,15 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.6.1)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
-  - SwiftyStoreKit (0.13.2)
+  - Realm (3.9.0):
+    - Realm/Headers (= 3.9.0)
+  - Realm/Headers (3.9.0)
+  - RealmSwift (3.9.0):
+    - Realm (= 3.9.0)
+  - SwiftyStoreKit (0.13.3)
 
 DEPENDENCIES:
+  - Facebook-iOS-SDK
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -91,6 +120,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bolts
+    - Facebook-iOS-SDK
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -111,6 +142,8 @@ SPEC REPOS:
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Facebook-iOS-SDK: e9018836d4e8f8ada0be437bea8856335b6c4c5a
   Firebase: 25812f43e7a53b11ae2f0a5f4c6d12faeb1f7cd7
   FirebaseAnalytics: df15839e9c6ca6bd14d2e8ab6b0c672e6c49097e
   FirebaseAuth: 504b198ceb3472dca5c65bb95544ea44cfc9439e
@@ -126,10 +159,10 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
-  SwiftyStoreKit: b7563505440a68c9d9fa70bc43d8a97015519409
+  Realm: 3d36f208bf3aff8335dc3298742140182bde4edb
+  RealmSwift: aa4d11917bfcfaa3ed51f219102a487ecd895447
+  SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
 
-PODFILE CHECKSUM: 37b7e9ea0efffd855f99829b4372425d520079fd
+PODFILE CHECKSUM: de28a6b98d3cad577c1787aa5eae34f4b265ddf1
 
 COCOAPODS: 1.5.3
