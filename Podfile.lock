@@ -1,4 +1,32 @@
 PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - Facebook-iOS-SDK (4.35.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit (= 4.35.0)
+    - Facebook-iOS-SDK/LoginKit (= 4.35.0)
+    - Facebook-iOS-SDK/MarketingKit (= 4.35.0)
+    - Facebook-iOS-SDK/PlacesKit (= 4.35.0)
+    - Facebook-iOS-SDK/ShareKit (= 4.35.0)
+    - Facebook-iOS-SDK/TVOSKit (= 4.35.0)
+  - Facebook-iOS-SDK/CoreKit (4.35.0):
+    - Bolts (~> 1.7)
+  - Facebook-iOS-SDK/LoginKit (4.35.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/MarketingKit (4.35.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/PlacesKit (4.35.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/ShareKit (4.35.0):
+    - Bolts (~> 1.7)
+    - Facebook-iOS-SDK/CoreKit
   - Firebase/Auth (4.0.4):
     - Firebase/Core
     - FirebaseAuth (= 4.0.0)
@@ -60,6 +88,7 @@ PODS:
   - SwiftyStoreKit (0.13.2)
 
 DEPENDENCIES:
+  - Facebook-iOS-SDK
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -70,7 +99,9 @@ DEPENDENCIES:
   - SwiftyStoreKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
+    - Bolts
+    - Facebook-iOS-SDK
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -88,6 +119,8 @@ SPEC REPOS:
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Facebook-iOS-SDK: e729a95092b271f354cef8e9cf2fef957aa6ffb4
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -104,6 +137,6 @@ SPEC CHECKSUMS:
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   SwiftyStoreKit: b7563505440a68c9d9fa70bc43d8a97015519409
 
-PODFILE CHECKSUM: 37b7e9ea0efffd855f99829b4372425d520079fd
+PODFILE CHECKSUM: de28a6b98d3cad577c1787aa5eae34f4b265ddf1
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.0

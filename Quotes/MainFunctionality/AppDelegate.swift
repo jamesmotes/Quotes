@@ -16,6 +16,7 @@ import RealmSwift
 import GoogleMobileAds
 import StoreKit
 import SwiftyStoreKit
+import FBSDKCoreKit
 
 var notificationQuote : String = ""
 
@@ -45,8 +46,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     override init() {
     }
 
-
+    // Facebook Ads
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options);
+        
+        return handled
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        // Facebook Ads
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions);
         
         //UIApplication.shared.registerForRemoteNotifications()
         if #available(iOS 10.0, *) {

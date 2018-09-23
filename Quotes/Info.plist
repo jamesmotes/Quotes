@@ -51,5 +51,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+        <key>CFBundleURLSchemas</key>
+        <array>
+            <string>fb233331370872198</string>
+        </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>233331370872198</string>
+    <key>FacebookDisplayName</key>
+    <string>Brilliance- Motivational Quotes</string>
 </dict>
 </plist>
