@@ -1,6 +1,7 @@
 target 'Quotes' do
     use_frameworks!
 
+    pod 'Facebook-iOS-SDK'
     pod 'SwiftyStoreKit'    
     pod 'RealmSwift'
     pod 'Firebase/Core'#, '4.0.4'
