@@ -136,6 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             globalTheme.imageFile = defaults.string(forKey: "imageFile")!
             globalTheme.image = defaults.data(forKey: "image") as! NSData
             globalTheme.whiteBackground = defaults.bool(forKey: "whiteBackground")
+            numBackgrounds = defaults.integer(forKey: "numBackgrounds")
         }
         
         if(defaults.integer(forKey: "reviewCountdown") == 0){

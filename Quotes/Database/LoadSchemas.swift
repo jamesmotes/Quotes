@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+var numBackgrounds = 22
 
 //var imageIterator = 0
 
@@ -15,6 +16,8 @@ class LoadSchemas {
     let realm = try! Realm()
     
     init() {
+        numBackgrounds = 0
+        
         var imageFile : String = String()
         var fontStyle : String = String()
         // var whiteBackground : Bool = Bool()
@@ -193,10 +196,14 @@ class LoadSchemas {
         // TODO: Rename schema to theme
         // TODO: Pull schemas to create global schema object
         // TODO: query all schemas/themes in customization view
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.set(numBackgrounds, forKey: "numBackgrounds")
     }
     
     func addSchema(imageFile : String, fontStyle : String, textColor : UIColor, backgroundColor : UIColor){
-        
+        numBackgrounds += 1
         var schema = Schema()
         schema.imageFile = imageFile
         schema.font = fontStyle
@@ -208,8 +215,13 @@ class LoadSchemas {
         else {
             schema.whiteBackground = false
         }
-        try! realm.write {
-            realm.add(schema)
+        do {
+            try realm.write {
+                realm.add(schema)
+            }
+        }
+        catch {
+            print("Error loading backgrounds")
         }
     }
     

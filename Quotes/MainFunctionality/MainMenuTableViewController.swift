@@ -33,7 +33,7 @@ class MainMenuTableViewCell: UITableViewCell {
 }
 
 
-let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Personal Quotes", "Unlock Features", "Recommended Motivators", "Contact Us", "Review Us"]
+let mainMenuOptions = [/*"General", */"People", "Categories",/* "Mood",*/ "Favorites", "Custom Notifications", "Fonts and Backgrounds", "Add Your Own Quote", "Unlock Features", "Recommended Motivators", "Contact Us", "Review Us"]
 let mainMenuWhiteIcons = ["PeopleWhite.png", "CategoriesWhite.png", "star", "AlarmIconWhite.png", "FontsWhite.png", "PersonalWhite.png", "unlockwhite.png", "influencer_white.png", "ContactUsWhite.png", "ReviewWhite.png"]
 
 let mainMenuBlackIcons = ["PeopleBlack.png", "CategoriesBlack.png", "star", "AlarmIconBlack.png", "FontsBlack.png", "PersonalBlack.png", "unlockblack.png", "influencer_black.png", "ContactUsBlack.png", "ReviewBlack.png"]

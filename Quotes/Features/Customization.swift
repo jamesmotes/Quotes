@@ -11,6 +11,8 @@ import RealmSwift
 
 var justChanged = false
 
+var deleteOption = false
+
 var hasImage = true
 //var globalImageFile = "Colorcloud.jpg"
 
@@ -20,7 +22,7 @@ var globalTheme : Theme = Theme()
 
 var loadedImage : UIImage = UIImage()
 
-class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class Customization: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -147,6 +149,10 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         else {
             cell.lockImage.isHidden = true
         }
+        /*if(indexPath.row >= numBackgrounds){
+            cell.delete = true
+            cell.lockImage.image = UIImage(named: "DeleteIconBlack.png")
+        }*/
         
         if(indexPath.row == 0){
             cell.quote.text = ""
@@ -156,11 +162,31 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         }
         
         //cell.sizeThatFits(CGSize(width: collectionView.frame.width/3.1, height: collectionView.frame.width/3.1))
-        
+        if(deleteOption){
+            cell.shakeIcons()
+        }
+        else {
+            cell.stopShakingIcons()
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if(deleteOption){
+            let theme = array[indexPath.row]
+            do {
+                try realm.write {
+                    realm.delete(theme)
+                }
+            }
+            catch {
+                print("Error deleting theme")
+            }
+            array.remove(at: indexPath.row)
+            collectionView.reloadData()
+            return
+        }
         
         if(!full_unlock && (indexPath.row > 6 || indexPath.row == 0)){
             performSegue(withIdentifier: "fontsToPurchase", sender: nil)
@@ -315,6 +341,27 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         justChanged = true
     }
     
+    @objc func handleLongPress(gestureRecognizer : UILongPressGestureRecognizer){
+        
+        if (gestureRecognizer.state != UIGestureRecognizerState.began){
+            return
+        }
+        
+        let p = gestureRecognizer.location(in: self.collectionView)
+        
+        if let indexPath : IndexPath = (self.collectionView?.indexPathForItem(at: p))! {
+            print(indexPath)
+            if(deleteOption){
+                deleteOption = false
+            }
+            else {
+                deleteOption = true
+            }
+            collectionView.reloadData()
+        }
+        
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -363,6 +410,12 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         array = Array(realm.objects(Theme.self))
         collectionView.reloadData()
         
+        let lpgr : UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(Customization.handleLongPress(gestureRecognizer:)))
+        lpgr.minimumPressDuration = 0.5
+        lpgr.delegate = self
+        lpgr.delaysTouchesBegan = true
+        self.collectionView?.addGestureRecognizer(lpgr)
+        
         // Do any additional setup after loading the view.
         
     }
@@ -409,6 +462,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBAction func clickedBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     
     /*
     // MARK: - Navigation
