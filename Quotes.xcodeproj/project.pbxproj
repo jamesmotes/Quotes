@@ -25,6 +25,18 @@
 		1A1E301F20A5589000EA6687 /* QuoteIcon1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E301A20A5589000EA6687 /* QuoteIcon1024.jpg */; };
 		1A2B608521584BC6005DF054 /* DeleteIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608321584BC6005DF054 /* DeleteIconBlack.png */; };
 		1A2B608621584BC6005DF054 /* DeleteIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608421584BC6005DF054 /* DeleteIconWhite.png */; };
+		1A2B608821586195005DF054 /* DeleteIconRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608721586194005DF054 /* DeleteIconRed.png */; };
+		1A2B609421586C61005DF054 /* Bridge.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608A21586C5E005DF054 /* Bridge.JPG */; };
+		1A2B609521586C61005DF054 /* Lightning.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608B21586C5E005DF054 /* Lightning.JPG */; };
+		1A2B609621586C61005DF054 /* OceanSunset.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608C21586C5F005DF054 /* OceanSunset.JPG */; };
+		1A2B609721586C61005DF054 /* CliffDiving.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608D21586C5F005DF054 /* CliffDiving.JPG */; };
+		1A2B609821586C61005DF054 /* TreeDiving.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608E21586C5F005DF054 /* TreeDiving.JPG */; };
+		1A2B609921586C61005DF054 /* Forest.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B608F21586C60005DF054 /* Forest.JPG */; };
+		1A2B609A21586C61005DF054 /* ChainBridge.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B609021586C60005DF054 /* ChainBridge.JPG */; };
+		1A2B609B21586C61005DF054 /* DowntownNYC.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B609121586C60005DF054 /* DowntownNYC.JPG */; };
+		1A2B609C21586C61005DF054 /* HandSunset.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B609221586C61005DF054 /* HandSunset.JPG */; };
+		1A2B609D21586C61005DF054 /* PalmOut.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B609321586C61005DF054 /* PalmOut.JPG */; };
+		1A2B609F2158755B005DF054 /* LoadThemes2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B609E2158755B005DF054 /* LoadThemes2.swift */; };
 		1A34173820DAA53400723322 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173720DAA53400723322 /* IAPProducts.swift */; };
 		1A34173A20DAA5DD00723322 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173920DAA5DD00723322 /* IAPService.swift */; };
 		1A4E02CF20C0E02700671DA9 /* LoadCustomImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */; };
@@ -150,6 +162,18 @@
 		1A1E301A20A5589000EA6687 /* QuoteIcon1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = QuoteIcon1024.jpg; sourceTree = "<group>"; };
 		1A2B608321584BC6005DF054 /* DeleteIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeleteIconBlack.png; sourceTree = "<group>"; };
 		1A2B608421584BC6005DF054 /* DeleteIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeleteIconWhite.png; sourceTree = "<group>"; };
+		1A2B608721586194005DF054 /* DeleteIconRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeleteIconRed.png; sourceTree = "<group>"; };
+		1A2B608A21586C5E005DF054 /* Bridge.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bridge.JPG; sourceTree = "<group>"; };
+		1A2B608B21586C5E005DF054 /* Lightning.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lightning.JPG; sourceTree = "<group>"; };
+		1A2B608C21586C5F005DF054 /* OceanSunset.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OceanSunset.JPG; sourceTree = "<group>"; };
+		1A2B608D21586C5F005DF054 /* CliffDiving.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CliffDiving.JPG; sourceTree = "<group>"; };
+		1A2B608E21586C5F005DF054 /* TreeDiving.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TreeDiving.JPG; sourceTree = "<group>"; };
+		1A2B608F21586C60005DF054 /* Forest.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Forest.JPG; sourceTree = "<group>"; };
+		1A2B609021586C60005DF054 /* ChainBridge.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChainBridge.JPG; sourceTree = "<group>"; };
+		1A2B609121586C60005DF054 /* DowntownNYC.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DowntownNYC.JPG; sourceTree = "<group>"; };
+		1A2B609221586C61005DF054 /* HandSunset.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HandSunset.JPG; sourceTree = "<group>"; };
+		1A2B609321586C61005DF054 /* PalmOut.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PalmOut.JPG; sourceTree = "<group>"; };
+		1A2B609E2158755B005DF054 /* LoadThemes2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThemes2.swift; sourceTree = "<group>"; };
 		1A34173720DAA53400723322 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
 		1A34173920DAA5DD00723322 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCustomImageController.swift; sourceTree = "<group>"; };
@@ -273,6 +297,7 @@
 				1A4E02D020C42F9800671DA9 /* Theme.swift */,
 				1A4E02D220C4306D00671DA9 /* LoadThemes.swift */,
 				1A8FEA3820C567D3004303FD /* Influencer.swift */,
+				1A2B609E2158755B005DF054 /* LoadThemes2.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -287,6 +312,23 @@
 				1A1E301A20A5589000EA6687 /* QuoteIcon1024.jpg */,
 			);
 			path = AppIcons;
+			sourceTree = "<group>";
+		};
+		1A2B608921586C3D005DF054 /* Updated Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B608A21586C5E005DF054 /* Bridge.JPG */,
+				1A2B609021586C60005DF054 /* ChainBridge.JPG */,
+				1A2B608D21586C5F005DF054 /* CliffDiving.JPG */,
+				1A2B609121586C60005DF054 /* DowntownNYC.JPG */,
+				1A2B608F21586C60005DF054 /* Forest.JPG */,
+				1A2B609221586C61005DF054 /* HandSunset.JPG */,
+				1A2B608B21586C5E005DF054 /* Lightning.JPG */,
+				1A2B608C21586C5F005DF054 /* OceanSunset.JPG */,
+				1A2B609321586C61005DF054 /* PalmOut.JPG */,
+				1A2B608E21586C5F005DF054 /* TreeDiving.JPG */,
+			);
+			path = "Updated Backgrounds";
 			sourceTree = "<group>";
 		};
 		1A62EF5020A25DFE00F38F00 /* Alarms */ = {
@@ -344,6 +386,8 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1A2B608921586C3D005DF054 /* Updated Backgrounds */,
+				1A2B608721586194005DF054 /* DeleteIconRed.png */,
 				1A2B608321584BC6005DF054 /* DeleteIconBlack.png */,
 				1A2B608421584BC6005DF054 /* DeleteIconWhite.png */,
 				1A79BB4B20E15D2600005278 /* ReviewBlack.png */,
@@ -549,6 +593,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2B609921586C61005DF054 /* Forest.JPG in Resources */,
 				1A62EF4D20A25DB700F38F00 /* PeopleWhite.png in Resources */,
 				1A2B608521584BC6005DF054 /* DeleteIconBlack.png in Resources */,
 				1A62EF4320A1E6FD00F38F00 /* BackButtonBlack.png in Resources */,
@@ -568,6 +613,7 @@
 				1A1E301B20A5589000EA6687 /* QuoteIcon152.png in Resources */,
 				1A7BCA1420A4037C001241E6 /* City.jpg in Resources */,
 				1A0DC0D620A3DEDF007FEA6B /* butterfly.jpg in Resources */,
+				1A2B609D21586C61005DF054 /* PalmOut.JPG in Resources */,
 				1A0DC0DC20A3DEDF007FEA6B /* desertwalk.jpg in Resources */,
 				1A8FEA3F20C81051004303FD /* photo.png in Resources */,
 				1A62EF4B20A25DB700F38F00 /* PeopleBlack.png in Resources */,
@@ -586,6 +632,7 @@
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
 				1AA123742044F22D0004C1AE /* Share-icon-iOS.jpg in Resources */,
 				1A62EF4020A1E6FD00F38F00 /* CategoriesWhite.png in Resources */,
+				1A2B609821586C61005DF054 /* TreeDiving.JPG in Resources */,
 				8105650B208D821300BB9433 /* MenuBlack.png in Resources */,
 				1A79BB4C20E15D2600005278 /* ReviewWhite.png in Resources */,
 				81056509208D821300BB9433 /* MenuWhite.png in Resources */,
@@ -595,9 +642,12 @@
 				1A62EF3C20A1E6FD00F38F00 /* CategoriesBlack.png in Resources */,
 				1A79BB4D20E15D2600005278 /* ReviewBlack.png in Resources */,
 				8105650A208D821300BB9433 /* ShareBlack.png in Resources */,
+				1A2B609B21586C61005DF054 /* DowntownNYC.JPG in Resources */,
 				1A62EF3F20A1E6FD00F38F00 /* NoAdsBlack.png in Resources */,
+				1A2B609A21586C61005DF054 /* ChainBridge.JPG in Resources */,
 				1A0DC0D920A3DEDF007FEA6B /* ferriswheel.jpg in Resources */,
 				1A62EF4F20A25DB700F38F00 /* PersonalBlack.png in Resources */,
+				1A2B609421586C61005DF054 /* Bridge.JPG in Resources */,
 				1A62EF4E20A25DB700F38F00 /* PersonalWhite.png in Resources */,
 				1A8FEA4D20C8CB50004303FD /* insta.png in Resources */,
 				1A7BCA1720A4037C001241E6 /* whitemountain.jpg in Resources */,
@@ -608,21 +658,26 @@
 				1A62EF4220A1E6FD00F38F00 /* AlarmIconBlack.png in Resources */,
 				1A7BCA1B20A5219B001241E6 /* unlockwhite.png in Resources */,
 				1A4E02D720C43DDF00671DA9 /* plussign.png in Resources */,
+				1A2B609521586C61005DF054 /* Lightning.JPG in Resources */,
 				1A8FEA4520C8C661004303FD /* youtube.png in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
 				1A62EF2920A157C200F38F00 /* whitetower.jpg in Resources */,
 				1AA123782044F4B40004C1AE /* search.png in Resources */,
+				1A2B608821586195005DF054 /* DeleteIconRed.png in Resources */,
 				81056507208D821200BB9433 /* SearchWhite.png in Resources */,
+				1A2B609721586C61005DF054 /* CliffDiving.JPG in Resources */,
 				1A2B608621584BC6005DF054 /* DeleteIconWhite.png in Resources */,
 				1A62EF3B20A1E6FD00F38F00 /* FontsBlack.png in Resources */,
 				1A62EF2520A157C200F38F00 /* airballoons.jpg in Resources */,
 				1A7BCA1620A4037C001241E6 /* basketballcourt.jpg in Resources */,
 				1A0DC0DB20A3DEDF007FEA6B /* colorsky.jpg in Resources */,
 				1A1E301C20A5589000EA6687 /* QuoteIcon180.png in Resources */,
+				1A2B609C21586C61005DF054 /* HandSunset.JPG in Resources */,
 				1A1E301E20A5589000EA6687 /* QuoteIcon120.png in Resources */,
 				1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */,
 				1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */,
 				1A0DC0D720A3DEDF007FEA6B /* hotair.jpg in Resources */,
+				1A2B609621586C61005DF054 /* OceanSunset.JPG in Resources */,
 				1A0DC0D520A3DEDF007FEA6B /* fyah.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,6 +790,7 @@
 				812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1A62EF1920A0922500F38F00 /* Session.swift in Sources */,
+				1A2B609F2158755B005DF054 /* LoadThemes2.swift in Sources */,
 				1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */,
 				1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */,
 				1A8FEA4120C8245C004303FD /* RecommendedMotivators.swift in Sources */,

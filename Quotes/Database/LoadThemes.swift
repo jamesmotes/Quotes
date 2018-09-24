@@ -64,11 +64,6 @@ class LoadThemes {
         imageFile = "Colorcloud.jpg"
         addTheme(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
-        fontStyle = "TradeGothic"
-        textColor = UIColor.white
-        backgroundColor = UIColor.black
-        imageFile = "babylion.jpg"
-        addTheme(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         fontStyle = "Didot"
         textColor = UIColor.white
@@ -100,11 +95,6 @@ class LoadThemes {
          backgroundColor = UIColor.black
          addTheme(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
          */
-        imageFile = "City.jpg"
-        fontStyle = "Copperplate"
-        textColor = UIColor.white
-        backgroundColor = UIColor.black
-        addTheme(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
         imageFile = "colorhallway.jpg"
         fontStyle = "Copperplate"
@@ -179,21 +169,7 @@ class LoadThemes {
         backgroundColor = UIColor.black
         addTheme(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
-        /*
-         imageFile = ""
-         fontStyle = "Symbol"
-         textColor = UIColor.white
-         backgroundColor = UIColor.black
-         schema.imageFile = imageFile
-         schema.font = fontStyle
-         schema.textColor = textColor
-         schema.backgroundColor = backgroundColor
-         schemas.append(schema)
-         */
         
-        // TODO: Rename schema to theme
-        // TODO: Pull schemas to create global schema object
-        // TODO: query all schemas/themes in customization view
     }
     
     func addTheme(imageFile : String, fontStyle : String, textColor : UIColor, backgroundColor : UIColor){
@@ -214,8 +190,35 @@ class LoadThemes {
         else {
             theme.whiteBackground = false
         }
-        try! realm.write {
-            realm.add(theme)
+        
+        let query = "imageFile CONTAINS '" + imageFile + "'"
+        let themes = Array(realm.objects(Theme.self).filter(query))
+        
+        if(themes.count < 1){
+            do {
+                try realm.write {
+                    realm.add(theme)
+                    numBackgrounds += 1
+                }
+            }
+            catch {
+                print("Error loading Background")
+            }
+        }
+    }
+    
+    func deleteTheme(imageFile: String){
+        let query = "imageFile CONTAINS '" + imageFile + "'"
+        let themes = Array(realm.objects(Theme.self).filter(query))
+        if(themes.count > 1){
+            do {
+                try realm.write {
+                realm.delete(themes[0])
+                }
+            }
+            catch{
+                print("Error deleting theme")
+            }
         }
     }
     

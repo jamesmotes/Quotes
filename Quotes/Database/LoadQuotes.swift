@@ -30,10 +30,19 @@ class LoadQuotes {
             quote.categories.insert(mood, at: quote.categories.count)
         }
         quote.id = quoteIterator
-        quoteIterator += 1
-        try! realm.write {
-            realm.add(quote)
-        }
+        let query = "text CONTAINS '" + _quote + "'"
+        //let check = Array(realm.objects(Quote.self).filter(query))
+        //if(check.count < 1){
+            do {
+                try realm.write {
+                    realm.add(quote)
+                    quoteIterator += 1
+                }
+            }
+            catch {
+                print("Error making quote")
+            }
+        //}
     }
     
     init(){

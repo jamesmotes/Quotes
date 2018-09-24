@@ -94,6 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if(defaults.bool(forKey: "HasBeenLaunched") == false){
             defaults.set(true, forKey: "FirstUpdate")
             defaults.set(true, forKey: "SecondUpdate")
+            defaults.set(true, forKey: "ThirdUpdate")
             defaults.set([], forKey: "AlarmSetPeople")
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
@@ -110,19 +111,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             storeCustomiationInfo()
         }
         else{
-            //First App Update
-            if(defaults.bool(forKey: "FirstUpdate") == false){
-                defaults.set(true, forKey: "FirstUpdate")
-                var _ : LoadThemes = LoadThemes()
+            //App Update
+
+            if(defaults.bool(forKey: "ThirdUpdate") == false){
                 
-                let initialImage = UIImage(named: "Colorcloud.jpg")
-                globalTheme.setImage(_image: initialImage)
-                
-                defaults.set(globalTheme.image, forKey: "image")
-            }
-            if(defaults.bool(forKey: "SecondUpdate") == false){
-                reloadQuotes()
-                defaults.set(true, forKey: "SecondUpdate")
+                updateDatabase()
+                var _ : LoadThemes2 = LoadThemes2()
+                defaults.set(true, forKey: "ThirdUpdate")
             }
             
             
@@ -494,10 +489,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func updateDatabase(){
-        
+        reloadQuotes()
         var _ : LoadQuotes = LoadQuotes()
         //var _ : LoadSchemas = LoadSchemas()
-        var _ : LoadThemes = LoadThemes()
+        //var _ : LoadThemes = LoadThemes()
         
         
         let defaults = UserDefaults.standard
@@ -544,11 +539,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func reloadQuotes(){
         let allQuotes = realm.objects(Quote.self)
-        try! realm.write {
-            realm.delete(allQuotes)
+        for q in allQuotes {
+            if (q.custom == false){
+                try! realm.write {
+                    realm.delete(q)
+                }
+            }
         }
         quoteIterator = 0
-        updateDatabase()
     }
     
     func storeCustomiationInfo() {

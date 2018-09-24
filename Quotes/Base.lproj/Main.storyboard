@@ -515,7 +515,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="Wab-1x-qjI"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeleteIconWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hh-gb-7dI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeleteIconRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hh-gb-7dI">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="1v7-sy-pJI"/>
@@ -1765,7 +1765,7 @@ subscription to that publication, where applicable</string>
         <image name="AlarmIconWhite.png" width="26" height="26"/>
         <image name="BackButtonWhite.png" width="50" height="50"/>
         <image name="CategoriesWhite.png" width="32" height="32"/>
-        <image name="DeleteIconWhite.png" width="100" height="100"/>
+        <image name="DeleteIconRed.png" width="100" height="100"/>
         <image name="FontsWhite.png" width="50" height="50"/>
         <image name="MenuBlack.png" width="50" height="50"/>
         <image name="MenuWhite.png" width="50" height="50"/>

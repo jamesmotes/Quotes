@@ -162,7 +162,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
         }
         
         //cell.sizeThatFits(CGSize(width: collectionView.frame.width/3.1, height: collectionView.frame.width/3.1))
-        if(deleteOption){
+        if(deleteOption && indexPath.row > 0){
             cell.shakeIcons()
         }
         else {
@@ -173,7 +173,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if(deleteOption){
+        if(deleteOption && indexPath.row > 0){
             let theme = array[indexPath.row]
             do {
                 try realm.write {
@@ -422,6 +422,7 @@ class Customization: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     override func viewDidAppear(_ animated: Bool) {
         collectionView.reloadData()
+        deleteOption = false
         if(savedImage == true){
             dismiss(animated: true, completion: nil)
             savedImage = false
