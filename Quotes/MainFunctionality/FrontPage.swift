@@ -12,6 +12,7 @@ import GoogleMobileAds
 import Foundation
 import StoreKit
 import SwiftyStoreKit
+import SafariServices
 
 var pers = ""
 var category = ""
@@ -511,6 +512,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     @IBAction func deleteQuote(_ sender: Any) {
+        if quotes.count == 0 {
+            return
+        }
         let query : String = "id == " + String(quotes[index].id)
         let theQuote = realm.objects(Quote.self).filter(query).first
         do {
@@ -636,6 +640,22 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         else {
             performSegue(withIdentifier: "goToSearch", sender: nil)
         }
+    }
+    @IBAction func lookUpPerson(_ sender: Any) {
+        var url = "https://en.wikipedia.org/wiki/"
+        
+        let fullNameArr : [String] = quotes[index].person.components(separatedBy: CharacterSet.whitespaces)
+        
+        for n in fullNameArr {
+            url += n.replacingOccurrences(of: "\"", with: "")
+            url += "_"
+        }
+        
+        let svc = SFSafariViewController(url: NSURL(string: url)! as URL)
+        present(svc, animated: true, completion: nil)
+        
+        //let application = UIApplication.shared
+        //application.openURL(NSURL(string: url)! as URL)
     }
     
     private func showErrorAlert(for error: ServiceError) {

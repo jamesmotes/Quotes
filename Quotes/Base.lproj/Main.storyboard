@@ -200,6 +200,12 @@
                                     <outletCollection property="gestureRecognizers" destination="xFM-xZ-2Wi" appends="YES" id="wbj-yq-NtX"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sY-e6-5zW">
+                                <rect key="frame" x="48" y="486" width="279" height="39"/>
+                                <connections>
+                                    <action selector="lookUpPerson:" destination="dYJ-Kj-E20" eventType="touchUpInside" id="fkU-oR-jXt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -207,6 +213,7 @@
                             <constraint firstItem="vSr-Gp-sZh" firstAttribute="top" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="23" id="0Uj-2J-cd9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3CT-qL-Isf" secondAttribute="trailing" constant="97" id="1M8-GH-NIm"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="WaF-9c-0uI" secondAttribute="bottom" constant="16" id="25b-Aq-1EB"/>
+                            <constraint firstItem="8sY-e6-5zW" firstAttribute="top" secondItem="r4S-V2-zqV" secondAttribute="bottom" constant="23" id="6gZ-l3-dBm"/>
                             <constraint firstItem="dGC-zT-l4U" firstAttribute="top" secondItem="vSr-Gp-sZh" secondAttribute="bottom" constant="8" id="6yH-NF-WmB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hPb-DZ-e2x" secondAttribute="trailing" constant="75" id="9SK-qF-riI"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="e51-Tg-kq5" secondAttribute="trailing" constant="16" id="9YZ-pb-D8m"/>
@@ -225,6 +232,7 @@
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="91b-xX-bAC" secondAttribute="trailing" constant="16" id="W1D-cT-aFr"/>
                             <constraint firstItem="3CT-qL-Isf" firstAttribute="top" secondItem="vSr-Gp-sZh" secondAttribute="bottom" constant="8" id="WYI-1t-tEn"/>
                             <constraint firstItem="3CT-qL-Isf" firstAttribute="top" secondItem="jgK-NU-xbX" secondAttribute="bottom" constant="8" id="Xer-fQ-eeH"/>
+                            <constraint firstItem="8sY-e6-5zW" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="48" id="Y76-xJ-8Xh"/>
                             <constraint firstItem="uaR-gQ-CmH" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" id="Y9y-JD-sCK"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="egb-Sh-Bpj" secondAttribute="bottom" constant="16" id="bSc-ab-lyE"/>
                             <constraint firstItem="3CT-qL-Isf" firstAttribute="leading" secondItem="P2m-5i-EMa" secondAttribute="leadingMargin" constant="97" id="c27-FH-0u2"/>
@@ -232,6 +240,8 @@
                             <constraint firstItem="lXd-6x-Eb5" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="jSM-MY-KHk"/>
                             <constraint firstItem="hPb-DZ-e2x" firstAttribute="top" secondItem="dGC-zT-l4U" secondAttribute="bottom" constant="6" id="kRs-Ww-tHd"/>
                             <constraint firstItem="jgK-NU-xbX" firstAttribute="leading" secondItem="uaR-gQ-CmH" secondAttribute="trailing" constant="40" id="lu7-Rj-KKN"/>
+                            <constraint firstItem="3CT-qL-Isf" firstAttribute="top" secondItem="8sY-e6-5zW" secondAttribute="bottom" constant="8" id="mDe-7h-h5D"/>
+                            <constraint firstItem="4qy-YD-y4i" firstAttribute="trailing" secondItem="8sY-e6-5zW" secondAttribute="trailing" constant="48" id="mRy-cV-DMb"/>
                             <constraint firstItem="4qy-YD-y4i" firstAttribute="bottom" secondItem="aKE-V1-MAT" secondAttribute="bottom" constant="16" id="p6y-q1-dpP"/>
                             <constraint firstItem="WaF-9c-0uI" firstAttribute="leading" secondItem="4qy-YD-y4i" secondAttribute="leading" constant="16" id="rIR-gZ-8WX"/>
                             <constraint firstItem="lXd-6x-Eb5" firstAttribute="top" secondItem="4qy-YD-y4i" secondAttribute="top" id="sA3-fA-BTe"/>
@@ -296,7 +306,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1050" y="-1743"/>
+            <point key="canvasLocation" x="-1050.4000000000001" y="-1743.778110944528"/>
         </scene>
         <!--Search View-->
         <scene sceneID="Em4-7o-JcJ">

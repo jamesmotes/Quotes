@@ -11,7 +11,7 @@ import UserNotifications
 import Firebase
 import FirebaseMessaging
 import FirebaseInstanceID
-import FirebaseDatabase
+//import FirebaseDatabase
 import RealmSwift
 import GoogleMobileAds
 import StoreKit
@@ -89,12 +89,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         if (defaults.bool(forKey: "updated") == false){
             updateDatabase()
+            var _ : LoadThemes = LoadThemes()
+            var _ : LoadThemes2 = LoadThemes2()
             defaults.set(true, forKey: "updated")
         }
         if(defaults.bool(forKey: "HasBeenLaunched") == false){
             defaults.set(true, forKey: "FirstUpdate")
             defaults.set(true, forKey: "SecondUpdate")
             defaults.set(true, forKey: "ThirdUpdate")
+            defaults.set(true, forKey: "FourthUpdate")
             defaults.set([], forKey: "AlarmSetPeople")
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
@@ -119,6 +122,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 var _ : LoadThemes2 = LoadThemes2()
                 defaults.set(true, forKey: "ThirdUpdate")
             }
+            else if(defaults.bool(forKey: "FourthUpdate") == false){
+                let allThemes = realm.objects(Theme.self)
+                for t in allThemes {
+                    try! realm.write {
+                        realm.delete(t)
+                    }
+                }
+                
+                var _ : LoadThemes = LoadThemes()
+                var _ : LoadThemes2 = LoadThemes2()
+            } else {
+                globalTheme.image = defaults.data(forKey: "image") as! NSData
+            }
+            defaults.set(true, forKey: "FourthUpdate")
             
             
             // TODO: Change to global Schema object
@@ -129,7 +146,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             globalTheme.font = defaults.string(forKey: "fontStyle")!
             globalTheme.setBackgroundColor(color: defaults.colorForKey(key: "backgroundColor")!)
             globalTheme.imageFile = defaults.string(forKey: "imageFile")!
-            globalTheme.image = defaults.data(forKey: "image") as! NSData
             globalTheme.whiteBackground = defaults.bool(forKey: "whiteBackground")
             numBackgrounds = defaults.integer(forKey: "numBackgrounds")
         }
@@ -177,7 +193,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         
         
-        loadInfluencers()
+        //loadInfluencers()
         
         //Swifty Store Kit Setup
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
@@ -562,7 +578,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     
-    func loadInfluencers() {
+    /*func loadInfluencers() {
         //load influencers
         
         
@@ -635,7 +651,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         })
         //TODO Clear Realm of unused influencer images and store all current images
         
-    }
+    }*/
 
 }
 

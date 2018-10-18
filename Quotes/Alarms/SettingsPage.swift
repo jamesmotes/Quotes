@@ -52,7 +52,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var person = filteredData[indexPath.item]
+        let person = filteredData[indexPath.item]
         searchController.searchBar.text = person
     }
     
@@ -61,6 +61,7 @@ class SettingsPage: UIViewController , UNUserNotificationCenterDelegate, UITable
         setTheme()
         
         data.append(contentsOf: peopleOptions)
+        data.append("Elon Musk")
         data.append(contentsOf: catOptions)
         data.shuffle()
         filteredData = data

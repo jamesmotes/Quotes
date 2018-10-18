@@ -146,8 +146,8 @@ class RecommendedMotivators: UIViewController, UICollectionViewDelegate, UIColle
         switch(links[indexPath.row]){
         case 0:
             print("link insta")
-            var instagramHooks = "instagram://user?username=\(selectedInfluencer.insta)"
-            var instagramUrl = NSURL(string: instagramHooks)
+            let instagramHooks = "instagram://user?username=\(selectedInfluencer.insta)"
+            let instagramUrl = NSURL(string: instagramHooks)
             let application = UIApplication.shared
             if application.canOpenURL(instagramUrl! as URL) {
                 application.openURL(instagramUrl! as URL)
