@@ -39,6 +39,11 @@ class AlarmsTableViewController: UITableViewController {
         
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
+            for n in self.alarms {
+                if n.identifier.contains("standard_"){
+                    self.alarms.remove(at: self.alarms.index(of: n)!)
+                }
+            }
             print(notifications)
         }
         
@@ -142,6 +147,11 @@ class AlarmsTableViewController: UITableViewController {
         
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
+            for n in self.alarms {
+                if n.identifier.contains("standard_"){
+                    self.alarms.remove(at: self.alarms.index(of: n)!)
+                }
+            }
             print(notifications)
         }
         

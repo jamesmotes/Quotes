@@ -137,7 +137,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
             defaults.set(true, forKey: "FourthUpdate")
             
-            
             // TODO: Change to global Schema object
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
             AlarmSetTime = defaults.array(forKey: "AlarmSetTime") as! [DateComponents]
@@ -172,7 +171,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         application.registerForRemoteNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(refreshToken(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
-        
+
         
        Messaging.messaging().shouldEstablishDirectChannel = false
         
@@ -576,6 +575,92 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         defaults.set(globalTheme.image, forKey: "image")
     }
+    
+    func setStandardAlarms(){
+        let date = Date.init()
+        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+        triggerDate.second = 0
+        
+        var quotes = Array(realm.objects(Quote.self))
+        quotes.shuffle()
+        
+        var count = 0
+        
+        while count < quotes.count {
+            let q = quotes[count]
+            let content = UNMutableNotificationContent()
+            //content.title =
+            content.body = q.text + " - " + q.person
+            content.sound = UNNotificationSound.default()
+            content.categoryIdentifier = "RECEIVED_QUOTE"
+            
+            //should probably adjust for months with 30 and 28 days
+            triggerDate.day = triggerDate.day! + 1
+            if(triggerDate.day! > 31){
+                triggerDate.day = 1
+                triggerDate.month = triggerDate.month! + 1
+                if(triggerDate.month! > 12){
+                    triggerDate.month = 1
+                }
+            }
+            
+            triggerDate.hour = 17
+            triggerDate.minute = 32
+            
+            var trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+            
+            var identifier = "standard_" + (String)(count)
+            var request = UNNotificationRequest(identifier: identifier,
+                                                content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("something went wrong when adding the notification to the request center")
+                }
+            })
+            count += 1
+            
+            triggerDate.hour = 16
+            triggerDate.minute = 20
+            
+            trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+            
+            identifier = "standard_" + (String)(count)
+            request = UNNotificationRequest(identifier: identifier,
+                                            content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("something went wrong when adding the notification to the request center")
+                }
+            })
+            count += 1
+            
+            triggerDate.hour = 22
+            triggerDate.minute = 20
+            
+            trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+            
+            identifier = "standard_" + (String)(count)
+            request = UNNotificationRequest(identifier: identifier,
+                                                content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("something went wrong when adding the notification to the request center")
+                }
+            })
+            count += 1
+        }
+    }
+        
+        
+    
+    //print("TriggerDate")
+    //print(triggerDate)
+    
+    
+    
     
     
     /*func loadInfluencers() {

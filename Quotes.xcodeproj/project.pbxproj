@@ -39,6 +39,7 @@
 		1A2B609F2158755B005DF054 /* LoadThemes2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B609E2158755B005DF054 /* LoadThemes2.swift */; };
 		1A34173820DAA53400723322 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173720DAA53400723322 /* IAPProducts.swift */; };
 		1A34173A20DAA5DD00723322 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173920DAA5DD00723322 /* IAPService.swift */; };
+		1A44CD47217BEAA700D7D3E8 /* LoadQuotes2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44CD46217BEAA700D7D3E8 /* LoadQuotes2.swift */; };
 		1A4E02CF20C0E02700671DA9 /* LoadCustomImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */; };
 		1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D020C42F9800671DA9 /* Theme.swift */; };
 		1A4E02D320C4306D00671DA9 /* LoadThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D220C4306D00671DA9 /* LoadThemes.swift */; };
@@ -176,6 +177,7 @@
 		1A2B609E2158755B005DF054 /* LoadThemes2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThemes2.swift; sourceTree = "<group>"; };
 		1A34173720DAA53400723322 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
 		1A34173920DAA5DD00723322 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
+		1A44CD46217BEAA700D7D3E8 /* LoadQuotes2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuotes2.swift; sourceTree = "<group>"; };
 		1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCustomImageController.swift; sourceTree = "<group>"; };
 		1A4E02D020C42F9800671DA9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1A4E02D220C4306D00671DA9 /* LoadThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThemes.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				1A4E02D220C4306D00671DA9 /* LoadThemes.swift */,
 				1A8FEA3820C567D3004303FD /* Influencer.swift */,
 				1A2B609E2158755B005DF054 /* LoadThemes2.swift */,
+				1A44CD46217BEAA700D7D3E8 /* LoadQuotes2.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 				812405FE208CDE50006E7AB7 /* FontCell.swift in Sources */,
 				1AACFE921FF2F65E00E6424D /* AppDelegate.swift in Sources */,
 				1A62EF1920A0922500F38F00 /* Session.swift in Sources */,
+				1A44CD47217BEAA700D7D3E8 /* LoadQuotes2.swift in Sources */,
 				1A2B609F2158755B005DF054 /* LoadThemes2.swift in Sources */,
 				1A62EF1520A08E2800F38F00 /* Subscription.swift in Sources */,
 				1A96D54A203FA31300254090 /* LoadQuotes.swift in Sources */,

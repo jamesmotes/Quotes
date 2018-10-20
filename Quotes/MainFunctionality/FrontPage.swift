@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 import GoogleMobileAds
 import Foundation
 import StoreKit
@@ -529,6 +530,11 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         refresh()
     }
     @IBAction func swipedLeft(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        if(defaults.bool(forKey:"FifthUpdate") == false){
+            setStandardAlarms()
+            defaults.set(true, forKey: "FifthUpdate")
+        }
         if(index > 0){
             index -= 1
         }
@@ -541,6 +547,11 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     }
     
     @IBAction func swipedRight(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        if(defaults.bool(forKey:"FifthUpdate") == false){
+            setStandardAlarms()
+            defaults.set(true, forKey: "FifthUpdate")
+        }
         if(index < quotes.count - 1){
             index += 1
         }
@@ -729,6 +740,84 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 return
         }
         //full_unlock = true
+    }
+    
+    func setStandardAlarms(){
+        let date = Date.init()
+        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+        triggerDate.second = 0
+        
+        var quotes = Array(realm.objects(Quote.self))
+        quotes.shuffle()
+        
+        var count = 0
+        
+        while count < quotes.count {
+            let q = quotes[count]
+            let content = UNMutableNotificationContent()
+            //content.title =
+            content.body = q.text + " - " + q.person
+            content.sound = UNNotificationSound.default()
+            content.categoryIdentifier = "RECEIVED_QUOTE"
+            
+            //should probably adjust for months with 30 and 28 days
+            triggerDate.day = triggerDate.day! + 1
+            if(triggerDate.day! > 31){
+                triggerDate.day = 1
+                triggerDate.month = triggerDate.month! + 1
+                if(triggerDate.month! > 12){
+                    triggerDate.month = 1
+                }
+            }
+            
+            triggerDate.hour = 10
+            triggerDate.minute = 20
+            
+            var trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+            
+            var identifier = "standard_" + (String)(count)
+            var request = UNNotificationRequest(identifier: identifier,
+                                                content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("something went wrong when adding the notification to the request center")
+                }
+            })
+            count += 1
+            
+            triggerDate.hour = 16
+            triggerDate.minute = 20
+            
+            trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+            
+            identifier = "standard_" + (String)(count)
+            request = UNNotificationRequest(identifier: identifier,
+                                            content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("something went wrong when adding the notification to the request center")
+                }
+            })
+            count += 1
+            
+            triggerDate.hour = 22
+            triggerDate.minute = 20
+            
+            trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+            
+            identifier = "standard_" + (String)(count)
+            request = UNNotificationRequest(identifier: identifier,
+                                            content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("something went wrong when adding the notification to the request center")
+                }
+            })
+            count += 1
+        }
     }
 }
 
