@@ -708,6 +708,10 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             url += "_"
         }
         
+        if quotes[index].person == "Harvey Specter" {
+            
+        }
+        
         let svc = SFSafariViewController(url: NSURL(string: url)! as URL)
         present(svc, animated: true, completion: nil)
         
