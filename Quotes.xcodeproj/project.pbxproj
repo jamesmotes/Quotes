@@ -40,6 +40,28 @@
 		1A34173820DAA53400723322 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173720DAA53400723322 /* IAPProducts.swift */; };
 		1A34173A20DAA5DD00723322 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34173920DAA5DD00723322 /* IAPService.swift */; };
 		1A44CD47217BEAA700D7D3E8 /* LoadQuotes2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44CD46217BEAA700D7D3E8 /* LoadQuotes2.swift */; };
+		1A488CD5217C0053001F6B9F /* EditButtonWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CD3217C0052001F6B9F /* EditButtonWhite.png */; };
+		1A488CD6217C0053001F6B9F /* EditButtonBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CD4217C0053001F6B9F /* EditButtonBlack.png */; };
+		1A488CEC217C0B5F001F6B9F /* FitnessIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CD9217C0B58001F6B9F /* FitnessIconBlack.png */; };
+		1A488CED217C0B5F001F6B9F /* HungryIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CDA217C0B59001F6B9F /* HungryIconBlack.png */; };
+		1A488CEE217C0B5F001F6B9F /* HungryIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CDB217C0B59001F6B9F /* HungryIconWhite.png */; };
+		1A488CEF217C0B5F001F6B9F /* EmpowermentIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CDC217C0B59001F6B9F /* EmpowermentIconWhite.png */; };
+		1A488CF0217C0B5F001F6B9F /* RelationshipsIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CDD217C0B59001F6B9F /* RelationshipsIconWhite.png */; };
+		1A488CF1217C0B5F001F6B9F /* SuccessIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CDE217C0B59001F6B9F /* SuccessIconWhite.png */; };
+		1A488CF2217C0B5F001F6B9F /* GeneralIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CDF217C0B59001F6B9F /* GeneralIconBlack.png */; };
+		1A488CF3217C0B5F001F6B9F /* MotivationalIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE0217C0B5A001F6B9F /* MotivationalIconWhite.png */; };
+		1A488CF4217C0B5F001F6B9F /* EntrepreneurIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE1217C0B5A001F6B9F /* EntrepreneurIconWhite.png */; };
+		1A488CF5217C0B5F001F6B9F /* GeneralIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE2217C0B5B001F6B9F /* GeneralIconWhite.png */; };
+		1A488CF6217C0B5F001F6B9F /* EmpowermentIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE3217C0B5B001F6B9F /* EmpowermentIconBlack.png */; };
+		1A488CF7217C0B5F001F6B9F /* RelationshipsIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE4217C0B5C001F6B9F /* RelationshipsIconBlack.png */; };
+		1A488CF8217C0B5F001F6B9F /* ChangeIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE5217C0B5C001F6B9F /* ChangeIconWhite.png */; };
+		1A488CF9217C0B5F001F6B9F /* SportsIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE6217C0B5D001F6B9F /* SportsIconWhite.png */; };
+		1A488CFA217C0B5F001F6B9F /* EntrepreneurIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE7217C0B5D001F6B9F /* EntrepreneurIconBlack.png */; };
+		1A488CFB217C0B5F001F6B9F /* SuccessIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE8217C0B5E001F6B9F /* SuccessIconBlack.png */; };
+		1A488CFC217C0B5F001F6B9F /* FitnessIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CE9217C0B5E001F6B9F /* FitnessIconWhite.png */; };
+		1A488CFD217C0B5F001F6B9F /* MotivationalIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CEA217C0B5F001F6B9F /* MotivationalIconBlack.png */; };
+		1A488CFE217C0B5F001F6B9F /* SportsIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CEB217C0B5F001F6B9F /* SportsIconBlack.png */; };
+		1A488D00217C0C5A001F6B9F /* ChangeIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A488CFF217C0C5A001F6B9F /* ChangeIconBlack.png */; };
 		1A4E02CF20C0E02700671DA9 /* LoadCustomImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */; };
 		1A4E02D120C42F9800671DA9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D020C42F9800671DA9 /* Theme.swift */; };
 		1A4E02D320C4306D00671DA9 /* LoadThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E02D220C4306D00671DA9 /* LoadThemes.swift */; };
@@ -178,6 +200,28 @@
 		1A34173720DAA53400723322 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
 		1A34173920DAA5DD00723322 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		1A44CD46217BEAA700D7D3E8 /* LoadQuotes2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuotes2.swift; sourceTree = "<group>"; };
+		1A488CD3217C0052001F6B9F /* EditButtonWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditButtonWhite.png; sourceTree = "<group>"; };
+		1A488CD4217C0053001F6B9F /* EditButtonBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditButtonBlack.png; sourceTree = "<group>"; };
+		1A488CD9217C0B58001F6B9F /* FitnessIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitnessIconBlack.png; sourceTree = "<group>"; };
+		1A488CDA217C0B59001F6B9F /* HungryIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HungryIconBlack.png; sourceTree = "<group>"; };
+		1A488CDB217C0B59001F6B9F /* HungryIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HungryIconWhite.png; sourceTree = "<group>"; };
+		1A488CDC217C0B59001F6B9F /* EmpowermentIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmpowermentIconWhite.png; sourceTree = "<group>"; };
+		1A488CDD217C0B59001F6B9F /* RelationshipsIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RelationshipsIconWhite.png; sourceTree = "<group>"; };
+		1A488CDE217C0B59001F6B9F /* SuccessIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SuccessIconWhite.png; sourceTree = "<group>"; };
+		1A488CDF217C0B59001F6B9F /* GeneralIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralIconBlack.png; sourceTree = "<group>"; };
+		1A488CE0217C0B5A001F6B9F /* MotivationalIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MotivationalIconWhite.png; sourceTree = "<group>"; };
+		1A488CE1217C0B5A001F6B9F /* EntrepreneurIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EntrepreneurIconWhite.png; sourceTree = "<group>"; };
+		1A488CE2217C0B5B001F6B9F /* GeneralIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralIconWhite.png; sourceTree = "<group>"; };
+		1A488CE3217C0B5B001F6B9F /* EmpowermentIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmpowermentIconBlack.png; sourceTree = "<group>"; };
+		1A488CE4217C0B5C001F6B9F /* RelationshipsIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RelationshipsIconBlack.png; sourceTree = "<group>"; };
+		1A488CE5217C0B5C001F6B9F /* ChangeIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChangeIconWhite.png; sourceTree = "<group>"; };
+		1A488CE6217C0B5D001F6B9F /* SportsIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SportsIconWhite.png; sourceTree = "<group>"; };
+		1A488CE7217C0B5D001F6B9F /* EntrepreneurIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EntrepreneurIconBlack.png; sourceTree = "<group>"; };
+		1A488CE8217C0B5E001F6B9F /* SuccessIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SuccessIconBlack.png; sourceTree = "<group>"; };
+		1A488CE9217C0B5E001F6B9F /* FitnessIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitnessIconWhite.png; sourceTree = "<group>"; };
+		1A488CEA217C0B5F001F6B9F /* MotivationalIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MotivationalIconBlack.png; sourceTree = "<group>"; };
+		1A488CEB217C0B5F001F6B9F /* SportsIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SportsIconBlack.png; sourceTree = "<group>"; };
+		1A488CFF217C0C5A001F6B9F /* ChangeIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChangeIconBlack.png; sourceTree = "<group>"; };
 		1A4E02CE20C0E02700671DA9 /* LoadCustomImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCustomImageController.swift; sourceTree = "<group>"; };
 		1A4E02D020C42F9800671DA9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1A4E02D220C4306D00671DA9 /* LoadThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThemes.swift; sourceTree = "<group>"; };
@@ -294,13 +338,13 @@
 			children = (
 				1AA438992033E521000C7238 /* QuoteClass.swift */,
 				1A96D549203FA31300254090 /* LoadQuotes.swift */,
+				1A44CD46217BEAA700D7D3E8 /* LoadQuotes2.swift */,
 				81542FAE20A3A4550018D234 /* LoadSchemas.swift */,
 				81542FAC20A397420018D234 /* Schema.swift */,
 				1A4E02D020C42F9800671DA9 /* Theme.swift */,
 				1A4E02D220C4306D00671DA9 /* LoadThemes.swift */,
-				1A8FEA3820C567D3004303FD /* Influencer.swift */,
 				1A2B609E2158755B005DF054 /* LoadThemes2.swift */,
-				1A44CD46217BEAA700D7D3E8 /* LoadQuotes2.swift */,
+				1A8FEA3820C567D3004303FD /* Influencer.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -332,6 +376,33 @@
 				1A2B608E21586C5F005DF054 /* TreeDiving.JPG */,
 			);
 			path = "Updated Backgrounds";
+			sourceTree = "<group>";
+		};
+		1A488CD8217C0B3E001F6B9F /* Category Icons */ = {
+			isa = PBXGroup;
+			children = (
+				1A488CFF217C0C5A001F6B9F /* ChangeIconBlack.png */,
+				1A488CE5217C0B5C001F6B9F /* ChangeIconWhite.png */,
+				1A488CE3217C0B5B001F6B9F /* EmpowermentIconBlack.png */,
+				1A488CDC217C0B59001F6B9F /* EmpowermentIconWhite.png */,
+				1A488CE7217C0B5D001F6B9F /* EntrepreneurIconBlack.png */,
+				1A488CE1217C0B5A001F6B9F /* EntrepreneurIconWhite.png */,
+				1A488CD9217C0B58001F6B9F /* FitnessIconBlack.png */,
+				1A488CE9217C0B5E001F6B9F /* FitnessIconWhite.png */,
+				1A488CDF217C0B59001F6B9F /* GeneralIconBlack.png */,
+				1A488CE2217C0B5B001F6B9F /* GeneralIconWhite.png */,
+				1A488CDA217C0B59001F6B9F /* HungryIconBlack.png */,
+				1A488CDB217C0B59001F6B9F /* HungryIconWhite.png */,
+				1A488CEA217C0B5F001F6B9F /* MotivationalIconBlack.png */,
+				1A488CE0217C0B5A001F6B9F /* MotivationalIconWhite.png */,
+				1A488CE4217C0B5C001F6B9F /* RelationshipsIconBlack.png */,
+				1A488CDD217C0B59001F6B9F /* RelationshipsIconWhite.png */,
+				1A488CEB217C0B5F001F6B9F /* SportsIconBlack.png */,
+				1A488CE6217C0B5D001F6B9F /* SportsIconWhite.png */,
+				1A488CE8217C0B5E001F6B9F /* SuccessIconBlack.png */,
+				1A488CDE217C0B59001F6B9F /* SuccessIconWhite.png */,
+			);
+			path = "Category Icons";
 			sourceTree = "<group>";
 		};
 		1A62EF5020A25DFE00F38F00 /* Alarms */ = {
@@ -389,6 +460,9 @@
 		1AA3841B205232BD007E4241 /* imageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1A488CD8217C0B3E001F6B9F /* Category Icons */,
+				1A488CD4217C0053001F6B9F /* EditButtonBlack.png */,
+				1A488CD3217C0052001F6B9F /* EditButtonWhite.png */,
 				1A2B608921586C3D005DF054 /* Updated Backgrounds */,
 				1A2B608721586194005DF054 /* DeleteIconRed.png */,
 				1A2B608321584BC6005DF054 /* DeleteIconBlack.png */,
@@ -602,8 +676,11 @@
 				1A62EF4320A1E6FD00F38F00 /* BackButtonBlack.png in Resources */,
 				1A62EF2820A157C200F38F00 /* mountain.jpg in Resources */,
 				1A62EF4120A1E6FD00F38F00 /* NoAdsWhite.png in Resources */,
+				1A488CEE217C0B5F001F6B9F /* HungryIconWhite.png in Resources */,
 				812405F620884417006E7AB7 /* TradeGothic-BoldCondTwenty.otf in Resources */,
 				1A0DC0D420A3DEDF007FEA6B /* clouds.jpg in Resources */,
+				1A488CF5217C0B5F001F6B9F /* GeneralIconWhite.png in Resources */,
+				1A488CFC217C0B5F001F6B9F /* FitnessIconWhite.png in Resources */,
 				1A62EF3A20A1E6FD00F38F00 /* BackButtonWhite.png in Resources */,
 				1A62EF2720A157C200F38F00 /* Colorcloud.jpg in Resources */,
 				1A0DC0D820A3DEDF007FEA6B /* tempestuousocean.jpg in Resources */,
@@ -611,17 +688,23 @@
 				1A7BCA1C20A5219B001241E6 /* unlockblack.png in Resources */,
 				1A1E301D20A5589000EA6687 /* QuoteIcon167.png in Resources */,
 				1A62EF2A20A157C200F38F00 /* babylion.jpg in Resources */,
+				1A488CF0217C0B5F001F6B9F /* RelationshipsIconWhite.png in Resources */,
+				1A488CEF217C0B5F001F6B9F /* EmpowermentIconWhite.png in Resources */,
 				1A62EF4C20A25DB700F38F00 /* ContactUsWhite.png in Resources */,
 				1A62EF2620A157C200F38F00 /* starrynight.jpg in Resources */,
 				1A1E301B20A5589000EA6687 /* QuoteIcon152.png in Resources */,
+				1A488CF8217C0B5F001F6B9F /* ChangeIconWhite.png in Resources */,
 				1A7BCA1420A4037C001241E6 /* City.jpg in Resources */,
 				1A0DC0D620A3DEDF007FEA6B /* butterfly.jpg in Resources */,
+				1A488CF4217C0B5F001F6B9F /* EntrepreneurIconWhite.png in Resources */,
 				1A2B609D21586C61005DF054 /* PalmOut.JPG in Resources */,
 				1A0DC0DC20A3DEDF007FEA6B /* desertwalk.jpg in Resources */,
 				1A8FEA3F20C81051004303FD /* photo.png in Resources */,
+				1A488CED217C0B5F001F6B9F /* HungryIconBlack.png in Resources */,
 				1A62EF4B20A25DB700F38F00 /* PeopleBlack.png in Resources */,
 				1A8FEA4920C8C6B9004303FD /* twitter.png in Resources */,
 				1A8FEA4B20C8C6CA004303FD /* safari.png in Resources */,
+				1A488CF6217C0B5F001F6B9F /* EmpowermentIconBlack.png in Resources */,
 				812405F420884398006E7AB7 /* Fonts in Resources */,
 				1AC3C98020AA050D0024D91D /* GoogleService-Info.plist in Resources */,
 				1A0DC0DA20A3DEDF007FEA6B /* aurora.jpg in Resources */,
@@ -633,15 +716,20 @@
 				81056508208D821300BB9433 /* ShareWhite.png in Resources */,
 				1AB47C6F1FFC461B00F547E4 /* Podfile in Resources */,
 				1AACFE9C1FF2F65E00E6424D /* LaunchScreen.storyboard in Resources */,
+				1A488D00217C0C5A001F6B9F /* ChangeIconBlack.png in Resources */,
 				1AA123742044F22D0004C1AE /* Share-icon-iOS.jpg in Resources */,
+				1A488CFE217C0B5F001F6B9F /* SportsIconBlack.png in Resources */,
 				1A62EF4020A1E6FD00F38F00 /* CategoriesWhite.png in Resources */,
+				1A488CD5217C0053001F6B9F /* EditButtonWhite.png in Resources */,
 				1A2B609821586C61005DF054 /* TreeDiving.JPG in Resources */,
 				8105650B208D821300BB9433 /* MenuBlack.png in Resources */,
 				1A79BB4C20E15D2600005278 /* ReviewWhite.png in Resources */,
 				81056509208D821300BB9433 /* MenuWhite.png in Resources */,
 				1A7BCA1820A4037C001241E6 /* towerdown.jpg in Resources */,
 				1A62EF4A20A25DB700F38F00 /* ContactUsBlack.png in Resources */,
+				1A488CFD217C0B5F001F6B9F /* MotivationalIconBlack.png in Resources */,
 				81056506208D821200BB9433 /* SearchBlack.png in Resources */,
+				1A488CF2217C0B5F001F6B9F /* GeneralIconBlack.png in Resources */,
 				1A62EF3C20A1E6FD00F38F00 /* CategoriesBlack.png in Resources */,
 				1A79BB4D20E15D2600005278 /* ReviewBlack.png in Resources */,
 				8105650A208D821300BB9433 /* ShareBlack.png in Resources */,
@@ -655,6 +743,8 @@
 				1A8FEA4D20C8CB50004303FD /* insta.png in Resources */,
 				1A7BCA1720A4037C001241E6 /* whitemountain.jpg in Resources */,
 				1AA123762044F3D00004C1AE /* share_icon_white.jpg in Resources */,
+				1A488CF9217C0B5F001F6B9F /* SportsIconWhite.png in Resources */,
+				1A488CFB217C0B5F001F6B9F /* SuccessIconBlack.png in Resources */,
 				1AB47C872001A4DB00F547E4 /* Images.xcassets in Resources */,
 				1A1E301F20A5589000EA6687 /* QuoteIcon1024.jpg in Resources */,
 				1A62EF2F20A1E4C200F38F00 /* lockicon.png in Resources */,
@@ -664,8 +754,10 @@
 				1A2B609521586C61005DF054 /* Lightning.JPG in Resources */,
 				1A8FEA4520C8C661004303FD /* youtube.png in Resources */,
 				1AACFE971FF2F65E00E6424D /* Main.storyboard in Resources */,
+				1A488CD6217C0053001F6B9F /* EditButtonBlack.png in Resources */,
 				1A62EF2920A157C200F38F00 /* whitetower.jpg in Resources */,
 				1AA123782044F4B40004C1AE /* search.png in Resources */,
+				1A488CF3217C0B5F001F6B9F /* MotivationalIconWhite.png in Resources */,
 				1A2B608821586195005DF054 /* DeleteIconRed.png in Resources */,
 				81056507208D821200BB9433 /* SearchWhite.png in Resources */,
 				1A2B609721586C61005DF054 /* CliffDiving.JPG in Resources */,
@@ -673,11 +765,15 @@
 				1A62EF3B20A1E6FD00F38F00 /* FontsBlack.png in Resources */,
 				1A62EF2520A157C200F38F00 /* airballoons.jpg in Resources */,
 				1A7BCA1620A4037C001241E6 /* basketballcourt.jpg in Resources */,
+				1A488CF7217C0B5F001F6B9F /* RelationshipsIconBlack.png in Resources */,
 				1A0DC0DB20A3DEDF007FEA6B /* colorsky.jpg in Resources */,
 				1A1E301C20A5589000EA6687 /* QuoteIcon180.png in Resources */,
+				1A488CEC217C0B5F001F6B9F /* FitnessIconBlack.png in Resources */,
 				1A2B609C21586C61005DF054 /* HandSunset.JPG in Resources */,
 				1A1E301E20A5589000EA6687 /* QuoteIcon120.png in Resources */,
+				1A488CF1217C0B5F001F6B9F /* SuccessIconWhite.png in Resources */,
 				1A96D546203E43F600254090 /* Screen Shot 2018-02-21 at 6.18.16 PM.png in Resources */,
+				1A488CFA217C0B5F001F6B9F /* EntrepreneurIconBlack.png in Resources */,
 				1AE8853820523DCA0000B56A /* IMG_0739.GIF in Resources */,
 				1A0DC0D720A3DEDF007FEA6B /* hotair.jpg in Resources */,
 				1A2B609621586C61005DF054 /* OceanSunset.JPG in Resources */,

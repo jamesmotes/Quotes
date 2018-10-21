@@ -18,6 +18,7 @@ class MainMenuTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var lockImage: UIImageView!
+    @IBOutlet weak var lockImage2: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,15 +44,23 @@ let peopleOptions = [/*"Elon Musk",*/ "LeBron James", "Gary Vaynerchuck", "Big B
 let catOptions = [/*"General",*/ "Change", /*"Success",*/"Entrepreneur", "Fitness", "Relationships", "Sports", "Motivational", "Empowerment", "Hungry"/*, "Death"*/]
 //let moodOptions = ["Happy", "Motivational", "Sad", "Hungry"]
 
+var catIconsWhite = ["ChangeIconWhite.png", "EntrepreneurIconWhite.png", "FitnessIconWhite.png", "RelationshipsIconWhite.png", "SportsIconWhite.png", "MotivationalIconWhite.png", "EmpowermentIconWhite.png", "HungryIconWhite.png"]
+
+var catIconsBlack = ["ChangeIconBlack.png", "EntrepreneurIconBlack.png", "FitnessIconBlack.png", "RelationshipsIconBlack.png", "SportsIconBlack.png", "MotivationalIconBlack.png", "EmpowermentIconBlack.png", "HungryIconBlack.png"]
+
 let MAIN_MENU = 0
 let PEOPLE_MENU = 1
 let CAT_MENU = 2
 let INF_MENU = 3
+
+let WHITE_ICONS = 0
+let BLACK_ICONS = 1
 //let MOOD_MENU = 3
 
 class MainMenuTableViewController: UITableViewController {
 
     var tableOptions = [mainMenuOptions, peopleOptions, catOptions/*, moodOptions*/]
+    var catColorIcons = [catIconsWhite, catIconsBlack]
     var currentMenu = MAIN_MENU
     let MinHeight: CGFloat = 100.0
     
@@ -75,6 +84,16 @@ class MainMenuTableViewController: UITableViewController {
         }
         tableOptions[CAT_MENU] = ["General", "Success"] + tableOptions[CAT_MENU]
         tableOptions[PEOPLE_MENU] = ["Elon Musk"] + tableOptions[PEOPLE_MENU]
+        
+        catColorIcons[BLACK_ICONS] = catIconsBlack.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        catColorIcons[BLACK_ICONS] = ["GeneralIconBlack.png", "SuccessIconBlack.png"] + catIconsBlack
+        
+        print(catIconsBlack)
+        
+        catColorIcons[WHITE_ICONS] = catIconsWhite.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        catColorIcons[WHITE_ICONS] = ["GeneralIconWhite.png", "SuccessIconWhite.png"] + catIconsWhite
+        
+        print(catIconsWhite)
         
         
         navigationController?.isNavigationBarHidden = false
@@ -321,9 +340,15 @@ class MainMenuTableViewController: UITableViewController {
                 if(currentMenu == CAT_MENU || currentMenu == PEOPLE_MENU){
                     if(sortedArray[indexPath.row] == "General" || sortedArray[indexPath.row] == "Success" || sortedArray[indexPath.row] == "Elon Musk"){
                         cell.lockImage.isHidden = true
+                        cell.lockImage2.isHidden = true
                     }
                     else{
-                        cell.lockImage.isHidden = false
+                        if(currentMenu == PEOPLE_MENU){
+                            cell.lockImage.isHidden = false
+                        }
+                        else {
+                            cell.lockImage2.isHidden = false
+                        }
                     }
                 }
                 else{
@@ -334,17 +359,48 @@ class MainMenuTableViewController: UITableViewController {
             cell.label.text = ""
             
             
-            
             cell.label2.text = sortedArray[indexPath.row]
-            cell.icon.image = nil
-            cell.label2.textAlignment = .left
             
-            cell.label2.font = UIFont(name: globalTheme.font, size: CGFloat(labelFontSize))  // Set font
-            cell.label2.textColor = globalTheme.getTextColor()                               // Set font color
-            cell.label2.adjustsFontSizeToFitWidth = true                                      // Set font size
+            if(currentMenu == CAT_MENU){
+                if(globalTheme.whiteBackground){
+                    cell.icon.image = UIImage(named: (catColorIcons[BLACK_ICONS])[indexPath.row])
+                }
+                else {
+                    //print(indexPath.row)
+                    //print(sortedArray)
+                    cell.icon.image = UIImage(named: (catColorIcons[WHITE_ICONS])[indexPath.row])
+                }
+                
+                //cell.label2.text = cell.label2.text! + "    "
+                
+                cell.label2.isHidden = true
+                
+                cell.label.text = (tableOptions[currentMenu])[indexPath.row]        // Label text
+                //cell.textLabel?.textAlignment = .center                           // Center text
+                cell.backgroundColor = globalTheme.getBackgroundColor()
+                cell.label.backgroundColor = globalTheme.getBackgroundColor()      // Set background color
+                
+                //let currentSize = 100
+                //cell.label.font = UIFont(name: "System", size: CGFloat(currentSize))
+                
+                cell.label.font = UIFont(name: globalTheme.font, size: CGFloat(labelFontSize))   // Set font
+                cell.label.textColor = globalTheme.getTextColor()                                          // Set font color
+                cell.label.adjustsFontSizeToFitWidth = true
+                
+            }
+            else {
+                
+                cell.icon.image = nil
+                cell.label2.textAlignment = .left
+                
+                cell.label2.font = UIFont(name: globalTheme.font, size: CGFloat(labelFontSize))  // Set font
+                cell.label2.textColor = globalTheme.getTextColor()                               // Set font color
+                cell.label2.adjustsFontSizeToFitWidth = true                                      // Set font size
+                cell.label2.backgroundColor = globalTheme.getBackgroundColor()               // Set background color
+            }
+            
             
             cell.backgroundColor = globalTheme.getBackgroundColor()
-            cell.label2.backgroundColor = globalTheme.getBackgroundColor()               // Set background color
 
         }
         else if(currentMenu == INF_MENU){
@@ -373,6 +429,7 @@ class MainMenuTableViewController: UITableViewController {
             // Main menu
             cell.label2.text = ""
             cell.lockImage.isHidden = true
+            cell.lockImage2.isHidden = true
             //sortedArray = tableOptions[currentMenu]
             if(indexPath.row == 2){
                 cell.icon.image = #imageLiteral(resourceName: "star")

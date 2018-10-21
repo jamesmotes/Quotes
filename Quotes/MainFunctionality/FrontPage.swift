@@ -41,9 +41,10 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     @IBOutlet weak var person: UILabel!
     
     @IBOutlet weak var createQuoteButton: UIButton!
-    @IBOutlet weak var createQuoteImage: UIImageView!
-    @IBOutlet weak var deleteQuoteButton: UIButton!
-    @IBOutlet weak var deleteQuoteImage: UIImageView!
+    @IBOutlet weak var createQuoteBlack: UIButton!
+    //@IBOutlet weak var createQuoteImage: UIImageView!
+    //@IBOutlet weak var deleteQuoteButton: UIButton!
+    //@IBOutlet weak var deleteQuoteImage: UIImageView!
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchBlack: UIButton!
@@ -208,8 +209,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             currentSize = 25
             person.font = UIFont(name: globalTheme.font, size: CGFloat(currentSize))
             
-            createQuoteButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
-            deleteQuoteButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
+            //createQuoteButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
+            //deleteQuoteButton.setTitleColor(globalTheme.getTextColor(), for: .normal)
             
             self.view.backgroundColor = globalTheme.getBackgroundColor()
         }
@@ -219,6 +220,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             menuBlack.isHidden = false
             searchBlack.isHidden = false
             shareBlack.isHidden = false
+            menuBlack.isHidden = false
             
             menuButton.isHidden = true
             searchButton.isHidden = true
@@ -237,6 +239,10 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         //checkSubscription()
+        if(editQuote){
+            self.quotes.insert(editedQuote, at: self.index)
+        }
+        
         if(notificationQuote != "") {
             quotes = Array(realm.objects(Quote.self))
             quotes.shuffle()
@@ -332,15 +338,23 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             //favButton.isHidden = true
             //favButton.isEnabled = false
             
-            createQuoteButton.isHidden = false
-            createQuoteButton.isEnabled = true
+            if(globalTheme.whiteBackground){
+                createQuoteBlack.isHidden = false
+                createQuoteBlack.isEnabled = true
+            }
+            else {
+                createQuoteButton.isHidden = false
+                createQuoteButton.isEnabled = true
+            }
             
             /*createQuoteImage.isHidden = false
              createQuoteImage.layer.borderColor = globalFontColor.cgColor
              createQuoteImage.layer.borderWidth = 3.0
              */
-            deleteQuoteButton.isHidden = false
-            deleteQuoteButton.isEnabled = true
+            
+            //deleteQuoteButton.isHidden = false
+            //deleteQuoteButton.isEnabled = true
+            
             /*
              deleteQuoteImage.isHidden = false
              deleteQuoteImage.layer.borderColor = globalFontColor.cgColor
@@ -354,9 +368,12 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             createQuoteButton.isHidden = true
             createQuoteButton.isEnabled = false
             
+            createQuoteBlack.isHidden = true
+            createQuoteBlack.isEnabled = false
             
-            deleteQuoteButton.isHidden = true
-            deleteQuoteButton.isEnabled = false
+            
+            //deleteQuoteButton.isHidden = true
+            //deleteQuoteButton.isEnabled = false
             
         }
         
@@ -509,7 +526,36 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
     
    
     @IBAction func createCustomQuote(_ sender: Any) {
-        performSegue(withIdentifier: "createQuote", sender: nil)
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Add Quote", style: .default) { _ in
+            editQuote = false
+            self.performSegue(withIdentifier: "createQuote", sender: nil)
+        })
+        
+        alert.addAction(UIAlertAction(title: "Edit Quote", style: .default) { _ in
+            if self.quotes.count == 0 {
+                editQuote = false
+                self.performSegue(withIdentifier: "createQuote", sender: nil)
+            }
+            else {
+                editQuote = true
+                editingQuote = self.quotes[self.index]
+                self.quotes.insert(editedQuote, at: self.index)
+                self.performSegue(withIdentifier: "createQuote", sender: nil)
+            }
+        })
+        
+        alert.addAction(UIAlertAction(title: "Delete Quote", style: .default) { _ in
+            self.deleteQuote((Any).self)
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default) { _ in
+        })
+        
+        present(alert, animated: true)
+        
+        //performSegue(withIdentifier: "createQuote", sender: nil)
     }
     
     @IBAction func deleteQuote(_ sender: Any) {
@@ -608,7 +654,7 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         
         
         createQuoteButton.isHidden = true
-        deleteQuoteButton.isHidden = true
+        //deleteQuoteButton.isHidden = true
         menuBlack.isHidden = true
         searchBlack.isHidden = true
         shareBlack.isHidden = true

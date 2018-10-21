@@ -8,6 +8,10 @@
 import UIKit
 import RealmSwift
 
+var editQuote = false
+var editingQuote : Quote = Quote()
+var editedQuote : Quote = Quote()
+
 class CreateQuote: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var image: UIImageView!
@@ -39,6 +43,10 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if editQuote {
+            customQuote.text = editingQuote.text
+            customName.text = editingQuote.person
+        }
         editButton.isHidden = true
         setTheme()
     }
@@ -47,9 +55,11 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         if(globalTheme.whiteBackground){
             backButton.setImage(UIImage(named: "BackButtonBlack.png"), for: .normal)
             view.backgroundColor = UIColor.white
+            creationButton.titleLabel?.textColor = UIColor.black
         } else {
             backButton.imageView?.image = UIImage(named: "BackButtonWhite.png")
             view.backgroundColor = globalTheme.getBackgroundColor()
+            creationButton.titleLabel?.textColor = UIColor.white
         }
         
         /*if(globalTheme.imageFile != ""){
@@ -108,6 +118,17 @@ class CreateQuote: UIViewController, UITextFieldDelegate {
         quoteIterator += 1
         quote.custom = true
         
+        if(editQuote){
+            do {
+                try realm.write {
+                    realm.delete(editingQuote)
+                    editedQuote = quote
+                }
+            }
+            catch {
+                print("Error editing/deleting personal quote")
+            }
+        }
         do {
             try realm.write {
                 realm.add(quote)
