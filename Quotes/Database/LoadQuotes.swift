@@ -4650,7 +4650,7 @@ class LoadQuotes {
          
         name = "Tony Robbins"
         
-        text = "“Identify your problems, but give your power and energy to solutions."
+        text = "Identify your problems, but give your power and energy to solutions."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -4760,7 +4760,7 @@ class LoadQuotes {
         
         name = "Bruce Lee"
         
-        text = "“Ever since I was a child I have had this instinctive urge for expansion and growth. To me, the function and duty of a quality human being is the sincere and honest development of one’s potential."
+        text = "Ever since I was a child I have had this instinctive urge for expansion and growth. To me, the function and duty of a quality human being is the sincere and honest development of one’s potential."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -4924,7 +4924,7 @@ class LoadQuotes {
         cats = ["Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "“As we look ahead into the next century, leaders will be those who empower others."
+        text = "As we look ahead into the next century, leaders will be those who empower others."
         cats = ["Success"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
@@ -5166,7 +5166,7 @@ class LoadQuotes {
         cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
-        text = "“Creating opportunities means looking where others are not."
+        text = "Creating opportunities means looking where others are not."
         cats = ["Success", "Entrepreneur"]
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
         
