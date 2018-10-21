@@ -89,6 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         if (defaults.bool(forKey: "updated") == false){
             updateDatabase()
+            loadQuotes2()
             var _ : LoadThemes = LoadThemes()
             var _ : LoadThemes2 = LoadThemes2()
             defaults.set(true, forKey: "updated")
@@ -98,6 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults.set(true, forKey: "SecondUpdate")
             defaults.set(true, forKey: "ThirdUpdate")
             defaults.set(true, forKey: "FourthUpdate")
+            defaults.set(true, forKey: "SixthUpdate")
             defaults.set([], forKey: "AlarmSetPeople")
             defaults.set([], forKey: "AlarmSetTime")
             defaults.set(true, forKey: "HasBeenLaunched")
@@ -136,6 +138,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 globalTheme.image = defaults.data(forKey: "image") as! NSData
             }
             defaults.set(true, forKey: "FourthUpdate")
+            
+            if defaults.bool(forKey: "SixthUpdate") == false {
+                var _ : LoadQuotes2 = LoadQuotes2()
+                defaults.set(true, forKey: "SixthUpdate")
+            }
             
             // TODO: Change to global Schema object
             AlarmSetPeople = defaults.array(forKey: "AlarmSetPeople") as! [String]
@@ -512,44 +519,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         let defaults = UserDefaults.standard
         defaults.set(quoteIterator, forKey: "quoteIterator")
-        /*var ref: DatabaseReference!
-        ref = Database.database().reference()
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            guard let value = snapshot.value as? Dictionary<String,Dictionary<String,Dictionary<String,Any>>> else {return}
-            
-            print(value)
-            
-            for (person, q) in value {
-                //print(person)
-                for(label, info) in q {
-                    //print(label)
-                    var quote = Quote()
-                    quote.person = person
-                    for(thing, data) in info {
-                        //print(thing)
-                        if(thing == "categories"){
-                            for(cat, b) in data as! Dictionary<String,Any>{
-                                quote.categories.insert(cat, at: quote.categories.count)
-                            }
-                        }
-                        else if(thing == "moods"){
-                            for(mood, b) in data as! Dictionary<String,Any>{
-                                quote.moods.insert(mood, at: quote.moods.count)
-                            }
-                        }
-                        else if(thing == "text"){
-                            quote.text = data as! String
-                        }
-                    }
-                    try! self.realm.write {
-                        self.realm.add(quote)
-                    }
-                }
-            }
-        }) { (error) in
-            print(error.localizedDescription)
-        }*/
     }
     
     func reloadQuotes(){
@@ -562,6 +531,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
         quoteIterator = 0
+    }
+    
+    func loadQuotes2(){
+        var _ : LoadQuotes2 = LoadQuotes2()
     }
     
     func storeCustomiationInfo() {

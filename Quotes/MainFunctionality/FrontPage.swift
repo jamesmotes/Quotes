@@ -505,6 +505,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             }
         }
         else {
+            if index >= quotes.count || index < 0 {
+                index = quotes.count - 1
+                if index < 0 {
+                    index = 0
+                    refresh()
+                }
+            }
             print(index)
             self.text.text = quotes[index].text
             self.person.text = "- " + quotes[index].person

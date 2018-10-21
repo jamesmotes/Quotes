@@ -394,9 +394,9 @@ class MainMenuTableViewController: UITableViewController {
                 cell.label2.textAlignment = .left
                 
                 cell.label2.font = UIFont(name: globalTheme.font, size: CGFloat(labelFontSize))  // Set font
-                cell.label2.textColor = globalTheme.getTextColor()                               // Set font color
                 cell.label2.adjustsFontSizeToFitWidth = true                                      // Set font size
                 cell.label2.backgroundColor = globalTheme.getBackgroundColor()               // Set background color
+                cell.label2.textColor = globalTheme.getTextColor()                               // Set font color
             }
             
             
