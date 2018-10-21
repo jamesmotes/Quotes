@@ -85,13 +85,14 @@ class MainMenuTableViewController: UITableViewController {
         tableOptions[CAT_MENU] = ["General", "Success"] + tableOptions[CAT_MENU]
         tableOptions[PEOPLE_MENU] = ["Elon Musk"] + tableOptions[PEOPLE_MENU]
         
-        catColorIcons[BLACK_ICONS] = catIconsBlack.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
-        catColorIcons[BLACK_ICONS] = ["GeneralIconBlack.png", "SuccessIconBlack.png"] + catIconsBlack
+        for i in 1...(catColorIcons.count-1) {
+            catColorIcons[i] = catColorIcons[i].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        }
+        catColorIcons[BLACK_ICONS] = ["GeneralIconBlack.png", "SuccessIconBlack.png"] + catColorIcons[BLACK_ICONS]
         
         print(catIconsBlack)
         
-        catColorIcons[WHITE_ICONS] = catIconsWhite.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
-        catColorIcons[WHITE_ICONS] = ["GeneralIconWhite.png", "SuccessIconWhite.png"] + catIconsWhite
+        catColorIcons[WHITE_ICONS] = ["GeneralIconWhite.png", "SuccessIconWhite.png"] + catColorIcons[WHITE_ICONS]
         
         print(catIconsWhite)
         
@@ -364,11 +365,13 @@ class MainMenuTableViewController: UITableViewController {
             if(currentMenu == CAT_MENU){
                 if(globalTheme.whiteBackground){
                     cell.icon.image = UIImage(named: (catColorIcons[BLACK_ICONS])[indexPath.row])
+                    print(catColorIcons[BLACK_ICONS])
                 }
                 else {
                     //print(indexPath.row)
                     //print(sortedArray)
                     cell.icon.image = UIImage(named: (catColorIcons[WHITE_ICONS])[indexPath.row])
+                    print(catColorIcons[WHITE_ICONS])
                 }
                 
                 //cell.label2.text = cell.label2.text! + "    "
