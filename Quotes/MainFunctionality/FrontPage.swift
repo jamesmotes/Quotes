@@ -709,7 +709,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         }
         
         if quotes[index].person == "Harvey Specter" {
-            
+            url = "http://suits.wikia.com/wiki/Harvey_Specter"
+        }
+        else if quotes[index].person == "Big Brandon Carter" {
+            url = "https://www.youtube.com/channel/UCe072WU1CTmEZhkPS4bM6cQ"
+        }
+        else if quotes[index].person == "Drake" {
+            url = "https://en.wikipedia.org/wiki/Drake_(musician)"
         }
         
         let svc = SFSafariViewController(url: NSURL(string: url)! as URL)
