@@ -81,7 +81,7 @@ class LoadThemes2 {
         backgroundColor = UIColor.black
         addTheme(imageFile: imageFile, fontStyle: fontStyle, textColor: textColor, backgroundColor: backgroundColor)
         
-        imageFile = "PalmOut"
+        imageFile = "PalmOut.JPG"
         fontStyle = "Copperplate"
         textColor = UIColor.white
         backgroundColor = UIColor.black

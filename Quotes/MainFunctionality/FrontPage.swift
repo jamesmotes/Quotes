@@ -724,7 +724,9 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         else if quotes[index].person == "Drake" {
             url = "https://en.wikipedia.org/wiki/Drake_(musician)"
         }
-        
+        else if quotes[index].person == "Les Brown" {
+            url = "https://en.wikipedia.org/wiki/Les_Brown_(speaker)"
+        }
         let svc = SFSafariViewController(url: NSURL(string: url)! as URL)
         present(svc, animated: true, completion: nil)
         

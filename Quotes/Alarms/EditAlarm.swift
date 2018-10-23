@@ -11,6 +11,9 @@ import UserNotifications
 import Realm
 import RealmSwift
 
+var didDelete = false
+var preDeleteCount = 0
+
 class EditAlarm: UIViewController {
 
     let realm = try! Realm()
@@ -23,6 +26,7 @@ class EditAlarm: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        didDelete = false
         setTheme()
         center.getPendingNotificationRequests { (notifications) in
             self.alarms = notifications
@@ -253,6 +257,7 @@ class EditAlarm: UIViewController {
     
     @IBAction func deleteAlarm(_ sender: Any) {
         removeAlarm(name: alarmSelected)
+        didDelete = true
         dismiss(animated: true, completion: nil)
     }
     /*

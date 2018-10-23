@@ -242,6 +242,12 @@ class AlarmsTableViewController: UITableViewController {
                 }
             }
             didEdit = false
+            
+            if(didDelete){
+                if(AlarmSetPeople.count == preDeleteCount){
+                    AlarmSetPeople.remove(at: indexSelected)
+                }
+            }
         }
         
         tableView.reloadData()
@@ -297,6 +303,7 @@ class AlarmsTableViewController: UITableViewController {
         
         alarmSelected = AlarmSetPeople[indexPath.row]
         timeSelected = AlarmSetTime[indexPath.row]
+        preDeleteCount = AlarmSetPeople.count
         indexSelected = indexPath.row
     }
     
