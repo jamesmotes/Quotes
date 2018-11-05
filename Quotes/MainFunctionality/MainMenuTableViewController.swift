@@ -79,13 +79,13 @@ class MainMenuTableViewController: UITableViewController {
  
         backButton.imageEdgeInsets.right = view.frame.size.width - 30
         
-        for i in 1...(tableOptions.count-1) {
+        for i in 0...(tableOptions.count-1) {
             tableOptions[i] = tableOptions[i].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         }
         tableOptions[CAT_MENU] = ["General", "Success"] + tableOptions[CAT_MENU]
         tableOptions[PEOPLE_MENU] = ["Elon Musk"] + tableOptions[PEOPLE_MENU]
         
-        for i in 1...(catColorIcons.count-1) {
+        for i in 0...(catColorIcons.count-1) {
             catColorIcons[i] = catColorIcons[i].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
         }
         catColorIcons[BLACK_ICONS] = ["GeneralIconBlack.png", "SuccessIconBlack.png"] + catColorIcons[BLACK_ICONS]
