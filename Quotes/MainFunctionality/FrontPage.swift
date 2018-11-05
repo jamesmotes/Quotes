@@ -818,8 +818,8 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
         var count = 0
         
         while count < quotes.count {
-            let q = quotes[count]
-            let content = UNMutableNotificationContent()
+            var q = quotes[count]
+            var content = UNMutableNotificationContent()
             //content.title =
             content.body = q.text + " - " + q.person
             content.sound = UNNotificationSound.default()
@@ -827,11 +827,29 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
             
             //should probably adjust for months with 30 and 28 days
             triggerDate.day = triggerDate.day! + 1
-            if(triggerDate.day! > 31){
-                triggerDate.day = 1
-                triggerDate.month = triggerDate.month! + 1
-                if(triggerDate.month! > 12){
-                    triggerDate.month = 1
+            if(triggerDate.month == 1 || triggerDate.month == 3 || triggerDate.month == 5 || triggerDate.month == 7 || triggerDate.month == 8 || triggerDate.month == 10 || triggerDate.month == 12){
+                if(triggerDate.day! > 31){
+                    triggerDate.day = 1
+                    triggerDate.month = triggerDate.month! + 1
+                    if(triggerDate.month! > 12){
+                        triggerDate.month = 1
+                    }
+                }
+            } else if(triggerDate.month! == 2 && triggerDate.year!%4 != 4){
+                if(triggerDate.day! > 28){
+                    triggerDate.day = 1
+                    triggerDate.month = triggerDate.month! + 1
+                    if(triggerDate.month! > 12){
+                        triggerDate.month = 1
+                    }
+                }
+            } else {
+                if(triggerDate.day! > 30){
+                    triggerDate.day = 1
+                    triggerDate.month = triggerDate.month! + 1
+                    if(triggerDate.month! > 12){
+                        triggerDate.month = 1
+                    }
                 }
             }
             
@@ -850,6 +868,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 }
             })
             count += 1
+            if(count >= quotes.count){
+                break
+            }
+            q = quotes[count]
+            content = UNMutableNotificationContent()
+            //content.title =
+            content.body = q.text + " - " + q.person
             
             triggerDate.hour = 16
             triggerDate.minute = 20
@@ -866,6 +891,13 @@ class FrontPage: UIViewController , GADInterstitialDelegate {
                 }
             })
             count += 1
+            if(count >= quotes.count){
+                break
+            }
+            q = quotes[count]
+            content = UNMutableNotificationContent()
+            //content.title =
+            content.body = q.text + " - " + q.person
             
             triggerDate.hour = 22
             triggerDate.minute = 20

@@ -762,10 +762,12 @@ extension AppDelegate: SKPaymentTransactionObserver {
     }
     
     func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
         print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
     }
     
     func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
         print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
     }
 }

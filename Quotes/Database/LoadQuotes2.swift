@@ -575,11 +575,6 @@ class LoadQuotes2 {
         
         name = "Robert H. Schuller"
         
-        text = "Tough times never last, but tough people do."
-        cats = ["Success", "Change", "Empowerment"]
-        moos = []
-        MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        
         text = "Problems are not stop signs, they are guidelines."
         cats = ["Success", "Empowerment", "Motivational"]
         moos = []
@@ -741,7 +736,7 @@ class LoadQuotes2 {
         cats = ["Success"]
         moos = []
         MakeQuote(_name: name, _quote: text, _categories: cats, _moods: moos)
-        .
+        
         text = "I use pain to push me to greatness."
         cats = ["Success"]
         moos = []
